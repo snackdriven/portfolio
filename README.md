@@ -1,4 +1,4 @@
-# Welcome to my portfolio 🙋🏻👋🏻
+# Welcome to my Portfolio 🙋🏻👋🏻
 
 - [x] [Ultranauts Portfolio](https://docs.google.com/document/d/1syiHbjpettwmdhuJeTxJ4WGo43bkXb3NvccZsZX4bjc)
 
