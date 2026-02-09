@@ -1,6 +1,6 @@
 # Kayla Gilbert
 
-QA Systems Specialist. Bentonville, AR (remote). I break things for a living and occasionally build things to break them faster.
+QA Systems Specialist. Bentonville, AR (remote, as in not fit for public consumption). I break things for a living and occasionally build things to break them faster.
 
 **Live site:** [snackdriven.github.io/portfolio](https://snackdriven.github.io/portfolio/)
 
@@ -16,4 +16,5 @@ I test complex healthcare software that nobody else wants to touch. When somethi
 
 ## Contact
 
-On the site.
+- [kayla.gilbert89@gmail.com](mailto:kayla.gilbert89@gmail.com)
+- [linkedin.com/in/kaylagilbert22](https://linkedin.com/in/kaylagilbert22)
