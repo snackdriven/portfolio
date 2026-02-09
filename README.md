@@ -1,12 +1,17 @@
-# Welcome to My Portfolio 🙋🏻👋🏻
+# Kayla Gilbert
 
-- [x] [Resume](https://drive.google.com/file/d/1JmF4zNMFd2MAeTkbrTR_i9cG8HqqSZ4y/view?usp=sharing)
+QA Systems Specialist. Bentonville, AR (remote).
 
-- [x] [Ultranauts Portfolio](https://docs.google.com/document/d/1syiHbjpettwmdhuJeTxJ4WGo43bkXb3NvccZsZX4bjc)
+**Live site:** [snackdriven.github.io/portfolio](https://snackdriven.github.io/portfolio/)
 
-- [x] [QE Launchpad](https://docs.google.com/spreadsheets/d/1vdtwXY19wUeSS913mamTkVG-2d-ETzUNo7VSQr8SjwA/edit#gid=1809620313)
+## What's here
 
+Single-page resume built with vanilla HTML and CSS. No frameworks, no build step.
 
-## Personal Projects
+Fonts: Chakra Petch, JetBrains Mono, Inter. Color scheme is dark with green/magenta accents. Prints clean in black and white.
 
-- [x] [Apps Script for Connecting Gmail to Google Sheets](https://github.com/24k-ewok/email-to-sheet)
+## Contact
+
+- [kayla.gilbert89@gmail.com](mailto:kayla.gilbert89@gmail.com)
+- [github.com/snackdriven](https://github.com/snackdriven)
+- [linkedin.com/in/kaylagilbert22](https://linkedin.com/in/kaylagilbert22)
