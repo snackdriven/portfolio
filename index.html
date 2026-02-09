@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KAYLA GILBERT // RESUME</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #2D2B3A;
+    --bg-sidebar: #252336;
+    --fg: #E0DEE8;
+    --green: #4AEEA0;
+    --magenta: #FF6B9D;
+    --muted: #B5B2C8;
+    --border: #3D3A50;
+  }
+
+  ::selection {
+    background: var(--green);
+    color: var(--bg);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: "Inter", -apple-system, system-ui, sans-serif;
+    cursor: default;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+  }
+
+  a {
+    color: var(--fg);
+    text-decoration: none;
+    border-bottom: 1px solid var(--fg);
+    transition: color 0.1s, border-color 0.1s;
+  }
+  a:hover {
+    color: var(--green);
+    border-color: var(--green);
+  }
+
+  /* HERO */
+  .hero {
+    padding: 56px 48px 44px;
+    border-bottom: 3px solid var(--border);
+    border-left: 4px solid var(--green);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px 40px;
+  }
+  .hero h1 {
+    font-family: "Chakra Petch", sans-serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--green);
+  }
+  .hero .title {
+    font-family: "JetBrains Mono", "Courier New", Courier, monospace;
+    font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+    color: var(--magenta);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+  .hero .updated {
+    font-size: 0.75rem;
+    color: var(--muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-left: auto;
+  }
+
+  /* SECTION LAYOUT */
+  .section {
+    border-bottom: 3px solid var(--border);
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    min-height: 200px;
+  }
+  @media (max-width: 768px) {
+    .section {
+      grid-template-columns: 1fr;
+    }
+  }
+  .section-label {
+    padding: 40px 24px 40px 48px;
+    border-right: 3px solid var(--border);
+    background: var(--bg-sidebar);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  @media (max-width: 768px) {
+    .section-label {
+      border-right: none;
+      border-bottom: 2px solid var(--border);
+      padding: 24px 24px 16px 24px;
+      flex-direction: row;
+      align-items: baseline;
+      gap: 12px;
+    }
+  }
+  .section-number {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.85rem;
+    color: var(--magenta);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+  .section-name {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 500;
+    color: var(--magenta);
+  }
+  .section-content {
+    padding: 44px 48px 52px;
+    max-width: 880px;
+  }
+  @media (max-width: 768px) {
+    .section-content {
+      padding: 24px;
+    }
+  }
+
+  /* ABOUT */
+  .about-text {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: var(--fg);
+  }
+  .about-text strong {
+    color: var(--green);
+    font-weight: 500;
+  }
+
+  /* EXPERIENCE */
+  .job {
+    margin-bottom: 48px;
+  }
+  .job:last-child {
+    margin-bottom: 0;
+  }
+  .job-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .job-company {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    color: var(--green);
+    transition: color 0.2s;
+  }
+  .job-company:hover {
+    color: var(--magenta);
+  }
+  .job-separator {
+    color: var(--magenta);
+    font-weight: bold;
+  }
+  .job-role {
+    color: var(--fg);
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .job-role .promoted {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.75rem;
+    color: var(--green);
+    margin-left: 8px;
+    padding: 2px 8px;
+    border: 1px solid var(--green);
+    border-radius: 2px;
+  }
+  .job-period {
+    font-size: 0.8rem;
+    color: var(--muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+  .job-highlights {
+    list-style: none;
+    margin-top: 12px;
+  }
+  .job-highlights li {
+    padding: 8px 0;
+    padding-left: 24px;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  .job-highlights li::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    color: var(--green);
+    font-weight: bold;
+  }
+
+  /* SKILLS */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+  }
+  .skills-category {
+    margin-bottom: 0;
+  }
+  .skills-category-name {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.75rem;
+    color: var(--green);
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--green);
+  }
+  .skills-list {
+    list-style: none;
+    font-size: 0.92rem;
+    line-height: 1.9;
+  }
+  .skills-list li {
+    color: var(--fg);
+  }
+  .skills-list li::before {
+    content: "·";
+    color: var(--magenta);
+    margin-right: 8px;
+    font-weight: bold;
+  }
+
+  /* PROJECTS */
+  .project {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .project:last-child {
+    border-bottom: none;
+  }
+  .project-num {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+    padding-top: 2px;
+  }
+  .project-name {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: 500;
+    transition: color 0.1s;
+  }
+  .project-name:hover {
+    color: var(--green);
+  }
+  .project-impact {
+    font-size: 1rem;
+    color: var(--green);
+    margin-top: 6px;
+    font-weight: 500;
+  }
+  .project-desc {
+    font-size: 0.92rem;
+    color: var(--muted);
+    margin-top: 6px;
+    line-height: 1.6;
+  }
+  .project-tech {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.78rem;
+    color: var(--magenta);
+    margin-top: 8px;
+    letter-spacing: 0.04em;
+  }
+  .project-tech span + span::before {
+    content: " · ";
+    color: var(--border);
+  }
+
+  /* CONTACT */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .contact-item-label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .contact-item-value {
+    font-size: 1rem;
+  }
+
+  /* FOCUS */
+  a:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 2px;
+  }
+
+  /* PRINT */
+  @media print {
+    * { background: white !important; color: black !important; }
+    body { font-size: 11pt; line-height: 1.4; }
+    .hero { padding: 20px 24px 16px; border-bottom: 1px solid #ccc; border-left: none; }
+    .hero h1 { font-size: 24pt; color: black !important; }
+    .section { border-bottom: 1px solid #ccc; }
+    .section-label { background: #f5f5f5 !important; border-right: 1px solid #ccc; }
+    .section-number, .section-name { color: #333 !important; }
+    .skills-category-name { color: #333 !important; border-color: #ccc !important; }
+    .job-highlights li::before { color: #333 !important; }
+    a { text-decoration: underline; border: none !important; }
+    a[href^="http"]:after { content: " (" attr(href) ")"; font-size: 0.8em; color: #666 !important; }
+    .footer { display: none; }
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 24px 48px;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--muted);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <h1>Kayla Gilbert</h1>
+  <div class="title">QA Systems Specialist</div>
+  <div class="updated">2026</div>
+</header>
+
+<!-- 01 ABOUT -->
+<section class="section">
+  <div class="section-label">
+    <span class="section-number">01</span>
+    <span class="section-name">About</span>
+  </div>
+  <div class="section-content">
+    <p class="about-text">
+      <strong>I keep messy healthcare workflows reliable.</strong> I cover 10+ products solo, using Claude and Gemini to find edge cases, clean up bad requirements, and flag what I'd miss on my own.
+    </p>
+    <p class="about-text" style="margin-top: 16px;">
+      I specialize in internal tools nobody else wants to test: a dozen user roles, interconnected workflows, conditional UI, and documentation that's always 3 sprints behind. When something keeps breaking or takes too long, I build a process, template, or small tool to fix it.
+    </p>
+  </div>
+</section>
+
+<!-- 02 EXPERIENCE -->
+<section class="section">
+  <div class="section-label">
+    <span class="section-number">02</span>
+    <span class="section-name">Experience</span>
+  </div>
+  <div class="section-content">
+    <div class="job">
+      <div class="job-header">
+        <span class="job-company">Chorus Innovations</span>
+        <span class="job-separator">&middot;</span>
+        <span class="job-role">Senior QA Specialist <span class="promoted">PROMOTED 2024</span></span>
+      </div>
+      <div class="job-period">Apr 2023 &ndash; Present &nbsp;/&nbsp; Remote</div>
+      <ul class="job-highlights">
+        <li>Own release-readiness decisions across <strong>10+ healthcare products</strong> as the sole QA on a small team. I'm the quality and risk gate.</li>
+        <li>Design test matrices for multi-role workflows (doctors, nurses, admins, patients) with 20+ conditional paths and UI that shifts per role and state</li>
+        <li>Built a personal, locally-run toolkit (14 custom scripts, local video analysis, form autofill, test plan generation) that cut my triage and debugging time by ~75%</li>
+        <li>Catch data mismatches between UI and backend (patient records, appointment states, billing data), keeping PHI boundaries and data exposure risk in mind</li>
+        <li>Write Jira tickets engineers can act on: clear repro steps, specific acceptance criteria, screenshots, and what "fixed" actually looks like</li>
+        <li>Push back on happy-path-only releases by working with product and engineering to nail down requirements before code ships</li>
+        <li>Run cross-browser regression passes (Chrome, Firefox, Safari, Edge) and cross-environment validation (dev, staging, prod) before every release</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-company">Ultranauts Inc</span>
+        <span class="job-separator">&middot;</span>
+        <span class="job-role">Software Quality Engineer II</span>
+      </div>
+      <div class="job-period">Oct 2021 &ndash; Feb 2023 &nbsp;/&nbsp; Remote</div>
+      <ul class="job-highlights">
+        <li>Worked with enterprise and startup clients, owning test strategy and determining where automation would save time vs. adding overhead</li>
+        <li>Helped set testing standards for the team: what to automate, how to document it, when manual testing made more sense</li>
+        <li>Built Selenium test suites for workflows with complex business rules (multi-step forms, conditional logic, role-based access)</li>
+        <li>Ran pre-release validation across dev, staging, and production environments</li>
+        <li>Created Confluence test templates and documentation that sped up new QA onboarding</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 03 SKILLS -->
+<section class="section">
+  <div class="section-label">
+    <span class="section-number">03</span>
+    <span class="section-name">Skills</span>
+  </div>
+  <div class="section-content">
+    <div class="skills-grid">
+      <div class="skills-category">
+        <div class="skills-category-name">QA Specializations</div>
+        <ul class="skills-list">
+          <li>Healthcare / Internal Tools Testing</li>
+          <li>Role-Based Permissions Testing</li>
+          <li>Data Integrity Validation</li>
+          <li>Cross-Browser Regression</li>
+          <li>Release Readiness Assessment</li>
+          <li>Edge Case Generation</li>
+          <li>Requirements Analysis</li>
+        </ul>
+      </div>
+
+      <div class="skills-category">
+        <div class="skills-category-name">Automation & Tools</div>
+        <ul class="skills-list">
+          <li>Playwright</li>
+          <li>Selenium</li>
+          <li>Testmo</li>
+          <li>Jira & Confluence</li>
+          <li>Claude & Gemini</li>
+          <li>Python</li>
+          <li>JavaScript / TypeScript</li>
+          <li>HTML / CSS</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 PROJECTS -->
+<section class="section">
+  <div class="section-label">
+    <span class="section-number">04</span>
+    <span class="section-name">Projects</span>
+  </div>
+  <div class="section-content">
+    <div class="project">
+      <div class="project-num">01</div>
+      <div>
+        <div class="project-name">Data Confluence Pipeline</div>
+        <div class="project-impact">Consolidated 11+ data sources into one searchable system</div>
+        <div class="project-desc">Python ETL pipeline that pulls notes from Slack, email, Google Docs, and other apps into one place. Deduplicates records and uses AI to classify thousands of entries into searchable markdown. Acts as a unified knowledge base for my cross-product QA work.</div>
+        <div class="project-tech"><span>Python</span><span>ETL</span><span>API Integration</span></div>
+      </div>
+    </div>
+    <div class="project">
+      <div class="project-num">02</div>
+      <div>
+        <div class="project-name">Projects Dashboard</div>
+        <div class="project-impact">75x faster rebuilds using Turborepo caching</div>
+        <div class="project-desc">One dashboard to manage builds and deploys for 7+ React apps with shared components and build caching. Rebuild time went from ~15s to under 200ms.</div>
+        <div class="project-tech"><span>React</span><span>TypeScript</span><span>Vite</span><span>Tailwind</span><span>Turborepo</span><span>pnpm Workspaces</span></div>
+      </div>
+    </div>
+    <div class="project">
+      <div class="project-num">03</div>
+      <div>
+        <div class="project-name">QA Workflow Automation Toolkit</div>
+        <div class="project-impact">~75% faster test planning and setup with tools I built myself</div>
+        <div class="project-desc">14 custom scripts and testing tools for my own workflows: local AI video analysis for bug triage, form autofill for rapid data entry, test plan generation, and Jira batch processing.</div>
+        <div class="project-tech"><span>TypeScript</span><span>Node.js</span><span>Claude API</span><span>Gemini API</span><span>JavaScript</span></div>
+      </div>
+    </div>
+    <p style="margin-top: 20px; font-size: 0.88rem; color: var(--muted);">GitHub repositories and live demos available upon request.</p>
+  </div>
+</section>
+
+<!-- 05 CONTACT -->
+<section class="section">
+  <div class="section-label">
+    <span class="section-number">05</span>
+    <span class="section-name">Contact</span>
+  </div>
+  <div class="section-content">
+    <div class="contact-grid">
+      <div>
+        <div class="contact-item-label">Email</div>
+        <div class="contact-item-value"><a href="mailto:kayla.gilbert89@gmail.com">kayla.gilbert89@gmail.com</a></div>
+      </div>
+      <div>
+        <div class="contact-item-label">GitHub</div>
+        <div class="contact-item-value"><a href="https://github.com/snackdriven">github.com/snackdriven</a></div>
+      </div>
+      <div>
+        <div class="contact-item-label">LinkedIn</div>
+        <div class="contact-item-value"><a href="https://linkedin.com/in/kaylagilbert22">linkedin.com/in/kaylagilbert22</a></div>
+      </div>
+      <div>
+        <div class="contact-item-label">Location</div>
+        <div class="contact-item-value">Bentonville, AR &middot; Remote</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  Kayla Gilbert // 2026
+</footer>
+
+</body>
+</html>
