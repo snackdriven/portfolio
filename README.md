@@ -16,5 +16,4 @@ I test complex healthcare software that nobody else wants to touch. When somethi
 
 ## Contact
 
-- [kayla.gilbert89@gmail.com](mailto:kayla.gilbert89@gmail.com)
-- [linkedin.com/in/kaylagilbert22](https://linkedin.com/in/kaylagilbert22)
+On the site.
