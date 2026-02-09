@@ -331,17 +331,82 @@
     outline-offset: 2px;
   }
 
-  /* PRINT */
+  /* PRINT — 4-size type scale: 18pt / 10pt / 9pt / 8pt */
   @media print {
+    /* Reset colors */
     * { background: white !important; color: black !important; }
-    body { font-size: 11pt; line-height: 1.4; }
-    .hero { padding: 20px 24px 16px; border-bottom: 1px solid #ccc; border-left: none; }
-    .hero h1 { font-size: 24pt; color: black !important; }
-    .section { border-bottom: 1px solid #ccc; }
-    .section-label { background: #f5f5f5 !important; border-right: 1px solid #ccc; }
-    .section-number, .section-name { color: #333 !important; }
-    .skills-category-name { color: #333 !important; border-color: #ccc !important; }
-    .job-highlights li::before { color: #333 !important; }
+    *::before, *::after { color: #444 !important; }
+
+    /* Base: 9pt body */
+    body { font-size: 9pt; line-height: 1.5; }
+
+    /* Normalize fonts: Inter everywhere, Mono only in sidebar */
+    .hero h1 { font-family: "Inter", sans-serif !important; }
+    .hero .title,
+    .job-company,
+    .job-role .promoted,
+    .skills-category-name,
+    .project-name,
+    .project-tech,
+    .contact-item-label { font-family: "Inter", -apple-system, sans-serif !important; }
+
+    /* Hero */
+    .hero { padding: 16px 20px 12px; border-bottom: 1px solid #ccc; border-left: none; gap: 6px 20px; }
+    .hero h1 { font-size: 18pt; font-weight: 700; letter-spacing: 0.05em; }
+    .hero .title { font-size: 11pt; font-weight: 500; letter-spacing: 0.05em; }
+    .hero .updated { display: none; }
+
+    /* Sidebar layout */
+    .section { border-bottom: 1px solid #ccc; grid-template-columns: 110px 1fr !important; min-height: 0 !important; }
+    .section-label {
+      background: #f5f5f5 !important;
+      border-right: 1px solid #ccc !important;
+      border-bottom: none !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 2px !important;
+      padding: 12px 10px 12px 14px !important;
+    }
+    .section-content { padding: 12px 20px 16px; }
+    .section-number { font-size: 8pt; color: #888 !important; letter-spacing: 0.15em; }
+    .section-name { font-size: 8pt; color: #333 !important; letter-spacing: 0.15em; }
+
+    /* About */
+    .about-text strong { font-weight: 600 !important; }
+
+    /* Experience */
+    .job { margin-bottom: 16px; }
+    .job-header { gap: 8px; }
+    .job-company { font-size: 10pt; font-weight: 600; letter-spacing: 0.05em; }
+    .job-separator { font-size: 0; }
+    .job-separator::before { content: "|"; font-size: 9pt; color: #999 !important; }
+    .job-role { font-size: 9pt; font-weight: 500; text-transform: none !important; letter-spacing: 0.05em; }
+    .job-role .promoted { border-color: #555 !important; font-size: 8pt; font-weight: 400; padding: 1px 6px; text-transform: uppercase !important; }
+    .job-period { font-size: 8pt; color: #555 !important; text-transform: none !important; letter-spacing: 0.05em; }
+    .job-highlights li { padding: 2px 0 2px 16px; font-size: 9pt; line-height: 1.5; }
+    .job-highlights li::before { content: "\2022" !important; font-weight: normal !important; }
+
+    /* Skills */
+    .skills-grid { gap: 14px; }
+    .skills-category-name { color: #333 !important; border-color: #ccc !important; margin-bottom: 4px; font-size: 8pt; font-weight: 600; letter-spacing: 0.15em; }
+    .skills-list { line-height: 1.6; font-size: 9pt; }
+    .skills-list li::before { content: "\2022" !important; margin-right: 6px; font-weight: normal !important; }
+
+    /* Projects */
+    .project { padding: 8px 0; grid-template-columns: 1fr !important; border-color: #ccc !important; page-break-inside: avoid; }
+    .project-num { display: none; }
+    .project-name { font-size: 9pt; font-weight: 600; letter-spacing: 0.05em; text-transform: none !important; }
+    .project-impact { font-size: 9pt; font-weight: 500; }
+    .project-desc { font-size: 9pt; color: #333 !important; }
+    .project-tech { color: #555 !important; font-size: 8pt; letter-spacing: 0.05em; }
+
+    /* Contact — 2 cols, readable */
+    .section:last-of-type { page-break-inside: avoid; }
+    .contact-grid { gap: 10px 32px; grid-template-columns: repeat(2, 1fr); }
+    .contact-item-label { font-size: 8pt; margin-bottom: 2px; font-weight: 600; letter-spacing: 0.15em; }
+    .contact-item-value { font-size: 9pt; }
+
+    /* Links & footer */
     a { text-decoration: underline; border: none !important; }
     a[href^="http"]:after { content: none; }
     .footer { display: none; }
@@ -375,10 +440,7 @@
   </div>
   <div class="section-content">
     <p class="about-text">
-      <strong>I keep messy healthcare workflows reliable.</strong> I cover 10+ products solo, using Claude and Gemini to find edge cases, clean up bad requirements, and flag what I'd miss on my own.
-    </p>
-    <p class="about-text" style="margin-top: 16px;">
-      I specialize in internal tools nobody else wants to test: a dozen user roles, interconnected workflows, conditional UI, and documentation that's always 3 sprints behind. When something keeps breaking or takes too long, I build a process, template, or small tool to fix it.
+      <strong>I keep messy healthcare workflows reliable.</strong> I cover 10+ products solo, specializing in internal tools with a dozen user roles, interconnected workflows, and conditional UI. When something keeps breaking or takes too long, I build a process, template, or small tool to fix it. I use Claude and Gemini to find edge cases and clean up bad requirements.
     </p>
   </div>
 </section>
@@ -400,11 +462,9 @@
       <ul class="job-highlights">
         <li>Own release-readiness decisions across <strong>10+ healthcare products</strong> as the sole QA on a small team. I'm the quality and risk gate.</li>
         <li>Design test matrices for multi-role workflows (doctors, nurses, admins, patients) with 20+ conditional paths and UI that shifts per role and state</li>
-        <li>Built a personal, locally-run toolkit (14 custom scripts, local video analysis, form autofill, test plan generation) that cut my triage and debugging time by ~75%</li>
+        <li>Built a locally-run toolkit (14 custom scripts, video analysis, form autofill, test plan generation) that cut my triage and debugging time by ~75%</li>
         <li>Catch data mismatches between UI and backend (patient records, appointment states, billing data), keeping PHI boundaries and data exposure risk in mind</li>
-        <li>Write Jira tickets engineers can act on: clear repro steps, specific acceptance criteria, screenshots, and what "fixed" actually looks like</li>
-        <li>Push back on happy-path-only releases by working with product and engineering to nail down requirements before code ships</li>
-        <li>Run cross-browser regression passes (Chrome, Firefox, Safari, Edge) and cross-environment validation (dev, staging, prod) before every release</li>
+        <li>Push back on happy-path-only releases, nail down requirements with product and engineering before code ships, and write Jira tickets with clear repro steps and acceptance criteria</li>
       </ul>
     </div>
 
@@ -417,10 +477,8 @@
       <div class="job-period">Oct 2021 &ndash; Feb 2023 &nbsp;/&nbsp; Remote</div>
       <ul class="job-highlights">
         <li>Worked with enterprise and startup clients, owning test strategy and determining where automation would save time vs. adding overhead</li>
-        <li>Helped set testing standards for the team: what to automate, how to document it, when manual testing made more sense</li>
         <li>Built Selenium test suites for workflows with complex business rules (multi-step forms, conditional logic, role-based access)</li>
-        <li>Ran pre-release validation across dev, staging, and production environments</li>
-        <li>Created Confluence test templates and documentation that sped up new QA onboarding</li>
+        <li>Set testing standards for the team and created Confluence templates that sped up onboarding and documentation</li>
       </ul>
     </div>
   </div>
@@ -476,7 +534,7 @@
       <div>
         <div class="project-name">Data Confluence Pipeline</div>
         <div class="project-impact">Consolidated 11+ data sources into one searchable system</div>
-        <div class="project-desc">Python ETL pipeline that pulls notes from Slack, email, Google Docs, and other apps into one place. Deduplicates records and uses AI to classify thousands of entries into searchable markdown. Acts as a unified knowledge base for my cross-product QA work.</div>
+        <div class="project-desc">Python ETL pipeline that pulls from Slack, email, Google Docs, and other apps into one searchable knowledge base. Deduplicates records and uses AI to classify thousands of entries.</div>
         <div class="project-tech"><span>Python</span><span>ETL</span><span>API Integration</span></div>
       </div>
     </div>
@@ -485,7 +543,7 @@
       <div>
         <div class="project-name">Projects Dashboard</div>
         <div class="project-impact">75x faster rebuilds using Turborepo caching</div>
-        <div class="project-desc">One dashboard to manage builds and deploys for 7+ React apps with shared components and build caching. Rebuild time went from ~15s to under 200ms.</div>
+        <div class="project-desc">Monorepo dashboard for 7+ React apps with shared components and build caching. Rebuild time: ~15s to under 200ms.</div>
         <div class="project-tech"><span>React</span><span>TypeScript</span><span>Vite</span><span>Tailwind</span><span>Turborepo</span><span>pnpm Workspaces</span></div>
       </div>
     </div>
@@ -494,11 +552,10 @@
       <div>
         <div class="project-name">QA Workflow Automation Toolkit</div>
         <div class="project-impact">~75% faster test planning and setup with tools I built myself</div>
-        <div class="project-desc">14 custom scripts and testing tools for my own workflows: local AI video analysis for bug triage, form autofill for rapid data entry, test plan generation, and Jira batch processing.</div>
+        <div class="project-desc">14 custom scripts for my own workflows: AI video analysis for bug triage, form autofill, test plan generation, and Jira batch processing.</div>
         <div class="project-tech"><span>TypeScript</span><span>Node.js</span><span>Claude API</span><span>Gemini API</span><span>JavaScript</span></div>
       </div>
     </div>
-    <p style="margin-top: 20px; font-size: 0.88rem; color: var(--muted);">GitHub repositories and live demos available upon request.</p>
   </div>
 </section>
 
@@ -511,16 +568,20 @@
   <div class="section-content">
     <div class="contact-grid">
       <div>
+        <div class="contact-item-label">Phone</div>
+        <div class="contact-item-value"><a href="tel:3134442213">(313) 444-2213</a></div>
+      </div>
+      <div>
         <div class="contact-item-label">Email</div>
         <div class="contact-item-value"><a href="mailto:kayla.gilbert89@gmail.com">kayla.gilbert89@gmail.com</a></div>
       </div>
       <div>
-        <div class="contact-item-label">GitHub</div>
-        <div class="contact-item-value"><a href="https://github.com/snackdriven">github.com/snackdriven</a></div>
-      </div>
-      <div>
         <div class="contact-item-label">LinkedIn</div>
         <div class="contact-item-value"><a href="https://linkedin.com/in/kaylagilbert22">linkedin.com/in/kaylagilbert22</a></div>
+      </div>
+      <div>
+        <div class="contact-item-label">GitHub</div>
+        <div class="contact-item-value"><a href="https://github.com/snackdriven">github.com/snackdriven</a></div>
       </div>
       <div>
         <div class="contact-item-label">Location</div>
