@@ -353,9 +353,14 @@
   @page { margin: 0.4in 0.5in; size: letter; }
 
   @media print {
-    /* Reset colors */
-    * { background: white !important; color: black !important; }
-    *::before, *::after { color: #444 !important; }
+    /* Dark theme — force backgrounds to print */
+    * { color: var(--fg) !important; }
+    *::before, *::after { color: var(--green) !important; }
+    body {
+      background: var(--bg) !important;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
 
     /* Base: 9pt — set on html too so rem units resolve correctly */
     html { font-size: 9pt; }
@@ -375,75 +380,75 @@
     .contact-item-label { font-family: "Inter", -apple-system, sans-serif !important; }
 
     /* Hero */
-    .hero { padding: 20px 24px 14px; border-bottom: 1px solid #ccc; border-left: none; }
+    .hero { padding: 28px 24px 22px; border-bottom: 3px solid var(--border); border-left: 4px solid var(--green); }
     .hero-top { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 20px; }
-    .hero h1 { font-size: 18pt; font-weight: 700; letter-spacing: 0.05em; }
-    .hero .title { font-size: 11pt; font-weight: 500; letter-spacing: 0.02em; }
+    .hero h1 { font-size: 18pt; font-weight: 700; letter-spacing: 0.05em; color: var(--green) !important; }
+    .hero .title { font-size: 11pt; font-weight: 500; letter-spacing: 0.02em; color: var(--magenta) !important; }
     .hero .updated { display: none; }
-    .hero-contact { margin-top: 4px; font-size: 9pt; }
-    .hero-contact a { text-decoration: none !important; }
-    .hero-sep { margin: 0 6px; }
+    .hero-contact { margin-top: 6px; font-size: 9pt; color: var(--muted) !important; }
+    .hero-contact a { text-decoration: none !important; color: var(--muted) !important; }
+    .hero-sep { margin: 0 6px; color: var(--border) !important; }
 
     /* Sidebar layout */
-    .section { border-bottom: 1px solid #ccc; grid-template-columns: 110px 1fr !important; }
+    .section { border-bottom: 3px solid var(--border); grid-template-columns: 110px 1fr !important; }
     .section-label {
-      background: #f5f5f5 !important;
-      border-right: 1px solid #ccc !important;
+      background: var(--bg-sidebar) !important;
+      border-right: 3px solid var(--border) !important;
       border-bottom: none !important;
       flex-direction: column !important;
       align-items: flex-start !important;
       gap: 2px !important;
-      padding: 16px 10px 16px 14px !important;
+      padding: 20px 10px 20px 14px !important;
     }
-    .section-content { padding: 20px 24px 24px; }
-    .section-number { font-size: 8pt; color: #888 !important; letter-spacing: 0.05em; }
-    .section-name { font-size: 8pt; color: #333 !important; letter-spacing: 0.05em; }
+    .section-content { padding: 24px 24px 28px; }
+    .section-number { font-size: 8pt; color: var(--magenta) !important; letter-spacing: 0.05em; }
+    .section-name { font-size: 8pt; color: var(--magenta) !important; letter-spacing: 0.05em; }
 
     /* About — slightly larger as a summary hook */
-    .about-text { font-size: 10pt; line-height: 1.7; }
-    .about-text strong { font-weight: 600 !important; }
+    .about-text { font-size: 10pt; line-height: 1.85; color: var(--fg) !important; }
+    .about-text strong { font-weight: 600 !important; color: var(--green) !important; }
 
     /* Page 2 starts at Skills */
     .section:nth-of-type(3) { break-before: page; page-break-before: always; }
 
     /* Experience */
-    .job { margin-bottom: 24px; page-break-inside: avoid; }
+    .job { margin-bottom: 34px; page-break-inside: avoid; }
     .section-label { page-break-after: avoid; }
     .job-header { gap: 8px; }
-    .job-company { font-size: 10pt; font-weight: 600; letter-spacing: 0.05em; }
+    .job-company { font-size: 10pt; font-weight: 600; letter-spacing: 0.05em; color: var(--green) !important; }
     .job-separator { font-size: 0; }
-    .job-separator::before { content: "|"; font-size: 9pt; color: #999 !important; }
-    .job-role { font-size: 9pt; font-weight: 500; text-transform: none !important; letter-spacing: 0.05em; }
-    .job-role .promoted { border-color: #555 !important; font-size: 8pt; font-weight: 400; padding: 1px 6px; text-transform: uppercase !important; }
-    .job-period { font-size: 8pt; color: #555 !important; text-transform: none !important; letter-spacing: 0.05em; }
-    .job-highlights li { padding: 4px 0 4px 16px; font-size: 9pt; line-height: 1.6; }
-    .job-highlights li::before { content: "\2022" !important; font-weight: normal !important; }
+    .job-separator::before { content: "|"; font-size: 9pt; color: var(--magenta) !important; }
+    .job-role { font-size: 9pt; font-weight: 500; text-transform: none !important; letter-spacing: 0.05em; color: var(--fg) !important; }
+    .job-role .promoted { border-color: var(--green) !important; color: var(--green) !important; font-size: 8pt; font-weight: 400; padding: 1px 6px; text-transform: uppercase !important; }
+    .job-period { font-size: 8pt; color: var(--muted) !important; text-transform: none !important; letter-spacing: 0.05em; }
+    .job-highlights li { padding: 5px 0 5px 16px; font-size: 9pt; line-height: 1.65; color: var(--fg) !important; }
+    .job-highlights li::before { content: "\2022" !important; font-weight: normal !important; color: var(--green) !important; }
 
     /* Skills */
     .skills-grid { gap: 16px 32px; grid-template-columns: 1fr 1fr !important; }
-    .skills-category-name { color: #333 !important; border-color: #ccc !important; margin-bottom: 6px; font-size: 8pt; font-weight: 600; letter-spacing: 0.05em; }
+    .skills-category-name { color: var(--green) !important; border-color: var(--green) !important; margin-bottom: 6px; font-size: 8pt; font-weight: 600; letter-spacing: 0.05em; }
     .skills-list { line-height: 1.7; font-size: 9pt; }
-    .skills-list li::before { content: "\2022" !important; margin-right: 6px; font-weight: normal !important; }
+    .skills-list li::before { content: "\2022" !important; margin-right: 6px; font-weight: normal !important; color: var(--magenta) !important; }
 
     /* Projects */
-    .project { padding: 10px 0; grid-template-columns: 1fr !important; border-color: #ccc !important; page-break-inside: avoid; }
+    .project { padding: 10px 0; grid-template-columns: 1fr !important; border-color: var(--border) !important; page-break-inside: avoid; }
     .project-num { display: none; }
-    .project-name { font-size: 9pt; font-weight: 600; letter-spacing: 0.05em; text-transform: none !important; }
-    .project-impact { font-size: 9pt; font-weight: 500; }
-    .project-desc { font-size: 9pt; color: #333 !important; }
-    .project-tech { color: #555 !important; font-size: 8pt; letter-spacing: 0.05em; }
+    .project-name { font-size: 9pt; font-weight: 600; letter-spacing: 0.05em; text-transform: none !important; color: var(--fg) !important; }
+    .project-impact { font-size: 9pt; font-weight: 500; color: var(--green) !important; }
+    .project-desc { font-size: 9pt; color: var(--muted) !important; }
+    .project-tech { color: var(--magenta) !important; font-size: 8pt; letter-spacing: 0.05em; }
 
-    /* Contact — 2 cols, readable */
+    /* Links — 2 cols */
     .section:last-of-type { page-break-inside: avoid; }
     .contact-grid { gap: 10px 32px; grid-template-columns: repeat(2, 1fr); }
-    .contact-item-label { font-size: 8pt; margin-bottom: 2px; font-weight: 600; letter-spacing: 0.05em; }
-    .contact-item-value { font-size: 9pt; }
+    .contact-item-label { font-size: 8pt; margin-bottom: 2px; font-weight: 600; letter-spacing: 0.05em; color: var(--muted) !important; }
+    .contact-item-value { font-size: 9pt; color: var(--fg) !important; }
 
     /* Typography safeguards */
     p, li { orphans: 2; widows: 2; }
 
     /* Links & footer */
-    a { text-decoration: underline; border: none !important; }
+    a { text-decoration: none !important; border-bottom: 1px solid var(--fg) !important; color: var(--fg) !important; }
     a[href^="http"]:after { content: none; }
     .footer { display: none; }
   }
