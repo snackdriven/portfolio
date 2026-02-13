@@ -641,6 +641,32 @@
 
 <footer class="footer">
   Kayla Gilbert // 2026
+    <div class="wedding-countdown" style="margin-top: 2rem; padding: 1rem 0; border-top: 1px solid var(--border-color); text-align: center; font-size: 0.9rem; opacity: 0.7;">
+        <span id="countdown"></span>
+    </div>
+    <script>
+    (function() {
+        const weddingDate = new Date('2026-03-21T00:00:00');
+        const countdown = document.getElementById('countdown');
+        
+        function updateCountdown() {
+            const now = new Date();
+            const diff = weddingDate - now;
+            const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+            
+            if (days > 0) {
+                countdown.textContent = `Kayla Young in ${days} ${days === 1 ? 'day' : 'days'}`;
+            } else if (days === 0) {
+                countdown.textContent = 'Kayla Young today!';
+            } else {
+                countdown.textContent = 'Kayla Young';
+            }
+        }
+        
+        updateCountdown();
+        setInterval(updateCountdown, 1000 * 60 * 60); // Update every hour
+    })();
+    </script>
 </footer>
 
 </body>
