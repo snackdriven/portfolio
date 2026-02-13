@@ -1,12 +1,20 @@
-# Welcome to My Portfolio 🙋🏻👋🏻
+# Kayla Gilbert
 
-- [x] [Resume](https://drive.google.com/file/d/1JmF4zNMFd2MAeTkbrTR_i9cG8HqqSZ4y/view?usp=sharing)
+QA Systems Specialist. Bentonville, AR (remote). I break things for a living and occasionally build things to break them faster.
 
-- [x] [Ultranauts Portfolio](https://docs.google.com/document/d/1syiHbjpettwmdhuJeTxJ4WGo43bkXb3NvccZsZX4bjc)
+**Live site:** [snackdriven.github.io/portfolio](https://snackdriven.github.io/portfolio/) ✨
 
-- [x] [QE Launchpad](https://docs.google.com/spreadsheets/d/1vdtwXY19wUeSS913mamTkVG-2d-ETzUNo7VSQr8SjwA/edit#gid=1809620313)
+## What's here
 
+Single-page resume. Vanilla HTML and CSS, no frameworks, no build step. It didn't need React and I refused to give it React.
 
-## Personal Projects
+Dark theme with green/magenta accents. Prints clean in black and white for the recruiters who still print resumes in 2026.
 
-- [x] [Apps Script for Connecting Gmail to Google Sheets](https://github.com/24k-ewok/email-to-sheet)
+## About me
+
+I test complex healthcare software that nobody else wants to touch. When something is slow or broken or annoying, I usually end up building a small tool to fix it. Most of my repos are private because they're either half-finished or contain my unhinged commit messages.
+
+## Contact
+
+- [kayla.gilbert89@gmail.com](mailto:kayla.gilbert89@gmail.com)
+- [linkedin.com/in/kaylagilbert22](https://linkedin.com/in/kaylagilbert22)
