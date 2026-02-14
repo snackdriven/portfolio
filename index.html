@@ -67,7 +67,162 @@
     text-transform: uppercase;
     font-weight: 700;
     color: var(--green);
+    text-shadow:
+      0 0 2px var(--green),
+      0 0 8px rgba(74, 238, 160, 0.5),
+      0 0 16px rgba(74, 238, 160, 0.3),
+      0 2px 4px rgba(0, 0, 0, 0.4);
   }
+
+  .hero h1 span {
+    display: inline-block;
+    position: relative;
+    text-shadow:
+      0 0 2px var(--green),
+      0 0 8px rgba(74, 238, 160, 0.5),
+      0 0 16px rgba(74, 238, 160, 0.3),
+      0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .hero:hover h1 {
+    cursor: default;
+  }
+
+  /* Smoother RGB shift - balanced */
+  @keyframes neon-flicker {
+    0%, 76% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        1.5px 0 2px rgba(255, 107, 157, 0.35),
+        -1.5px 0 2px rgba(181, 178, 200, 0.35);
+    }
+    77% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        -2.5px 0 2px rgba(255, 107, 157, 0.55),
+        2.5px -1.5px 2px rgba(181, 178, 200, 0.55);
+    }
+    78% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        -4px 0 2.5px rgba(255, 107, 157, 0.7),
+        3.5px -2.5px 2.5px rgba(181, 178, 200, 0.7);
+    }
+    79% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        4px -2.5px 2.5px rgba(255, 107, 157, 0.7),
+        -3.5px 2.5px 2.5px rgba(181, 178, 200, 0.7);
+    }
+    80% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        -3.5px 0 2.5px rgba(255, 107, 157, 0.7),
+        4px 0 2.5px rgba(181, 178, 200, 0.7);
+    }
+    81% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        3.5px 2.5px 2.5px rgba(255, 107, 157, 0.7),
+        -4px 0 2.5px rgba(181, 178, 200, 0.7);
+    }
+    82% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        -2.5px -2.5px 2.5px rgba(255, 107, 157, 0.7),
+        2.5px 0 2.5px rgba(181, 178, 200, 0.7);
+    }
+    83% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        -1.5px 0 2px rgba(255, 107, 157, 0.55),
+        1.5px 0 2px rgba(181, 178, 200, 0.55);
+    }
+    84%, 90% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        1.5px 0 2px rgba(255, 107, 157, 0.35),
+        -1.5px 0 2px rgba(181, 178, 200, 0.35);
+    }
+    91% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        2.5px 0 2px rgba(255, 107, 157, 0.55),
+        -2.5px -1.5px 2px rgba(181, 178, 200, 0.55);
+    }
+    92% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        4px 0 2.5px rgba(255, 107, 157, 0.7),
+        -4px -2.5px 2.5px rgba(181, 178, 200, 0.7);
+    }
+    92.5% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        -3.5px 2.5px 2.5px rgba(255, 107, 157, 0.7),
+        3.5px -2.5px 2.5px rgba(181, 178, 200, 0.7);
+    }
+    93% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        -1.5px 0 2px rgba(255, 107, 157, 0.55),
+        1.5px 0 2px rgba(181, 178, 200, 0.55);
+    }
+    94%, 100% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        1.5px 0 2px rgba(255, 107, 157, 0.35),
+        -1.5px 0 2px rgba(181, 178, 200, 0.35);
+    }
+  }
+
+  /* Flicker effect - triggered by JS */
+  .hero h1 span.flickering {
+    animation: neon-flicker 0.8s linear;
+  }
+
   .hero .title {
     font-family: "JetBrains Mono", "Courier New", Courier, monospace;
     font-size: clamp(0.9rem, 1.5vw, 1.05rem);
@@ -166,293 +321,6 @@
     font-weight: 500;
   }
 
-  /* EXPERIENCE */
-  .job {
-    margin-bottom: 48px;
-  }
-  .job:last-child {
-    margin-bottom: 0;
-  }
-  .job-header {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 12px;
-    margin-bottom: 8px;
-  }
-  .job-company {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 1.15rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-weight: 500;
-    color: var(--green);
-    transition: color 0.2s;
-  }
-  .job-company:hover {
-    color: var(--magenta);
-  }
-  .job-separator {
-    color: var(--magenta);
-    font-weight: bold;
-  }
-  .job-role {
-    color: var(--fg);
-    font-size: 1rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .job-role .promoted {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 0.75rem;
-    color: var(--green);
-    margin-left: 8px;
-    padding: 2px 8px;
-    border: 1px solid var(--green);
-    border-radius: 2px;
-  }
-  .job-period {
-    font-size: 0.8rem;
-    color: var(--muted);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    margin-top: 2px;
-  }
-  .job-highlights {
-    list-style: none;
-    margin-top: 12px;
-  }
-  .job-highlights li {
-    padding: 8px 0;
-    padding-left: 24px;
-    position: relative;
-    font-size: 0.95rem;
-    line-height: 1.7;
-  }
-  .job-highlights li::before {
-    content: ">";
-    position: absolute;
-    left: 0;
-    color: var(--green);
-    font-weight: bold;
-  }
-
-  /* SKILLS */
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 32px;
-  }
-  .skills-category {
-    margin-bottom: 0;
-  }
-  .skills-category-name {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 0.75rem;
-    color: var(--green);
-    text-transform: uppercase;
-    letter-spacing: 0.25em;
-    margin-bottom: 12px;
-    padding-bottom: 6px;
-    border-bottom: 2px solid var(--green);
-  }
-  .skills-list {
-    list-style: none;
-    font-size: 0.92rem;
-    line-height: 1.7;
-  }
-  .skills-list li {
-    color: var(--fg);
-  }
-  .skills-list li::before {
-    content: "·";
-    color: var(--magenta);
-    margin-right: 8px;
-    font-weight: bold;
-  }
-
-  /* PROJECTS */
-  .project {
-    display: grid;
-    grid-template-columns: 40px 1fr;
-    gap: 16px;
-    padding: 16px 0;
-    border-bottom: 1px solid var(--border);
-  }
-  .project:last-child {
-    border-bottom: none;
-  }
-  .project-num {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 0.8rem;
-    color: var(--muted);
-    font-variant-numeric: tabular-nums;
-    padding-top: 2px;
-  }
-  .project-name {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    font-weight: 500;
-    transition: color 0.1s;
-  }
-  .project-name:hover {
-    color: var(--green);
-  }
-  .project-impact {
-    font-size: 1rem;
-    color: var(--green);
-    margin-top: 6px;
-    font-weight: 500;
-  }
-  .project-desc {
-    font-size: 0.92rem;
-    color: var(--muted);
-    margin-top: 6px;
-    line-height: 1.6;
-  }
-  .project-tech {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 0.78rem;
-    color: var(--magenta);
-    margin-top: 8px;
-    letter-spacing: 0.04em;
-  }
-  .project-tech span + span::before {
-    content: " · ";
-    color: var(--border);
-  }
-
-  /* CONTACT */
-  .contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-  }
-  .contact-item-label {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--muted);
-    margin-bottom: 6px;
-  }
-  .contact-item-value {
-    font-size: 1rem;
-  }
-
-  /* FOCUS */
-  a:focus-visible {
-    outline: 2px solid var(--green);
-    outline-offset: 2px;
-  }
-
-  /* PRINT — 4-size type scale: 18pt / 10pt / 9pt / 8pt */
-  @page { margin: 0.4in 0.5in; size: letter; }
-
-  @media print {
-    /* Dark theme — force backgrounds to print */
-    * { color: var(--fg) !important; }
-    *::before, *::after { color: var(--green) !important; }
-    body {
-      background: var(--bg) !important;
-      print-color-adjust: exact;
-      -webkit-print-color-adjust: exact;
-    }
-
-    /* Base: 9pt — set on html too so rem units resolve correctly */
-    html { font-size: 9pt; }
-    body { font-size: 9pt; line-height: 1.5; }
-
-    /* Normalize fonts: Inter everywhere for ATS */
-    .hero h1 { font-family: "Inter", sans-serif !important; }
-    .hero .title,
-    .hero-contact,
-    .section-number,
-    .section-name,
-    .job-company,
-    .job-role .promoted,
-    .skills-category-name,
-    .project-name,
-    .project-tech,
-    .contact-item-label { font-family: "Inter", -apple-system, sans-serif !important; }
-
-    /* Hero */
-    .hero { padding: 28px 24px 22px; border-bottom: 3px solid var(--border); border-left: 4px solid var(--green); }
-    .hero-top { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 20px; }
-    .hero h1 { font-size: 18pt; font-weight: 700; letter-spacing: 0.05em; color: var(--green) !important; }
-    .hero .title { font-size: 11pt; font-weight: 500; letter-spacing: 0.02em; color: var(--magenta) !important; }
-    .hero .updated { display: none; }
-    .hero-contact { margin-top: 6px; font-size: 9pt; color: var(--muted) !important; }
-    .hero-contact a { text-decoration: none !important; color: var(--muted) !important; }
-    .hero-sep { margin: 0 6px; color: var(--border) !important; }
-
-    /* Sidebar layout */
-    .section { border-bottom: 3px solid var(--border); grid-template-columns: 110px 1fr !important; }
-    .section-label {
-      background: var(--bg-sidebar) !important;
-      border-right: 3px solid var(--border) !important;
-      border-bottom: none !important;
-      flex-direction: column !important;
-      align-items: flex-start !important;
-      gap: 2px !important;
-      padding: 20px 10px 20px 14px !important;
-    }
-    .section-content { padding: 24px 24px 28px; }
-    .section-number { font-size: 8pt; color: var(--magenta) !important; letter-spacing: 0.05em; }
-    .section-name { font-size: 8pt; color: var(--magenta) !important; letter-spacing: 0.05em; }
-
-    /* About — slightly larger as a summary hook */
-    .about-text { font-size: 10pt; line-height: 1.85; color: var(--fg) !important; }
-    .about-text strong { font-weight: 600 !important; color: var(--green) !important; }
-
-    /* Page 2 starts at Skills */
-    .section:nth-of-type(3) { break-before: page; page-break-before: always; }
-
-    /* Experience */
-    .job { margin-bottom: 34px; page-break-inside: avoid; }
-    .section-label { page-break-after: avoid; }
-    .job-header { gap: 8px; }
-    .job-company { font-size: 10pt; font-weight: 600; letter-spacing: 0.05em; color: var(--green) !important; }
-    .job-separator { font-size: 0; }
-    .job-separator::before { content: "|"; font-size: 9pt; color: var(--magenta) !important; }
-    .job-role { font-size: 9pt; font-weight: 500; text-transform: none !important; letter-spacing: 0.05em; color: var(--fg) !important; }
-    .job-role .promoted { border-color: var(--green) !important; color: var(--green) !important; font-size: 8pt; font-weight: 400; padding: 1px 6px; text-transform: uppercase !important; }
-    .job-period { font-size: 8pt; color: var(--muted) !important; text-transform: none !important; letter-spacing: 0.05em; }
-    .job-highlights li { padding: 5px 0 5px 16px; font-size: 9pt; line-height: 1.65; color: var(--fg) !important; }
-    .job-highlights li::before { content: "\2022" !important; font-weight: normal !important; color: var(--green) !important; }
-
-    /* Skills */
-    .skills-grid { gap: 16px 32px; grid-template-columns: 1fr 1fr !important; }
-    .skills-category-name { color: var(--green) !important; border-color: var(--green) !important; margin-bottom: 6px; font-size: 8pt; font-weight: 600; letter-spacing: 0.05em; }
-    .skills-list { line-height: 1.7; font-size: 9pt; }
-    .skills-list li::before { content: "\2022" !important; margin-right: 6px; font-weight: normal !important; color: var(--magenta) !important; }
-
-    /* Projects */
-    .project { padding: 10px 0; grid-template-columns: 1fr !important; border-color: var(--border) !important; page-break-inside: avoid; }
-    .project-num { display: none; }
-    .project-name { font-size: 9pt; font-weight: 600; letter-spacing: 0.05em; text-transform: none !important; color: var(--fg) !important; }
-    .project-impact { font-size: 9pt; font-weight: 500; color: var(--green) !important; }
-    .project-desc { font-size: 9pt; color: var(--muted) !important; }
-    .project-tech { color: var(--magenta) !important; font-size: 8pt; letter-spacing: 0.05em; }
-
-    /* Links — 2 cols */
-    .section:last-of-type { page-break-inside: avoid; }
-    .contact-grid { gap: 10px 32px; grid-template-columns: repeat(2, 1fr); }
-    .contact-item-label { font-size: 8pt; margin-bottom: 2px; font-weight: 600; letter-spacing: 0.05em; color: var(--muted) !important; }
-    .contact-item-value { font-size: 9pt; color: var(--fg) !important; }
-
-    /* Typography safeguards */
-    p, li { orphans: 2; widows: 2; }
-
-    /* Links & footer */
-    a { text-decoration: none !important; border-bottom: 1px solid var(--fg) !important; color: var(--fg) !important; }
-    a[href^="http"]:after { content: none; }
-    .footer { display: none; }
-  }
-
   /* FOOTER */
   .footer {
     padding: 24px 48px;
@@ -469,7 +337,7 @@
 <!-- HERO -->
 <header class="hero">
   <div class="hero-top">
-    <h1>Kayla Gilbert</h1>
+    <h1>Ka<span>y</span>la G<span>i</span>lb<span>e</span>rt</h1>
     <div class="title">QA Systems Specialist</div>
     <div class="updated">2026</div>
   </div>
@@ -479,8 +347,7 @@
     <a href="mailto:kayla@snackdriven.com">kayla@snackdriven.com</a>
     <span class="hero-sep">|</span>
     <span>Bentonville, AR (Remote)</span>
-    <span class="hero-sep">|</span>
-    </div>
+  </div>
 </header>
 
 <!-- 01 ABOUT -->
@@ -496,143 +363,29 @@
   </div>
 </section>
 
-<!-- 02 EXPERIENCE -->
-<section class="section">
-  <div class="section-label">
-    <span class="section-number">02</span>
-    <span class="section-name">Experience</span>
-  </div>
-  <div class="section-content">
-    <div class="job">
-      <div class="job-header">
-        <span class="job-company">Chorus Innovations</span>
-        <span class="job-separator">&middot;</span>
-        <span class="job-role">Senior QA Specialist <span class="promoted">PROMOTED 2024</span></span>
-      </div>
-      <div class="job-period">Apr 2023 &ndash; Present &nbsp;/&nbsp; Remote</div>
-      <ul class="job-highlights">
-        <li>Own release-readiness decisions across <strong>5+ healthcare products</strong> as sole QA—no backup, so if I'm out sick, releases either slip or ship risky. One authorization workflow alone has 6 stages, 3 PDFs per stage that need manual verification, reversions that reset state, and role-based permission checks at every transition. I'm the quality and risk gate<a href="https://media.giphy.com/media/8abAbOrQ9rvLG/giphy.gif" target="_blank" title="You shall not pass!" style="border: none;">.</a></li>
-        <li>Design test matrices for multi-role workflows (doctors, nurses, admins, patients) with 20+ conditional paths and UI that shifts per role and state</li>
-        <li>Caught state machine breaks where authorization workflows got stuck mid-transition or allowed invalid state jumps—like skipping approval stages that should be required. Devs test happy paths; I test what happens when users click Cancel halfway through a 6-step form</li>
-        <li>Built 14 custom scripts (video analysis, form autofill, test plan generation) that cut triage from ~4 hours to under 1 hour per release. The test plan generator has saved me multiple times—turns vague requirements into testable matrices so I'm not guessing what "works correctly" means</li>
-        <li>Catch data mismatches between UI and backend (patient records, appointment states, billing data), keeping PHI boundaries and data exposure risk in mind</li>
-        <li>Push back on happy-path-only releases, nail down requirements with product and engineering before code ships, and write Jira tickets with clear repro steps and acceptance criteria</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <div class="job-header">
-        <span class="job-company">Ultranauts Inc</span>
-        <span class="job-separator">&middot;</span>
-        <span class="job-role">Software Quality Engineer II</span>
-      </div>
-      <div class="job-period">Oct 2021 &ndash; Feb 2023 &nbsp;/&nbsp; Remote</div>
-      <ul class="job-highlights">
-        <li>Worked with enterprise and startup clients, owning test strategy and determining where automation would save time vs. adding overhead</li>
-        <li>Built Selenium test suites for workflows with complex business rules (multi-step forms, conditional logic, role-based access)</li>
-        <li>Set testing standards for the team and created Confluence templates that sped up onboarding and documentation</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- 03 SKILLS -->
-<section class="section">
-  <div class="section-label">
-    <span class="section-number">03</span>
-    <span class="section-name">Skills</span>
-  </div>
-  <div class="section-content">
-    <div class="skills-grid">
-      <div class="skills-category">
-        <div class="skills-category-name">QA Specializations</div>
-        <ul class="skills-list">
-          <li>Healthcare / Internal Tools Testing</li>
-          <li>Role-Based Permissions Testing</li>
-          <li>Data Integrity Validation</li>
-          <li>Cross-Browser Regression</li>
-          <li>Release Readiness Assessment</li>
-          <li>Edge Case Generation</li>
-          <li>Requirements Analysis</li>
-        </ul>
-      </div>
-
-      <div class="skills-category">
-        <div class="skills-category-name">Automation & Tools</div>
-        <ul class="skills-list">
-          <li>Playwright</li>
-          <li>Selenium</li>
-          <li>Testmo</li>
-          <li>Jira & Confluence</li>
-          <li>Claude & Gemini</li>
-          <li>Python</li>
-          <li>JavaScript / TypeScript</li>
-          <li>HTML / CSS</li>
-        </ul>
-      </div>
-
-      <div class="skills-category">
-        <div class="skills-category-name">What Doesn't Scale (Yet)</div>
-        <ul class="skills-list">
-          <li>Single point of failure: If I'm out, releases slip or ship with untested edge cases</li>
-          <li>Tribal knowledge: I know which workflows break when users have multiple sessions open, which state transitions create orphaned records, which async operations fail silently—none of this is documented</li>
-          <li>Custom tooling lock-in: 14 scripts that save me hours but would take a week+ to hand off and explain</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 04 PROJECTS -->
-<section class="section">
-  <div class="section-label">
-    <span class="section-number">04</span>
-    <span class="section-name">Projects</span>
-  </div>
-  <div class="section-content">
-    <div class="project">
-      <div class="project-num">01</div>
-      <div>
-        <div class="project-name">Data Confluence Pipeline</div>
-        <div class="project-impact">Built because Slack search was useless after 3 months and I was re-answering the same questions</div>
-        <div class="project-desc">Python ETL pipeline that pulls from Slack, email, Google Docs, and other apps into one searchable knowledge base. Deduplicates records and uses AI to classify thousands of entries.</div>
-        <div class="project-tech"><span>Python</span><span>ETL</span><span>API Integration</span></div>
-      </div>
-    </div>
-    <div class="project">
-      <div class="project-num">02</div>
-      <div>
-        <div class="project-name">Projects Dashboard</div>
-        <div class="project-impact">Built after waiting 12 minutes per rebuild got unbearable—needed sub-second iteration</div>
-        <div class="project-desc">Monorepo dashboard for 7+ React apps with shared components and build caching. Rebuild time: ~15s to under 200ms.</div>
-        <div class="project-tech"><span>React</span><span>TypeScript</span><span>Vite</span><span>Tailwind</span><span>Turborepo</span><span>pnpm Workspaces</span></div>
-      </div>
-    </div>
-    <div class="project">
-      <div class="project-num">03</div>
-      <div>
-        <div class="project-name">QA Workflow Automation Toolkit</div>
-        <div class="project-impact">~75% faster test planning and setup with tools I built myself</div>
-        <div class="project-desc">14 custom scripts for my own workflows: AI video analysis for bug triage, form autofill, test plan generation, and Jira batch processing.</div>
-        <div class="project-tech"><span>TypeScript</span><span>Node.js</span><span>Claude API</span><span>Gemini API</span><span>JavaScript</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
 <footer class="footer">
   <div style="display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
     <!-- Social Icons -->
-<!-- Footer Text with Inline Countdown -->
-    <div style="font-size: 0.9rem;">
-      Kayla Gilbert // 2026<span id="countdown-inline" style="opacity: 0.35; font-size: 0.85em;"></span>
+    <div class="social-icons" style="display: flex; gap: 1rem; align-items: center;">
+      <a href="https://github.com/snackdriven" target="_blank" title="GitHub" class="social-icon" style="border: none;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+      </a>
+      <a href="https://linkedin.com/in/snackdriven" target="_blank" title="LinkedIn" class="social-icon" style="border: none;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+      </a>
+      <a href="mailto:kayla@snackdriven.com" title="Email" class="social-icon" style="border: none;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+      </a>
+    </div>
+
+    <!-- Footer Text with Hover Countdown -->
+    <div style="font-size: 0.9rem;" class="footer-name-container">
+      <span class="footer-name">Kayla <span class="name-swap-wrapper" style="position: relative; display: inline-block;"><span class="last-name-gilbert" style="transition: opacity 0.3s;">Gilbert</span><span class="last-name-young" style="position: absolute; left: 0; opacity: 0; transition: opacity 0.3s; white-space: nowrap;">Young<span id="countdown-inline" style="font-size: 0.85em; margin-left: 0.3em;"></span></span></span></span><span class="year-text" style="transition: opacity 0.3s;"> // 2026</span>
     </div>
   </div>
-  
+
   <style>
     .social-icon {
-      text-decoration: none;
       color: var(--text-color);
       opacity: 0.6;
       transition: all 0.2s ease;
@@ -643,29 +396,91 @@
       opacity: 1;
       transform: scale(1.15);
     }
+
+    .footer-name {
+      cursor: pointer;
+    }
+
+    .footer-name-container:hover .last-name-gilbert {
+      opacity: 0;
+    }
+
+    .footer-name-container:hover .last-name-young {
+      opacity: 1 !important;
+    }
+
+    .footer-name-container:hover .year-text {
+      opacity: 0;
+    }
+
+    #countdown-inline {
+      opacity: 0.6;
+    }
   </style>
-  
+
   <script>
   (function() {
       const weddingDate = new Date('2026-03-21T00:00:00');
       const countdown = document.getElementById('countdown-inline');
-      
+
       function updateCountdown() {
           const now = new Date();
           const diff = weddingDate - now;
           const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
-          
+
           if (days > 0) {
-              countdown.textContent = ` · Kayla Young in ${days} ${days === 1 ? 'day' : 'days'}`;
+              countdown.textContent = ` (${days} ${days === 1 ? 'day' : 'days'})`;
           } else if (days === 0) {
-              countdown.textContent = ' · Kayla Young today!';
+              countdown.textContent = ' (today!)';
           } else {
-              countdown.textContent = ' · Kayla Young';
+              countdown.textContent = '';
           }
       }
-      
+
       updateCountdown();
       setInterval(updateCountdown, 1000 * 60 * 60); // Update every hour
+  })();
+
+  // Random letter flickering (based on example 3, but gentler)
+  (function() {
+      const hero = document.querySelector('.hero');
+      const letters = document.querySelectorAll('.hero h1 span');
+      let isHovering = false;
+      let flickerTimeout;
+
+      function randomFromInterval(from, to) {
+          return Math.floor(Math.random() * (to - from + 1) + from);
+      }
+
+      function flickerLetter() {
+          if (!isHovering || letters.length === 0) return;
+
+          // Pick random letter
+          const randomLetter = letters[randomFromInterval(0, letters.length - 1)];
+
+          // Add flicker animation
+          randomLetter.classList.add('flickering');
+
+          // Remove after animation completes
+          setTimeout(() => {
+              randomLetter.classList.remove('flickering');
+          }, 800);
+
+          // Schedule next flicker (1-3 seconds later)
+          flickerTimeout = setTimeout(flickerLetter, randomFromInterval(1000, 3000));
+      }
+
+      hero.addEventListener('mouseenter', () => {
+          isHovering = true;
+          flickerLetter();
+      });
+
+      hero.addEventListener('mouseleave', () => {
+          isHovering = false;
+          clearTimeout(flickerTimeout);
+          // Remove any active flickers
+          letters.forEach(letter => letter.classList.remove('flickering'));
+      });
   })();
   </script>
 </footer>
