@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kayla Gilbert - Projects</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #2D2B3A;
+    --bg-sidebar: #252336;
+    --fg: #E0DEE8;
+    --green: #4AEEA0;
+    --magenta: #FF6B9D;
+    --muted: #B5B2C8;
+    --border: #3D3A50;
+  }
+
+  ::selection {
+    background: var(--green);
+    color: var(--bg);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: "Inter", -apple-system, system-ui, sans-serif;
+    cursor: default;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+  }
+
+  /* Skip link for screen readers */
+  .skip-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--green);
+    color: var(--bg);
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  .skip-link:focus {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  a {
+    color: var(--fg);
+    text-decoration: none;
+    border-bottom: 1px solid var(--fg);
+    transition: color 0.1s, border-color 0.1s;
+  }
+  a:hover {
+    color: var(--green);
+    border-color: var(--green);
+  }
+
+  /* CONTAINER */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 64px 48px;
+  }
+  @media (max-width: 768px) {
+    .container {
+      padding: 32px 24px;
+    }
+    .projects-hero {
+      padding: 32px 24px;
+    }
+  }
+
+  /* HERO */
+  .projects-hero {
+    position: relative;
+    padding: 56px 48px 44px;
+    border-bottom: 3px solid var(--border);
+  }
+  .projects-hero::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--green);
+  }
+  .projects-hero h1 {
+    font-family: "Chakra Petch", sans-serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--green);
+    text-shadow:
+      0 0 2px var(--green),
+      0 0 8px rgba(74, 238, 160, 0.5),
+      0 0 16px rgba(74, 238, 160, 0.3),
+      0 2px 4px rgba(0, 0, 0, 0.4);
+    transition: text-shadow 0.3s ease;
+  }
+  .projects-hero h1 span {
+    display: inline-block;
+    position: relative;
+    text-shadow:
+      0 0 2px var(--green),
+      0 0 8px rgba(74, 238, 160, 0.5),
+      0 0 16px rgba(74, 238, 160, 0.3),
+      0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  .projects-hero h1 span.flickering {
+    animation: neon-flicker 0.8s ease-in-out;
+  }
+  @keyframes neon-flicker {
+    0%, 76% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        1.5px 0 2px rgba(255, 107, 157, 0.35),
+        -1.5px 0 2px rgba(181, 178, 200, 0.35);
+    }
+    77% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        -2.5px 0 2px rgba(255, 107, 157, 0.55),
+        2.5px -1.5px 2px rgba(181, 178, 200, 0.55);
+    }
+    78% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        -4px 0 2.5px rgba(255, 107, 157, 0.7),
+        3.5px -2.5px 2.5px rgba(181, 178, 200, 0.7);
+    }
+    79% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        4px -2.5px 2.5px rgba(255, 107, 157, 0.7),
+        -3.5px 2.5px 2.5px rgba(181, 178, 200, 0.7);
+    }
+    80% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        -3.5px 0 2.5px rgba(255, 107, 157, 0.7),
+        4px 0 2.5px rgba(181, 178, 200, 0.7);
+    }
+    81% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        3.5px 2.5px 2.5px rgba(255, 107, 157, 0.7),
+        -4px 0 2.5px rgba(181, 178, 200, 0.7);
+    }
+    82% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        -2.5px -2.5px 2.5px rgba(255, 107, 157, 0.7),
+        2.5px 0 2.5px rgba(181, 178, 200, 0.7);
+    }
+    83% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        -1.5px 0 2px rgba(255, 107, 157, 0.55),
+        1.5px 0 2px rgba(181, 178, 200, 0.55);
+    }
+    84%, 90% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        1.5px 0 2px rgba(255, 107, 157, 0.35),
+        -1.5px 0 2px rgba(181, 178, 200, 0.35);
+    }
+    91% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        2.5px 0 2px rgba(255, 107, 157, 0.55),
+        -2.5px -1.5px 2px rgba(181, 178, 200, 0.55);
+    }
+    92% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        4px 0 2.5px rgba(255, 107, 157, 0.7),
+        -4px -2.5px 2.5px rgba(181, 178, 200, 0.7);
+    }
+    92.5% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        -3.5px 2.5px 2.5px rgba(255, 107, 157, 0.7),
+        3.5px -2.5px 2.5px rgba(181, 178, 200, 0.7);
+    }
+    93% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        -1.5px 0 2px rgba(255, 107, 157, 0.55),
+        1.5px 0 2px rgba(181, 178, 200, 0.55);
+    }
+    94%, 100% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        1.5px 0 2px rgba(255, 107, 157, 0.35),
+        -1.5px 0 2px rgba(181, 178, 200, 0.35);
+    }
+  }
+  .projects-hero:hover h1 {
+    cursor: default;
+  }
+  .projects-hero p {
+    color: var(--muted);
+    margin-top: 16px;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  /* SECTION */
+  .section {
+    margin-bottom: 64px;
+  }
+  .section:last-of-type {
+    margin-bottom: 32px;
+  }
+
+  /* PROJECT CATEGORY */
+  .project-category {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.9rem;
+    color: var(--magenta);
+    font-weight: 500;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    border-bottom: 2px solid var(--magenta);
+    padding-bottom: 8px;
+  }
+
+  /* PROJECTS */
+  .section-content {
+    max-width: 880px;
+  }
+  .project {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 16px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .project:last-child {
+    border-bottom: none;
+  }
+  .project-num {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+    padding-top: 2px;
+  }
+  .project-name {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: 500;
+    transition: color 0.1s;
+  }
+  .project-name:hover {
+    color: var(--green);
+  }
+  .project-impact {
+    font-size: 1rem;
+    color: var(--green);
+    margin-top: 6px;
+    font-weight: 500;
+  }
+  .project-desc {
+    font-size: 0.92rem;
+    color: var(--muted);
+    margin-top: 8px;
+    line-height: 1.7;
+  }
+  .project-desc strong {
+    color: var(--fg);
+    font-weight: 500;
+  }
+  .project-tech {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.78rem;
+    color: var(--magenta);
+    margin-top: 8px;
+    letter-spacing: 0.04em;
+  }
+  .project-tech span + span::before {
+    content: " · ";
+    color: var(--border);
+  }
+  .project-github {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.85rem;
+    color: var(--magenta);
+    text-decoration: none;
+    margin-top: 8px;
+    display: inline-block;
+    border: none;
+  }
+  .project-github:hover {
+    color: var(--green);
+    border-bottom: 1px solid var(--green);
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 24px 48px;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--muted);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  .footer a {
+    font-family: "JetBrains Mono", monospace;
+    color: var(--muted);
+    text-decoration: none;
+    border: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  .footer a:hover {
+    color: var(--green);
+  }
+  .social-icon {
+    color: var(--fg);
+    opacity: 0.6;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    border: none;
+  }
+  .social-icon:hover {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+
+  /* FOCUS */
+  a:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 2px;
+  }
+
+  /* PRINT — 4-size type scale: 18pt / 10pt / 9pt / 8pt */
+  @page { margin: 0.4in 0.5in; size: letter; }
+
+  @media print {
+    /* Light theme for print - save ink */
+    * {
+      color: #1a1a1a !important;
+      text-shadow: none !important;
+      animation: none !important;
+    }
+    *::before, *::after { color: #059669 !important; }
+    body {
+      background: #ffffff !important;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    /* Base: 9pt — set on html too so rem units resolve correctly */
+    html { font-size: 9pt; }
+    body { font-size: 9pt; line-height: 1.5; }
+
+    /* Normalize fonts: Inter everywhere for ATS */
+    .projects-hero h1,
+    .project-category,
+    .project-name,
+    .project-tech { font-family: "Inter", -apple-system, sans-serif !important; }
+
+    /* Container */
+    .container { padding: 0; max-width: 100%; }
+
+    /* Hero */
+    .projects-hero {
+      border-bottom: 2px solid #d1d5db;
+      border-left: 4px solid #059669;
+      padding-bottom: 12px;
+      padding-left: 24px;
+      margin-bottom: 32px;
+    }
+    .projects-hero h1 {
+      font-size: 18pt;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: #059669 !important;
+    }
+    .projects-hero p {
+      font-size: 9pt;
+      line-height: 1.65;
+      color: #6b7280 !important;
+      margin-top: 8px;
+    }
+
+    /* Navigation breadcrumb - hide in print */
+    .projects-hero div:first-child { display: none; }
+
+    /* Section spacing */
+    .section {
+      margin-bottom: 32px;
+      page-break-inside: auto;
+    }
+    .section:last-of-type {
+      margin-bottom: 16px;
+    }
+
+    /* Category headers */
+    .project-category {
+      font-size: 10pt;
+      font-weight: 600;
+      color: #dc2626 !important;
+      border-color: #dc2626 !important;
+      margin-bottom: 12px;
+      letter-spacing: 0.05em;
+      padding-bottom: 4px;
+    }
+
+    /* Projects */
+    .project {
+      padding: 10px 0;
+      grid-template-columns: 1fr !important;
+      page-break-inside: avoid;
+      border-color: #d1d5db !important;
+    }
+    .project-num { display: none; }
+    .project-name {
+      font-size: 9pt;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: none !important;
+      color: #1a1a1a !important;
+    }
+    .project-impact {
+      font-size: 9pt;
+      font-weight: 500;
+      color: #059669 !important;
+      margin-top: 4px;
+    }
+    .project-desc {
+      font-size: 9pt;
+      line-height: 1.65;
+      color: #6b7280 !important;
+      margin-top: 6px;
+    }
+    .project-desc strong {
+      font-weight: 600;
+      color: #1a1a1a !important;
+    }
+    .project-tech {
+      color: #dc2626 !important;
+      font-size: 8pt;
+      letter-spacing: 0.05em;
+      margin-top: 6px;
+    }
+    .project-github { display: none; }
+
+    /* Footer */
+    .footer { display: none; }
+
+    /* Typography safeguards */
+    p, li { orphans: 2; widows: 2; }
+
+    /* Links */
+    a {
+      text-decoration: none !important;
+      border-bottom: none !important;
+      color: #1a1a1a !important;
+    }
+    a[href^="http"]:after { content: none; }
+  }
+</style>
+</head>
+<body>
+<!-- Skip to main content link for accessibility -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- HERO -->
+<header class="projects-hero">
+  <!-- Navigation Breadcrumb -->
+  <div style="font-family: 'JetBrains Mono', monospace;
+              font-size: 0.85rem;
+              color: var(--muted);
+              margin-bottom: 32px;">
+    <a href="index.html" style="color: var(--muted); border: none;">Resume</a>
+    <span style="margin: 0 8px; color: var(--border);">→</span>
+    <span style="color: var(--fg);">Projects</span>
+  </div>
+
+  <h1><span>P</span><span>r</span><span>o</span><span>j</span><span>e</span><span>c</span><span>t</span><span>s</span></h1>
+  <p>
+    Applications I've built in my downtime.
+    ADHD-focused productivity platforms, AI testing companions, monorepo tools. Stuff I actually use.
+  </p>
+</header>
+
+<main class="container" id="main-content">
+  <!-- QA & TESTING TOOLS -->
+  <section class="section">
+    <h2 class="project-category">QA & Testing Tools</h2>
+    <div class="section-content">
+
+      <div class="project">
+        <div class="project-num">01</div>
+        <div>
+          <div class="project-name">ATLAS</div>
+          <div class="project-impact">AI testing companion with hybrid predictions from 928 real JIRA tickets</div>
+          <div class="project-desc">
+            AI testing companion trained on 928 real JIRA tickets from healthcare products (ticket metadata only, no PHI). Hybrid model: LSTM neural network plus vector similarity search. Predicts bug severity, suggests test cases, flags regression risks. Gamification (XP/levels/achievements) and 5 AI coaches make testing less boring. Turns out personas that roast you for skipping edge cases actually work.
+          </div>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>SQL</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-num">02</div>
+        <div>
+          <div class="project-name">jira-wrapper</div>
+          <div class="project-impact">5 view modes with keyboard navigation</div>
+          <div class="project-desc">
+            Clicking through JIRA tabs to review 20+ tickets per sprint was killing me. Built a wrapper with 5 views (board, list, tree, detail, calendar) and full keyboard navigation. No more tab-clicking hell. React Query caching, loads 50 tickets in under 2 seconds.
+          </div>
+          <div class="project-tech">
+            <span>React</span>
+            <span>TypeScript</span>
+            <span>Tailwind</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRODUCTIVITY APPLICATIONS -->
+  <section class="section">
+    <h2 class="project-category">Productivity Applications</h2>
+    <div class="section-content">
+
+      <div class="project">
+        <div class="project-num">03</div>
+        <div>
+          <div class="project-name">Executive Dysfunction Center (EDC) 😍</div>
+          <div class="project-impact">Forever project where building IS the productivity system</div>
+          <div class="project-desc">
+            Productivity platform for ADHD and executive dysfunction. I've tried (and abandoned) Todoist, Notion, Things, Obsidian. None of them work for ADHD brains. So I built my own.
+            <br><br>
+            12 features: task dependencies, habit streaks, mood tracking (spoon theory), journaling, Google Calendar sync, concert tracking, RSS reader, multi-pane workspace (Andy Matuschak-style), dashboard, analytics. ADHD-specific UX: progressive disclosure, color-coded priorities, celebration animations.
+            <br><br>
+            Forever project, rebuilt multiple times. Each iteration shares the same Supabase backend (row-level security), so I see my real data while building. Building IS the accountability system.
+          </div>
+          <div class="project-tech">
+            <span>React</span>
+            <span>TypeScript</span>
+            <span>Playwright</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-num">04</div>
+        <div>
+          <div class="project-name">chronicle</div>
+          <div class="project-impact">Memory augmentation with timeline and KV storage</div>
+          <div class="project-desc">
+            Timeline-based memory system for tracking events, notes, and context over time. Key-value storage for quick lookups, MCP server integration for Claude, full-text search, tag filtering. Built with TanStack Table for timeline visualization and Express for the API backend.
+          </div>
+          <div class="project-tech">
+            <span>React</span>
+            <span>TypeScript</span>
+            <span>SQL</span>
+            <span>MCP</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DEVELOPER INFRASTRUCTURE -->
+  <section class="section">
+    <h2 class="project-category">Developer Infrastructure</h2>
+    <div class="section-content">
+
+      <div class="project">
+        <div class="project-num">05</div>
+        <div>
+          <div class="project-name">Projects Dashboard</div>
+          <div class="project-impact">Turborepo managing 14 apps with cached rebuilds under 200ms</div>
+          <div class="project-desc">
+            Rebuild times hit 12 minutes and I couldn't iterate fast enough. Honestly unbearable when you're trying to test a one-line CSS change. Built a monorepo with Turborepo managing 16 apps. Shared UI components, cached builds.
+            <br><br>
+            Turborepo handles parallel builds and incremental rebuilds. First build ~15s, cached rebuild under 200ms. Down from 12 minutes when I started.
+          </div>
+          <div class="project-tech">
+            <span>React</span>
+            <span>TypeScript</span>
+            <span>Tailwind</span>
+            <span>Vite</span>
+            <span>Turborepo</span>
+            <span>pnpm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-num">06</div>
+        <div>
+          <div class="project-name">OpenClaw</div>
+          <div class="project-impact">Multi-agent coordination system with gateway-based routing</div>
+          <div class="project-desc">
+            Coordinates 5 AI agents with isolated workspaces. Gateway routes messages to specialists: one handles tasks, one does character narration, one manages scheduling. Each agent only sees what it needs.
+            <br><br>
+            Tiered model selection keeps costs low: simple stuff uses DeepSeek Free, longer conversations use V3.2, complex reasoning uses Claude Haiku. Monthly cost: ~$5-15 instead of $100+. Local HTTP gateway handles token auth, session management, and inter-agent relay for time-sensitive tasks.
+          </div>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>TypeScript</span>
+            <span>HTTP Gateway</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+      <!-- Back to Resume Link -->
+      <div style="margin-bottom: 8px;">
+        <a href="index.html"
+           style="font-family: 'JetBrains Mono', monospace;
+                  color: var(--muted);
+                  text-decoration: none;
+                  border: none;
+                  font-size: 0.9rem;
+                  letter-spacing: 0.03em;">
+          ← Back to Resume
+        </a>
+      </div>
+
+      <div style="display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+        <!-- Social Icons -->
+        <div class="social-icons" style="display: flex; gap: 1rem; align-items: center;">
+          <a href="https://github.com/snackdriven" target="_blank" title="GitHub" class="social-icon" style="border: none;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/snackdriven" target="_blank" title="LinkedIn" class="social-icon" style="border: none;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="mailto:kayla@snackdriven.com" title="Email" class="social-icon" style="border: none;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+          </a>
+        </div>
+
+      <!-- Footer Text with Hover Countdown -->
+      <div style="font-size: 0.9rem;" class="footer-name-container">
+        <span class="footer-name">Kayla <span class="name-swap-wrapper" style="position: relative; display: inline-block;"><span class="last-name-gilbert" style="transition: opacity 0.3s;">Gilbert</span><span class="last-name-young" style="position: absolute; left: 0; opacity: 0; transition: opacity 0.3s; white-space: nowrap;">Young<span id="countdown-inline" style="font-size: 0.85em; margin-left: 0.3em;"></span></span></span></span><span class="year-text" style="transition: opacity 0.3s;"> // 2026</span>
+      </div>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    .footer-name {
+      cursor: pointer;
+    }
+
+    .footer-name-container:hover .last-name-gilbert {
+      opacity: 0;
+    }
+
+    .footer-name-container:hover .last-name-young {
+      opacity: 1 !important;
+    }
+
+    .footer-name-container:hover .year-text {
+      opacity: 0;
+    }
+
+    #countdown-inline {
+      opacity: 0.6;
+    }
+  </style>
+
+  <script>
+  (function() {
+      const weddingDate = new Date('2026-03-21T00:00:00');
+      const countdown = document.getElementById('countdown-inline');
+
+      function updateCountdown() {
+          const now = new Date();
+          const diff = weddingDate - now;
+          const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+
+          if (days > 0) {
+              countdown.textContent = `(${days} ${days === 1 ? 'day' : 'days'})`;
+          } else if (days === 0) {
+              countdown.textContent = '(today!)';
+          } else {
+              countdown.textContent = '';
+          }
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000 * 60 * 60); // Update every hour
+  })();
+
+  // Random letter flickering (continuous)
+  (function() {
+      const letters = document.querySelectorAll('.projects-hero h1 span');
+
+      function randomFromInterval(from, to) {
+          return Math.floor(Math.random() * (to - from + 1) + from);
+      }
+
+      function flickerLetter() {
+          if (letters.length === 0) return;
+
+          // Pick random letter
+          const randomLetter = letters[randomFromInterval(0, letters.length - 1)];
+
+          // Add flicker animation
+          randomLetter.classList.add('flickering');
+
+          // Remove after animation completes
+          setTimeout(() => {
+              randomLetter.classList.remove('flickering');
+          }, 800);
+
+          // Schedule next flicker (1-3 seconds later)
+          setTimeout(flickerLetter, randomFromInterval(1000, 3000));
+      }
+
+      // Start flickering immediately
+      flickerLetter();
+  })();
+  </script>
+
+</body>
+</html>
