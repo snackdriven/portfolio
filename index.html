@@ -480,10 +480,10 @@
     font-weight: 500;
   }
   .project-impact {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: var(--cyan);
     margin-top: 6px;
-    font-weight: 500;
+    font-weight: 400;
   }
   .project-desc {
     font-size: 0.92rem;
@@ -704,9 +704,7 @@
         <li>Own release-readiness decisions across <strong>5+ healthcare products</strong> as sole QA (no backup). If I'm out sick, releases either slip or ship risky. One authorization workflow alone has 6 stages, 3 PDFs per stage that need manual verification, reversions that reset state, and role-based permission checks at every transition. I'm the quality and risk gate<a href="assets/you-shall-not-pass.gif" target="_blank" title="You shall not pass!" style="border: none;">.</a></li>
         <li>Design test matrices for multi-role workflows (doctors, nurses, admins, patients) with 20+ conditional paths and UI that shifts per role and state</li>
         <li>Caught state machine breaks where authorization workflows got stuck mid-transition or allowed invalid state jumps (like skipping approval stages that should be required). Devs test happy paths; I test what happens when users click Cancel halfway through a 6-step form</li>
-        <li>Built 14 custom scripts (video analysis, form autofill, test plan generation) that cut triage from ~4 hours to under 1 hour per release. The test plan generator turns vague requirements into testable matrices so I'm not guessing what "works correctly" means</li>
-        <li>Catch data mismatches between UI and backend. Prioritize patient records and billing data where PHI exposure risk is highest</li>
-        <li>Push back on happy-path-only releases and nail down requirements with product and engineering before code ships. Jira tickets always have repro steps, expected vs actual, and acceptance criteria</li>
+        <li>Built 14 custom scripts that cut triage from ~4 hours to under 1 hour per release. The test plan generator turns vague requirements into testable matrices so I'm not guessing what "works correctly" means</li>
       </ul>
     </div>
 
@@ -719,8 +717,8 @@
       <div class="job-period">Oct 2021 &ndash; Feb 2023 &nbsp;/&nbsp; Remote</div>
       <ul class="job-highlights">
         <li>Tested software for fintech and SaaS clients. First job where I had to figure out when automation saves time vs when it just creates maintenance work. Learned to push back on "automate everything" and argue for manual testing when it made sense.</li>
-        <li>Wrote unit tests with Jest for NestJS/TypeScript apps <a href="ultranauts/flatfile/ShareableLinkResolver test.spec.ts" target="_blank" title="View Jest test file">[↗]</a>. Started with zero testing knowledge, ended writing 200+ line test files with mocks, error handling, and edge cases. Tests broke when requirements changed, which taught me to test behavior instead of implementation.</li>
-        <li>Built BI dashboards with Vue.js and D3 <a href="ultranauts/loanpal/BuyPriceByProduct.vue" target="_blank" title="View Vue.js component">[↗]</a>. Wrote Cube.js schemas <a href="ultranauts/loanpal/SQLSchema.js" target="_blank" title="View Cube.js schema">[↗]</a> to define SQL measures and dimensions, then built frontend components to visualize financial data (<a href="ultranauts/loanpal/screenshots/Launchpad-Fund-Cohort-Analysis.png" target="_blank" title="View dashboard">fund cohorts</a>, <a href="ultranauts/loanpal/screenshots/Launchpad-Borrower-Demographics.png" target="_blank" title="View dashboard">borrower demographics</a>, <a href="ultranauts/loanpal/screenshots/Launchpad-CF-Prepayment-Rates.png" target="_blank" title="View dashboard">CF prepayment rates</a>). First time working with SQL, Databricks, and semantic layers.</li>
+        <li>Wrote unit tests with Jest for NestJS/TypeScript apps <a href="ultranauts/flatfile/ShareableLinkResolver test.spec.ts" target="_blank" title="View Jest test file">[↗]</a>. Started with zero testing knowledge, ended writing 200+ line test files. Tests broke when requirements changed, which taught me to test behavior instead of implementation.</li>
+        <li>Built BI dashboards with Vue.js and D3 <a href="ultranauts/loanpal/BuyPriceByProduct.vue" target="_blank" title="View Vue.js component">[↗]</a>. Wrote Cube.js schemas <a href="ultranauts/loanpal/SQLSchema.js" target="_blank" title="View Cube.js schema">[↗]</a> to define SQL measures and dimensions, then built frontend components to visualize financial data (<a href="ultranauts/loanpal/screenshots/Launchpad-Fund-Cohort-Analysis.png" target="_blank" title="View dashboard">fund cohorts</a>, <a href="ultranauts/loanpal/screenshots/Launchpad-Borrower-Demographics.png" target="_blank" title="View dashboard">borrower demographics</a>, <a href="ultranauts/loanpal/screenshots/Launchpad-CF-Prepayment-Rates.png" target="_blank" title="View dashboard">CF prepayment rates</a>). First time working with SQL and Databricks.</li>
       </ul>
     </div>
   </div>
@@ -743,7 +741,6 @@
           <li>Cross-Browser Regression</li>
           <li>Release Readiness Assessment</li>
           <li>Edge Case Generation</li>
-          <li>Requirements Analysis</li>
         </ul>
       </div>
 
@@ -751,16 +748,13 @@
         <div class="skills-category-name">Automation & Tools</div>
         <ul class="skills-list">
           <li>Playwright</li>
-          <li>Selenium</li>
-          <li>API Testing</li>
+          <li>REST / GraphQL</li>
           <li>React / Vue</li>
           <li>SQL</li>
-          <li>Testmo</li>
           <li>Jira & Confluence</li>
           <li>Claude & Gemini</li>
           <li>Python</li>
           <li>JavaScript / TypeScript</li>
-          <li>HTML / CSS</li>
         </ul>
       </div>
 
@@ -768,7 +762,7 @@
         <div class="skills-category-name">What Doesn't Scale (Yet)</div>
         <ul class="skills-list">
           <li>Single point of failure: If I'm out, releases slip or ship with untested edge cases</li>
-          <li>Tribal knowledge: I know which workflows break when users have multiple sessions open, which state transitions create orphaned records, which async operations fail silently. None of this is documented</li>
+          <li>Tribal knowledge: I know which workflows break when users have multiple sessions open and which async operations fail silently. None of this is documented</li>
           <li>Custom tooling lock-in: 14 scripts that save me hours but would take a week+ to hand off and explain</li>
         </ul>
       </div>
