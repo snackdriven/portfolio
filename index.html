@@ -596,14 +596,14 @@
       page-break-after: avoid !important;
     }
     .section-content {
-      padding: 12px 0 24px;
+      padding: 10px 0 14px;
       page-break-before: avoid !important;
     }
     .section-number { font-size: 8pt; color: #dc2626 !important; letter-spacing: 0.05em; font-weight: 600; }
     .section-name { font-size: 9pt; color: #1a1a1a !important; letter-spacing: 0.08em; font-weight: 600; text-transform: uppercase; }
 
     /* About — slightly larger as a summary hook */
-    .about-text { font-size: 10pt; line-height: 1.85; color: #1a1a1a !important; }
+    .about-text { font-size: 9.5pt; line-height: 1.65; color: #1a1a1a !important; }
     .about-text strong { font-weight: 600 !important; color: #059669 !important; }
 
     /* Experience */
@@ -619,9 +619,10 @@
     .job-highlights li::before { content: "\2022" !important; font-weight: normal !important; color: #059669 !important; }
 
     /* Skills */
-    .skills-grid { gap: 16px 32px; grid-template-columns: 1fr 1fr !important; }
-    .skills-category-name { color: #059669 !important; border-color: #059669 !important; margin-bottom: 6px; font-size: 8pt; font-weight: 600; letter-spacing: 0.05em; }
-    .skills-list { line-height: 1.7; font-size: 9pt; }
+    .skills-grid { gap: 8px 32px; grid-template-columns: 1fr 1fr !important; }
+    .skills-category { grid-column: auto !important; }
+    .skills-category-name { color: #059669 !important; border-color: #059669 !important; margin-bottom: 4px; font-size: 8pt; font-weight: 600; letter-spacing: 0.05em; }
+    .skills-list { line-height: 1.45; font-size: 8.5pt; }
     .skills-list li::before { content: "\2022" !important; margin-right: 6px; font-weight: normal !important; color: #dc2626 !important; }
 
     /* Projects */
@@ -649,6 +650,9 @@
 
     /* Skills — force to new page so header doesn't orphan */
     #section-skills { page-break-before: always; }
+
+    /* Hide projects section in print */
+    #section-projects { display: none !important; }
   }
 
   /* FOOTER */
@@ -783,7 +787,7 @@
 </section>
 
 <!-- 04 PROJECTS -->
-<section class="section">
+<section class="section" id="section-projects">
   <div class="section-label">
     <span class="section-number">04</span>
     <span class="section-name">Projects</span>
