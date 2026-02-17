@@ -542,7 +542,7 @@
   <h1><span>P</span><span>r</span><span>o</span><span>j</span><span>e</span><span>c</span><span>t</span><span>s</span></h1>
   <p>
     Applications I've built in my downtime.
-    ADHD-focused productivity platforms, AI testing companions, monorepo tools. Stuff I actually use.
+    Productivity platforms, QA tools, developer infrastructure. Stuff I actually use.
   </p>
 </header>
 
@@ -555,25 +555,10 @@
       <div class="project">
         <div class="project-num">01</div>
         <div>
-          <div class="project-name">ATLAS</div>
-          <div class="project-impact">AI testing companion with hybrid predictions from 928 real JIRA tickets</div>
-          <div class="project-desc">
-            AI testing companion trained on 928 real JIRA tickets from healthcare products (ticket metadata only, no PHI). Hybrid model: LSTM neural network plus vector similarity search. Predicts bug severity, suggests test cases, flags regression risks. Gamification (XP/levels/achievements) and 5 AI coaches make testing less boring. Turns out personas that roast you for skipping edge cases actually work.
-          </div>
-          <div class="project-tech">
-            <span>Python</span>
-            <span>SQL</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="project">
-        <div class="project-num">02</div>
-        <div>
           <div class="project-name">jira-wrapper</div>
-          <div class="project-impact">5 view modes with keyboard navigation</div>
+          <div class="project-impact">50 tickets loaded in under 2 seconds, 5 view modes, keyboard-first</div>
           <div class="project-desc">
-            Clicking through JIRA tabs to review 20+ tickets per sprint was killing me. Built a wrapper with 5 views (board, list, tree, detail, calendar) and full keyboard navigation. No more tab-clicking hell. React Query caching, loads 50 tickets in under 2 seconds.
+            Holiday break, backlog of piled-up tickets, most of them queued for release within a day or two of getting back. JIRA's default view wasn't cutting it. The ticket names didn't have the context I needed to sort them at a glance, and I couldn't reorder things without changing the actual board, which would mess with everyone else's setup. Built a local wrapper instead: 5 views (board, list, tree, detail, calendar), custom sorting, full keyboard navigation. React Query caching loads 50 tickets in under 2 seconds.
           </div>
           <div class="project-tech">
             <span>React</span>
@@ -592,32 +577,33 @@
     <div class="section-content">
 
       <div class="project">
-        <div class="project-num">03</div>
+        <div class="project-num">02</div>
         <div>
-          <div class="project-name">Executive Dysfunction Center (EDC) 😍</div>
+          <div class="project-name">Executive Dysfunction Center (EDC) ✨</div>
           <div class="project-impact">Forever project where building IS the productivity system</div>
           <div class="project-desc">
-            Productivity platform for ADHD and executive dysfunction. I've tried (and abandoned) Todoist, Notion, Things, Obsidian. None of them work for ADHD brains. So I built my own.
+            Personal productivity platform. I've tried (and abandoned) Todoist, Notion, Things, Obsidian. None of them stuck. So I built my own.
             <br><br>
-            12 features: task dependencies, habit streaks, mood tracking (spoon theory), journaling, Google Calendar sync, concert tracking, RSS reader, multi-pane workspace (Andy Matuschak-style), dashboard, analytics. ADHD-specific UX: progressive disclosure, color-coded priorities, celebration animations.
+            12 features: task dependencies, habit streaks, mood tracking, journaling, Google Calendar sync, concert tracking, RSS reader, multi-pane workspace (panels stack side by side as you navigate), dashboard, analytics. UX is built to get out of your way: progressive disclosure so nothing feels overwhelming, color-coded priorities, and celebration animations, because a pop of dopamine and whimsy is underrated UX.
             <br><br>
-            Forever project, rebuilt multiple times. Each iteration shares the same Supabase backend (row-level security), so I see my real data while building. Building IS the accountability system.
+            Self-taught project. When I wanted to learn something new, EDC was what I built it with: Vue first, then React, Tauri for a bit. Each rebuild uses the same Supabase backend so my real tasks and habits carry over. Building IS the accountability system.
           </div>
           <div class="project-tech">
             <span>React</span>
             <span>TypeScript</span>
+            <span>Supabase</span>
             <span>Playwright</span>
           </div>
         </div>
       </div>
 
       <div class="project">
-        <div class="project-num">04</div>
+        <div class="project-num">03</div>
         <div>
           <div class="project-name">chronicle</div>
-          <div class="project-impact">Memory augmentation with timeline and KV storage</div>
+          <div class="project-impact">Timeline memory system with direct MCP integration for Claude</div>
           <div class="project-desc">
-            Timeline-based memory system for tracking events, notes, and context over time. Key-value storage for quick lookups, MCP server integration for Claude, full-text search, tag filtering. Built with TanStack Table for timeline visualization and Express for the API backend.
+            I kept losing context between sessions. Not just what I decided, but why, and what was going on at the time. It came up most when I'd hit a known bug I'd already called out in a previous sprint, or try to remember a decision made in a ticket that nobody documented. Chronicle tracks all of that. The main draw is MCP integration: Claude can query my personal history directly mid-conversation, which is most of why I built it. Key-value storage for quick lookups, full-text search and tag filtering when I need to dig. TanStack Table for the timeline view, Express for the API.
           </div>
           <div class="project-tech">
             <span>React</span>
@@ -637,14 +623,14 @@
     <div class="section-content">
 
       <div class="project">
-        <div class="project-num">05</div>
+        <div class="project-num">04</div>
         <div>
           <div class="project-name">Projects Dashboard</div>
-          <div class="project-impact">Turborepo managing 14 apps with cached rebuilds under 200ms</div>
+          <div class="project-impact">Turborepo managing 16 apps with cached rebuilds under 200ms</div>
           <div class="project-desc">
-            Rebuild times hit 12 minutes and I couldn't iterate fast enough. Honestly unbearable when you're trying to test a one-line CSS change. Built a monorepo with Turborepo managing 16 apps. Shared UI components, cached builds.
+            Rebuild times were getting unbearable. Waiting to see if a CSS change worked was driving me insane. Built a monorepo with Turborepo managing 16 apps, shared components, cached builds.
             <br><br>
-            Turborepo handles parallel builds and incremental rebuilds. First build ~15s, cached rebuild under 200ms. Down from 12 minutes when I started.
+            Got fresh builds down to ~15 seconds, cached rebuilds under 200ms. Turborepo handles parallel builds and incremental caching.
           </div>
           <div class="project-tech">
             <span>React</span>
@@ -658,14 +644,14 @@
       </div>
 
       <div class="project">
-        <div class="project-num">06</div>
+        <div class="project-num">05</div>
         <div>
           <div class="project-name">OpenClaw</div>
           <div class="project-impact">Multi-agent coordination system with gateway-based routing</div>
           <div class="project-desc">
-            Coordinates 5 AI agents with isolated workspaces. Gateway routes messages to specialists: one handles tasks, one does character narration, one manages scheduling. Each agent only sees what it needs.
+            Coordinates 5 AI agents with isolated workspaces. The gateway routes messages to the right specialist: task management, scheduling, and a narration agent that's basically the EDC philosophy in terminal/Telegram form (keeps things moving without being naggy). Each agent only sees what it needs.
             <br><br>
-            Tiered model selection keeps costs low: simple stuff uses DeepSeek Free, longer conversations use V3.2, complex reasoning uses Claude Haiku. Monthly cost: ~$5-15 instead of $100+. Local HTTP gateway handles token auth, session management, and inter-agent relay for time-sensitive tasks.
+            Model routing depends on what's being asked. Cheap models for short requests, V3.2 for longer conversations, Claude Haiku when something actually needs to think. Before this, everything was hitting the Claude API directly and the bill showed it. Monthly cost is now $5-15. The HTTP gateway handles auth and session state, plus cross-agent relay when needed.
           </div>
           <div class="project-tech">
             <span>Python</span>
