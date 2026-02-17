@@ -260,6 +260,21 @@
     line-height: 1.7;
   }
 
+  /* BREADCRUMB */
+  .breadcrumb {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 32px;
+  }
+  .breadcrumb-sep {
+    margin: 0 8px;
+    color: var(--border);
+  }
+  .breadcrumb-current {
+    color: var(--fg);
+  }
+
   /* SECTION */
   .section {
     margin-bottom: 64px;
@@ -271,7 +286,7 @@
   /* PROJECT CATEGORY */
   .project-category {
     font-family: "JetBrains Mono", monospace;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     color: var(--magenta);
     font-weight: 500;
     margin-bottom: 24px;
@@ -302,6 +317,14 @@
     font-variant-numeric: tabular-nums;
     padding-top: 2px;
   }
+  @media (max-width: 768px) {
+    .project {
+      grid-template-columns: 1fr;
+    }
+    .project-num {
+      display: none;
+    }
+  }
   .project-name {
     font-family: "JetBrains Mono", monospace;
     font-size: 1rem;
@@ -314,10 +337,10 @@
     color: var(--green);
   }
   .project-impact {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: var(--green);
     margin-top: 6px;
-    font-weight: 500;
+    font-weight: 400;
   }
   .project-desc {
     font-size: 0.92rem;
@@ -355,6 +378,19 @@
   }
 
   /* FOOTER */
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .footer-links-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
   .footer {
     padding: 24px 48px;
     text-align: center;
@@ -530,13 +566,10 @@
 <!-- HERO -->
 <header class="projects-hero">
   <!-- Navigation Breadcrumb -->
-  <div style="font-family: 'JetBrains Mono', monospace;
-              font-size: 0.85rem;
-              color: var(--muted);
-              margin-bottom: 32px;">
+  <div class="breadcrumb">
     <a href="index.html" style="color: var(--muted); border: none;">Resume</a>
-    <span style="margin: 0 8px; color: var(--border);">→</span>
-    <span style="color: var(--fg);">Projects</span>
+    <span class="breadcrumb-sep">→</span>
+    <span class="breadcrumb-current">Projects</span>
   </div>
 
   <h1><span>P</span><span>r</span><span>o</span><span>j</span><span>e</span><span>c</span><span>t</span><span>s</span></h1>
@@ -555,7 +588,7 @@
       <div class="project">
         <div class="project-num">01</div>
         <div>
-          <div class="project-name">jira-wrapper</div>
+          <div class="project-name">Refract</div>
           <div class="project-impact">50 tickets loaded in under 2 seconds, 5 view modes, keyboard-first</div>
           <div class="project-desc">
             Holiday break, backlog of piled-up tickets, most of them queued for release within a day or two of getting back. JIRA's default view wasn't cutting it. The ticket names didn't have the context I needed to sort them at a glance, and I couldn't reorder things without changing the actual board, which would mess with everyone else's setup. Built a local wrapper instead: 5 views (board, list, tree, detail, calendar), custom sorting, full keyboard navigation. React Query caching loads 50 tickets in under 2 seconds.
@@ -565,6 +598,7 @@
             <span>TypeScript</span>
             <span>Tailwind</span>
           </div>
+          <a href="https://github.com/snackdriven/refract" target="_blank" class="project-github">github.com/snackdriven/refract →</a>
         </div>
       </div>
 
@@ -667,7 +701,7 @@
 
 <!-- FOOTER -->
 <footer class="footer">
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+    <div class="footer-inner">
       <!-- Back to Resume Link -->
       <div style="margin-bottom: 8px;">
         <a href="index.html"
@@ -681,7 +715,7 @@
         </a>
       </div>
 
-      <div style="display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+      <div class="footer-links-row">
         <!-- Social Icons -->
         <div class="social-icons" style="display: flex; gap: 1rem; align-items: center;">
           <a href="https://github.com/snackdriven" target="_blank" title="GitHub" class="social-icon" style="border: none;">
