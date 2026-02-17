@@ -15,6 +15,7 @@
     --bg-sidebar: #252336;
     --fg: #E0DEE8;
     --green: #4AEEA0;
+    --cyan: #72C5D9;
     --magenta: #FF6B9D;
     --muted: #B5B2C8;
     --border: #3D3A50;
@@ -67,9 +68,7 @@
 
   /* CONTAINER */
   .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 64px 48px;
+    padding: 48px 48px;
   }
   @media (max-width: 768px) {
     .container {
@@ -265,7 +264,7 @@
     font-family: "JetBrains Mono", monospace;
     font-size: 0.85rem;
     color: var(--muted);
-    margin-bottom: 32px;
+    margin-bottom: 16px;
   }
   .breadcrumb-sep {
     margin: 0 8px;
@@ -331,14 +330,10 @@
     text-transform: uppercase;
     letter-spacing: 0.03em;
     font-weight: 500;
-    transition: color 0.1s;
-  }
-  .project-name:hover {
-    color: var(--green);
   }
   .project-impact {
     font-size: 0.95rem;
-    color: var(--green);
+    color: var(--cyan);
     margin-top: 6px;
     font-weight: 400;
   }
@@ -366,9 +361,9 @@
   .project-github {
     font-family: "JetBrains Mono", monospace;
     font-size: 0.85rem;
-    color: var(--magenta);
+    color: var(--muted);
     text-decoration: none;
-    margin-top: 8px;
+    margin-top: 16px;
     display: inline-block;
     border: none;
   }
@@ -398,6 +393,7 @@
     color: var(--muted);
     letter-spacing: 0.2em;
     text-transform: uppercase;
+    border-top: 3px solid var(--border);
   }
   .footer a {
     font-family: "JetBrains Mono", monospace;
@@ -567,22 +563,18 @@
 <header class="projects-hero">
   <!-- Navigation Breadcrumb -->
   <div class="breadcrumb">
-    <a href="index.html" style="color: var(--muted); border: none;">Resume</a>
+    <a href="index.html" style="color: var(--fg); border: none;">Resume</a>
     <span class="breadcrumb-sep">→</span>
     <span class="breadcrumb-current">Projects</span>
   </div>
 
   <h1><span>P</span><span>r</span><span>o</span><span>j</span><span>e</span><span>c</span><span>t</span><span>s</span></h1>
-  <p>
-    Applications I've built in my downtime.
-    Productivity platforms, QA tools, developer infrastructure. Stuff I actually use.
-  </p>
+  <p>Applications I've built in my downtime.</p>
+  <p>Productivity platforms, QA tools, developer infrastructure. Stuff I actually use.</p>
 </header>
 
 <main class="container" id="main-content">
-  <!-- QA & TESTING TOOLS -->
   <section class="section">
-    <h2 class="project-category">QA & Testing Tools</h2>
     <div class="section-content">
 
       <div class="project">
@@ -601,14 +593,6 @@
           <a href="https://github.com/snackdriven/refract" target="_blank" class="project-github">github.com/snackdriven/refract →</a>
         </div>
       </div>
-
-    </div>
-  </section>
-
-  <!-- PRODUCTIVITY APPLICATIONS -->
-  <section class="section">
-    <h2 class="project-category">Productivity Applications</h2>
-    <div class="section-content">
 
       <div class="project">
         <div class="project-num">02</div>
@@ -648,13 +632,6 @@
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <!-- DEVELOPER INFRASTRUCTURE -->
-  <section class="section">
-    <h2 class="project-category">Developer Infrastructure</h2>
-    <div class="section-content">
 
       <div class="project">
         <div class="project-num">04</div>
@@ -700,21 +677,9 @@
 </main>
 
 <!-- FOOTER -->
+
 <footer class="footer">
     <div class="footer-inner">
-      <!-- Back to Resume Link -->
-      <div style="margin-bottom: 8px;">
-        <a href="index.html"
-           style="font-family: 'JetBrains Mono', monospace;
-                  color: var(--muted);
-                  text-decoration: none;
-                  border: none;
-                  font-size: 0.9rem;
-                  letter-spacing: 0.03em;">
-          ← Back to Resume
-        </a>
-      </div>
-
       <div class="footer-links-row">
         <!-- Social Icons -->
         <div class="social-icons" style="display: flex; gap: 1rem; align-items: center;">

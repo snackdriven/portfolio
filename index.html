@@ -15,6 +15,7 @@
     --bg-sidebar: #252336;
     --fg: #E0DEE8;
     --green: #4AEEA0;
+    --cyan: #72C5D9;
     --magenta: #FF6B9D;
     --muted: #B5B2C8;
     --border: #3D3A50;
@@ -448,7 +449,7 @@
   }
   .skills-list li::before {
     content: "·";
-    color: var(--magenta);
+    color: var(--muted);
     margin-right: 8px;
     font-weight: bold;
   }
@@ -477,14 +478,10 @@
     text-transform: uppercase;
     letter-spacing: 0.03em;
     font-weight: 500;
-    transition: color 0.1s;
-  }
-  .project-name:hover {
-    color: var(--green);
   }
   .project-impact {
     font-size: 1rem;
-    color: var(--green);
+    color: var(--cyan);
     margin-top: 6px;
     font-weight: 500;
   }
@@ -786,8 +783,7 @@
     <span class="section-name">Projects</span>
   </div>
   <div class="section-content">
-    <div class="project">
-      <div class="project-num">01</div>
+    <div class="project" style="grid-template-columns: 1fr;">
       <div>
         <div class="project-name">Data Confluence Pipeline</div>
         <div class="project-impact">Finds patterns across 6,671+ tickets that individual issue views miss</div>
@@ -795,17 +791,7 @@
         <div class="project-tech"><span>Python</span><span>ETL</span><span>SQL</span></div>
       </div>
     </div>
-    <div class="project">
-      <div class="project-num">02</div>
-      <div>
-        <div class="project-name">Projects Dashboard</div>
-        <div class="project-impact">Built when rebuild times made CSS iteration impossible. ~15s fresh, under 200ms cached</div>
-        <div class="project-desc">Monorepo dashboard managing 16 React/Vue apps with shared components and build caching. Rebuild time: ~15s to under 200ms.</div>
-        <div class="project-tech"><span>React</span><span>TypeScript</span><span>Vite</span><span>Tailwind</span><span>Turborepo</span><span>pnpm Workspaces</span></div>
-      </div>
-    </div>
-    <div class="project">
-      <div class="project-num">03</div>
+    <div class="project" style="grid-template-columns: 1fr;">
       <div>
         <div class="project-name">QA Workflow Automation Toolkit</div>
         <div class="project-impact">Cut test planning from ~40 minutes to under 10 with custom scripts</div>
@@ -813,24 +799,15 @@
         <div class="project-tech"><span>TypeScript</span><span>Node.js</span><span>Claude API</span><span>Gemini API</span><span>JavaScript</span></div>
       </div>
     </div>
+    <div style="margin-top: 24px;">
+      <a href="projects.html" style="font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--fg); text-decoration: none; letter-spacing: 0.05em;">View all projects →</a>
+    </div>
   </div>
 </section>
 </main>
 
 <footer class="footer">
   <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
-    <!-- View All Projects Link -->
-    <div style="margin-bottom: 8px;">
-      <a href="projects.html"
-         style="font-family: 'JetBrains Mono', monospace;
-                color: var(--muted);
-                text-decoration: none;
-                border: none;
-                font-size: 0.9rem;
-                letter-spacing: 0.03em;">
-        View All Projects →
-      </a>
-    </div>
 
     <div style="display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
       <!-- Social Icons -->
