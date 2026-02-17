@@ -8,7 +8,6 @@ QA Systems Specialist. Bentonville, AR (remote). I break things for a living and
 
 Single-page resume. Vanilla HTML and CSS, no frameworks, no build step. It didn't need React and I refused to give it React.
 
-Dark theme with green/magenta accents. Prints clean in black and white for the recruiters who still print resumes in 2026.
 
 ## About me
 
@@ -16,5 +15,5 @@ I test complex healthcare software that nobody else wants to touch. When somethi
 
 ## Contact
 
-- [kayla.gilbert89@gmail.com](mailto:kayla.gilbert89@gmail.com)
+- [kayla@snackdriven.com](mailto:kayla@snackdriven.com)
 - [linkedin.com/in/snackdriven](https://linkedin.com/in/snackdriven)
