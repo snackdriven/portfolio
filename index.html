@@ -534,7 +534,7 @@
   }
 
   /* PRINT — 4-size type scale: 18pt / 10pt / 9pt / 8pt */
-  @page { margin: 0.4in 0.5in; size: letter; }
+  @page { margin: 0 0.5in; size: letter; }
 
   @media print {
     /* Screen-only content — hidden in print to keep 1 page */
@@ -573,8 +573,10 @@
     /* Hero */
     .hero { padding: 28px 24px 22px; border-bottom: 2px solid #d1d5db; border-left: 4px solid #059669; }
     .hero-top { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 20px; }
-    .hero h1 { font-size: 18pt; font-weight: 700; letter-spacing: 0.05em; color: #059669 !important; }
-    .hero h1 span { color: #059669 !important; }
+    /* Replace span-fragmented name with clean text for ATS */
+    .hero h1 { font-size: 0 !important; }
+    .hero h1::before { content: "KAYLA GILBERT"; font-size: 18pt; font-weight: 700; letter-spacing: 0.05em; color: #059669 !important; font-family: "Inter", sans-serif !important; }
+    .hero h1 span { display: none !important; }
     .hero .title { font-size: 11pt; font-weight: 500; letter-spacing: 0.02em; color: #dc2626 !important; }
     .hero .updated { display: none; }
     .hero-contact { margin-top: 6px; font-size: 9pt; color: #6b7280 !important; }
