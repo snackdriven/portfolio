@@ -665,7 +665,7 @@
 <!-- HERO -->
 <header class="hero">
   <div class="hero-top">
-    <h1>Ka<span>y</span>la G<span>i</span>lb<span>e</span>rt</h1>
+    <h1><span data-solo>K</span>a<span data-group="yl">y</span><span data-group="yl">l</span>a <span data-solo>G</span><span data-group="ie">i</span>lb<span data-group="ie">e</span><span data-solo>r</span>t</h1>
     <div class="title">QA Systems Specialist</div>
     <div class="updated">2026</div>
   </div>
@@ -887,46 +887,40 @@
       setInterval(updateCountdown, 1000 * 60 * 60); // Update every hour
   })();
 
-  // Random letter flickering (based on example 3, but gentler)
+  // Neon flicker: solo (common), ie cascade (medium), yl simultaneous (rare)
   (function() {
-      const hero = document.querySelector('.hero');
-      const letters = document.querySelectorAll('.hero h1 span');
-      let isHovering = false;
-      let flickerTimeout;
+      const yl   = Array.from(document.querySelectorAll('.hero h1 span[data-group="yl"]'));
+      const ie   = Array.from(document.querySelectorAll('.hero h1 span[data-group="ie"]'));
+      const solo = Array.from(document.querySelectorAll('.hero h1 span[data-solo]'));
 
       function randomFromInterval(from, to) {
           return Math.floor(Math.random() * (to - from + 1) + from);
       }
 
-      function flickerLetter() {
-          if (!isHovering || letters.length === 0) return;
-
-          // Pick random letter
-          const randomLetter = letters[randomFromInterval(0, letters.length - 1)];
-
-          // Add flicker animation
-          randomLetter.classList.add('flickering');
-
-          // Remove after animation completes
-          setTimeout(() => {
-              randomLetter.classList.remove('flickering');
-          }, 800);
-
-          // Schedule next flicker (1-3 seconds later)
-          flickerTimeout = setTimeout(flickerLetter, randomFromInterval(1000, 3000));
+      function flicker(spans, stagger) {
+          spans.forEach((l, idx) => {
+              setTimeout(() => {
+                  l.classList.add('flickering');
+                  setTimeout(() => l.classList.remove('flickering'), 800);
+              }, idx * (stagger || 0));
+          });
       }
 
-      hero.addEventListener('mouseenter', () => {
-          isHovering = true;
-          flickerLetter();
-      });
+      function next() {
+          const roll = Math.random();
+          if (roll < 0.2) {
+              flicker(yl, 0);
+              setTimeout(next, randomFromInterval(3000, 5000));
+          } else if (roll < 0.55) {
+              flicker(ie, 120);
+              setTimeout(next, randomFromInterval(2500, 4500));
+          } else {
+              flicker([solo[randomFromInterval(0, solo.length - 1)]], 0);
+              setTimeout(next, randomFromInterval(1500, 3500));
+          }
+      }
 
-      hero.addEventListener('mouseleave', () => {
-          isHovering = false;
-          clearTimeout(flickerTimeout);
-          // Remove any active flickers
-          letters.forEach(letter => letter.classList.remove('flickering'));
-      });
+      next();
   })();
   </script>
 </footer>

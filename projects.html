@@ -568,7 +568,7 @@
     <span class="breadcrumb-current">Projects</span>
   </div>
 
-  <h1><span>P</span><span>r</span><span>o</span><span>j</span><span>e</span><span>c</span><span>t</span><span>s</span></h1>
+  <h1>P<span data-solo>r</span>o<span data-group="jc">j</span>e<span data-group="jc">c</span><span data-pair>t</span><span data-pair>s</span></h1>
   <p>Applications I've built in my downtime.</p>
   <p>Productivity platforms, QA tools, developer infrastructure. Stuff I actually use.</p>
 </header>
@@ -747,34 +747,40 @@
       setInterval(updateCountdown, 1000 * 60 * 60); // Update every hour
   })();
 
-  // Random letter flickering (continuous)
+  // Neon flicker: solo (common), jc cascade (medium), ts simultaneous (rare)
   (function() {
-      const letters = document.querySelectorAll('.projects-hero h1 span');
+      const ts   = Array.from(document.querySelectorAll('.projects-hero h1 span[data-pair]'));
+      const jc   = Array.from(document.querySelectorAll('.projects-hero h1 span[data-group="jc"]'));
+      const solo = Array.from(document.querySelectorAll('.projects-hero h1 span[data-solo]'));
 
       function randomFromInterval(from, to) {
           return Math.floor(Math.random() * (to - from + 1) + from);
       }
 
-      function flickerLetter() {
-          if (letters.length === 0) return;
-
-          // Pick random letter
-          const randomLetter = letters[randomFromInterval(0, letters.length - 1)];
-
-          // Add flicker animation
-          randomLetter.classList.add('flickering');
-
-          // Remove after animation completes
-          setTimeout(() => {
-              randomLetter.classList.remove('flickering');
-          }, 800);
-
-          // Schedule next flicker (1-3 seconds later)
-          setTimeout(flickerLetter, randomFromInterval(1000, 3000));
+      function flicker(spans, stagger) {
+          spans.forEach((l, idx) => {
+              setTimeout(() => {
+                  l.classList.add('flickering');
+                  setTimeout(() => l.classList.remove('flickering'), 800);
+              }, idx * (stagger || 0));
+          });
       }
 
-      // Start flickering immediately
-      flickerLetter();
+      function next() {
+          const roll = Math.random();
+          if (roll < 0.2) {
+              flicker(ts, 0);
+              setTimeout(next, randomFromInterval(3000, 5000));
+          } else if (roll < 0.55) {
+              flicker(jc, 120);
+              setTimeout(next, randomFromInterval(2500, 4500));
+          } else {
+              flicker([solo[randomFromInterval(0, solo.length - 1)]], 0);
+              setTimeout(next, randomFromInterval(1500, 3500));
+          }
+      }
+
+      next();
   })();
   </script>
 
