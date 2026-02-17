@@ -58,12 +58,12 @@
   a {
     color: var(--fg);
     text-decoration: none;
-    border-bottom: 1px solid var(--fg);
+    border-bottom: 1px solid var(--border);
     transition: color 0.1s, border-color 0.1s;
   }
   a:hover {
-    color: var(--green);
-    border-color: var(--green);
+    color: var(--cyan);
+    border-color: var(--cyan);
   }
 
   /* CONTAINER */
@@ -273,6 +273,10 @@
   .breadcrumb-current {
     color: var(--fg);
   }
+  .breadcrumb a {
+    color: var(--fg);
+    border: none;
+  }
 
   /* SECTION */
   .section {
@@ -368,8 +372,8 @@
     border: none;
   }
   .project-github:hover {
-    color: var(--green);
-    border-bottom: 1px solid var(--green);
+    color: var(--cyan);
+    border-bottom: 1px solid var(--cyan);
   }
 
   /* FOOTER */
@@ -405,7 +409,7 @@
     transition: color 0.2s;
   }
   .footer a:hover {
-    color: var(--green);
+    color: var(--cyan);
   }
   .social-icon {
     color: var(--fg);
@@ -563,7 +567,7 @@
 <header class="projects-hero">
   <!-- Navigation Breadcrumb -->
   <div class="breadcrumb">
-    <a href="index.html" style="color: var(--fg); border: none;">Resume</a>
+    <a href="index.html">Resume</a>
     <span class="breadcrumb-sep">→</span>
     <span class="breadcrumb-current">Projects</span>
   </div>
