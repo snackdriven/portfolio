@@ -338,6 +338,14 @@
     letter-spacing: 0.03em;
     font-weight: 500;
   }
+  .project-date {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.75rem;
+    color: var(--muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
   .project-impact {
     font-size: 0.95rem;
     color: var(--cyan);
@@ -522,6 +530,12 @@
       text-transform: none !important;
       color: #1a1a1a !important;
     }
+    .project-date {
+      font-size: 8pt;
+      color: #6b7280 !important;
+      letter-spacing: 0.05em;
+      margin-top: 2px;
+    }
     .project-impact {
       font-size: 9pt;
       font-weight: 500;
@@ -583,11 +597,13 @@
 <main class="container" id="main-content">
   <section class="section">
     <div class="section-content">
+      <div class="project-category">Personal Projects</div>
 
       <div class="project">
         <div class="project-num">01</div>
         <div>
           <div class="project-name">Refract</div>
+          <div class="project-date">2025</div>
           <div class="project-impact">50 tickets loaded in under 2 seconds, 5 view modes, keyboard-first</div>
           <div class="project-desc">
             Holiday break, backlog of piled-up tickets, most of them queued for release within a day or two of getting back. JIRA's default view wasn't cutting it. The ticket names didn't have the context I needed to sort them at a glance, and I couldn't reorder things without changing the actual board, which would mess with everyone else's setup. Built a local wrapper instead: 5 views (board, list, tree, detail, calendar), custom sorting, full keyboard navigation. React Query caching loads 50 tickets in under 2 seconds.
@@ -605,6 +621,7 @@
         <div class="project-num">02</div>
         <div>
           <div class="project-name">Executive Dysfunction Center (EDC) ✨</div>
+          <div class="project-date">2022–present</div>
           <div class="project-impact">Forever project where building IS the productivity system</div>
           <div class="project-desc">
             Personal productivity platform. I've tried (and abandoned) Todoist, Notion, Things, Obsidian. None of them stuck. So I built my own.
@@ -619,6 +636,7 @@
             <span>Supabase</span>
             <span>Playwright</span>
           </div>
+          <span class="project-github">private repo</span>
         </div>
       </div>
 
@@ -626,6 +644,7 @@
         <div class="project-num">03</div>
         <div>
           <div class="project-name">chronicle</div>
+          <div class="project-date">2025</div>
           <div class="project-impact">Timeline memory system with direct MCP integration for Claude</div>
           <div class="project-desc">
             I kept losing context between sessions. Not just what I decided, but why, and what was going on at the time. It came up most when I'd hit a known bug I'd already called out in a previous sprint, or try to remember a decision made in a ticket that nobody documented. Chronicle tracks all of that. The main draw is MCP integration: Claude can query my personal history directly mid-conversation, which is most of why I built it. Key-value storage for quick lookups, full-text search and tag filtering when I need to dig. TanStack Table for the timeline view, Express for the API.
@@ -636,14 +655,15 @@
             <span>SQL</span>
             <span>MCP</span>
           </div>
+          <span class="project-github">private repo</span>
         </div>
       </div>
-
 
       <div class="project">
         <div class="project-num">04</div>
         <div>
           <div class="project-name">Projects Dashboard</div>
+          <div class="project-date">2024–present</div>
           <div class="project-impact">Turborepo managing 16 apps with cached rebuilds under 200ms</div>
           <div class="project-desc">
             Rebuild times were getting unbearable. Waiting to see if a CSS change worked was driving me insane. Built a monorepo with Turborepo managing 16 apps, shared components, cached builds.
@@ -658,6 +678,7 @@
             <span>Turborepo</span>
             <span>pnpm</span>
           </div>
+          <span class="project-github">private repo</span>
         </div>
       </div>
 
@@ -665,6 +686,7 @@
         <div class="project-num">05</div>
         <div>
           <div class="project-name">OpenClaw</div>
+          <div class="project-date">2025–present</div>
           <div class="project-impact">5 AI agents, one HTTP gateway, $120/month → $15</div>
           <div class="project-desc">
             Coordinates 5 AI agents with isolated workspaces. The gateway routes messages to the right specialist: task management, scheduling, and a narration agent that's basically the EDC philosophy in terminal/Telegram form (keeps things moving without being naggy). Each agent only sees what it needs.
@@ -676,6 +698,52 @@
             <span>TypeScript</span>
             <span>HTTP Gateway</span>
           </div>
+          <span class="project-github">private repo</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-content">
+      <div class="project-category">QA &amp; Professional Tools</div>
+
+      <div class="project">
+        <div class="project-num">06</div>
+        <div>
+          <div class="project-name">QA Workflow Automation Toolkit</div>
+          <div class="project-date">2023–present</div>
+          <div class="project-impact">Cut test planning from ~40 minutes to under 10 with custom scripts</div>
+          <div class="project-desc">
+            14 custom scripts for my own workflows: AI video analysis for bug triage, form autofill, test plan generation, and Jira batch processing. Built incrementally over 3 years at Chorus — each one started because a manual process was eating time that should've been spent on actual testing.
+          </div>
+          <div class="project-tech">
+            <span>TypeScript</span>
+            <span>Node.js</span>
+            <span>Claude API</span>
+            <span>Gemini API</span>
+            <span>JavaScript</span>
+          </div>
+          <span class="project-github">internal tooling · not public</span>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-num">07</div>
+        <div>
+          <div class="project-name">Data Confluence Pipeline</div>
+          <div class="project-date">2024–present</div>
+          <div class="project-impact">Finds patterns across 6,671+ tickets that individual issue views miss</div>
+          <div class="project-desc">
+            Data aggregation pipeline across 6,671+ healthcare platform tickets. Python scripts pull patterns and feature timelines that aren't visible ticket-by-ticket. Source data: JIRA exports, Confluence docs, conversation history. Used for release planning and tracking where technical debt actually lives.
+          </div>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>ETL</span>
+            <span>SQL</span>
+          </div>
+          <span class="project-github">internal tooling · not public</span>
         </div>
       </div>
 
