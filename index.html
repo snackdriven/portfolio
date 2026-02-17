@@ -644,7 +644,11 @@
     /* Links & footer */
     a { text-decoration: none !important; border-bottom: none !important; color: #1a1a1a !important; }
     a[href^="http"]:after { content: none; }
+    a[href^="ultranauts"] { display: none !important; }
     .footer { display: none; }
+
+    /* Skills — force to new page so header doesn't orphan */
+    #section-skills { page-break-before: always; }
   }
 
   /* FOOTER */
@@ -734,7 +738,7 @@
 </section>
 
 <!-- 03 SKILLS -->
-<section class="section">
+<section class="section" id="section-skills">
   <div class="section-label">
     <span class="section-number">03</span>
     <span class="section-name">Skills</span>
