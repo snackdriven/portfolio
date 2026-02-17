@@ -423,8 +423,14 @@
   /* SKILLS */
   .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 28px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 44px;
+    container-type: inline-size;
+  }
+  @container (max-width: 807px) {
+    .skills-category:last-child {
+      grid-column: 1 / -1;
+    }
   }
   .skills-category {
     margin-bottom: 0;
@@ -730,7 +736,7 @@
     <span class="section-number">03</span>
     <span class="section-name">Skills</span>
   </div>
-  <div class="section-content">
+  <div class="section-content" style="max-width: none;">
     <div class="skills-grid">
       <div class="skills-category">
         <div class="skills-category-name">QA Specializations</div>
@@ -751,7 +757,6 @@
           <li>REST / GraphQL</li>
           <li>React / Vue</li>
           <li>SQL</li>
-          <li>Jira & Confluence</li>
           <li>Claude & Gemini</li>
           <li>Python</li>
           <li>JavaScript / TypeScript</li>
