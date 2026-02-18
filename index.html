@@ -15,7 +15,7 @@
     --bg-sidebar: #252336;
     --fg: #E0DEE8;
     --green: #4AEEA0;
-    --cyan: #72C5D9;
+    --cyan: #A78BFA;
     --magenta: #FF6B9D;
     --muted: #B5B2C8;
     --border: #3D3A50;
@@ -253,7 +253,7 @@
   .hero .title {
     font-family: "JetBrains Mono", "Courier New", Courier, monospace;
     font-size: clamp(0.9rem, 1.8vw, 1.15rem);
-    color: var(--magenta);
+    color: var(--cyan);
     text-transform: uppercase;
     letter-spacing: 0.15em;
   }
@@ -379,7 +379,7 @@
     font-weight: bold;
   }
   .job-role {
-    color: var(--fg);
+    color: var(--cyan);
     font-size: 1rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -394,6 +394,32 @@
     border: 1px solid var(--green);
     border-radius: 2px;
   }
+  /* Sub-role structure for companies with multiple titles */
+  .job-tenure {
+    font-size: 0.8rem;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .job-sub {
+    margin-top: 14px;
+    border-left: 2px solid var(--border);
+    padding-left: 14px;
+  }
+  .job-sub-header {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .job-period-inline {
+    font-size: 0.78rem;
+    color: var(--muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
   .job-period {
     font-size: 0.8rem;
     color: var(--muted);
@@ -404,6 +430,10 @@
   .job-highlights {
     list-style: none;
     margin-top: 12px;
+  }
+  .job-highlights strong {
+    color: var(--magenta);
+    font-weight: 600;
   }
   .job-highlights li {
     padding: 8px 0;
@@ -487,7 +517,7 @@
   }
   .project-impact {
     font-size: 0.95rem;
-    color: var(--cyan);
+    color: var(--green);
     margin-top: 6px;
     font-weight: 400;
   }
@@ -533,12 +563,16 @@
     outline-offset: 2px;
   }
 
+  /* Screen-only: hidden on screen, visible in print */
+  .screen-hide { display: none; }
+
   /* PRINT — 4-size type scale: 18pt / 10pt / 9pt / 8pt */
   @page { margin: 0 0.5in; size: letter; }
 
   @media print {
     /* Screen-only content — hidden in print to keep 1 page */
     .print-hide { display: none !important; }
+    .screen-hide { display: inline !important; }
 
     /* Light theme for print - save ink */
     * {
@@ -612,14 +646,17 @@
     .about-text strong { font-weight: 600 !important; color: #059669 !important; }
 
     /* Experience */
-    .job { margin-bottom: 28px; page-break-inside: avoid; }
+    .job { margin-bottom: 20px; page-break-inside: avoid; }
     .job-header { gap: 8px; }
     .job-company { font-size: 10pt; font-weight: 600; letter-spacing: 0.05em; color: #059669 !important; }
     .job-separator { font-size: 0; }
     .job-separator::before { content: "|"; font-size: 9pt; color: #dc2626 !important; }
+    .job-tenure { font-size: 8pt; color: #6b7280 !important; letter-spacing: 0.05em; text-transform: none !important; }
     .job-role { font-size: 9pt; font-weight: 500; text-transform: none !important; letter-spacing: 0.05em; color: #1a1a1a !important; }
-    .job-role .promoted { border-color: #059669 !important; color: #059669 !important; font-size: 8pt; font-weight: 400; padding: 1px 6px; text-transform: uppercase !important; }
     .job-period { font-size: 8pt; color: #6b7280 !important; text-transform: none !important; letter-spacing: 0.05em; }
+    .job-sub { margin-top: 8px; border-left: 1.5px solid #d1d5db !important; padding-left: 10px; }
+    .job-sub-header { gap: 8px; margin-bottom: 3px; }
+    .job-period-inline { font-size: 8pt; color: #6b7280 !important; letter-spacing: 0.05em; text-transform: none !important; }
     .job-highlights li { padding: 5px 0 5px 16px; font-size: 9pt; line-height: 1.65; color: #1a1a1a !important; }
     .job-highlights li::before { content: "\2022" !important; font-weight: normal !important; color: #059669 !important; }
 
@@ -686,8 +723,10 @@
     <a href="https://linkedin.com/in/snackdriven" target="_blank">LinkedIn</a>
     <span class="hero-sep">|</span>
     <a href="https://github.com/snackdriven" target="_blank">GitHub</a>
-    <span class="hero-sep">|</span>
-    <a href="https://snackdriven.com" target="_blank">snackdriven.com</a>
+    <span class="hero-sep screen-hide">|</span>
+    <a href="https://snackdriven.com" target="_blank" class="screen-hide">snackdriven.com</a>
+    <span class="hero-sep print-hide">|</span>
+    <a href="projects.html" class="print-hide">Projects</a>
     <span class="hero-sep print-hide">|</span>
     <span class="print-hide">Bentonville, AR (Remote)</span>
   </div>
@@ -714,34 +753,69 @@
     <span class="section-name">Experience</span>
   </div>
   <div class="section-content">
+
+    <!-- Chorus Innovations -->
     <div class="job">
       <div class="job-header">
         <span class="job-company">Chorus Innovations</span>
         <span class="job-separator">&middot;</span>
-        <span class="job-role">Senior QA Specialist</span>
+        <span class="job-tenure">Apr 2023 &ndash; Present &nbsp;/&nbsp; Remote</span>
       </div>
-      <div class="job-period">Apr 2023 &ndash; Present &nbsp;/&nbsp; Remote</div>
-      <ul class="job-highlights">
-        <li>Own release-readiness decisions across <strong>5+ healthcare products</strong> as sole QA (no backup). If I'm out sick, releases either slip or ship risky. One authorization workflow alone has 6 stages, 3 PDFs per stage that need manual verification, reversions that reset state, and role-based permission checks at every transition. I'm the quality and risk gate<a href="assets/you-shall-not-pass.gif" target="_blank" title="You shall not pass!" style="border: none;">.</a></li>
-        <li>Design test matrices for multi-role workflows (doctors, nurses, admins, patients) with 20+ conditional paths and UI that shifts per role and state.</li>
-        <li>Catch state machine breaks where authorization workflows get stuck mid-transition or allow invalid state jumps. Devs test happy paths; I test what happens when users click Cancel halfway through a 6-step form.</li>
-        <li>Built 14 custom scripts that cut triage from ~4 hours to under 1 hour per release. The test plan generator turns vague requirements into testable matrices so I'm not guessing what "works correctly" means.</li>
-      </ul>
+
+      <div class="job-sub">
+        <div class="job-sub-header">
+          <span class="job-role">Senior QA Specialist</span>
+          <span class="job-period-inline">Sep 2024 &ndash; Present</span>
+        </div>
+        <ul class="job-highlights">
+          <li>Own release-readiness decisions across 5+ healthcare products as sole QA. If I'm out sick, releases either slip or ship risky. I'm the quality and risk gate<a href="assets/you-shall-not-pass.gif" target="_blank" title="You shall not pass!" style="border: none;">.</a></li>
+          <li>Design test matrices for multi-role workflows (doctors, nurses, admins, patients) with 20+ conditional paths and UI that shifts per role and state.</li>
+          <li>Built 14 custom scripts (video analysis, form autofill, test plan generation) that cut triage from ~4 hours to under 1 hour per release.</li>
+          <li>Catch data mismatches between UI and backend (patient records, appointment states, billing data), keeping PHI exposure risk in mind.</li>
+        </ul>
+      </div>
+
+      <div class="job-sub">
+        <div class="job-sub-header">
+          <span class="job-role">Software QA Specialist</span>
+          <span class="job-period-inline">Apr 2023 &ndash; Sep 2024</span>
+        </div>
+        <ul class="job-highlights">
+          <li>Ran regression and smoke testing across dev, staging, and prod for each release. Built early QA tooling that became the full automation toolkit after promotion.</li>
+        </ul>
+      </div>
     </div>
 
+    <!-- Ultranauts Inc -->
     <div class="job">
       <div class="job-header">
         <span class="job-company">Ultranauts Inc</span>
         <span class="job-separator">&middot;</span>
-        <span class="job-role">Software Quality Engineer II</span>
+        <span class="job-tenure">Feb 2020 &ndash; Feb 2023 &nbsp;/&nbsp; Remote</span>
       </div>
-      <div class="job-period">Oct 2021 &ndash; Feb 2023 &nbsp;/&nbsp; Remote</div>
-      <ul class="job-highlights">
-        <li class="print-hide">Figured out early that automation isn't always faster. First job where I pushed back on "automate everything": some workflows just create maintenance debt that way.</li>
-        <li>Wrote unit tests with Jest for NestJS/TypeScript apps. Started with zero testing knowledge, ended writing 200+ line test files. Tests broke when requirements changed, which taught me to test behavior instead of implementation.</li>
-        <li>Built BI dashboards with Vue.js and D3, writing Cube.js schemas to visualize financial data (fund cohorts, borrower demographics, CF prepayment rates). First time working with SQL and Databricks.</li>
-      </ul>
+
+      <div class="job-sub">
+        <div class="job-sub-header">
+          <span class="job-role">Software Quality Engineer II</span>
+          <span class="job-period-inline">Oct 2021 &ndash; Feb 2023</span>
+        </div>
+        <ul class="job-highlights">
+          <li>Built Selenium test suites for workflows with complex business rules: multi-step forms, conditional logic, role-based access controls.</li>
+          <li>Worked with enterprise and startup clients on test strategy, determining where automation saved time vs. created maintenance overhead.</li>
+        </ul>
+      </div>
+
+      <div class="job-sub">
+        <div class="job-sub-header">
+          <span class="job-role">SQA Engineer I &amp; Tester</span>
+          <span class="job-period-inline">Feb 2020 &ndash; Sep 2021</span>
+        </div>
+        <ul class="job-highlights print-hide">
+          <li>Manual and exploratory testing across client projects. Wrote test cases, documented bugs, and learned to scope testing when requirements were vague.</li>
+        </ul>
+      </div>
     </div>
+
   </div>
 </section>
 
@@ -790,30 +864,6 @@
   </div>
 </section>
 
-<!-- 04 PROJECTS -->
-<section class="section" id="section-projects">
-  <div class="section-label">
-    <span class="section-number">04</span>
-    <span class="section-name">Projects</span>
-  </div>
-  <div class="section-content">
-    <div class="project" style="grid-template-columns: 1fr;">
-      <div>
-        <div class="project-name">Release Pattern Analysis</div>
-        <div class="project-impact">Finds patterns across 6,671+ tickets that individual issue views miss</div>
-      </div>
-    </div>
-    <div class="project" style="grid-template-columns: 1fr;">
-      <div>
-        <div class="project-name">QA Workflow Automation Toolkit</div>
-        <div class="project-impact">Cut test planning from ~40 minutes to under 10 with custom scripts</div>
-      </div>
-    </div>
-    <div style="margin-top: 24px;">
-      <a href="projects.html" style="font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--fg); text-decoration: none; letter-spacing: 0.05em;">View all projects →</a>
-    </div>
-  </div>
-</section>
 </main>
 
 <footer class="footer">
