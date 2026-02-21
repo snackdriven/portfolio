@@ -3,10 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Kayla Gilbert, Senior QA Engineer. Test automation, internal tooling, and behavioral health SaaS. 14 custom scripts, 8 products, sole QA.">
+<meta property="og:title" content="Kayla Gilbert - QA Engineer">
+<meta property="og:description" content="Test automation, internal tooling, and behavioral health SaaS. Portfolio and work history.">
+<meta property="og:url" content="https://snackdriven.com">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%234AEEA0'>%3E</text></svg>">
 <title>Kayla Gilbert - QA Engineer · Test Automation & Internal Tooling</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -280,6 +286,23 @@
   .hero-sep {
     margin: 0 10px;
     color: var(--border);
+  }
+  @media (max-width: 768px) {
+    .hero {
+      padding: 32px 24px 28px;
+    }
+    .hero-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 0;
+    }
+    .hero-sep {
+      display: none;
+    }
+    .hero-contact a,
+    .hero-contact > span:not(.hero-sep) {
+      margin-right: 16px;
+    }
   }
 
   /* SECTION LAYOUT */
@@ -687,8 +710,6 @@
     a[href^="ultranauts"] { display: none !important; }
     .footer { display: none; }
 
-    /* Hide projects in 1-page print */
-    #section-projects { display: none !important; }
   }
 
   /* FOOTER */
@@ -736,7 +757,7 @@
 <section class="section">
   <div class="section-label">
     <span class="section-number">01</span>
-    <span class="section-name">About</span>
+    <h2 class="section-name">About</h2>
   </div>
   <div class="section-content">
     <p class="about-text">
@@ -749,7 +770,7 @@
 <section class="section">
   <div class="section-label">
     <span class="section-number">02</span>
-    <span class="section-name">Experience</span>
+    <h2 class="section-name">Experience</h2>
   </div>
   <div class="section-content">
 
@@ -767,7 +788,7 @@
           <span class="job-period-inline">Sep 2024 &ndash; Present</span>
         </div>
         <ul class="job-highlights">
-          <li>Own release-readiness decisions across 8 behavioral health products as sole QA. If I'm out sick, releases either slip or ship risky. I'm the quality and risk gate<a href="assets/you-shall-not-pass.gif" target="_blank" title="You shall not pass!" style="border: none;">.</a></li>
+          <li>Own release-readiness decisions across 8 behavioral health products as sole QA. If I'm out sick, releases either slip or ship risky. I'm the quality and risk gate<a href="assets/you-shall-not-pass.gif" target="_blank" rel="noopener noreferrer" title="You shall not pass!" style="border: none;" aria-hidden="true" tabindex="-1">.</a></li>
           <li>Design test matrices for multi-role workflows (doctors, nurses, admins, patients) with 20+ conditional paths and UI that shifts per role and state.</li>
           <li>Built 14 custom scripts (video analysis, form autofill, test plan generation) that cut triage from ~4 hours to under 1 hour per release.</li>
           <li>Catch data mismatches between UI and backend (patient records, appointment states, billing data), keeping PHI exposure risk in mind.</li>
@@ -822,7 +843,7 @@
 <section class="section" id="section-skills">
   <div class="section-label">
     <span class="section-number">03</span>
-    <span class="section-name">Stack</span>
+    <h2 class="section-name">Stack</h2>
   </div>
   <div class="section-content" style="max-width: none;">
     <div class="skills-grid">
@@ -896,7 +917,7 @@
 <section class="section print-hide" id="section-target">
   <div class="section-label">
     <span class="section-number">04</span>
-    <span class="section-name">Looking For</span>
+    <h2 class="section-name">Looking For</h2>
   </div>
   <div class="section-content">
     <p class="about-text">
