@@ -748,9 +748,81 @@
     <span class="hero-sep print-hide">|</span>
     <a href="projects.html" class="print-hide">Projects</a>
     <span class="hero-sep print-hide">|</span>
-    <a href="resume/kayla-gilbert-resume-qa.pdf" target="_blank" class="print-hide" style="color: var(--magenta);">Resume</a>
+    <div class="resume-menu print-hide" id="resume-menu">
+      <button class="resume-menu-btn" id="resume-menu-btn" aria-haspopup="true" aria-expanded="false">Resume ▾</button>
+      <div class="resume-menu-dropdown" id="resume-menu-dropdown" role="menu">
+        <a href="resume/kayla-gilbert-resume-automation.pdf" target="_blank" role="menuitem">Automation</a>
+        <a href="resume/kayla-gilbert-resume-qa.pdf" target="_blank" role="menuitem">QA generalist</a>
+        <a href="resume/kayla-gilbert-resume-tools.pdf" target="_blank" role="menuitem">Tooling</a>
+      </div>
+    </div>
   </div>
 </header>
+
+<style>
+  .resume-menu {
+    position: relative;
+    display: inline-block;
+  }
+  .resume-menu-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    font-size: inherit;
+    color: var(--magenta);
+    cursor: pointer;
+    letter-spacing: inherit;
+  }
+  .resume-menu-btn:hover {
+    text-decoration: underline;
+  }
+  .resume-menu-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    background: var(--bg-sidebar);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    min-width: 140px;
+    z-index: 100;
+    flex-direction: column;
+  }
+  .resume-menu-dropdown.open {
+    display: flex;
+  }
+  .resume-menu-dropdown a {
+    padding: 8px 14px;
+    color: var(--fg);
+    font-size: 0.85rem;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--border);
+  }
+  .resume-menu-dropdown a:last-child {
+    border-bottom: none;
+  }
+  .resume-menu-dropdown a:hover {
+    color: var(--magenta);
+    background: var(--bg);
+  }
+</style>
+
+<script>
+(function() {
+  const btn = document.getElementById('resume-menu-btn');
+  const dropdown = document.getElementById('resume-menu-dropdown');
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    const open = dropdown.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+  document.addEventListener('click', function() {
+    dropdown.classList.remove('open');
+    btn.setAttribute('aria-expanded', false);
+  });
+})();
+</script>
 
 <main id="main-content">
 <!-- 01 ABOUT -->
@@ -931,6 +1003,7 @@
 
 <footer class="footer">
   <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+
 
     <div style="display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
       <!-- Footer Text with Hover Countdown -->
