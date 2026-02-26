@@ -10,6 +10,7 @@ Two-page portfolio site. Vanilla HTML and CSS, no frameworks, no build step. It 
 
 - `index.html` — resume (experience, stack, what I'm looking for)
 - `projects.html` — project writeups with tech details
+- `resume/` — three targeted variants (automation, QA generalist, tooling) in PDF and DOCX
 
 Print styles built in. The resume prints to a clean single-page PDF with a light theme and ATS-friendly fonts.
 
