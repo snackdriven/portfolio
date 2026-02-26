@@ -610,7 +610,7 @@
 
     /* Base: 9pt — set on html too so rem units resolve correctly */
     html { font-size: 9pt; }
-    body { font-size: 9pt; line-height: 1.5; }
+    body { font-size: 9pt; line-height: 1.4; }
 
     /* Normalize fonts: Inter everywhere for ATS */
     .hero h1 { font-family: "Inter", sans-serif !important; }
@@ -625,7 +625,7 @@
     .contact-item-label { font-family: "Inter", -apple-system, sans-serif !important; }
 
     /* Hero */
-    .hero { padding: 28px 24px 22px; border-bottom: 2px solid #d1d5db; border-left: 4px solid #059669; }
+    .hero { padding: 20px 24px 14px; border-bottom: 2px solid #d1d5db; border-left: 4px solid #059669; }
     .hero-top { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 20px; }
     /* Replace span-fragmented name with clean text for ATS */
     .hero h1 { font-size: 0 !important; }
@@ -633,7 +633,7 @@
     .hero h1 span { display: none !important; }
     .hero .title { font-size: 11pt; font-weight: 500; letter-spacing: 0.02em; color: #dc2626 !important; }
     .hero .updated { display: none; }
-    .hero-contact { margin-top: 6px; font-size: 9pt; color: #6b7280 !important; }
+    .hero-contact { margin-top: 4px; font-size: 9pt; color: #6b7280 !important; }
     .hero-contact a { text-decoration: none !important; color: #6b7280 !important; border-bottom: none !important; }
     .hero-sep { margin: 0 6px; color: #d1d5db !important; }
 
@@ -651,22 +651,22 @@
       flex-direction: row !important;
       align-items: baseline !important;
       gap: 8px !important;
-      padding: 8px 0 4px !important;
+      padding: 6px 0 3px !important;
       page-break-after: avoid !important;
     }
     .section-content {
-      padding: 10px 0 14px;
+      padding: 5px 0 7px;
       page-break-before: avoid !important;
     }
     .section-number { font-size: 8pt; color: #dc2626 !important; letter-spacing: 0.05em; font-weight: 600; }
     .section-name { font-size: 9pt; color: #1a1a1a !important; letter-spacing: 0.08em; font-weight: 600; text-transform: uppercase; }
 
     /* About — slightly larger as a summary hook */
-    .about-text { font-size: 9.5pt; line-height: 1.65; color: #1a1a1a !important; }
+    .about-text { font-size: 9pt; line-height: 1.5; color: #1a1a1a !important; }
     .about-text strong { font-weight: 600 !important; color: #059669 !important; }
 
     /* Experience */
-    .job { margin-bottom: 20px; page-break-inside: avoid; }
+    .job { margin-bottom: 14px; page-break-inside: avoid; }
     .job-header { gap: 8px; }
     .job-company { font-size: 10pt; font-weight: 600; letter-spacing: 0.05em; color: #059669 !important; }
     .job-separator { font-size: 0; }
@@ -677,11 +677,11 @@
     .job-sub { margin-top: 8px; padding-left: 10px; }
     .job-sub-header { gap: 8px; margin-bottom: 3px; }
     .job-period-inline { font-size: 8pt; color: #6b7280 !important; letter-spacing: 0.05em; text-transform: none !important; }
-    .job-highlights li { padding: 5px 0 5px 16px; font-size: 9pt; line-height: 1.65; color: #1a1a1a !important; }
+    .job-highlights li { padding: 3px 0 3px 16px; font-size: 9pt; line-height: 1.5; color: #1a1a1a !important; }
     .job-highlights li::before { content: "\2022" !important; font-weight: normal !important; color: #059669 !important; }
 
     /* Skills */
-    .skills-grid { gap: 6px 32px; grid-template-columns: 1fr 1fr !important; }
+    .skills-grid { gap: 4px 28px; grid-template-columns: 1fr 1fr !important; }
     .skills-category { grid-column: auto !important; }
     .skills-category-name { color: #059669 !important; border-color: #059669 !important; margin-bottom: 3px; font-size: 8pt; font-weight: 600; letter-spacing: 0.05em; }
     .skills-list { line-height: 1.35; font-size: 8pt; }
