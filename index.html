@@ -3,10 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KAYLA GILBERT // RESUME</title>
+<meta name="description" content="Kayla Gilbert, Senior QA Engineer. Test automation, internal tooling, and behavioral health SaaS. 14 custom scripts, 8 products, sole QA.">
+<meta property="og:title" content="Kayla Gilbert - QA Engineer">
+<meta property="og:description" content="Test automation, internal tooling, and behavioral health SaaS. Portfolio and work history.">
+<meta property="og:url" content="https://snackdriven.com">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%234AEEA0'>%3E</text></svg>">
+<title>Kayla Gilbert - QA Engineer · Test Automation & Internal Tooling</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -15,6 +21,8 @@
     --bg-sidebar: #252336;
     --fg: #E0DEE8;
     --green: #4AEEA0;
+    --cyan: #A78BFA;
+    --teal: #72C5D9;
     --magenta: #FF6B9D;
     --muted: #B5B2C8;
     --border: #3D3A50;
@@ -36,28 +44,55 @@
     line-height: 1.6;
   }
 
+  /* Skip link for screen readers */
+  .skip-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--green);
+    color: var(--bg);
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  .skip-link:focus {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
   a {
     color: var(--fg);
     text-decoration: none;
-    border-bottom: 1px solid var(--fg);
-    transition: color 0.1s, border-color 0.1s;
+    border-bottom: none;
+    transition: color 0.1s;
   }
   a:hover {
-    color: var(--green);
-    border-color: var(--green);
+    color: var(--magenta);
   }
 
   /* HERO */
   .hero {
+    position: relative;
     padding: 56px 48px 44px;
     border-bottom: 3px solid var(--border);
-    border-left: 4px solid var(--green);
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--green);
   }
   .hero-top {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 24px 40px;
+    justify-content: space-between;
+    gap: 8px 24px;
   }
   .hero h1 {
     font-family: "Chakra Petch", sans-serif;
@@ -67,11 +102,165 @@
     text-transform: uppercase;
     font-weight: 700;
     color: var(--green);
+    text-shadow:
+      0 0 2px var(--green),
+      0 0 8px rgba(74, 238, 160, 0.5),
+      0 0 16px rgba(74, 238, 160, 0.3),
+      0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .hero h1 span {
+    display: inline-block;
+    position: relative;
+    text-shadow:
+      0 0 2px var(--green),
+      0 0 8px rgba(74, 238, 160, 0.5),
+      0 0 16px rgba(74, 238, 160, 0.3),
+      0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .hero:hover h1 {
+    cursor: default;
+  }
+
+  /* Smoother RGB shift - balanced */
+  @keyframes neon-flicker {
+    0%, 76% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        1.5px 0 2px rgba(255, 107, 157, 0.35),
+        -1.5px 0 2px rgba(181, 178, 200, 0.35);
+    }
+    77% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        -2.5px 0 2px rgba(255, 107, 157, 0.55),
+        2.5px -1.5px 2px rgba(181, 178, 200, 0.55);
+    }
+    78% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        -4px 0 2.5px rgba(255, 107, 157, 0.7),
+        3.5px -2.5px 2.5px rgba(181, 178, 200, 0.7);
+    }
+    79% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        4px -2.5px 2.5px rgba(255, 107, 157, 0.7),
+        -3.5px 2.5px 2.5px rgba(181, 178, 200, 0.7);
+    }
+    80% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        -3.5px 0 2.5px rgba(255, 107, 157, 0.7),
+        4px 0 2.5px rgba(181, 178, 200, 0.7);
+    }
+    81% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        3.5px 2.5px 2.5px rgba(255, 107, 157, 0.7),
+        -4px 0 2.5px rgba(181, 178, 200, 0.7);
+    }
+    82% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        -2.5px -2.5px 2.5px rgba(255, 107, 157, 0.7),
+        2.5px 0 2.5px rgba(181, 178, 200, 0.7);
+    }
+    83% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        -1.5px 0 2px rgba(255, 107, 157, 0.55),
+        1.5px 0 2px rgba(181, 178, 200, 0.55);
+    }
+    84%, 90% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        1.5px 0 2px rgba(255, 107, 157, 0.35),
+        -1.5px 0 2px rgba(181, 178, 200, 0.35);
+    }
+    91% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        2.5px 0 2px rgba(255, 107, 157, 0.55),
+        -2.5px -1.5px 2px rgba(181, 178, 200, 0.55);
+    }
+    92% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        4px 0 2.5px rgba(255, 107, 157, 0.7),
+        -4px -2.5px 2.5px rgba(181, 178, 200, 0.7);
+    }
+    92.5% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        -3.5px 2.5px 2.5px rgba(255, 107, 157, 0.7),
+        3.5px -2.5px 2.5px rgba(181, 178, 200, 0.7);
+    }
+    93% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        -1.5px 0 2px rgba(255, 107, 157, 0.55),
+        1.5px 0 2px rgba(181, 178, 200, 0.55);
+    }
+    94%, 100% {
+      text-shadow:
+        0 0 2px var(--green),
+        0 0 8px rgba(74, 238, 160, 0.5),
+        0 0 16px rgba(74, 238, 160, 0.3),
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        1.5px 0 2px rgba(255, 107, 157, 0.35),
+        -1.5px 0 2px rgba(181, 178, 200, 0.35);
+    }
+  }
+
+  /* Flicker effect - triggered by JS */
+  .hero h1 span.flickering {
+    animation: neon-flicker 0.8s linear;
   }
   .hero .title {
-    font-family: "JetBrains Mono", "Courier New", Courier, monospace;
-    font-size: clamp(0.9rem, 1.5vw, 1.05rem);
-    color: var(--magenta);
+    font-family: "DM Mono", "Courier New", Courier, monospace;
+    font-size: clamp(0.9rem, 1.8vw, 1.15rem);
+    color: var(--cyan);
     text-transform: uppercase;
     letter-spacing: 0.15em;
   }
@@ -88,16 +277,32 @@
     color: var(--muted);
   }
   .hero-contact a {
-    color: var(--muted);
-    border-bottom-color: var(--border);
+    color: var(--fg);
+    border-bottom: none;
   }
   .hero-contact a:hover {
-    color: var(--green);
-    border-color: var(--green);
+    color: var(--magenta);
   }
   .hero-sep {
     margin: 0 10px;
     color: var(--border);
+  }
+  @media (max-width: 768px) {
+    .hero {
+      padding: 32px 24px 28px;
+    }
+    .hero-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 0;
+    }
+    .hero-sep {
+      display: none;
+    }
+    .hero-contact a,
+    .hero-contact > span:not(.hero-sep) {
+      margin-right: 16px;
+    }
   }
 
   /* SECTION LAYOUT */
@@ -117,7 +322,7 @@
     background: var(--bg-sidebar);
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 8px;
   }
   @media (max-width: 768px) {
     .section-label {
@@ -126,11 +331,11 @@
       padding: 24px 24px 16px 24px;
       flex-direction: row;
       align-items: baseline;
-      gap: 12px;
+      gap: 8px;
     }
   }
   .section-number {
-    font-family: "JetBrains Mono", monospace;
+    font-family: "DM Mono", monospace;
     font-size: 0.85rem;
     color: var(--magenta);
     letter-spacing: 0.3em;
@@ -138,8 +343,8 @@
     margin-bottom: 2px;
   }
   .section-name {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 0.9rem;
+    font-family: "DM Mono", monospace;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     font-weight: 500;
@@ -181,7 +386,7 @@
     margin-bottom: 8px;
   }
   .job-company {
-    font-family: "JetBrains Mono", monospace;
+    font-family: "DM Mono", monospace;
     font-size: 1.15rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -197,14 +402,15 @@
     font-weight: bold;
   }
   .job-role {
-    color: var(--fg);
-    font-size: 1rem;
+    font-family: "DM Mono", monospace;
+    color: var(--cyan);
+    font-size: 0.9rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.05em;
   }
   .job-role .promoted {
-    font-family: "JetBrains Mono", monospace;
+    font-family: "DM Mono", monospace;
     font-size: 0.75rem;
     color: var(--green);
     margin-left: 8px;
@@ -212,16 +418,45 @@
     border: 1px solid var(--green);
     border-radius: 2px;
   }
+  /* Sub-role structure for companies with multiple titles */
+  .job-tenure {
+    font-size: 0.8rem;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .job-sub {
+    margin-top: 14px;
+    padding-left: 14px;
+  }
+  .job-sub-header {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .job-period-inline {
+    font-size: 0.78rem;
+    color: var(--muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
   .job-period {
     font-size: 0.8rem;
     color: var(--muted);
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    margin-top: 2px;
+    margin-top: 6px;
   }
   .job-highlights {
     list-style: none;
     margin-top: 12px;
+  }
+  .job-highlights strong {
+    color: var(--magenta);
+    font-weight: 600;
   }
   .job-highlights li {
     padding: 8px 0;
@@ -234,26 +469,27 @@
     content: ">";
     position: absolute;
     left: 0;
-    color: var(--green);
+    color: var(--muted);
     font-weight: bold;
   }
 
   /* SKILLS */
   .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 44px;
+    container-type: inline-size;
   }
   .skills-category {
     margin-bottom: 0;
   }
   .skills-category-name {
-    font-family: "JetBrains Mono", monospace;
+    font-family: "DM Mono", monospace;
     font-size: 0.75rem;
     color: var(--green);
     text-transform: uppercase;
     letter-spacing: 0.25em;
-    margin-bottom: 12px;
+    margin-bottom: 6px;
     padding-bottom: 6px;
     border-bottom: 2px solid var(--green);
   }
@@ -267,10 +503,11 @@
   }
   .skills-list li::before {
     content: "·";
-    color: var(--magenta);
+    color: var(--muted);
     margin-right: 8px;
     font-weight: bold;
   }
+
 
   /* PROJECTS */
   .project {
@@ -284,28 +521,24 @@
     border-bottom: none;
   }
   .project-num {
-    font-family: "JetBrains Mono", monospace;
+    font-family: "DM Mono", monospace;
     font-size: 0.8rem;
     color: var(--muted);
     font-variant-numeric: tabular-nums;
     padding-top: 2px;
   }
   .project-name {
-    font-family: "JetBrains Mono", monospace;
+    font-family: "DM Mono", monospace;
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.03em;
     font-weight: 500;
-    transition: color 0.1s;
-  }
-  .project-name:hover {
-    color: var(--green);
   }
   .project-impact {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: var(--green);
     margin-top: 6px;
-    font-weight: 500;
+    font-weight: 400;
   }
   .project-desc {
     font-size: 0.92rem;
@@ -314,7 +547,7 @@
     line-height: 1.6;
   }
   .project-tech {
-    font-family: "JetBrains Mono", monospace;
+    font-family: "DM Mono", monospace;
     font-size: 0.78rem;
     color: var(--magenta);
     margin-top: 8px;
@@ -329,10 +562,10 @@
   .contact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
+    gap: 28px;
   }
   .contact-item-label {
-    font-family: "JetBrains Mono", monospace;
+    font-family: "DM Mono", monospace;
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.2em;
@@ -349,26 +582,36 @@
     outline-offset: 2px;
   }
 
+  /* Screen-only: hidden on screen, visible in print */
+  .screen-hide { display: none; }
+
   /* PRINT — 4-size type scale: 18pt / 10pt / 9pt / 8pt */
-  @page { margin: 0.4in 0.5in; size: letter; }
+  @page { margin: 0 0.5in; size: letter; }
 
   @media print {
-    /* Dark theme — force backgrounds to print */
-    * { color: var(--fg) !important; }
-    *::before, *::after { color: var(--green) !important; }
+    /* Screen-only content — hidden in print to keep 1 page */
+    .print-hide { display: none !important; }
+    .screen-hide { display: inline !important; }
+
+    /* Light theme for print - save ink */
+    * {
+      color: #1a1a1a !important;
+      text-shadow: none !important;
+      animation: none !important;
+    }
+    *::before, *::after { color: #059669 !important; }
     body {
-      background: var(--bg) !important;
+      background: #ffffff !important;
       print-color-adjust: exact;
       -webkit-print-color-adjust: exact;
     }
 
     /* Base: 9pt — set on html too so rem units resolve correctly */
     html { font-size: 9pt; }
-    body { font-size: 9pt; line-height: 1.5; }
+    body { font-size: 9pt; line-height: 1.4; }
 
     /* Normalize fonts: Inter everywhere for ATS */
     .hero h1 { font-family: "Inter", sans-serif !important; }
-    .hero .title,
     .hero-contact,
     .section-number,
     .section-name,
@@ -380,77 +623,91 @@
     .contact-item-label { font-family: "Inter", -apple-system, sans-serif !important; }
 
     /* Hero */
-    .hero { padding: 28px 24px 22px; border-bottom: 3px solid var(--border); border-left: 4px solid var(--green); }
+    .hero { padding: 17px 24px 11px; border-bottom: 2px solid #d1d5db; border-left: 4px solid #059669; }
     .hero-top { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 20px; }
-    .hero h1 { font-size: 18pt; font-weight: 700; letter-spacing: 0.05em; color: var(--green) !important; }
-    .hero .title { font-size: 11pt; font-weight: 500; letter-spacing: 0.02em; color: var(--magenta) !important; }
+    /* Replace span-fragmented name with clean text for ATS */
+    .hero h1 { font-size: 0 !important; }
+    .hero h1::before { content: "KAYLA GILBERT"; font-size: 18pt; font-weight: 700; letter-spacing: 0.05em; color: #059669 !important; font-family: "Inter", sans-serif !important; }
+    .hero h1 span { display: none !important; }
+    .hero .title { font-size: 11pt; font-weight: 500; letter-spacing: 0.02em; color: #dc2626 !important; }
     .hero .updated { display: none; }
-    .hero-contact { margin-top: 6px; font-size: 9pt; color: var(--muted) !important; }
-    .hero-contact a { text-decoration: none !important; color: var(--muted) !important; }
-    .hero-sep { margin: 0 6px; color: var(--border) !important; }
+    .hero-contact { margin-top: 4px; font-size: 9pt; color: #6b7280 !important; }
+    .hero-contact a { text-decoration: none !important; color: #6b7280 !important; border-bottom: none !important; }
+    .hero-sep { margin: 0 6px; color: #d1d5db !important; }
 
-    /* Sidebar layout */
-    .section { border-bottom: 3px solid var(--border); grid-template-columns: 110px 1fr !important; }
-    .section-label {
-      background: var(--bg-sidebar) !important;
-      border-right: 3px solid var(--border) !important;
-      border-bottom: none !important;
-      flex-direction: column !important;
-      align-items: flex-start !important;
-      gap: 2px !important;
-      padding: 20px 10px 20px 14px !important;
+    /* Sidebar layout - simplified for print */
+    .section {
+      border-bottom: 2px solid #d1d5db;
+      grid-template-columns: 1fr !important;
+      display: block !important;
+      page-break-inside: auto !important;
     }
-    .section-content { padding: 24px 24px 28px; }
-    .section-number { font-size: 8pt; color: var(--magenta) !important; letter-spacing: 0.05em; }
-    .section-name { font-size: 8pt; color: var(--magenta) !important; letter-spacing: 0.05em; }
+    .section-label {
+      background: transparent !important;
+      border-right: none !important;
+      border-bottom: none !important;
+      flex-direction: row !important;
+      align-items: baseline !important;
+      gap: 8px !important;
+      padding: 8px 0 2px !important;
+      page-break-after: avoid !important;
+    }
+    .section-content {
+      padding: 6px 0 7px;
+      page-break-before: avoid !important;
+    }
+    .section-number { font-size: 8pt; color: #dc2626 !important; letter-spacing: 0.05em; font-weight: 600; }
+    .section-name { font-size: 9pt; color: #1a1a1a !important; letter-spacing: 0.08em; font-weight: 600; text-transform: uppercase; }
 
     /* About — slightly larger as a summary hook */
-    .about-text { font-size: 10pt; line-height: 1.85; color: var(--fg) !important; }
-    .about-text strong { font-weight: 600 !important; color: var(--green) !important; }
-
-    /* Page 2 starts at Skills */
-    .section:nth-of-type(3) { break-before: page; page-break-before: always; }
+    .about-text { font-size: 9pt; line-height: 1.5; color: #1a1a1a !important; }
+    .about-text strong { font-weight: 600 !important; color: #059669 !important; }
 
     /* Experience */
-    .job { margin-bottom: 34px; page-break-inside: avoid; }
-    .section-label { page-break-after: avoid; }
+    .job { margin-bottom: 14px; page-break-inside: avoid; }
     .job-header { gap: 8px; }
-    .job-company { font-size: 10pt; font-weight: 600; letter-spacing: 0.05em; color: var(--green) !important; }
+    .job-company { font-size: 10pt; font-weight: 600; letter-spacing: 0.05em; color: #059669 !important; }
     .job-separator { font-size: 0; }
-    .job-separator::before { content: "|"; font-size: 9pt; color: var(--magenta) !important; }
-    .job-role { font-size: 9pt; font-weight: 500; text-transform: none !important; letter-spacing: 0.05em; color: var(--fg) !important; }
-    .job-role .promoted { border-color: var(--green) !important; color: var(--green) !important; font-size: 8pt; font-weight: 400; padding: 1px 6px; text-transform: uppercase !important; }
-    .job-period { font-size: 8pt; color: var(--muted) !important; text-transform: none !important; letter-spacing: 0.05em; }
-    .job-highlights li { padding: 5px 0 5px 16px; font-size: 9pt; line-height: 1.65; color: var(--fg) !important; }
-    .job-highlights li::before { content: "\2022" !important; font-weight: normal !important; color: var(--green) !important; }
+    .job-separator::before { content: "|"; font-size: 9pt; color: #dc2626 !important; }
+    .job-tenure { font-size: 8pt; color: #6b7280 !important; letter-spacing: 0.05em; text-transform: none !important; }
+    .job-role { font-size: 9pt; font-weight: 500; text-transform: none !important; letter-spacing: 0.05em; color: #1a1a1a !important; }
+    .job-period { font-size: 8pt; color: #6b7280 !important; text-transform: none !important; letter-spacing: 0.05em; }
+    .job-sub { margin-top: 8px; padding-left: 20px; }
+    .job-sub-header { gap: 8px; margin-bottom: 3px; }
+    .job-period-inline { font-size: 8pt; color: #6b7280 !important; letter-spacing: 0.05em; text-transform: none !important; }
+    .job-highlights li { padding: 2px 0 2px 16px; font-size: 9pt; line-height: 1.5; color: #1a1a1a !important; }
+    .job-highlights li::before { content: "\2022" !important; font-weight: normal !important; color: #059669 !important; }
 
     /* Skills */
-    .skills-grid { gap: 16px 32px; grid-template-columns: 1fr 1fr !important; }
-    .skills-category-name { color: var(--green) !important; border-color: var(--green) !important; margin-bottom: 6px; font-size: 8pt; font-weight: 600; letter-spacing: 0.05em; }
-    .skills-list { line-height: 1.7; font-size: 9pt; }
-    .skills-list li::before { content: "\2022" !important; margin-right: 6px; font-weight: normal !important; color: var(--magenta) !important; }
+    .skills-grid { gap: 9px 28px; grid-template-columns: 1fr 1fr !important; }
+    .skills-category { grid-column: auto !important; }
+    .skills-category-name { color: #059669 !important; border-color: #059669 !important; margin-bottom: 3px; padding-bottom: 2px !important; font-size: 8pt; font-weight: 600; letter-spacing: 0.05em; }
+    .skills-list { line-height: 1.35; font-size: 8pt; }
+    .skills-list li::before { content: "\2022" !important; margin-right: 6px; font-weight: normal !important; color: #dc2626 !important; }
 
     /* Projects */
-    .project { padding: 10px 0; grid-template-columns: 1fr !important; border-color: var(--border) !important; page-break-inside: avoid; }
+    .project { padding: 10px 0; grid-template-columns: 1fr !important; border-color: #d1d5db !important; page-break-inside: avoid; }
     .project-num { display: none; }
-    .project-name { font-size: 9pt; font-weight: 600; letter-spacing: 0.05em; text-transform: none !important; color: var(--fg) !important; }
-    .project-impact { font-size: 9pt; font-weight: 500; color: var(--green) !important; }
-    .project-desc { font-size: 9pt; color: var(--muted) !important; }
-    .project-tech { color: var(--magenta) !important; font-size: 8pt; letter-spacing: 0.05em; }
+    .project-name { font-size: 9pt; font-weight: 600; letter-spacing: 0.05em; text-transform: none !important; color: #1a1a1a !important; }
+    .project-impact { font-size: 9pt; font-weight: 500; color: #059669 !important; }
+    .project-desc { font-size: 9pt; color: #6b7280 !important; }
+    .project-tech { color: #dc2626 !important; font-size: 8pt; letter-spacing: 0.05em; }
 
     /* Links — 2 cols */
-    .section:last-of-type { page-break-inside: avoid; }
+    .section:last-of-type { page-break-inside: avoid; border-bottom: none; }
     .contact-grid { gap: 10px 32px; grid-template-columns: repeat(2, 1fr); }
-    .contact-item-label { font-size: 8pt; margin-bottom: 2px; font-weight: 600; letter-spacing: 0.05em; color: var(--muted) !important; }
-    .contact-item-value { font-size: 9pt; color: var(--fg) !important; }
+    .contact-item-label { font-size: 8pt; margin-bottom: 2px; font-weight: 600; letter-spacing: 0.05em; color: #6b7280 !important; }
+    .contact-item-value { font-size: 9pt; color: #1a1a1a !important; }
 
     /* Typography safeguards */
     p, li { orphans: 2; widows: 2; }
 
     /* Links & footer */
-    a { text-decoration: none !important; border-bottom: 1px solid var(--fg) !important; color: var(--fg) !important; }
+    a { text-decoration: none !important; border-bottom: none !important; color: #1a1a1a !important; }
     a[href^="http"]:after { content: none; }
+    a[href^="ultranauts"] { display: none !important; }
     .footer { display: none; }
+
   }
 
   /* FOOTER */
@@ -465,32 +722,115 @@
 </style>
 </head>
 <body>
+<!-- Skip to main content link for accessibility -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- HERO -->
 <header class="hero">
   <div class="hero-top">
-    <h1>Kayla Gilbert</h1>
-    <div class="title">QA Systems Specialist</div>
-    <div class="updated">2026</div>
+    <h1><span data-solo>K</span>a<span data-group="yl">y</span><span data-group="yl">l</span>a <span data-solo>G</span><span data-group="ie">i</span>lb<span data-group="ie">e</span><span data-solo>r</span>t</h1>
+    <div class="title">QA Engineer &middot; Test Automation & Internal Tooling</div>
   </div>
   <div class="hero-contact">
+    <a href="mailto:kayla@snackdriven.com">kayla@snackdriven.com</a>
+    <span class="hero-sep">|</span>
     <a href="tel:3134442213">(313) 444-2213</a>
+    <span class="hero-sep print-hide">|</span>
+    <span class="print-hide">Bentonville, AR (Remote)</span>
     <span class="hero-sep">|</span>
-    <a href="mailto:kayla.gilbert89@gmail.com">kayla.gilbert89@gmail.com</a>
+    <a href="https://linkedin.com/in/snackdriven" target="_blank">LinkedIn</a>
     <span class="hero-sep">|</span>
-    <span>Bentonville, AR (Remote)</span>
+    <a href="https://github.com/snackdriven" target="_blank">GitHub</a>
+    <span class="hero-sep screen-hide">|</span>
+    <a href="https://snackdriven.com" target="_blank" class="screen-hide">snackdriven.com</a>
+    <span class="hero-sep print-hide">|</span>
+    <a href="projects.html" class="print-hide">Projects</a>
+    <span class="hero-sep print-hide">|</span>
+    <div class="resume-menu print-hide" id="resume-menu">
+      <button class="resume-menu-btn" id="resume-menu-btn" aria-haspopup="true" aria-expanded="false">Resume ▾</button>
+      <div class="resume-menu-dropdown" id="resume-menu-dropdown" role="menu">
+        <a href="resume/kayla-gilbert-resume-automation.pdf" target="_blank" role="menuitem">Automation</a>
+        <a href="resume/kayla-gilbert-resume-tools.pdf" target="_blank" role="menuitem">Tooling</a>
+      </div>
+    </div>
   </div>
 </header>
 
+<style>
+  .resume-menu {
+    position: relative;
+    display: inline-block;
+  }
+  .resume-menu-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    font-size: inherit;
+    color: var(--magenta);
+    cursor: pointer;
+    letter-spacing: inherit;
+  }
+  .resume-menu-btn:hover {
+    text-decoration: underline;
+  }
+  .resume-menu-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    background: var(--bg-sidebar);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    min-width: 140px;
+    z-index: 100;
+    flex-direction: column;
+  }
+  .resume-menu-dropdown.open {
+    display: flex;
+  }
+  .resume-menu-dropdown a {
+    padding: 8px 14px;
+    color: var(--fg);
+    font-size: 0.85rem;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--border);
+  }
+  .resume-menu-dropdown a:last-child {
+    border-bottom: none;
+  }
+  .resume-menu-dropdown a:hover {
+    color: var(--magenta);
+    background: var(--bg);
+  }
+</style>
+
+<script>
+(function() {
+  const btn = document.getElementById('resume-menu-btn');
+  const dropdown = document.getElementById('resume-menu-dropdown');
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    const open = dropdown.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+  document.addEventListener('click', function() {
+    dropdown.classList.remove('open');
+    btn.setAttribute('aria-expanded', false);
+  });
+})();
+</script>
+
+<main id="main-content">
 <!-- 01 ABOUT -->
 <section class="section">
   <div class="section-label">
     <span class="section-number">01</span>
-    <span class="section-name">About</span>
+    <h2 class="section-name">About</h2>
   </div>
   <div class="section-content">
     <p class="about-text">
-      <strong>I keep messy healthcare workflows reliable.</strong> I cover 5+ products solo, specializing in internal tools with a dozen user roles, interconnected workflows, and conditional UI. When something keeps breaking or takes too long, I build a process, template, or small tool to fix it. I use Claude and Gemini to find edge cases and clean up bad requirements.
+      I own QA for 8 behavioral health products solo. When a manual process starts eating time, I write a script. 14 built so far: documentation down to an hour a week, 63-section forms turned into one-click autofill. I've built myself out of the boring work but not the job.
     </p>
   </div>
 </section>
@@ -499,148 +839,267 @@
 <section class="section">
   <div class="section-label">
     <span class="section-number">02</span>
-    <span class="section-name">Experience</span>
+    <h2 class="section-name">Experience</h2>
   </div>
   <div class="section-content">
+
+    <!-- Chorus Innovations -->
     <div class="job">
       <div class="job-header">
         <span class="job-company">Chorus Innovations</span>
         <span class="job-separator">&middot;</span>
-        <span class="job-role">Senior QA Specialist <span class="promoted">PROMOTED 2024</span></span>
+        <span class="job-tenure">Apr 2023 &ndash; Present &nbsp;/&nbsp; Remote</span>
       </div>
-      <div class="job-period">Apr 2023 &ndash; Present &nbsp;/&nbsp; Remote</div>
-      <ul class="job-highlights">
-        <li>Own release-readiness decisions across <strong>5+ healthcare products</strong> as sole QA—no backup, so if I'm out sick, releases either slip or ship risky. One authorization workflow alone has 6 stages, 3 PDFs per stage that need manual verification, reversions that reset state, and role-based permission checks at every transition. I'm the quality and risk gate<a href="https://media.giphy.com/media/8abAbOrQ9rvLG/giphy.gif" target="_blank" title="You shall not pass!" style="border: none;">.</a></li>
-        <li>Design test matrices for multi-role workflows (doctors, nurses, admins, patients) with 20+ conditional paths and UI that shifts per role and state</li>
-        <li>Caught state machine breaks where authorization workflows got stuck mid-transition or allowed invalid state jumps—like skipping approval stages that should be required. Devs test happy paths; I test what happens when users click Cancel halfway through a 6-step form</li>
-        <li>Built 14 custom scripts (video analysis, form autofill, test plan generation) that cut triage from ~4 hours to under 1 hour per release. The test plan generator has saved me multiple times—turns vague requirements into testable matrices so I'm not guessing what "works correctly" means</li>
-        <li>Catch data mismatches between UI and backend (patient records, appointment states, billing data), keeping PHI boundaries and data exposure risk in mind</li>
-        <li>Push back on happy-path-only releases, nail down requirements with product and engineering before code ships, and write Jira tickets with clear repro steps and acceptance criteria</li>
-      </ul>
+
+      <div class="job-sub">
+        <div class="job-sub-header">
+          <span class="job-role">Senior QA Specialist</span>
+          <span class="job-period-inline">Sep 2024 &ndash; Present</span>
+        </div>
+        <ul class="job-highlights">
+          <li>Sole QA for 8 behavioral health products. No team means every manual process I don't eliminate becomes permanent overhead. So I built automation tooling and test infrastructure instead.</li>
+          <li>Codified multi-role workflows (doctors, nurses, admins, patients) with 20+ conditional paths into reusable test architecture. Runtime-generated UI means the models have to survive vendor push cycles, not just fixed states.</li>
+          <li>Built 14 custom scripts (video analysis, form autofill, test plan generation, Jira release summaries). Documentation overhead went from ~4 hrs/wk to under 1.</li>
+          <li>Verify PHI data persists through save/refresh cycles — patient records, appointment states, billing data. These are medical records. Accuracy matters.</li>
+        </ul>
+      </div>
+
+      <div class="job-sub">
+        <div class="job-sub-header">
+          <span class="job-role">Software QA Specialist</span>
+          <span class="job-period-inline">Apr 2023 &ndash; Sep 2024</span>
+        </div>
+        <ul class="job-highlights">
+          <li>Inherited an environment too unstable to automate directly. Built incrementally: manual templates → checklists → scripts. By promotion, those iterations were the full QA toolkit.</li>
+        </ul>
+      </div>
     </div>
 
+    <!-- Ultranauts Inc -->
     <div class="job">
       <div class="job-header">
         <span class="job-company">Ultranauts Inc</span>
         <span class="job-separator">&middot;</span>
-        <span class="job-role">Software Quality Engineer II</span>
+        <span class="job-tenure">Feb 2020 &ndash; Feb 2023 &nbsp;/&nbsp; Remote</span>
       </div>
-      <div class="job-period">Oct 2021 &ndash; Feb 2023 &nbsp;/&nbsp; Remote</div>
-      <ul class="job-highlights">
-        <li>Worked with enterprise and startup clients, owning test strategy and determining where automation would save time vs. adding overhead</li>
-        <li>Built Selenium test suites for workflows with complex business rules (multi-step forms, conditional logic, role-based access)</li>
-        <li>Set testing standards for the team and created Confluence templates that sped up onboarding and documentation</li>
-      </ul>
+
+      <div class="job-sub">
+        <div class="job-sub-header">
+          <span class="job-role">Software Quality Engineer II</span>
+          <span class="job-period-inline">Oct 2021 &ndash; Feb 2023</span>
+        </div>
+        <ul class="job-highlights">
+          <li>Built Selenium automation for workflows where manual regression wasn't sustainable: multi-step forms, conditional logic, role-based access controls across client codebases.</li>
+          <li>Scoped test strategy for fintech and enterprise SaaS clients: what to automate, and what to skip because the maintenance cost would outweigh the coverage.</li>
+        </ul>
+      </div>
+
+      <div class="job-sub print-hide">
+        <div class="job-sub-header">
+          <span class="job-role">SQA Engineer I &amp; Tester</span>
+          <span class="job-period-inline">Feb 2020 &ndash; Sep 2021</span>
+        </div>
+        <ul class="job-highlights">
+          <li>Manual and exploratory testing across multiple client projects. Scoped coverage for requirements that were still being written.</li>
+        </ul>
+      </div>
     </div>
+
   </div>
 </section>
 
 <!-- 03 SKILLS -->
-<section class="section">
+<section class="section" id="section-skills">
   <div class="section-label">
     <span class="section-number">03</span>
-    <span class="section-name">Skills</span>
+    <h2 class="section-name">Stack</h2>
   </div>
-  <div class="section-content">
+  <div class="section-content" style="max-width: none;">
     <div class="skills-grid">
       <div class="skills-category">
-        <div class="skills-category-name">QA Specializations</div>
-        <ul class="skills-list">
-          <li>Healthcare / Internal Tools Testing</li>
-          <li>Role-Based Permissions Testing</li>
-          <li>Data Integrity Validation</li>
-          <li>Cross-Browser Regression</li>
-          <li>Release Readiness Assessment</li>
-          <li>Edge Case Generation</li>
-          <li>Requirements Analysis</li>
-        </ul>
-      </div>
-
-      <div class="skills-category">
-        <div class="skills-category-name">Automation & Tools</div>
+        <div class="skills-category-name">Testing</div>
         <ul class="skills-list">
           <li>Playwright</li>
           <li>Selenium</li>
-          <li>Testmo</li>
-          <li>Jira & Confluence</li>
-          <li>Claude & Gemini</li>
-          <li>Python</li>
-          <li>JavaScript / TypeScript</li>
-          <li>HTML / CSS</li>
+          <li>Cypress</li>
+          <li>Postman</li>
+          <li>GraphQL validation</li>
         </ul>
       </div>
 
       <div class="skills-category">
-        <div class="skills-category-name">What Doesn't Scale (Yet)</div>
+        <div class="skills-category-name">Languages</div>
         <ul class="skills-list">
-          <li>Single point of failure: If I'm out, releases slip or ship with untested edge cases</li>
-          <li>Tribal knowledge: I know which workflows break when users have multiple sessions open, which state transitions create orphaned records, which async operations fail silently—none of this is documented</li>
-          <li>Custom tooling lock-in: 14 scripts that save me hours but would take a week+ to hand off and explain</li>
+          <li>TypeScript</li>
+          <li>Python</li>
+          <li>SQL</li>
+          <li>Node.js</li>
         </ul>
       </div>
+
+      <div class="skills-category">
+        <div class="skills-category-name">Frontend</div>
+        <ul class="skills-list">
+          <li>React</li>
+          <li>Tailwind</li>
+          <li>Storybook</li>
+        </ul>
+      </div>
+
+      <div class="skills-category">
+        <div class="skills-category-name">Tools</div>
+        <ul class="skills-list">
+          <li>Jira</li>
+          <li>Confluence</li>
+          <li>Git</li>
+          <li>CI/CD</li>
+          <li>TestRail</li>
+        </ul>
+      </div>
+
+      <div class="skills-category">
+        <div class="skills-category-name">AI</div>
+        <ul class="skills-list">
+          <li>Claude API + Code</li>
+          <li>Gemini (video triage)</li>
+        </ul>
+      </div>
+
+      <div class="skills-category">
+        <div class="skills-category-name">Domain</div>
+        <ul class="skills-list">
+          <li>Behavioral health SaaS</li>
+          <li>HIPAA</li>
+        </ul>
+      </div>
+
     </div>
+
   </div>
 </section>
 
-<!-- 04 PROJECTS -->
-<section class="section">
+<!-- 04 LOOKING FOR -->
+<section class="section print-hide" id="section-target">
   <div class="section-label">
     <span class="section-number">04</span>
-    <span class="section-name">Projects</span>
+    <h2 class="section-name">Looking For</h2>
   </div>
   <div class="section-content">
-    <div class="project">
-      <div class="project-num">01</div>
-      <div>
-        <div class="project-name">Data Confluence Pipeline</div>
-        <div class="project-impact">Built because Slack search was useless after 3 months and I was re-answering the same questions</div>
-        <div class="project-desc">Python ETL pipeline that pulls from Slack, email, Google Docs, and other apps into one searchable knowledge base. Deduplicates records and uses AI to classify thousands of entries.</div>
-        <div class="project-tech"><span>Python</span><span>ETL</span><span>API Integration</span></div>
-      </div>
-    </div>
-    <div class="project">
-      <div class="project-num">02</div>
-      <div>
-        <div class="project-name">Projects Dashboard</div>
-        <div class="project-impact">Built after waiting 12 minutes per rebuild got unbearable—needed sub-second iteration</div>
-        <div class="project-desc">Monorepo dashboard for 7+ React apps with shared components and build caching. Rebuild time: ~15s to under 200ms.</div>
-        <div class="project-tech"><span>React</span><span>TypeScript</span><span>Vite</span><span>Tailwind</span><span>Turborepo</span><span>pnpm Workspaces</span></div>
-      </div>
-    </div>
-    <div class="project">
-      <div class="project-num">03</div>
-      <div>
-        <div class="project-name">QA Workflow Automation Toolkit</div>
-        <div class="project-impact">~75% faster test planning and setup with tools I built myself</div>
-        <div class="project-desc">14 custom scripts for my own workflows: AI video analysis for bug triage, form autofill, test plan generation, and Jira batch processing.</div>
-        <div class="project-tech"><span>TypeScript</span><span>Node.js</span><span>Claude API</span><span>Gemini API</span><span>JavaScript</span></div>
-      </div>
-    </div>
+    <p class="about-text">
+      Senior QA, automation, or tooling roles in healthcare, govtech, or regulated domains. Best fit: a team shipping faster than its testing can handle that needs it actually fixed. Remote,&nbsp;mid-size.
+    </p>
   </div>
 </section>
 
-<!-- 05 LINKS -->
-<section class="section">
-  <div class="section-label">
-    <span class="section-number">05</span>
-    <span class="section-name">Links</span>
-  </div>
-  <div class="section-content">
-    <div class="contact-grid">
-      <div>
-        <div class="contact-item-label">LinkedIn</div>
-        <div class="contact-item-value"><a href="https://linkedin.com/in/kaylagilbert22">linkedin.com/in/kaylagilbert22</a></div>
-      </div>
-      <div>
-        <div class="contact-item-label">GitHub</div>
-        <div class="contact-item-value"><a href="https://github.com/snackdriven">github.com/snackdriven</a></div>
-      </div>
-    </div>
-  </div>
-</section>
+
+</main>
 
 <footer class="footer">
-  Kayla Gilbert // 2026
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+
+
+    <div style="display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+      <!-- Footer Text with Hover Countdown -->
+      <div style="font-size: 0.9rem;" class="footer-name-container">
+        <span class="footer-name">Kayla <span class="name-swap-wrapper" style="position: relative; display: inline-block;"><span class="last-name-gilbert" style="transition: opacity 0.3s;">Gilbert</span><span class="last-name-young" style="position: absolute; left: 0; opacity: 0; transition: opacity 0.3s; white-space: nowrap;">Young<span id="countdown-inline" style="font-size: 0.85em; margin-left: 0.3em;"></span></span></span></span><span class="year-text" style="transition: opacity 0.3s;"> // 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .social-icon {
+      color: currentColor;
+      opacity: 0.6;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      border: none;
+    }
+    .social-icon:hover {
+      opacity: 1;
+      transform: scale(1.15);
+    }
+
+    .footer-name {
+      cursor: pointer;
+    }
+
+    .footer-name-container:hover .last-name-gilbert {
+      opacity: 0;
+    }
+
+    .footer-name-container:hover .last-name-young {
+      opacity: 1 !important;
+    }
+
+    .footer-name-container:hover .year-text {
+      opacity: 0;
+    }
+
+    #countdown-inline {
+      opacity: 0.6;
+    }
+  </style>
+
+  <script>
+  (function() {
+      const weddingDate = new Date('2026-03-21T00:00:00');
+      const countdown = document.getElementById('countdown-inline');
+
+      function updateCountdown() {
+          const now = new Date();
+          const diff = weddingDate - now;
+          const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+
+          if (days > 0) {
+              countdown.textContent = `(${days} ${days === 1 ? 'day' : 'days'})`;
+          } else if (days === 0) {
+              countdown.textContent = '(today!)';
+          } else {
+              countdown.textContent = '';
+          }
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000 * 60 * 60); // Update every hour
+  })();
+
+  // Neon flicker: solo (common), ie cascade (medium), yl simultaneous (rare)
+  (function() {
+      const yl   = Array.from(document.querySelectorAll('.hero h1 span[data-group="yl"]'));
+      const ie   = Array.from(document.querySelectorAll('.hero h1 span[data-group="ie"]'));
+      const solo = Array.from(document.querySelectorAll('.hero h1 span[data-solo]'));
+
+      function randomFromInterval(from, to) {
+          return Math.floor(Math.random() * (to - from + 1) + from);
+      }
+
+      function flicker(spans, stagger) {
+          spans.forEach((l, idx) => {
+              setTimeout(() => {
+                  l.classList.add('flickering');
+                  setTimeout(() => l.classList.remove('flickering'), 800);
+              }, idx * (stagger || 0));
+          });
+      }
+
+      function next() {
+          const roll = Math.random();
+          if (roll < 0.2) {
+              flicker(yl, 0);
+              setTimeout(next, randomFromInterval(3000, 5000));
+          } else if (roll < 0.55) {
+              flicker(ie, 120);
+              setTimeout(next, randomFromInterval(2500, 4500));
+          } else {
+              flicker([solo[randomFromInterval(0, solo.length - 1)]], 0);
+              setTimeout(next, randomFromInterval(1500, 3500));
+          }
+      }
+
+      next();
+  })();
+  </script>
 </footer>
 
 </body>
