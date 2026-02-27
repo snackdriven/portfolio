@@ -480,9 +480,6 @@
     gap: 44px;
     container-type: inline-size;
   }
-  .skills-category:last-child {
-    grid-column: span 2;
-  }
   .skills-category {
     margin-bottom: 0;
   }
@@ -510,6 +507,7 @@
     margin-right: 8px;
     font-weight: bold;
   }
+
 
   /* PROJECTS */
   .project {
@@ -752,7 +750,6 @@
       <button class="resume-menu-btn" id="resume-menu-btn" aria-haspopup="true" aria-expanded="false">Resume ▾</button>
       <div class="resume-menu-dropdown" id="resume-menu-dropdown" role="menu">
         <a href="resume/kayla-gilbert-resume-automation.pdf" target="_blank" role="menuitem">Automation</a>
-        <a href="resume/kayla-gilbert-resume-qa.pdf" target="_blank" role="menuitem">QA generalist</a>
         <a href="resume/kayla-gilbert-resume-tools.pdf" target="_blank" role="menuitem">Tooling</a>
       </div>
     </div>
@@ -833,7 +830,7 @@
   </div>
   <div class="section-content">
     <p class="about-text">
-      I own QA for 8 behavioral health products. No backup means I'm a single point of failure. I test edge cases manually and build scripts when processes waste time repeatedly. 4-hour triage became a 1-hour script, 63-section forms became templates. 14 tools later, I've automated myself out of the boring work but not the job. Still need humans to catch what breaks in weird ways.
+      I own QA for 8 behavioral health products solo. When a manual process starts eating time, I write a script. 14 built so far: documentation down to an hour a week, 63-section forms turned into one-click autofill. I've built myself out of the boring work but not the job.
     </p>
   </div>
 </section>
@@ -860,10 +857,10 @@
           <span class="job-period-inline">Sep 2024 &ndash; Present</span>
         </div>
         <ul class="job-highlights">
-          <li>Own release-readiness decisions across 8 behavioral health products as sole QA. If I'm out sick, releases either slip or ship risky. I'm the quality and risk gate<a href="assets/you-shall-not-pass.gif" target="_blank" rel="noopener noreferrer" title="You shall not pass!" style="border: none;" aria-hidden="true" tabindex="-1">.</a></li>
-          <li>Design test matrices for multi-role workflows (doctors, nurses, admins, patients) with 20+ conditional paths and UI that shifts per role and state.</li>
-          <li>Built 14 custom scripts (video analysis, form autofill, test plan generation) that cut triage from ~4 hours to under 1 hour per release.</li>
-          <li>Catch data mismatches between UI and backend (patient records, appointment states, billing data). PHI is in scope, so nothing here is just a UI bug.</li>
+          <li>Sole QA for 8 behavioral health products. No team means every manual process I don't eliminate becomes permanent overhead. So I built automation tooling and test infrastructure instead.</li>
+          <li>Codified multi-role workflows (doctors, nurses, admins, patients) with 20+ conditional paths into reusable test architecture. Runtime-generated UI means the models have to survive vendor push cycles, not just fixed states.</li>
+          <li>Built 14 custom scripts (video analysis, form autofill, test plan generation, Jira release summaries). Documentation overhead went from ~4 hrs/wk to under 1.</li>
+          <li>Verify PHI data persists through save/refresh cycles — patient records, appointment states, billing data. These are medical records. Accuracy matters.</li>
         </ul>
       </div>
 
@@ -873,7 +870,7 @@
           <span class="job-period-inline">Apr 2023 &ndash; Sep 2024</span>
         </div>
         <ul class="job-highlights">
-          <li>Env was too flimsy to automate on, so I went manual first: templates, then checklists, then scripts. That became the full toolkit by promotion.</li>
+          <li>Inherited an environment too unstable to automate directly. Built incrementally: manual templates → checklists → scripts. By promotion, those iterations were the full QA toolkit.</li>
         </ul>
       </div>
     </div>
@@ -892,8 +889,8 @@
           <span class="job-period-inline">Oct 2021 &ndash; Feb 2023</span>
         </div>
         <ul class="job-highlights">
-          <li>Built Selenium test suites for workflows with complex business rules: multi-step forms, conditional logic, role-based access controls.</li>
-          <li>Advised fintech, enterprise SaaS, and data tooling clients on test strategy: where to automate, where automation would just create maintenance debt.</li>
+          <li>Built Selenium automation for workflows where manual regression wasn't sustainable: multi-step forms, conditional logic, role-based access controls across client codebases.</li>
+          <li>Scoped test strategy for fintech and enterprise SaaS clients: what to automate, and what to skip because the maintenance cost would outweigh the coverage.</li>
         </ul>
       </div>
 
@@ -903,7 +900,7 @@
           <span class="job-period-inline">Feb 2020 &ndash; Sep 2021</span>
         </div>
         <ul class="job-highlights">
-          <li>Manual and exploratory testing across client projects. Wrote test cases, documented bugs, and learned to scope testing when requirements were vague.</li>
+          <li>Manual and exploratory testing across multiple client projects. Scoped coverage for requirements that were still being written.</li>
         </ul>
       </div>
     </div>
@@ -924,6 +921,7 @@
         <ul class="skills-list">
           <li>Playwright</li>
           <li>Selenium</li>
+          <li>Cypress</li>
           <li>Postman</li>
           <li>GraphQL validation</li>
         </ul>
@@ -935,6 +933,7 @@
           <li>TypeScript</li>
           <li>Python</li>
           <li>SQL</li>
+          <li>Node.js</li>
         </ul>
       </div>
 
@@ -953,6 +952,8 @@
           <li>Jira</li>
           <li>Confluence</li>
           <li>Git</li>
+          <li>CI/CD</li>
+          <li>TestRail</li>
         </ul>
       </div>
 
@@ -969,19 +970,11 @@
         <ul class="skills-list">
           <li>Behavioral health SaaS</li>
           <li>HIPAA</li>
-          <li>No-code platforms</li>
         </ul>
       </div>
 
-      <div class="skills-category print-hide">
-        <div class="skills-category-name">What Doesn't Scale (Yet)</div>
-        <ul class="skills-list">
-          <li>Single point of failure: If I'm out, releases slip or ship with untested edge cases</li>
-          <li>Tribal knowledge: I know which workflows break when users have multiple sessions open and which async operations fail silently. None of this is documented</li>
-          <li>Custom tooling lock-in: 14 scripts that save me hours but would take a week+ to hand off and explain</li>
-        </ul>
-      </div>
     </div>
+
   </div>
 </section>
 

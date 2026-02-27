@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Projects by Kayla Gilbert. QA automation toolkit, Jira Local, Chronicle, EDC, and OpenClaw.">
+<meta name="description" content="Projects by Kayla Gilbert. QA automation toolkit, Jira Local, and Chronicle.">
 <meta property="og:title" content="Kayla Gilbert - Projects">
 <meta property="og:description" content="QA tools, productivity systems, developer infrastructure. Most started as a fix for something broken.">
 <meta property="og:url" content="https://snackdriven.com/projects.html">
@@ -597,7 +597,7 @@
 
   <h1>P<span data-solo>r</span>o<span data-group="jc">j</span>e<span data-group="jc">c</span><span data-pair>t</span><span data-pair>s</span></h1>
   <p>Most of these started as a fix for something broken.</p>
-  <p>QA tools, productivity systems, developer infrastructure. Same instinct each time.</p>
+  <p>QA automation and personal tooling. Same instinct each time.</p>
 </header>
 
 <main class="container" id="main-content">
@@ -608,9 +608,12 @@
         <div>
           <div class="project-name">QA Workflow Automation Toolkit</div>
           <div class="project-date">2023&ndash;present</div>
-          <div class="project-impact">Cut test planning from ~40 minutes to under 10 with custom scripts</div>
+          <div class="project-impact">Config-driven Playwright framework + 14 scripts. Documentation overhead from ~4 hrs/wk to under 1.</div>
           <div class="project-desc">
-            14 custom scripts for my own workflows: AI video analysis for bug triage, form autofill, test plan generation, and Jira batch processing. Built incrementally over 3 years at Chorus. Each one started because a manual process was eating time that should've been spent on actual testing.
+            The hard part was the platform: no staging, 350+ form fields generated at runtime, label names that change whenever the vendor pushes an update. I built a Playwright harness where field mappings live in config files, so when labels shift I update config instead of rewriting tests. A Claude API layer handles the cases where that's still not enough, doing fuzzy matching on the selector.
+          </div>
+          <div class="project-desc">
+            The 14 scripts came separately. Each one started with a manual process I got tired of doing: video capture for HIPAA audit evidence, Jira release summaries from ticket metadata, daily QA digests, 63-section form autofill. Two and a half years at Chorus, accumulated one annoyance at a time.
           </div>
           <div class="project-tech">
             <span>TypeScript</span>
@@ -628,14 +631,15 @@
         <div>
           <div class="project-name">Jira Local</div>
           <div class="project-date">2025</div>
-          <div class="project-impact">50 tickets loaded in under 2 seconds, 5 view modes, keyboard-first</div>
+          <div class="project-impact">5 views (board/list/tree/detail/calendar), custom sorting, full keyboard navigation &mdash; without touching the shared board</div>
           <div class="project-desc">
-            Holiday break, backlog of piled-up tickets, most of them queued for release within a day or two of getting back. JIRA's default view wasn't cutting it. The ticket names didn't have the context I needed to sort them at a glance, and I couldn't reorder things without changing the actual board, which would mess with everyone else's setup. Built a local wrapper instead: 5 views (board, list, tree, detail, calendar), custom sorting, full keyboard navigation. React Query caching loads 50 tickets in under 2 seconds.
+            Holiday break, backlog of piled-up tickets, most of them queued for release within a day or two of getting back. JIRA's default view wasn't cutting it. The ticket names didn't have the context I needed to sort them at a glance, and I couldn't reorder things without changing the actual board, which would mess with everyone else's setup. Built a local wrapper instead. Changes stay local.
           </div>
           <div class="project-tech">
-            <span>React</span>
+            <span>React 18</span>
             <span>TypeScript</span>
-            <span>Tailwind</span>
+            <span>Vite</span>
+            <span>TanStack Query</span>
           </div>
           <a href="https://github.com/snackdriven/jira-local" target="_blank" rel="noopener noreferrer" class="project-github">github.com/snackdriven/jira-local &rarr;</a>
         </div>
@@ -646,9 +650,9 @@
         <div>
           <div class="project-name">chronicle</div>
           <div class="project-date">2025</div>
-          <div class="project-impact">Timeline memory system with direct MCP integration for Claude</div>
+          <div class="project-impact">MCP server exposing a personal event timeline as a context source for Claude mid-conversation</div>
           <div class="project-desc">
-            I kept losing context between sessions. Not just what I decided, but why, and what was going on at the time. It came up most when I'd hit a known bug I'd already called out in a previous sprint, or try to remember a decision made in a ticket that nobody documented. Chronicle tracks all of that. The main draw is MCP integration: Claude can query my personal history directly mid-conversation, which is most of why I built it. Key-value storage for quick lookups, full-text search and tag filtering when I need to dig. TanStack Table for the timeline view, Express for the API.
+            I kept re-explaining the same context to Claude: not what I decided, but why, and what was happening at the time. New session or different machine, didn't matter — it was gone either way. Chronicle is an MCP server that stores that timeline and surfaces it on request, so the context follows me.
           </div>
           <div class="project-tech">
             <span>React</span>
@@ -657,64 +661,6 @@
             <span>MCP</span>
           </div>
           <a href="https://github.com/snackdriven/chronicle" target="_blank" rel="noopener noreferrer" class="project-github">github.com/snackdriven/chronicle &rarr;</a>
-        </div>
-      </div>
-
-      <div class="project">
-        <div class="project-num">04</div>
-        <div>
-          <div class="project-name">Executive Dysfunction Center (EDC) &#10024;</div>
-          <div class="project-date">2022&ndash;present</div>
-          <div class="project-impact">Personal productivity app &mdash; rebuilt across Vue, React, and Tauri. Same Supabase backend each time.</div>
-          <div class="project-desc">
-            I've tried (and abandoned) Todoist, Notion, Things, Obsidian. None of them stuck. So I built my own. Task dependencies, habit streaks, mood tracking, journaling, Google Calendar sync, multi-pane workspace. When I wanted to learn a new stack, EDC was what I built it with. Each rebuild uses the same Supabase backend so my real tasks carry over. Building IS the accountability system.
-          </div>
-          <div class="project-tech">
-            <span>React</span>
-            <span>TypeScript</span>
-            <span>Supabase</span>
-            <span>Playwright</span>
-          </div>
-          <span class="project-github">private &middot; available on request</span>
-        </div>
-      </div>
-
-      <div class="project">
-        <div class="project-num">05</div>
-        <div>
-          <div class="project-name">mise-en-place</div>
-          <div class="project-date">2025&ndash;present</div>
-          <div class="project-impact">Zero-dependency task and event planner with cross-device sync</div>
-          <div class="project-desc">
-            Tried every planner app. None of them modeled time the way my brain does. Built this one from scratch: three files, no build step, no npm. Tasks have three time states (due-by, open, recurring) and surface based on an activation window rather than just a due date. Events and tasks share a calendar view. Catppuccin Mocha theme because I spend a lot of time looking at it. Optional Supabase sync via magic link auth — works fully offline otherwise.
-          </div>
-          <div class="project-tech">
-            <span>Vanilla JS</span>
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>Supabase</span>
-          </div>
-          <a href="https://snackdriven.github.io/mise-en-place/" target="_blank" rel="noopener noreferrer" class="project-github">snackdriven.github.io/mise-en-place &rarr;</a>
-        </div>
-      </div>
-
-      <div class="project">
-        <div class="project-num">06</div>
-        <div>
-          <div class="project-name">OpenClaw</div>
-          <div class="project-date">2025&ndash;present</div>
-          <div class="project-impact">5 AI agents, one HTTP gateway, 87% cost reduction ($120/month &rarr; $15)</div>
-          <div class="project-desc">
-            Coordinates 5 AI agents with isolated workspaces. The gateway routes messages to the right specialist: task management, scheduling, and a narration agent that keeps things moving without being naggy. Each agent only sees what it needs.
-          </div>
-          <div class="project-desc">
-            Model routing depends on what's being asked. Cheap models for short requests, heavier models when something needs more reasoning. Before this, everything was hitting the Claude API directly and the bill showed it. Monthly cost is now $5-15. The HTTP gateway handles auth and session state, plus cross-agent relay when needed.
-          </div>
-          <div class="project-tech">
-            <span>Python</span>
-            <span>TypeScript</span>
-          </div>
-          <span class="project-github">private &middot; available on request</span>
         </div>
       </div>
 
