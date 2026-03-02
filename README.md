@@ -1,6 +1,6 @@
 # Kayla Gilbert
 
-QA Engineer. Test automation and internal tooling. Bentonville, AR (remote).
+Test automation and internal tooling. Bentonville, AR (remote).
 
 **Live site:** [snackdriven.com](https://snackdriven.com)
 
