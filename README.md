@@ -16,7 +16,7 @@ Print styles built in. The resume prints to a clean single-page PDF with a light
 
 ## About me
 
-I own QA for 8 behavioral health products. When something is slow or broken or annoying, I usually end up building a small tool to fix it. 14 scripts and counting. Most of my repos are private because they're either half-finished or contain my unhinged commit messages.
+I write tools to kill manual work. Came up through QA: eight behavioral health products, no backup. Every slow process was mine to eliminate or live with. 14 scripts later. Most of my repos are private because they're either half-finished or contain my unhinged commit messages.
 
 ## Contact
 
