@@ -8,6 +8,9 @@
 <meta property="og:description" content="QA tools, productivity systems, developer infrastructure. Most started as a fix for something broken.">
 <meta property="og:url" content="https://snackdriven.com/projects.html">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://snackdriven.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%234AEEA0'>%3E</text></svg>">
 <title>Kayla Gilbert - Projects</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -597,7 +600,7 @@
 
   <h1>P<span data-solo>r</span>o<span data-group="jc">j</span>e<span data-group="jc">c</span><span data-pair>t</span><span data-pair>s</span></h1>
   <p>Most of these started as a fix for something broken.</p>
-  <p>QA automation and personal tooling. Same instinct each time.</p>
+  <p>QA automation and personal tooling.</p>
 </header>
 
 <main class="container" id="main-content">
@@ -608,9 +611,9 @@
         <div>
           <div class="project-name">QA Workflow Automation Toolkit</div>
           <div class="project-date">2023&ndash;present</div>
-          <div class="project-impact">Config-driven Playwright framework + 14 scripts. Documentation overhead from ~4 hrs/wk to under 1.</div>
+          <div class="project-impact">Config-driven Playwright framework + 14 scripts. Documentation overhead from ~4 hrs/wk to under an hour.</div>
           <div class="project-desc">
-            The hard part was the platform: no staging, 350+ form fields generated at runtime, label names that change whenever the vendor pushes an update. I built a Playwright harness where field mappings live in config files, so when labels shift I update config instead of rewriting tests. A Claude API layer handles the cases where that's still not enough, doing fuzzy matching on the selector.
+            The hard part was the platform: no staging, 350+ form fields generated at runtime, label names that change whenever the vendor pushes an update. I built a Playwright harness where field mappings live in config files. When labels shift, I update config instead of rewriting tests. When that's still not enough, a Claude API layer does fuzzy selector matching.
           </div>
           <div class="project-desc">
             The 14 scripts came separately. Each one started with a manual process I got tired of doing: video capture for HIPAA audit evidence, Jira release summaries from ticket metadata, daily QA digests, 63-section form autofill. Two and a half years at Chorus, accumulated one annoyance at a time.
@@ -622,7 +625,8 @@
             <span>Gemini API</span>
             <span>JavaScript</span>
           </div>
-          <span class="project-github">internal tooling &middot; not public</span>
+          <div class="project-desc" style="font-size:0.85rem;">The public repo has 2 of the 14 scripts. The rest touch PHI-adjacent workflows or internal Jira structure that can't be extracted cleanly.</div>
+          <a href="https://github.com/snackdriven/qa-toolkit" target="_blank" rel="noopener noreferrer" class="project-github">github.com/snackdriven/qa-toolkit &rarr;</a>
         </div>
       </div>
 
@@ -631,7 +635,7 @@
         <div>
           <div class="project-name">Jira Local</div>
           <div class="project-date">2025</div>
-          <div class="project-impact">5 views (board/list/tree/detail/calendar), custom sorting, full keyboard navigation &mdash; without touching the shared board</div>
+          <div class="project-impact">5 views (board/list/tree/detail/calendar), custom sorting, full keyboard navigation, none of it touching the shared board.</div>
           <div class="project-desc">
             Holiday break, backlog of piled-up tickets, most of them queued for release within a day or two of getting back. JIRA's default view wasn't cutting it. The ticket names didn't have the context I needed to sort them at a glance, and I couldn't reorder things without changing the actual board, which would mess with everyone else's setup. Built a local wrapper instead. Changes stay local.
           </div>
@@ -650,9 +654,9 @@
         <div>
           <div class="project-name">chronicle</div>
           <div class="project-date">2025</div>
-          <div class="project-impact">MCP server exposing a personal event timeline as a context source for Claude mid-conversation</div>
+          <div class="project-impact">MCP server giving Claude access to a personal decision timeline across sessions</div>
           <div class="project-desc">
-            I kept re-explaining the same context to Claude: not what I decided, but why, and what was happening at the time. New session or different machine, didn't matter — it was gone either way. Chronicle is an MCP server that stores that timeline and surfaces it on request, so the context follows me.
+            I kept re-explaining the same context to Claude. Not what I decided, but why, and what was happening at the time. New session or different machine, same result: gone. Chronicle is an MCP server with a SQLite backend that stores the timeline and surfaces it on request, mid-conversation, as a live tool. Not a static file you paste in once. So the context follows me.
           </div>
           <div class="project-tech">
             <span>React</span>
@@ -671,7 +675,7 @@
           <div class="project-date">2026</div>
           <div class="project-impact">Zero-dependency task and event planner with cross-device sync, ADHD-friendly hierarchy, and Catppuccin Mocha</div>
           <div class="project-desc">
-            Three files, no build step, no npm. Tasks have three time states (due-by, open, recurring), subtasks, dependencies, and an activation date that controls when something surfaces. The ADHD angle is deliberate: blocked status is derived from unfinished dependencies rather than set manually, so the app figures out what you can actually do right now. Optional Supabase sync if you want it across devices.
+            Three files, no build step, no npm. Tasks have three time states (due-by, open, recurring), subtasks, dependencies, and an activation date that controls when something surfaces. The ADHD angle is deliberate. Blocked status comes from unfinished dependencies, not something you toggle manually. The app figures out what you can do right now. Optional Supabase sync.
           </div>
           <div class="project-tech">
             <span>Vanilla JS</span>
