@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Test 002: Flaky by Design — a placeholder post on why tests lie and how to make them stop.">
+<meta property="og:title" content="Test 002: Flaky by Design — snackdriven.com">
+<meta property="og:description" content="A placeholder on flake hunting: why tests lie and how to make them stop.">
+<meta property="og:url" content="https://snackdriven.com/blog/flaky-by-design.html">
+<meta property="og:type" content="article">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%234AEEA0'>%3E</text></svg>">
+<title>Test 002: Flaky by Design — snackdriven.com</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #2D2B3A;
+    --bg-sidebar: #252336;
+    --fg: #E0DEE8;
+    --green: #4AEEA0;
+    --cyan: #A78BFA;
+    --teal: #72C5D9;
+    --magenta: #FF6B9D;
+    --muted: #B5B2C8;
+    --border: #3D3A50;
+  }
+
+  ::selection { background: var(--green); color: var(--bg); }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: "Inter", -apple-system, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    line-height: 1.7;
+  }
+
+  .wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  /* ---- top bar ---- */
+  .topbar {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 28px;
+    margin-bottom: 48px;
+    border-bottom: 1px solid var(--border);
+    font-family: "DM Mono", monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+  }
+  .topbar .brand { color: var(--green); font-weight: 500; }
+  .topbar .brand .prompt { text-shadow: 0 0 8px rgba(74, 238, 160, 0.5); }
+  .topbar nav { display: flex; gap: 20px; }
+
+  a { color: var(--teal); text-decoration: none; transition: color 0.1s; }
+  a:hover { color: var(--magenta); }
+  a:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+  .topbar .brand { color: var(--green); }
+  .topbar nav a { color: var(--muted); }
+  .topbar nav a:hover { color: var(--magenta); }
+
+  /* ---- article header ---- */
+  .post-meta {
+    font-family: "DM Mono", monospace;
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--muted);
+    margin-bottom: 18px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .post-meta .tag { color: var(--teal); }
+  .badge {
+    font-family: "DM Mono", monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--bg);
+    background: var(--cyan);
+    padding: 2px 6px;
+    border-radius: 3px;
+  }
+
+  h1.title {
+    font-family: "Chakra Petch", sans-serif;
+    font-size: clamp(1.9rem, 5vw, 2.8rem);
+    line-height: 1.05;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--green);
+    text-shadow:
+      0 0 2px var(--green),
+      0 0 8px rgba(74, 238, 160, 0.5),
+      0 0 16px rgba(74, 238, 160, 0.3),
+      0 2px 4px rgba(0, 0, 0, 0.4);
+    margin-bottom: 40px;
+  }
+
+  /* ---- article body ---- */
+  article p { margin-bottom: 22px; color: var(--fg); }
+  article p.lead { font-size: 1.1rem; color: var(--muted); }
+
+  article h2 {
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--teal);
+    margin: 44px 0 16px;
+  }
+  article h2::before { content: "// "; color: var(--border); }
+
+  article ul, article ol { margin: 0 0 22px 0; padding-left: 0; list-style: none; }
+  article ul li, article ol li {
+    position: relative;
+    padding-left: 26px;
+    margin-bottom: 10px;
+    color: var(--fg);
+  }
+  article ul li::before {
+    content: "▹";
+    position: absolute;
+    left: 4px;
+    color: var(--green);
+  }
+  article ol { counter-reset: step; }
+  article ol li { counter-increment: step; }
+  article ol li::before {
+    content: counter(step) ".";
+    position: absolute;
+    left: 0;
+    color: var(--magenta);
+    font-family: "DM Mono", monospace;
+    font-size: 0.85em;
+  }
+
+  article a { border-bottom: 1px solid var(--border); padding-bottom: 1px; }
+  article a:hover { border-bottom-color: var(--magenta); }
+
+  code {
+    font-family: "DM Mono", monospace;
+    font-size: 0.88em;
+    background: var(--bg-sidebar);
+    color: var(--cyan);
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+  }
+
+  pre {
+    background: var(--bg-sidebar);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--green);
+    border-radius: 6px;
+    padding: 18px 20px;
+    overflow-x: auto;
+    margin: 0 0 24px;
+  }
+  pre code {
+    background: none;
+    border: none;
+    padding: 0;
+    color: var(--fg);
+    font-size: 0.84rem;
+    line-height: 1.7;
+  }
+  pre .c { color: var(--muted); }
+  pre .g { color: var(--green); }
+  pre .m { color: var(--magenta); }
+
+  blockquote {
+    border-left: 3px solid var(--magenta);
+    padding: 4px 0 4px 20px;
+    margin: 0 0 24px;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 44px 0;
+  }
+
+  /* ---- footer ---- */
+  footer {
+    margin-top: 64px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-family: "DM Mono", monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+  }
+  footer .links { display: flex; gap: 22px; }
+  footer .links a {
+    color: var(--muted);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 2px;
+  }
+  footer .links a:hover { color: var(--magenta); border-bottom-color: var(--magenta); }
+  footer .domain { text-transform: uppercase; letter-spacing: 0.2em; color: var(--border); }
+
+  .backlink {
+    display: inline-block;
+    margin-top: 8px;
+    font-family: "DM Mono", monospace;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  .backlink:hover { color: var(--magenta); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="brand" href="/"><span class="prompt">&gt;</span> snackdriven.com</a>
+    <nav>
+      <a href="/">home</a>
+      <a href="/blog/">log</a>
+    </nav>
+  </div>
+
+  <article>
+    <div class="post-meta">
+      <span>2026-06-17</span>
+      <span class="tag">#testing</span>
+      <span>~3 min read</span>
+      <span class="badge">placeholder</span>
+    </div>
+
+    <h1 class="title">Test 002: Flaky by Design</h1>
+
+    <p class="lead">Another placeholder &mdash; here to show how a second entry stacks up in the log. The topic is real even if the words aren&rsquo;t yet: a flaky test isn&rsquo;t random, it&rsquo;s a race condition you haven&rsquo;t named.</p>
+
+    <pre><code><span class="c"># the test that passes on your machine</span>
+<span class="g">PASS</span>  checkout.spec.ts  <span class="c">(local, run 1)</span>
+<span class="m">FAIL</span>  checkout.spec.ts  <span class="c">(ci, run 2)</span>
+<span class="m">FAIL</span>  checkout.spec.ts  <span class="c">(ci, run 3)</span>
+<span class="g">PASS</span>  checkout.spec.ts  <span class="c">(ci, run 4)</span>
+<span class="c"># ...this is the bug, not the weather</span></code></pre>
+
+    <h2>The lie</h2>
+    <p>&ldquo;It&rsquo;s just flaky&rdquo; is the most expensive sentence in a test suite. It teaches the team to re-run until green, which teaches the suite that failure is optional, which is how a real regression sails through behind a retry button.</p>
+
+    <h2>The usual suspects</h2>
+    <ul>
+      <li>Time &mdash; <code>sleep(500)</code> is a bet that the machine is never busy. It loses on CI.</li>
+      <li>Order &mdash; tests that share state pass alone and fail in a crowd.</li>
+      <li>Network &mdash; a real call where a stub belonged.</li>
+      <li>Animation &mdash; clicking an element mid-transition, before it&rsquo;s where you think it is.</li>
+    </ul>
+
+    <h2>The pin-down</h2>
+    <ol>
+      <li>Reproduce it on purpose &mdash; loop the test 100&times; until it fails on command.</li>
+      <li>Replace every wait-for-time with a wait-for-condition.</li>
+      <li>Isolate state so order can&rsquo;t matter.</li>
+      <li>Quarantine, never ignore &mdash; a skipped flake is a bug with a hat on.</li>
+    </ol>
+
+    <blockquote>A retry is a snooze button. Sometimes you need sleep; mostly you need to fix the alarm.</blockquote>
+
+    <h2>Status</h2>
+    <p>Placeholder for now &mdash; the real version comes with an actual failing test and the diff that fixed it. Until then, take the checklist and go pin something down. Questions go to <a href="mailto:kayla@snackdriven.com">the usual inbox</a>.</p>
+
+    <hr>
+
+    <a class="backlink" href="/blog/">&larr; back to the log</a>
+  </article>
+
+  <footer>
+    <div class="links">
+      <a href="mailto:kayla@snackdriven.com">email</a>
+      <a href="https://github.com/snackdriven" target="_blank" rel="noopener">github</a>
+      <a href="https://linkedin.com/in/snackdriven" target="_blank" rel="noopener">linkedin</a>
+    </div>
+    <div class="domain">snackdriven.com</div>
+  </footer>
+
+</div>
+
+<script>
+console.log('%c  STATUS  test 002: flaky by design  ', 'background:#A78BFA;color:#2D2B3A;font-family:"DM Mono",monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:2px;');
+console.log('%c\n  ✓  page renders\n  ✓  theme tokens resolve\n  ○  actual content  (pending)\n', 'color:#4AEEA0;font-family:"DM Mono",monospace;font-size:11px;line-height:1.9;');
+console.log('%c  2 passing  1 pending', 'color:#B5B2C8;font-family:"DM Mono",monospace;font-size:11px;');
+console.log('%c\n  → kayla@snackdriven.com\n', 'color:#72C5D9;font-family:"DM Mono",monospace;font-size:11px;');
+</script>
+
+</body>
+</html>
