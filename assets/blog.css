@@ -1,0 +1,155 @@
+/* ============================================================
+   snackdriven.com — blog.css
+   Blog feature styles. Builds only on tokens/components from
+   site.css (link site.css first). No palette values live here.
+   ============================================================ */
+
+/* ---- layout ---- */
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 64px 24px 96px;
+  line-height: 1.6;
+}
+/* reading column — narrower + looser leading for long-form articles */
+.wrap.reading {
+  max-width: 680px;
+  line-height: 1.7;
+}
+
+/* ---- blog index ---- */
+.page-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+.page-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+.page-intro {
+  color: var(--muted);
+  font-size: 1.02rem;
+  max-width: 56ch;
+}
+
+.posts {
+  margin-top: 56px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.post-row {
+  display: block;
+  padding: 22px 20px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-sidebar);
+  transition: border-color 0.12s, transform 0.12s;
+}
+.post-row:hover { border-color: var(--green); transform: translateX(2px); }
+/* tighter meta inside cards than in the article header */
+.post-row .post-meta {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 8px;
+}
+.post-row h2 {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--fg);
+  margin-bottom: 6px;
+}
+.post-row:hover h2 { color: var(--magenta); }
+.post-row p { color: var(--muted); font-size: 0.95rem; }
+
+/* ---- article ---- */
+.post-title {
+  font-size: clamp(1.9rem, 5vw, 2.8rem);
+  line-height: 1.05;
+  letter-spacing: 0.03em;
+  margin-bottom: 40px;
+}
+
+article p { margin-bottom: 22px; color: var(--fg); }
+article p.lead { font-size: 1.1rem; color: var(--muted); }
+
+article h2 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--teal);
+  margin: 44px 0 16px;
+}
+article h2::before { content: "// "; color: var(--border); }
+
+article ul, article ol { margin: 0 0 22px 0; padding-left: 0; list-style: none; }
+article ul li, article ol li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 10px;
+  color: var(--fg);
+}
+article ul li::before { content: "▹"; position: absolute; left: 4px; color: var(--green); }
+article ol { counter-reset: step; }
+article ol li { counter-increment: step; }
+article ol li::before {
+  content: counter(step) ".";
+  position: absolute;
+  left: 0;
+  color: var(--magenta);
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+}
+
+article a { color: var(--teal); border-bottom: 1px solid var(--border); padding-bottom: 1px; }
+article a:hover { color: var(--magenta); border-bottom-color: var(--magenta); }
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  background: var(--bg-sidebar);
+  color: var(--cyan);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+pre {
+  background: var(--bg-sidebar);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  border-radius: 6px;
+  padding: 18px 20px;
+  overflow-x: auto;
+  margin: 0 0 24px;
+}
+pre code { background: none; border: none; padding: 0; color: var(--fg); font-size: 0.84rem; line-height: 1.7; }
+pre .c { color: var(--muted); }
+pre .g { color: var(--green); }
+pre .m { color: var(--magenta); }
+
+blockquote {
+  border-left: 3px solid var(--magenta);
+  padding: 4px 0 4px 20px;
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+hr { border: none; border-top: 1px solid var(--border); margin: 44px 0; }
+
+.backlink {
+  display: inline-block;
+  margin-top: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.backlink:hover { color: var(--magenta); }
