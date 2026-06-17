@@ -6,8 +6,11 @@
 <meta name="description" content="snackdriven.com — coming soon.">
 <meta property="og:title" content="snackdriven.com">
 <meta property="og:description" content="Coming soon.">
-<meta property="og:url" content="https://snackdriven.com">
+<meta property="og:url" content="https://snackdriven.com/">
 <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://snackdriven.com/">
+<meta name="theme-color" content="#2D2B3A">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%234AEEA0'>%3E</text></svg>">
 <title>snackdriven.com</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,8 +59,12 @@
 </div>
 
 <script>
-// Neon flicker — carried over from the old site
+// Neon flicker — carried over from the old site.
+// Respect prefers-reduced-motion: don't start the loop at all.
 (function() {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        return;
+    }
     const groups = {
         th: Array.from(document.querySelectorAll('h1 span[data-group="th"]')),
         ng: Array.from(document.querySelectorAll('h1 span[data-group="ng"]'))
