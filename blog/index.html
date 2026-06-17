@@ -13,177 +13,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  :root {
-    --bg: #2D2B3A;
-    --bg-sidebar: #252336;
-    --fg: #E0DEE8;
-    --green: #4AEEA0;
-    --cyan: #A78BFA;
-    --teal: #72C5D9;
-    --magenta: #FF6B9D;
-    --muted: #B5B2C8;
-    --border: #3D3A50;
-  }
-
-  ::selection { background: var(--green); color: var(--bg); }
-
-  body {
-    background: var(--bg);
-    color: var(--fg);
-    font-family: "Inter", -apple-system, system-ui, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    min-height: 100vh;
-    line-height: 1.6;
-  }
-
-  .wrap {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 64px 24px 96px;
-  }
-
-  /* ---- top bar ---- */
-  .topbar {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 16px;
-    padding-bottom: 28px;
-    margin-bottom: 48px;
-    border-bottom: 1px solid var(--border);
-    font-family: "DM Mono", monospace;
-    font-size: 0.8rem;
-    letter-spacing: 0.04em;
-  }
-  .topbar .brand {
-    color: var(--green);
-    font-weight: 500;
-  }
-  .topbar .brand .prompt { text-shadow: 0 0 8px rgba(74, 238, 160, 0.5); }
-  .topbar nav { display: flex; gap: 20px; }
-
-  a { color: var(--fg); text-decoration: none; transition: color 0.1s; }
-  a:hover { color: var(--magenta); }
-  a:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
-  .topbar nav a { color: var(--muted); }
-  .topbar nav a:hover { color: var(--magenta); }
-
-  /* ---- header ---- */
-  .page-label {
-    font-family: "DM Mono", monospace;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--muted);
-    margin-bottom: 16px;
-  }
-  h1.page-title {
-    font-family: "Chakra Petch", sans-serif;
-    font-size: clamp(2rem, 5vw, 3rem);
-    line-height: 1;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: var(--green);
-    text-shadow:
-      0 0 2px var(--green),
-      0 0 8px rgba(74, 238, 160, 0.5),
-      0 0 16px rgba(74, 238, 160, 0.3),
-      0 2px 4px rgba(0, 0, 0, 0.4);
-    margin-bottom: 16px;
-  }
-  .page-intro {
-    color: var(--muted);
-    font-size: 1.02rem;
-    max-width: 56ch;
-  }
-
-  /* ---- post list ---- */
-  .posts {
-    margin-top: 56px;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-  .post-row {
-    display: block;
-    padding: 22px 20px;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    background: var(--bg-sidebar);
-    transition: border-color 0.12s, transform 0.12s;
-  }
-  .post-row:hover {
-    border-color: var(--green);
-    transform: translateX(2px);
-  }
-  .post-meta {
-    font-family: "DM Mono", monospace;
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: var(--muted);
-    margin-bottom: 8px;
-    display: flex;
-    gap: 14px;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  .post-meta .tag { color: var(--teal); }
-  .badge {
-    font-family: "DM Mono", monospace;
-    font-size: 0.62rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--bg);
-    background: var(--cyan);
-    padding: 2px 6px;
-    border-radius: 3px;
-  }
-  .post-row h2 {
-    font-family: "Inter", sans-serif;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--fg);
-    margin-bottom: 6px;
-  }
-  .post-row:hover h2 { color: var(--magenta); }
-  .post-row p {
-    color: var(--muted);
-    font-size: 0.95rem;
-  }
-
-  /* ---- footer ---- */
-  footer {
-    margin-top: 72px;
-    padding-top: 28px;
-    border-top: 1px solid var(--border);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
-    font-family: "DM Mono", monospace;
-    font-size: 0.78rem;
-    letter-spacing: 0.04em;
-  }
-  footer .links { display: flex; gap: 22px; }
-  footer .links a {
-    color: var(--muted);
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 2px;
-  }
-  footer .links a:hover { color: var(--magenta); border-bottom-color: var(--magenta); }
-  footer .domain {
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--border);
-  }
-</style>
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/blog.css">
 </head>
 <body>
 <div class="wrap">
@@ -197,7 +28,7 @@
   </div>
 
   <div class="page-label">~/blog &mdash; field notes</div>
-  <h1 class="page-title">The Log</h1>
+  <h1 class="neon page-title">The Log</h1>
   <p class="page-intro">Notes on test automation, internal tooling, and developer experience &mdash; written mostly so future me remembers why past me did the thing.</p>
 
   <ul class="posts">
@@ -225,7 +56,7 @@
     </li>
   </ul>
 
-  <footer>
+  <footer class="site-footer">
     <div class="links">
       <a href="mailto:kayla@snackdriven.com">email</a>
       <a href="https://github.com/snackdriven" target="_blank" rel="noopener">github</a>
