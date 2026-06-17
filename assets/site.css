@@ -10,6 +10,9 @@
 
 /* ---- design tokens (the single source of truth) ---- */
 :root {
+  /* render native UI (scrollbars, form controls) in dark mode */
+  color-scheme: dark;
+
   /* palette */
   --bg: #2D2B3A;
   --bg-sidebar: #252336;
@@ -91,6 +94,7 @@ a:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
 .topbar nav { display: flex; gap: 20px; }
 .topbar nav a { color: var(--muted); }
 .topbar nav a:hover { color: var(--magenta); }
+.topbar nav a[aria-current="page"] { color: var(--green); }
 
 /* ---- mono metadata row + badge (shared by list cards and articles) ---- */
 .post-meta {
@@ -146,4 +150,16 @@ a:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
   margin-top: 64px;
   padding-top: 28px;
   border-top: 1px solid var(--border);
+}
+
+/* ---- respect reduced-motion (WCAG 2.3.3 / prefers-reduced-motion) ----
+   The home page's neon flicker is also gated in JS so it never starts;
+   this is the CSS belt-and-suspenders for any motion that does run. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .post-row:hover { transform: none; }
 }
