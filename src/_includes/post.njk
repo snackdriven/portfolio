@@ -1,0 +1,19 @@
+---
+layout: base.njk
+---
+<div class="wrap reading">
+  {% include "topbar.njk" %}
+  <article>
+    <div class="post-meta">
+      <span>{{ date | ymd }}</span>
+      <span class="tag">#{{ tag }}</span>
+      <span>~{{ read }} min read</span>
+      {% if badge %}<span class="badge">{{ badge }}</span>{% endif %}
+    </div>
+    <h1 class="neon post-title">{{ title }}</h1>
+    {{ content | safe }}
+    <hr>
+    <a class="backlink" href="/">&larr; back to the log</a>
+  </article>
+  {% include "site-footer.njk" %}
+</div>

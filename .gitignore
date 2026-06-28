@@ -1,2 +1,6 @@
 # Local tooling and editor config (not committed)
 .claude/
+
+# Build output and dependencies
+_site/
+node_modules/

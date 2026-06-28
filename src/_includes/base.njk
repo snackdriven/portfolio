@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{{ description }}">
+<meta property="og:title" content="{{ ogtitle or title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="https://snackdriven.com{{ page.url }}">
+<meta property="og:type" content="{{ ogtype or 'website' }}">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://snackdriven.com{{ page.url }}">
+<meta name="theme-color" content="#2D2B3A">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%234AEEA0'>%3E</text></svg>">
+<title>{{ title }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+{% if blogcss %}<link rel="stylesheet" href="/assets/blog.css">{% endif %}
+<script defer src="/assets/site.js"></script>
+{% if isPost %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ title }}",
+  "description": "{{ description }}",
+  "datePublished": "{{ date | ymd }}",
+  "dateModified": "{{ date | ymd }}",
+  "author": { "@type": "Person", "name": "Kayla Young", "url": "https://snackdriven.com/" },
+  "url": "https://snackdriven.com{{ page.url }}",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://snackdriven.com{{ page.url }}" }
+}
+</script>
+{% endif %}
+</head>
+<body>
+{{ content | safe }}
+</body>
+</html>
