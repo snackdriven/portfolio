@@ -1,7 +1,7 @@
 ---
 title: "Unknown skill: buddy"
 date: 2026-06-26
-permalink: /blog/unknown-skill-buddy.html
+permalink: /unknown-skill-buddy.html
 tag: meta
 read: 2
 excerpt: "Claude Code shipped a terminal pet, then pulled it. I rebuilt it as a skill and gave it the buttons it should have had."

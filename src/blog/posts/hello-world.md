@@ -1,7 +1,7 @@
 ---
 title: "Test 001: Hello, World"
 date: 2026-06-17
-permalink: /blog/hello-world.html
+permalink: /hello-world.html
 tag: meta
 read: 2
 badge: placeholder
@@ -12,7 +12,7 @@ ogtitle: "Test 001: Hello, World — snackdriven.com"
 <p class="lead">Cat ipsum dolor sit amet, hate dog and stare at owner accusingly then wink, but love to play with owner&rsquo;s hair tie. If you&rsquo;re reading it, the deploy worked &mdash; consider this the first green check, served warm with a side of placeholder.</p>
 
 <pre><code><span class="c"># the only test that matters today</span>
-<span class="g">PASS</span>  blog/hello-world.html
+<span class="g">PASS</span>  hello-world.html
   ✓ page renders <span class="c">(3 ms)</span>
   ✓ theme tokens resolve <span class="c">(1 ms)</span>
   ○ actual content <span class="m">(pending)</span></code></pre>
