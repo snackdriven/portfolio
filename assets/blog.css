@@ -37,6 +37,30 @@
   max-width: 56ch;
 }
 
+/* ---- terminal-prompt hero ---- */
+.prompt-title {
+  font-family: var(--font-mono);
+  font-size: clamp(1.15rem, 3.1vw, 1.84rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  margin-bottom: 16px;
+}
+.prompt-title .host { color: var(--green); text-shadow: var(--glow-green); }
+.prompt-title .pmt { color: var(--muted); }
+.prompt-title .cmd { color: var(--cyan); white-space: nowrap; }
+.prompt-title .cursor {
+  display: inline-block;
+  width: 0.55em;
+  height: 1.05em;
+  margin-left: 0.1em;
+  vertical-align: -0.18em;
+  background: var(--green);
+  box-shadow: 0 0 6px rgba(74, 238, 160, 0.6);
+  animation: cursor-blink 1.1s steps(1) infinite;
+}
+@keyframes cursor-blink { 0%, 50% { opacity: 1; } 50.01%, 100% { opacity: 0; } }
+
 .posts {
   margin-top: 56px;
   list-style: none;

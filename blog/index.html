@@ -18,6 +18,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="stylesheet" href="/assets/blog.css">
+<script defer src="/assets/site.js"></script>
 </head>
 <body>
 <div class="wrap">
@@ -27,14 +28,25 @@
     <nav>
       <a href="/">home</a>
       <a href="/blog/" aria-current="page">log</a>
+      <a href="/portfolio/">resume</a>
     </nav>
   </div>
 
-  <div class="page-label">~/blog &mdash; field notes</div>
-  <h1 class="neon page-title">The Log</h1>
+  <div class="page-label">~/blog</div>
+  <h1 class="prompt-title"><span class="host">snackdriven</span><span class="pmt" aria-hidden="true">:~$</span> <span class="cmd">off the happy path</span><span class="cursor" aria-hidden="true"></span></h1>
   <p class="page-intro">Notes on test automation, internal tooling, and developer experience &mdash; written mostly so future me remembers why past me did the thing.</p>
 
   <ul class="posts">
+    <li>
+      <a class="post-row" href="/blog/unknown-skill-buddy.html">
+        <div class="post-meta">
+          <span>2026-06-26</span>
+          <span class="tag">#meta</span>
+        </div>
+        <h2>Unknown skill: buddy</h2>
+        <p>Claude Code shipped a terminal pet, then pulled it. I rebuilt it as a skill and gave it the buttons it should have had.</p>
+      </a>
+    </li>
     <li>
       <a class="post-row" href="/blog/flaky-by-design.html">
         <div class="post-meta">
@@ -72,8 +84,8 @@
 
 <script>
 console.log('%c  STATUS  snackdriven.com/blog  ', 'background:#A78BFA;color:#2D2B3A;font-family:"DM Mono",monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:2px;');
-console.log('%c\n  ✓  log is alive\n  ✓  2 posts rendered\n  ✗  more posts pending\n', 'color:#4AEEA0;font-family:"DM Mono",monospace;font-size:11px;line-height:1.9;');
-console.log('%c  2 passing  2 pending', 'color:#B5B2C8;font-family:"DM Mono",monospace;font-size:11px;');
+console.log('%c\n  ✓  log is alive\n  ✓  3 posts rendered\n  ✗  more posts pending\n', 'color:#4AEEA0;font-family:"DM Mono",monospace;font-size:11px;line-height:1.9;');
+console.log('%c  3 passing  1 pending', 'color:#B5B2C8;font-family:"DM Mono",monospace;font-size:11px;');
 </script>
 
 </body>
