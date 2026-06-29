@@ -2,7 +2,7 @@
 title: "The feature I deleted that became the one I use most"
 date: 2026-06-14
 permalink: /the-feature-i-deleted-that-became-the-one-i-use-most.html
-tag: meta
+tag: tooling
 read: 1
 excerpt: "The thing I run most in a day is `! folder`."
 description: "The thing I run most in a day is `! folder`."

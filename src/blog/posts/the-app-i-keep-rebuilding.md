@@ -2,7 +2,7 @@
 title: "The app I keep rebuilding"
 date: 2026-06-15
 permalink: /the-app-i-keep-rebuilding.html
-tag: meta
+tag: reflection
 read: 1
 excerpt: "There's one app I keep building. Mood, habits, tasks, a journal, all in one place, for brains that can't hold all four at once."
 description: "There's one app I keep building. Mood, habits, tasks, a journal, all in one place, for brains that can't hold all four at once."

@@ -2,7 +2,7 @@
 title: "I built an ai writing tool to be bad at helping"
 date: 2026-04-15
 permalink: /i-built-an-ai-writing-tool-to-be-bad-at-helping.html
-tag: meta
+tag: ai
 read: 1
 excerpt: "Every AI writing tool wants to help. It finishes your sentence the way it thinks you meant it, smooths the draft, makes it read like everyone else's draft."
 description: "Every AI writing tool wants to help. It finishes your sentence the way it thinks you meant it, smooths the draft, makes it read like everyone else's draft."

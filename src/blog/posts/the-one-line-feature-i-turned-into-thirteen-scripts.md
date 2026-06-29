@@ -2,7 +2,7 @@
 title: "The one-line feature I turned into thirteen scripts"
 date: 2026-06-03
 permalink: /the-one-line-feature-i-turned-into-thirteen-scripts.html
-tag: meta
+tag: tooling
 read: 2
 excerpt: "Claude Code has a status line. The deal is simple: you point a setting at a script, it hands that script a blob of session data every tick, and whatever the script prints shows up at the bottom of the terminal."
 description: "Claude Code has a status line. The deal is simple: you point a setting at a script, it hands that script a blob of session data every tick, and whatever the script prints shows up at the bottom of the terminal."

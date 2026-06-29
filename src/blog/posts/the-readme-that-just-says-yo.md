@@ -2,7 +2,7 @@
 title: "The readme that just says \"yo\""
 date: 2026-06-16
 permalink: /the-readme-that-just-says-yo.html
-tag: meta
+tag: reflection
 read: 1
 excerpt: "A bunch of my repos have a README that's clearly the only thing I ever typed in them."
 description: "A bunch of my repos have a README that's clearly the only thing I ever typed in them."

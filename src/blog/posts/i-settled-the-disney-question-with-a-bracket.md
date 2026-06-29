@@ -2,7 +2,7 @@
 title: "I settled the disney question with a bracket"
 date: 2026-02-21
 permalink: /i-settled-the-disney-question-with-a-bracket.html
-tag: meta
+tag: building
 read: 1
 excerpt: "At some point I decided the only honest way to rank 70 Disney and Pixar movies was a single-elimination bracket."
 description: "At some point I decided the only honest way to rank 70 Disney and Pixar movies was a single-elimination bracket."

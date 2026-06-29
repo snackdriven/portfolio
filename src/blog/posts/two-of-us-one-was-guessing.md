@@ -2,7 +2,7 @@
 title: "Two of us, one was guessing"
 date: 2026-06-15
 permalink: /two-of-us-one-was-guessing.html
-tag: meta
+tag: ai
 read: 1
 excerpt: "I had a research agent read my old repos and put them in order. I already knew the order."
 description: "I had a research agent read my old repos and put them in order. I already knew the order."

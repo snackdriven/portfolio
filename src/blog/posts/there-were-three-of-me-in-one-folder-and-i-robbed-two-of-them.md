@@ -2,7 +2,7 @@
 title: "There were three of me in one folder and I robbed two of them"
 date: 2026-06-15
 permalink: /there-were-three-of-me-in-one-folder-and-i-robbed-two-of-them.html
-tag: meta
+tag: incident
 read: 1
 excerpt: "I run several of these AI sessions at once now, in the background, each on something different."
 description: "I run several of these AI sessions at once now, in the background, each on something different."
