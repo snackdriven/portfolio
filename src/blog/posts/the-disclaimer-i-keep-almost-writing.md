@@ -3,6 +3,7 @@ title: "The disclaimer I keep almost writing"
 date: 2026-06-17
 permalink: /the-disclaimer-i-keep-almost-writing.html
 tag: reflection
+hidden: true
 read: 1
 excerpt: "I've ended a few of these the same way: the code is the AI's, the ideas are mine."
 description: "I've ended a few of these the same way: the code is the AI's, the ideas are mine."

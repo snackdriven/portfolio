@@ -3,6 +3,7 @@ title: "Everything I build looks like a tiny tv"
 date: 2026-05-29
 permalink: /everything-i-build-looks-like-a-tiny-tv.html
 tag: design
+hidden: true
 read: 1
 excerpt: "I have a type, and the type is 'terminal program that looks like broadcast gear."
 description: "I have a type, and the type is 'terminal program that looks like broadcast gear."

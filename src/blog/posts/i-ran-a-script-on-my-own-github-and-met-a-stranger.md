@@ -3,6 +3,7 @@ title: "I ran a script on my own github and met a stranger"
 date: 2026-06-15
 permalink: /i-ran-a-script-on-my-own-github-and-met-a-stranger.html
 tag: reflection
+hidden: true
 read: 1
 excerpt: "I ran one command against my own GitHub account this week to see what was there."
 description: "I ran one command against my own GitHub account this week to see what was there."
