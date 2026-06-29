@@ -47,6 +47,7 @@
   margin-bottom: 16px;
 }
 .prompt-title .host { color: var(--green); text-shadow: var(--glow-green); }
+.prompt-title .host span { display: inline-block; }
 .prompt-title .pmt { color: var(--muted); }
 .prompt-title .cmd { color: var(--cyan); white-space: nowrap; }
 .prompt-title .cursor {

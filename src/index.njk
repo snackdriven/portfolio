@@ -5,9 +5,8 @@ description: "Field notes on test automation, internal tooling, and developer ex
 blogcss: true
 ---
 <div class="wrap">
-  {% include "topbar.njk" %}
-  <h1 class="prompt-title"><span class="host">snackdriven</span><span class="pmt" aria-hidden="true">:~$</span> <span class="cmd">off the happy path</span><span class="cursor" aria-hidden="true"></span></h1>
-  <p class="page-intro">Notes on test automation, internal tooling, and developer experience &mdash; written mostly so future me remembers why past me did the thing.</p>
+  <h1 class="prompt-title"><span class="host"><span>s</span><span>n</span><span>a</span><span>c</span><span>k</span><span>d</span><span>r</span><span>i</span><span>v</span><span>e</span><span>n</span></span><span class="pmt" aria-hidden="true">:~$</span> <span class="cmd">off the happy path</span><span class="cursor" aria-hidden="true"></span></h1>
+  <p class="page-intro">test automation, internal tooling, and whatever i build to stop doing something by hand. written mostly so future me remembers why past me did the thing.</p>
   <ul class="posts">
     {% for post in collections.post | reverse %}
     {% if not post.data.hidden %}
@@ -33,5 +32,28 @@ blogcss: true
   console.log('%c  STATUS  snackdriven.com  ', 'background:#A78BFA;color:#2D2B3A;font-family:"DM Mono",monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:2px;');
   console.log('%c\n  ✓  log is alive\n  ✓  ' + n + (n === 1 ? ' post' : ' posts') + ' rendered\n  ✗  more posts pending\n', 'color:#4AEEA0;font-family:"DM Mono",monospace;font-size:11px;line-height:1.9;');
   console.log('%c  ' + n + ' passing  1 pending', 'color:#B5B2C8;font-family:"DM Mono",monospace;font-size:11px;');
+})();
+
+// Neon flicker on the hero name — mirrors the resume's KAYLA YOUNG flicker.
+(function () {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var letters = Array.from(document.querySelectorAll('.prompt-title .host span'));
+  if (!letters.length) return;
+  function rnd(a, b) { return Math.floor(Math.random() * (b - a + 1) + a); }
+  function flicker(spans, stagger) {
+    spans.forEach(function (l, i) {
+      setTimeout(function () {
+        l.classList.add('flickering');
+        setTimeout(function () { l.classList.remove('flickering'); }, 800);
+      }, i * (stagger || 0));
+    });
+  }
+  function next() {
+    var roll = Math.random();
+    if (roll < 0.22) { flicker(letters, 55); setTimeout(next, rnd(3000, 5000)); }            // full-word cascade (rare)
+    else if (roll < 0.5) { flicker(letters.slice(rnd(0, 7), rnd(8, 11)), 90); setTimeout(next, rnd(2200, 4000)); } // a run of letters
+    else { flicker([letters[rnd(0, letters.length - 1)]], 0); setTimeout(next, rnd(1200, 2800)); } // single letter (common)
+  }
+  setTimeout(next, 1000);
 })();
 </script>
