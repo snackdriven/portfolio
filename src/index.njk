@@ -10,6 +10,7 @@ blogcss: true
   <p class="page-intro">Notes on test automation, internal tooling, and developer experience &mdash; written mostly so future me remembers why past me did the thing.</p>
   <ul class="posts">
     {% for post in collections.post | reverse %}
+    {% if not post.data.hidden %}
     <li>
       <a class="post-row" href="{{ post.url }}">
         <div class="post-meta">
@@ -21,6 +22,7 @@ blogcss: true
         <p>{{ post.data.excerpt }}</p>
       </a>
     </li>
+    {% endif %}
     {% endfor %}
   </ul>
   {% include "site-footer.njk" %}

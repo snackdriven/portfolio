@@ -3,6 +3,7 @@ title: "The week my own automations tried to brick my laptop"
 date: 2026-06-12
 permalink: /the-week-my-own-automations-tried-to-brick-my-laptop.html
 tag: incident
+hidden: true
 read: 2
 excerpt: "The worst one looked like a memory leak. iTerm went sludgy, the fans came up, the load average hit 401."
 description: "The worst one looked like a memory leak. iTerm went sludgy, the fans came up, the load average hit 401."

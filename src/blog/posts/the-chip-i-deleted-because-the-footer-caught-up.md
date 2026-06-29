@@ -3,6 +3,7 @@ title: "The chip I deleted because the footer caught up"
 date: 2026-06-12
 permalink: /the-chip-i-deleted-because-the-footer-caught-up.html
 tag: tooling
+hidden: true
 read: 1
 excerpt: "For a while my statusline showed the PR number for whatever branch I was on."
 description: "For a while my statusline showed the PR number for whatever branch I was on."

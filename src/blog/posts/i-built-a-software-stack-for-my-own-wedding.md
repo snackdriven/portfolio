@@ -3,6 +3,7 @@ title: "I built a software stack for my own wedding"
 date: 2025-10-01
 permalink: /i-built-a-software-stack-for-my-own-wedding.html
 tag: building
+hidden: true
 read: 1
 excerpt: "I'm getting married, and somewhere in the planning my brain decided the correct response to a real-world problem was to open a code editor."
 description: "I'm getting married, and somewhere in the planning my brain decided the correct response to a real-world problem was to open a code editor."

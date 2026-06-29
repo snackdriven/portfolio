@@ -3,6 +3,7 @@ title: "The Tale of Two Tobys"
 date: 2026-06-22
 permalink: /the-tale-of-two-tobys.html
 tag: incident
+hidden: true
 read: 3
 excerpt: "It was the best of names. It was the worst of names."
 description: "It was the best of names. It was the worst of names."

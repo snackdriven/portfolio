@@ -3,6 +3,7 @@ title: "Test 001: Hello, World"
 date: 2026-06-17
 permalink: /hello-world.html
 tag: meta
+hidden: true
 read: 2
 badge: placeholder
 excerpt: "Cat ipsum dolor sit amet — the obligatory first commit, filled with placeholder purrs until the real words land."

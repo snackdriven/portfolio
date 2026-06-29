@@ -3,6 +3,7 @@ title: "I made a bootleg of every app I pay for"
 date: 2026-06-16
 permalink: /i-made-a-bootleg-of-every-app-i-pay-for.html
 tag: building
+hidden: true
 read: 1
 excerpt: "In 2025 I went through a phase of cloning the apps I use instead of just using them."
 description: "In 2025 I went through a phase of cloning the apps I use instead of just using them."
