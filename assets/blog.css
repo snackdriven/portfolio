@@ -103,6 +103,14 @@
   margin-bottom: 40px;
   text-transform: lowercase;
 }
+/* the title is an <h2> on the single-post landing; don't give it the section "// " prefix */
+.post-title::before { content: none; }
+/* on the single-post landing the post title is a sub-head: smaller than the
+   page hero (clamp 1.15-1.84rem) at every width, and tighter below. */
+.single-post .post-title {
+  font-size: clamp(1.15rem, 2.6vw, 1.5rem);
+  margin-bottom: 28px;
+}
 
 article p { margin-bottom: 22px; color: var(--fg); }
 article p.lead { font-size: 1.1rem; color: var(--muted); }
