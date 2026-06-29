@@ -7,9 +7,21 @@ blogcss: true
 <div class="wrap">
   <h1 class="prompt-title"><span class="host"><span>s</span><span>n</span><span>a</span><span>c</span><span>k</span><span>d</span><span>r</span><span>i</span><span>v</span><span>e</span><span>n</span></span><span class="pmt" aria-hidden="true">:~$</span> <span class="cmd">off the happy path</span><span class="cursor" aria-hidden="true"></span></h1>
   <p class="page-intro">test automation, internal tooling, and whatever i build to stop doing something by hand. written mostly so future me remembers why past me did the thing.</p>
+  {% if collections.visiblePost.length == 1 %}
+  {% set p = collections.visiblePost[0] %}
+  <article class="single-post">
+    <div class="post-meta">
+      <span>{{ p.date | ymd }}</span>
+      <span class="tag">#{{ p.data.tag }}</span>
+      <span>~{{ p.data.read }} min read</span>
+      {% if p.data.badge %}<span class="badge">{{ p.data.badge }}</span>{% endif %}
+    </div>
+    <h2 class="neon post-title">{{ p.data.title }}</h2>
+    {{ p.templateContent | safe }}
+  </article>
+  {% else %}
   <ul class="posts">
-    {% for post in collections.post | reverse %}
-    {% if not post.data.hidden %}
+    {% for post in collections.visiblePost %}
     <li>
       <a class="post-row" href="{{ post.url }}">
         <div class="post-meta">
@@ -21,14 +33,14 @@ blogcss: true
         <p>{{ post.data.excerpt }}</p>
       </a>
     </li>
-    {% endif %}
     {% endfor %}
   </ul>
+  {% endif %}
   {% include "site-footer.njk" %}
 </div>
 <script>
 (function () {
-  var n = document.querySelectorAll('.post-row').length;
+  var n = document.querySelectorAll('.post-row, .single-post').length;
   console.log('%c  STATUS  snackdriven.com  ', 'background:#A78BFA;color:#2D2B3A;font-family:"DM Mono",monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:2px;');
   console.log('%c\n  ✓  log is alive\n  ✓  ' + n + (n === 1 ? ' post' : ' posts') + ' rendered\n  ✗  more posts pending\n', 'color:#4AEEA0;font-family:"DM Mono",monospace;font-size:11px;line-height:1.9;');
   console.log('%c  ' + n + ' passing  1 pending', 'color:#B5B2C8;font-family:"DM Mono",monospace;font-size:11px;');
