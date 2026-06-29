@@ -142,6 +142,13 @@ a:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
 .links a { color: var(--muted); border-bottom: 1px solid var(--border); padding-bottom: 2px; }
 .links a:hover { color: var(--magenta); border-bottom-color: var(--magenta); }
 
+/* resume link sits faint so it's discoverable without crowding the footer,
+   and brightens on footer hover (or keyboard focus). */
+.resume-link { opacity: 0.25; transition: opacity 0.2s ease; }
+.site-footer:hover .resume-link,
+.resume-link:hover,
+.resume-link:focus-visible { opacity: 1; }
+
 .domain {
   font-family: var(--font-mono);
   font-size: 0.78rem;
