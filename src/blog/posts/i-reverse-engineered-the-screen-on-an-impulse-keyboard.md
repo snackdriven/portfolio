@@ -5,11 +5,11 @@ permalink: /i-reverse-engineered-the-screen-on-an-impulse-keyboard.html
 tag: building
 hidden: true
 read: 2
-excerpt: "The keyboard was a Prime Day impulse I'd pre-approved as an eventual upgrade. It has a tiny screen. I lasted about two weeks before I had to take the screen apart."
-description: "The keyboard was a Prime Day impulse I'd pre-approved as an eventual upgrade. It has a tiny screen. I lasted about two weeks before I had to take the screen apart."
+excerpt: "The keyboard was a Prime Day impulse I'd pre-approved as an eventual upgrade. It has a tiny screen. I lasted under a week before I had to take the screen apart."
+description: "The keyboard was a Prime Day impulse I'd pre-approved as an eventual upgrade. It has a tiny screen. I lasted under a week before I had to take the screen apart."
 ogtitle: "I reverse-engineered the screen on an impulse keyboard — snackdriven.com"
 ---
-<p class="lead">The keyboard was a Prime Day impulse. I&rsquo;d been telling myself for months I&rsquo;d upgrade eventually, so when the AL80 dropped into a lightning deal I let &ldquo;eventually&rdquo; quietly mean &ldquo;now&rdquo; and filed it under planning. It has a little color screen tucked above the arrow keys. I lasted about two weeks before I couldn&rsquo;t leave the screen alone.</p>
+<p class="lead">The keyboard was a Prime Day impulse. I&rsquo;d been telling myself for months I&rsquo;d upgrade eventually, so when the AL80 dropped into a lightning deal I let &ldquo;eventually&rdquo; quietly mean &ldquo;now&rdquo; and filed it under planning. It has a little color screen tucked above the arrow keys. I lasted under a week before I couldn&rsquo;t leave the screen alone.</p>
 
 Out of the box you drive that screen through the vendor&rsquo;s web app. It shows a 24-hour clock and lets you upload pictures, and that&rsquo;s the whole menu. I wanted a 12-hour clock. Reasonable request. Not on offer. So I opened up the HID traffic to see what the web app was actually saying to the thing.
 
