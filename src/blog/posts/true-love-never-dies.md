@@ -1,6 +1,6 @@
 ---
 title: "True love never dies (it just files for insolvency)"
-date: 2026-05-22
+date: 2026-05-28
 permalink: /true-love-never-dies.html
 tag: reflection
 read: 2
