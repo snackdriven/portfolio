@@ -7,7 +7,7 @@ hidden: true
 read: 1
 excerpt: "I ran one command against my own GitHub account this week to see what was there."
 description: "I ran one command against my own GitHub account this week to see what was there."
-ogtitle: "I ran a script on my own github and met a stranger — snackdriven.com"
+ogtitle: "I ran a script on my own github and met a stranger · snackdriven.com"
 ---
 <p class="lead">I ran one command against my own GitHub account this week to see what was there. Seventy-eight repositories. I could have named maybe twenty-five without looking.</p>
 

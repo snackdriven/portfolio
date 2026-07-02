@@ -7,7 +7,7 @@ hidden: true
 read: 1
 excerpt: "A bunch of my repos have a README that's clearly the only thing I ever typed in them."
 description: "A bunch of my repos have a README that's clearly the only thing I ever typed in them."
-ogtitle: "The readme that just says \"yo\" — snackdriven.com"
+ogtitle: "The readme that just says \"yo\" · snackdriven.com"
 ---
 <p class="lead">A bunch of my repos have a README that&rsquo;s clearly the only thing I ever typed in them.</p>
 

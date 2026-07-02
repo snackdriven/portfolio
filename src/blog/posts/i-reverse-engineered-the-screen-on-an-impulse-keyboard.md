@@ -5,15 +5,15 @@ permalink: /i-reverse-engineered-the-screen-on-an-impulse-keyboard.html
 tag: building
 hidden: false
 read: 2
-excerpt: "A Prime Day impulse keyboard with a tiny screen. Under a week before I reverse-engineered it — no screwdriver, all over USB."
-description: "A Prime Day impulse keyboard with a tiny screen. Under a week before I reverse-engineered it — no screwdriver, all over USB."
-ogtitle: "I reverse-engineered the screen on an impulse keyboard — snackdriven.com"
+excerpt: "A Prime Day impulse keyboard with a tiny screen. Under a week before I reverse-engineered it. No screwdriver, all over USB."
+description: "A Prime Day impulse keyboard with a tiny screen. Under a week before I reverse-engineered it. No screwdriver, all over USB."
+ogtitle: "I reverse-engineered the screen on an impulse keyboard · snackdriven.com"
 ---
-<p class="lead">I&rsquo;m at this desk most of my waking hours, so a good keyboard isn&rsquo;t a small thing &mdash; the upgrade was overdue. I&rsquo;d been on a Logitech MX Keys. Lovely, flat, completely screenless. So when the AL80 turned up in a Prime Day lightning deal, looking the way it looked and carrying a little color screen above the arrow keys, the timing was right and I grabbed it. I lasted under a week before I couldn&rsquo;t leave the screen alone.</p>
+<p class="lead">I&rsquo;m at this desk most of my waking hours, so a good keyboard isn&rsquo;t a small thing. The upgrade was overdue. I&rsquo;d been on a Logitech MX Keys. Lovely, flat, completely screenless. So when the AL80 turned up in a Prime Day lightning deal, looking the way it looked and carrying a little color screen above the arrow keys, the timing was right and I grabbed it. I lasted under a week before I couldn&rsquo;t leave the screen alone.</p>
 
 Out of the box you drive that screen through the vendor&rsquo;s web app. It shows a 24-hour clock and lets you upload pictures, and that&rsquo;s the whole menu. I wanted a 12-hour clock. Reasonable request. Not on offer. And when I asked around, the answer was that it couldn&rsquo;t be done. The AI I asked said the 12-hour clock was impossible; Reddit&rsquo;s verdict was blunter, that the screen only changes through YUNZII&rsquo;s own app and VIA can&rsquo;t touch it. So I opened up the HID traffic myself to see what the web app was actually saying to the thing.
 
-The clock hack turned out to be almost insulting. The screen displays whatever hour value you hand it. It doesn&rsquo;t convert anything, doesn&rsquo;t know what AM is. Send it a 5 instead of a 17 and it reads 05. The entire &ldquo;feature&rdquo; is one line of modulo. I shipped a little script that re-syncs every minute so it doesn&rsquo;t drift, and I had the 12-hour clock the vendor didn&rsquo;t feel like giving me &mdash; the one the internet had just sworn was impossible.
+The clock hack turned out to be almost insulting. The screen displays whatever hour value you hand it. It doesn&rsquo;t convert anything, doesn&rsquo;t know what AM is. Send it a 5 instead of a 17 and it reads 05. The entire &ldquo;feature&rdquo; is one line of modulo. I shipped a little script that re-syncs every minute so it doesn&rsquo;t drift, and I had the 12-hour clock the vendor didn&rsquo;t feel like giving me, the one the internet had just sworn was impossible.
 
 Then I wanted my own images on it, and that&rsquo;s where it became actual work. Every packet carries checksums, and nothing draws if they&rsquo;re wrong. Cracking them cost me one long night: the header one is a standard CRC, and the pixel one is a plain additive checksum I got wrong twice before the bytes set me straight. The panel is 112 by 137, sixteen-bit color, about thirty thousand bytes a frame. Now I can push whatever I want to it.
 

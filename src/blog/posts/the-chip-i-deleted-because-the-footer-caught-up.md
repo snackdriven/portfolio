@@ -7,7 +7,7 @@ hidden: true
 read: 1
 excerpt: "For a while my statusline showed the PR number for whatever branch I was on."
 description: "For a while my statusline showed the PR number for whatever branch I was on."
-ogtitle: "The chip I deleted because the footer caught up — snackdriven.com"
+ogtitle: "The chip I deleted because the footer caught up · snackdriven.com"
 ---
 <p class="lead">For a while my statusline showed the PR number for whatever branch I was on. Claude Code already handed my script the PR info on every tick, tucked in the data blob it passes down. My script pulled the number out and printed it in the corner, clickable, linking to the PR.</p>
 

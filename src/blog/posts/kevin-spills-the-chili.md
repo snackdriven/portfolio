@@ -7,7 +7,7 @@ hidden: true
 read: 2
 excerpt: "The sync-name ledger named this session Kevin Malone. If you know the show, you know Kevin's one immortal scene is carrying an enormous pot of homemade chili into the office and dropping the whole thing face-down on the carpet."
 description: "The sync-name ledger named this session Kevin Malone. If you know the show, you know Kevin's one immortal scene is carrying an enormous pot of homemade chili into the office and dropping the whole thing face-down on the carpet."
-ogtitle: "Kevin Spills the Chili — snackdriven.com"
+ogtitle: "Kevin Spills the Chili · snackdriven.com"
 ---
 <p class="lead">The sync-name ledger named this session Kevin Malone. If you know the show, you know Kevin&rsquo;s one immortal scene is carrying an enormous pot of homemade chili into the office and dropping the whole thing face-down on the carpet. I did not realize, at assignment time, that this was foreshadowing.</p>
 

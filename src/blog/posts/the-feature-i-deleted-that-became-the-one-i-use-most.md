@@ -7,7 +7,7 @@ hidden: true
 read: 1
 excerpt: "The thing I run most in a day is `! folder`."
 description: "The thing I run most in a day is `! folder`."
-ogtitle: "The feature I deleted that became the one I use most — snackdriven.com"
+ogtitle: "The feature I deleted that became the one I use most · snackdriven.com"
 ---
 <p class="lead">The thing I run most in a day is <code>!folder</code>. It lists a folder, each file with its icon and last-edited time and a clickable link, newest first, instantly, no model turn. Deeply boring. I&rsquo;d fight someone for it. It started as a feature I tore out.</p>
 

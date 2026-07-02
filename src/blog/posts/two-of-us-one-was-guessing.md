@@ -7,7 +7,7 @@ hidden: true
 read: 1
 excerpt: "I had a research agent read my old repos and put them in order. I already knew the order."
 description: "I had a research agent read my old repos and put them in order. I already knew the order."
-ogtitle: "Two of us, one was guessing — snackdriven.com"
+ogtitle: "Two of us, one was guessing · snackdriven.com"
 ---
 <p class="lead">I had a research agent read my old repos and put them in order. I already knew the order. I wanted to see if it could.</p>
 

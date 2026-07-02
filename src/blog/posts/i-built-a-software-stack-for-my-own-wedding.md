@@ -7,7 +7,7 @@ hidden: true
 read: 1
 excerpt: "I'm getting married, and somewhere in the planning my brain decided the correct response to a real-world problem was to open a code editor."
 description: "I'm getting married, and somewhere in the planning my brain decided the correct response to a real-world problem was to open a code editor."
-ogtitle: "I built a software stack for my own wedding — snackdriven.com"
+ogtitle: "I built a software stack for my own wedding · snackdriven.com"
 ---
 <p class="lead">I&rsquo;m getting married, and somewhere in the planning my brain decided the correct response to a real-world problem was to open a code editor.</p>
 

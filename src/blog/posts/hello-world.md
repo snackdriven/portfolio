@@ -6,11 +6,11 @@ tag: meta
 hidden: true
 read: 2
 badge: placeholder
-excerpt: "Cat ipsum dolor sit amet — the obligatory first commit, filled with placeholder purrs until the real words land."
-description: "The obligatory first post — a placeholder while the real log spins up."
-ogtitle: "Test 001: Hello, World — snackdriven.com"
+excerpt: "Cat ipsum dolor sit amet. The obligatory first commit, filled with placeholder purrs until the real words land."
+description: "The obligatory first post, a placeholder while the real log spins up."
+ogtitle: "Test 001: Hello, World · snackdriven.com"
 ---
-<p class="lead">Cat ipsum dolor sit amet, hate dog and stare at owner accusingly then wink, but love to play with owner&rsquo;s hair tie. If you&rsquo;re reading it, the deploy worked &mdash; consider this the first green check, served warm with a side of placeholder.</p>
+<p class="lead">Cat ipsum dolor sit amet, hate dog and stare at owner accusingly then wink, but love to play with owner&rsquo;s hair tie. If you&rsquo;re reading it, the deploy worked. Consider this the first green check, served warm with a side of placeholder.</p>
 
 <pre><code><span class="c"># the only test that matters today</span>
 <span class="g">PASS</span>  hello-world.html
@@ -32,4 +32,4 @@ Sleep on keyboard chase imaginary bugs, yet present belly, scratch hand when str
 
 ## Status
 
-Nap all day eat the grass, throw it back up an hour later &mdash; nothing real here yet. The next entry replaces this one. Until then knock things off tables and find me in [the usual places](mailto:kayla@snackdriven.com), preferably near a sunbeam.
+Nap all day eat the grass, throw it back up an hour later. Nothing real here yet. The next entry replaces this one. Until then knock things off tables and find me in [the usual places](mailto:kayla@snackdriven.com), preferably near a sunbeam.

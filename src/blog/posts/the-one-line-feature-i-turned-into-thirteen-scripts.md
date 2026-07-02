@@ -7,7 +7,7 @@ hidden: true
 read: 2
 excerpt: "Claude Code has a status line. The deal is simple: you point a setting at a script, it hands that script a blob of session data every tick, and whatever the script prints shows up at the bottom of the terminal."
 description: "Claude Code has a status line. The deal is simple: you point a setting at a script, it hands that script a blob of session data every tick, and whatever the script prints shows up at the bottom of the terminal."
-ogtitle: "The one-line feature I turned into thirteen scripts — snackdriven.com"
+ogtitle: "The one-line feature I turned into thirteen scripts · snackdriven.com"
 ---
 <p class="lead">Claude Code has a status line. The deal is simple: you point a setting at a script, it hands that script a blob of session data every tick, and whatever the script prints shows up at the bottom of the terminal. That&rsquo;s the feature. One command, print what you want.</p>
 

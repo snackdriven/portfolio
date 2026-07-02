@@ -7,7 +7,7 @@ hidden: true
 read: 1
 excerpt: "I've ended a few of these the same way: the code is the AI's, the ideas are mine."
 description: "I've ended a few of these the same way: the code is the AI's, the ideas are mine."
-ogtitle: "The disclaimer I keep almost writing — snackdriven.com"
+ogtitle: "The disclaimer I keep almost writing · snackdriven.com"
 ---
 <p class="lead">I&rsquo;ve ended a few of these the same way: the code is the AI&rsquo;s, the ideas are mine. True. Also the most careful sentence I write all week, so let me actually sit in it.</p>
 

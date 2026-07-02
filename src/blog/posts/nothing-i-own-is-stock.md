@@ -6,7 +6,7 @@ tag: reflection
 read: 3
 excerpt: "I have never left a device the way it shipped. Not one. On the compulsion to personalize everything I own, and why stock never lasts."
 description: "I have never left a device the way it shipped. Not one. On the compulsion to personalize everything I own, and why stock never lasts."
-ogtitle: "Nothing I own is stock — snackdriven.com"
+ogtitle: "Nothing I own is stock · snackdriven.com"
 ---
 <!-- factory reset: not found -->
 <p class="lead">I have never owned a piece of technology I left the way it came. I went looking for an exception while writing this. There isn&rsquo;t one.</p>

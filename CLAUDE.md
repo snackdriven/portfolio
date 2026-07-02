@@ -43,7 +43,7 @@ npm run serve          # local preview with --serve
 | `read` | yes | Integer minutes, shown as `~N min read`. |
 | `excerpt` | yes | Card blurb on the landing list. |
 | `description` | yes | Meta description + OG/Twitter + JSON-LD. **Keep identical to `excerpt`.** |
-| `ogtitle` | yes | Convention: `"<title> — snackdriven.com"`. |
+| `ogtitle` | yes | Convention: `"<title> · snackdriven.com"`. Middot separator, never a dash. |
 | `hidden` | optional | `true` = drafted/withheld from the listing. Omitting it (or `false`) = live. |
 | `badge` | optional | Small pill in the meta row (e.g. `placeholder`). Rare. |
 
@@ -76,7 +76,7 @@ npm run serve          # local preview with --serve
 - Use **HTML entities for punctuation**, not literal glyphs:
   - `&rsquo;` apostrophe/right single quote, `&lsquo;` left single
   - `&ldquo;` / `&rdquo;` double quotes
-  - `&mdash;` em dash, `&ndash;` en dash
+  - `&ndash;` en dash (ranges only). Never `&mdash;`/em dash; see the AI-tell audit.
   - `&larr;` etc. for arrows
   - Match the surrounding text — existing posts are fully entity-encoded.
 - Known CSS hooks (don't invent new ones casually): `.wrap.reading`,
@@ -109,9 +109,10 @@ editing copy, preserve that. Concrete rules distilled from prior edits:
 The "voice audit" step has teeth — these are the patterns that read as
 machine-written by late-2026 standards. Hunt them and cut them:
 
-- **Em-dash density.** The single biggest visual tell. Budget: at most one `—`
-  per post, ideally zero. Convert to colons, commas, or periods. (Check the
-  `excerpt`/`description` too — they show on the card.)
+- **No em-dashes. Zero.** The single biggest visual tell. Not one `—` anywhere
+  in prose (body, `excerpt`, `description`, lead). Convert to colons, commas, or
+  periods. Titles use a middot separator (`Title · snackdriven.com`), never a
+  dash. Check the `excerpt`/`description` too; they show on the card.
 - **"Not X, it's Y" antithesis.** "The mod isn't vanity. It's insurance."
   Rewrite so the point lands without the balanced negation.
 - **AI scaffolds.** "The honest version is that…", "The truth is simpler…",

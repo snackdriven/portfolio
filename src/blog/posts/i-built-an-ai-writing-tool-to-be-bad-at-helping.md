@@ -7,7 +7,7 @@ hidden: true
 read: 1
 excerpt: "Every AI writing tool wants to help. It finishes your sentence the way it thinks you meant it, smooths the draft, makes it read like everyone else's draft."
 description: "Every AI writing tool wants to help. It finishes your sentence the way it thinks you meant it, smooths the draft, makes it read like everyone else's draft."
-ogtitle: "I built an ai writing tool to be bad at helping — snackdriven.com"
+ogtitle: "I built an ai writing tool to be bad at helping · snackdriven.com"
 ---
 <p class="lead">Every AI writing tool wants to help. It finishes your sentence the way it thinks you meant it, smooths the draft, makes it read like everyone else&rsquo;s draft. I got tired of that and built one that does the opposite.</p>
 

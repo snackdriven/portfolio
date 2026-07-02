@@ -7,7 +7,7 @@ hidden: true
 read: 1
 excerpt: "I have a type, and the type is 'terminal program that looks like broadcast gear."
 description: "I have a type, and the type is 'terminal program that looks like broadcast gear."
-ogtitle: "Everything I build looks like a tiny tv — snackdriven.com"
+ogtitle: "Everything I build looks like a tiny tv · snackdriven.com"
 ---
 <p class="lead">I have a type, and the type is &ldquo;terminal program that looks like broadcast gear.&rdquo; radar tells me what to work on. dial is a CRT-flavored mood journal that used to be called poppy. The statusline is basically a TV guide for my day. Muted palette, runs in a terminal, and one rule I will die on: resizing the window changes the whitespace, never the content. Nothing reflows. It breathes wider.</p>
 

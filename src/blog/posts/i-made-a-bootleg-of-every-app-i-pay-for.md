@@ -7,7 +7,7 @@ hidden: true
 read: 1
 excerpt: "In 2025 I went through a phase of cloning the apps I use instead of just using them."
 description: "In 2025 I went through a phase of cloning the apps I use instead of just using them."
-ogtitle: "I made a bootleg of every app I pay for — snackdriven.com"
+ogtitle: "I made a bootleg of every app I pay for · snackdriven.com"
 ---
 <p class="lead">In 2025 I went through a phase of cloning the apps I use instead of just using them.</p>
 

@@ -7,7 +7,7 @@ hidden: true
 read: 1
 excerpt: "Working with Claude all day, the failure isn't that it's dumb. It's that it's confident, and so am I, and confidence at the finish line walks you straight past the moment you were supposed to check."
 description: "Working with Claude all day, the failure isn't that it's dumb. It's that it's confident, and so am I, and confidence at the finish line walks you straight past the moment you were supposed to check."
-ogtitle: "I built five little robots to stop me lying — snackdriven.com"
+ogtitle: "I built five little robots to stop me lying · snackdriven.com"
 ---
 <p class="lead">Working with Claude all day, the failure isn&rsquo;t that it&rsquo;s dumb. It&rsquo;s that it&rsquo;s confident, and so am I, and confidence at the finish line walks you straight past the moment you were supposed to check. I declared one refactor done three separate times. It was wrong three separate times. So I started building gates.</p>
 
