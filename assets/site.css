@@ -142,8 +142,10 @@ a:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
 .links a { color: var(--muted); border-bottom: 1px solid var(--border); padding-bottom: 2px; }
 .links a:hover { color: var(--magenta); border-bottom-color: var(--magenta); }
 
-/* linkedin hides behind a bare period — an easter egg you click if you know. */
-.li-dot { border-bottom: none; padding: 0 4px; }
+/* the trailing dot after the domain is a quiet link to the resume/portfolio. */
+.resume-dot { color: inherit; border-bottom: none; text-decoration: none; }
+.resume-dot:hover,
+.resume-dot:focus-visible { color: var(--magenta); }
 
 .domain {
   font-family: var(--font-mono);
