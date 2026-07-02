@@ -153,6 +153,7 @@ a:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--border);
+  white-space: nowrap;
 }
 
 /* ---- page footer ---- */
