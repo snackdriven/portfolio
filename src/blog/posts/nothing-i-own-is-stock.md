@@ -1,10 +1,9 @@
 ---
 title: "Nothing I own is stock"
-date: 2026-07-02
+date: 2026-03-13
 permalink: /nothing-i-own-is-stock.html
 tag: reflection
-hidden: true
-read: 2
+read: 3
 excerpt: "I have never left a device the way it shipped — not one. On the compulsion to personalize everything I own, and why stock is only ever temporary."
 description: "I have never left a device the way it shipped — not one. On the compulsion to personalize everything I own, and why stock is only ever temporary."
 ogtitle: "Nothing I own is stock — snackdriven.com"
