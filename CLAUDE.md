@@ -104,6 +104,27 @@ editing copy, preserve that. Concrete rules distilled from prior edits:
 - **Avoid "AI-vocab" tells.** Prior passes deliberately swapped flagged words
   (e.g. "crucially" → "mercifully"). Don't reintroduce generic LLM phrasing.
 
+### Signature moves (things the author likes)
+
+Weave these in where they land naturally — never force them, and don't let one
+crowd a line (see the "is it too much" lesson: confession + *one* payoff beats a
+pile-up).
+
+- **Alliteration.** Reach for it when it doesn't feel strained.
+- **Meta jokes & self-reference.** Jokes about the medium itself — the post
+  noticing it's a post, the site referring to itself as "the log," a QA framing
+  turned on the writing. (e.g. the homepage's "the rest is committed, so
+  technically it's research.")
+- **Easter eggs.** Small rewards for people who look closely. Existing ones:
+  the `console.log` status panel + neon-flicker script on the homepage, the
+  `>`-prompt SVG favicon, the terminal `PASS`/pending code block in
+  `hello-world`. Add more in that spirit.
+- **Numbers motif.** The author favors **13, 22, 23, 16** (list is not
+  exhaustive — more may surface). Where a number is arbitrary anyway — a count,
+  a version, a throwaway quantity, an Easter egg — prefer one of these. Don't
+  bend facts to hit them; use them only where the value is free to choose.
+  (Existing: "the one line feature i turned into **thirteen** scripts.")
+
 ## Pre-publish checklist (any post copy change)
 
 Before flipping a post live or pushing a copy edit:
