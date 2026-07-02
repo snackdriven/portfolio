@@ -104,6 +104,32 @@ editing copy, preserve that. Concrete rules distilled from prior edits:
 - **Avoid "AI-vocab" tells.** Prior passes deliberately swapped flagged words
   (e.g. "crucially" → "mercifully"). Don't reintroduce generic LLM phrasing.
 
+### AI-tell audit (run on every draft)
+
+The "voice audit" step has teeth — these are the patterns that read as
+machine-written by late-2026 standards. Hunt them and cut them:
+
+- **Em-dash density.** The single biggest visual tell. Budget: at most one `—`
+  per post, ideally zero. Convert to colons, commas, or periods. (Check the
+  `excerpt`/`description` too — they show on the card.)
+- **"Not X, it's Y" antithesis.** "The mod isn't vanity. It's insurance."
+  Rewrite so the point lands without the balanced negation.
+- **AI scaffolds.** "The honest version is that…", "The truth is simpler…",
+  "Here's the thing:". Cut the frame, just say it.
+- **Precision adverbs/adjectives** stacked for emphasis: "unshakeable,"
+  "specific," "precise," "genuinely," "truly," "exactly." Trim them.
+- **Tidy reveal-buttons.** "I was the problem." / "That's the whole point."
+  Land the beat on something concrete or on the piece's actual thesis instead.
+- **Balanced-negation pairs.** "all true, all beside the point"; "never once
+  the moment I paid for it." Vary the sentence lengths so it isn't symmetrical.
+- **Tacked-on quirky similes** and dated casual words ("unhinged," "feral,"
+  "chef's kiss"). Prefer a drier, more specific image.
+- **Parallel tricolons** where all three clauses share a shape. One is fine;
+  three matched ones in a row is a tell. Break the pattern.
+
+Not every symmetry is a tell — a real chiasmus or an earned punchline can stay.
+The test: does it carry meaning, or is it just shape? Keep meaning, cut shape.
+
 ### Signature moves (things the author likes)
 
 Weave these in where they land naturally — never force them, and don't let one
