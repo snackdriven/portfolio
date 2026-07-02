@@ -102,8 +102,20 @@ editing copy, preserve that. Concrete rules distilled from prior edits:
   (e.g. "keep") recurring three times in a stretch. Mix sentence lengths — a
   clipped fragment next to a longer line reads better than two matched clauses.
 - **Avoid "AI-vocab" tells.** Prior passes deliberately swapped flagged words
-  (e.g. "crucially" → "mercifully") and ran a humanizer pass. Don't reintroduce
-  generic LLM phrasing.
+  (e.g. "crucially" → "mercifully"). Don't reintroduce generic LLM phrasing.
+
+## Pre-publish checklist (any post copy change)
+
+Before flipping a post live or pushing a copy edit:
+
+1. **Run the humanizer skill** over the changed post to strip AI-vocab tells and
+   machine cadence.
+2. **Run a voice audit** — read the result against the house rules above
+   (snappy blurb, truthful framing, understated stakes, varied cadence). The
+   humanizer and the audit are complementary: the skill catches word-level
+   tells, the audit catches structure/framing the skill won't flag. Do both.
+3. Rebuild (`npx @11ty/eleventy`) and confirm the post writes clean.
+4. Then commit and push.
 
 ## Commit conventions
 
