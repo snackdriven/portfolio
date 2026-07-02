@@ -4,8 +4,8 @@ date: 2026-04-15
 permalink: /unknown-skill-buddy.html
 tag: meta
 read: 2
-excerpt: "Claude Code shipped a terminal pet, then took him away. No one takes my friends away from me, so I rebuilt him as a skill."
-description: "Claude Code shipped a terminal pet, then took it back. I rebuilt it as a skill, with the buttons it should've had."
+excerpt: "Claude Code shipped a terminal pet, then deleted him in an update. I rebuilt him as a skill, so the next update can't."
+description: "Claude Code shipped a terminal pet, then deleted him in an update. I rebuilt him as a skill, so the next update can't."
 ogtitle: "Unknown skill: buddy — snackdriven.com"
 ---
 <p class="lead">The corner of my statusline went quiet one morning, and when I typed <code>/buddy</code> I got back &ldquo;Unknown skill: buddy.&rdquo;</p>
