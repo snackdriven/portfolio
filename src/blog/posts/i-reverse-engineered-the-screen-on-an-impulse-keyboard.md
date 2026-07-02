@@ -5,8 +5,8 @@ permalink: /i-reverse-engineered-the-screen-on-an-impulse-keyboard.html
 tag: building
 hidden: false
 read: 2
-excerpt: "The AL80 was a Prime Day impulse — my first real mechanical, the upgrade I'd been promising myself. It has a tiny screen. I lasted under a week before I reverse-engineered it — no screwdriver, all over USB."
-description: "The AL80 was a Prime Day impulse — my first real mechanical, the upgrade I'd been promising myself. It has a tiny screen. I lasted under a week before I reverse-engineered it — no screwdriver, all over USB."
+excerpt: "A Prime Day impulse keyboard with a tiny screen. Under a week before I reverse-engineered it — no screwdriver, all over USB."
+description: "A Prime Day impulse keyboard with a tiny screen. Under a week before I reverse-engineered it — no screwdriver, all over USB."
 ogtitle: "I reverse-engineered the screen on an impulse keyboard — snackdriven.com"
 ---
 <p class="lead">It was supposed to be my first real mechanical keyboard, the upgrade I&rsquo;d been promising myself for a while. I&rsquo;d been on a Logitech MX Keys. Lovely, flat, completely screenless. So when the AL80 turned up in a Prime Day lightning deal, looking the way it looked and carrying a little color screen above the arrow keys, I let &ldquo;eventually&rdquo; quietly mean &ldquo;now&rdquo; and filed it under planning. I lasted under a week before I couldn&rsquo;t leave the screen alone.</p>
