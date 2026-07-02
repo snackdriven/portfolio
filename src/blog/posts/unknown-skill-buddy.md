@@ -4,8 +4,8 @@ date: 2026-04-15
 permalink: /unknown-skill-buddy.html
 tag: meta
 read: 2
-excerpt: "Claude Code shipped a terminal pet, then deleted him in an update. I rebuilt him as a skill, so the next update can't."
-description: "Claude Code shipped a terminal pet, then deleted him in an update. I rebuilt him as a skill, so the next update can't."
+excerpt: "Claude Code's terminal pet lasted a week before an update deleted him. Mine's a skill: deterministic, decaying, and update-proof."
+description: "Claude Code's terminal pet lasted a week before an update deleted him. Mine's a skill: deterministic, decaying, and update-proof."
 ogtitle: "Unknown skill: buddy — snackdriven.com"
 ---
 <p class="lead">The corner of my statusline went quiet one morning, and when I typed <code>/buddy</code> I got back &ldquo;Unknown skill: buddy.&rdquo;</p>
