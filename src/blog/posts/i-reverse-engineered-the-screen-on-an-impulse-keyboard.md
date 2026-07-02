@@ -3,7 +3,7 @@ title: "I reverse-engineered the screen on an impulse keyboard"
 date: 2026-07-01
 permalink: /i-reverse-engineered-the-screen-on-an-impulse-keyboard.html
 tag: building
-hidden: true
+hidden: false
 read: 2
 excerpt: "The AL80 was a Prime Day impulse — my first real mechanical, the upgrade I'd been promising myself. It has a tiny screen. I lasted under a week before I had to take it apart."
 description: "The AL80 was a Prime Day impulse — my first real mechanical, the upgrade I'd been promising myself. It has a tiny screen. I lasted under a week before I had to take it apart."
