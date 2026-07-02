@@ -3,7 +3,6 @@ title: "True love never dies (it just files for insolvency)"
 date: 2026-07-01
 permalink: /true-love-never-dies.html
 tag: reflection
-hidden: true
 read: 2
 excerpt: "Fitbit bought Pebble for parts in 2016 and switched it off. It's been nine years and I'm, if anything, angrier. Then it came back, and I made a noise I'm not proud of."
 description: "Fitbit bought Pebble for parts in 2016 and switched it off. It's been nine years and I'm, if anything, angrier. Then it came back, and I made a noise I'm not proud of."

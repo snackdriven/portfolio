@@ -1,6 +1,6 @@
 ---
 title: "Unknown skill: buddy"
-date: 2026-06-26
+date: 2026-04-15
 permalink: /unknown-skill-buddy.html
 tag: meta
 read: 2
