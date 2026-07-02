@@ -1,13 +1,13 @@
 ---
-title: "I mourned my Pebble for nine years and pre-ordered the sequel anyway"
+title: "True love never dies (it just gets bought by Fitbit)"
 date: 2026-07-01
-permalink: /i-mourned-my-pebble-for-nine-years-and-pre-ordered-the-sequel-anyway.html
+permalink: /true-love-never-dies.html
 tag: reflection
 hidden: true
 read: 2
 excerpt: "Fitbit bought Pebble for parts in 2016 and switched it off. It's been nine years and I'm, if anything, angrier. Then it came back, and I made a noise I'm not proud of."
 description: "Fitbit bought Pebble for parts in 2016 and switched it off. It's been nine years and I'm, if anything, angrier. Then it came back, and I made a noise I'm not proud of."
-ogtitle: "I mourned my Pebble for nine years and pre-ordered the sequel anyway — snackdriven.com"
+ogtitle: "True love never dies (it just gets bought by Fitbit) — snackdriven.com"
 ---
 <p class="lead">Fitbit bought Pebble in 2016, mostly for the parts, and quietly switched the whole thing off. It&rsquo;s been nine years and I&rsquo;m, if anything, angrier. The Pebble was a smartwatch that didn&rsquo;t want to be a phone, which in hindsight was the most radical thing about it. E-paper screen you could read in direct sun. Real buttons. A battery that went a week between charges. A full week, seven days, while everyone else&rsquo;s watch tapped out before lunch. It did a few things and it did them without once asking me for a cable.</p>
 
@@ -19,4 +19,4 @@ What I wear now is a round Samsung watch, because round is mostly what&rsquo;s l
 
 And then it came back. I did not see this coming. Google owns Fitbit now, and last year it open-sourced Pebble&rsquo;s software; Eric Migicovsky, the man who built the original, started a new company and shipped new ones, the Pebble 2 Duo and the Pebble Time 2. The watch I buried has a sequel. I found out and made a noise I&rsquo;m not proud of.
 
-Reader, I pre-ordered it. The Time 2, obviously, the direct descendant of the one I&rsquo;ve spent this whole post grieving. And I&rsquo;m still furious, to be clear. None of the last nine years was necessary. Someone bought a small good thing and switched it off, and a lot of us wore refurbs and community firmware for years just to keep the shape on our wrists. But the man who built the first one is building this one, the software&rsquo;s open now so nobody gets to quietly kill it again, and I get to find out what a Pebble looks like in 2026. Still furious about the years. Genuinely excited for the box on my doorstep. I&rsquo;ve decided I get to be both.
+Reader, I pre-ordered it. The Time 2, obviously, the direct descendant of the one I&rsquo;ve spent this whole post grieving. And I&rsquo;m still furious, to be clear. None of the last nine years was necessary. Someone bought a small good thing and switched it off, and a lot of us wore refurbs and community firmware for years just to keep the shape on our wrists. But the man who built the first one is building this one, the software&rsquo;s open now so nobody gets to quietly kill it again, and I get to find out what a Pebble looks like in 2026. Still furious about the years. Genuinely excited for the box on my doorstep. Both, as a treat.
