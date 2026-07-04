@@ -1,13 +1,13 @@
 ---
-title: "I reverse-engineered the screen on an impulse keyboard"
+title: "The internet said the 12-hour clock was impossible"
 date: 2026-07-01
 permalink: /i-reverse-engineered-the-screen-on-an-impulse-keyboard.html
 tag: building
 hidden: false
 read: 2
-excerpt: "A Prime Day impulse keyboard with a tiny screen. Under a week before I reverse-engineered it. No screwdriver, all over USB."
-description: "A Prime Day impulse keyboard with a tiny screen. Under a week before I reverse-engineered it. No screwdriver, all over USB."
-ogtitle: "I reverse-engineered the screen on an impulse keyboard · snackdriven.com"
+excerpt: "The AI said impossible. Reddit said only the vendor app could touch the screen. It was one line of modulo."
+description: "The AI said impossible. Reddit said only the vendor app could touch the screen. It was one line of modulo."
+ogtitle: "The internet said the 12-hour clock was impossible · snackdriven.com"
 ---
 <p class="lead">I&rsquo;m at this desk most of my waking hours, so a good keyboard isn&rsquo;t a small thing. The upgrade was overdue. I&rsquo;d been on a Logitech MX Keys. Lovely, flat, completely screenless. So when the AL80 turned up in a Prime Day lightning deal, looking the way it looked and carrying a little color screen above the arrow keys, the timing was right and I grabbed it. I lasted under a week before I couldn&rsquo;t leave the screen alone.</p>
 
