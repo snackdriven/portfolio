@@ -23,7 +23,7 @@ And then the banding, which I&rsquo;ll be telling people about for a while. Phot
 
 The real bug was dumber, and I&rsquo;m fond of it. I was shoving the image at the screen faster than it could swallow, and it was quietly dropping bytes on the floor. Send a block, wait for the screen&rsquo;s one-byte acknowledgment, send the next. Flow control, the least glamorous thing in computing. And the twist: when I tried to be extra safe and add pacing delays between the blocks, it got worse every time. The screen doesn&rsquo;t want gaps, it wants the natural back-and-forth. I deleted the delays and it cleaned up.
 
-Which brings me to the wall that beat me longest. The now-playing card is built, album art and track and a progress bar rendered down to the 96 by 160 panel. The frame writes perfectly: all 549 blocks acknowledged, in about a second. And the screen shows the old picture. It confirms every block and displays nothing new. There&rsquo;s a &ldquo;now actually show it&rdquo; step I&rsquo;m either not sending or sending a beat too early.
+Which brings me to the wall that beat me longest. The now-playing card is built, album art and track and a progress bar rendered down to the 96 by 160 panel. (I called it 112 by 137 last post. Wrong about that too, turns out.) The frame writes perfectly: all 549 blocks acknowledged, in about a second. And the screen shows the old picture. It confirms every block and displays nothing new. There&rsquo;s a &ldquo;now actually show it&rdquo; step I&rsquo;m either not sending or sending a beat too early.
 
 A beat too early was the right instinct. It was never the pixels. It came down to timing again, same as the flow control.
 
