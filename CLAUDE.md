@@ -131,6 +131,39 @@ machine-written by late-2026 standards. Hunt them and cut them:
 Not every symmetry is a tell — a real chiasmus or an earned punchline can stay.
 The test: does it carry meaning, or is it just shape? Keep meaning, cut shape.
 
+### Anchor voice (the bracket-README DNA)
+
+The truest calibration is the author's own shipped public writing, not an abstract
+rulebook. When a draft passes the AI-tell audit but still reads like nobody, check it
+against these moves, distilled from her repo READMEs (`snackdriven/`: `disney-bracket`,
+`bad-movie-bracket`, `qa-brain`, `qa-toolkit`, `riff-tracks`, `portfolio`) and the
+published bracket post. **The test for any line: could it sit in the disney-bracket or
+qa-brain README without sticking out? If not, cut or rewrite.**
+
+- **Flavor the framing, not every line.** The bite goes in the title, the opening, and
+  the closing aside. The body stays dry and functional. A crafted button on *every*
+  paragraph is the actual anti-pattern: over-salting kills it as fast as no voice at all.
+  This is the single most load-bearing rule, and the easiest to violate while feeling clever.
+- **Land a flat closing kicker.** Every post ends on one flat, unsignposted line: the
+  identity bite ("I find bugs for money and introduce them for fun. The brackets are the
+  second part.") or the license-footer bite ("MIT. These movies had no quality control.
+  Neither do you."). One kicker, not a pile-up. Don't trail off on a summary.
+- **Specific weird detail over abstract.** "Toy Story 2 was almost deleted by accident."
+  "The Fanatic made $3,153 opening weekend." Reach for the concrete oddity, not the
+  general claim.
+- **Flat punchline after the setup, no signposting.** "I'm sorry. There was no other way
+  to build this." Set it up straight, land it flat, move on. No "and the kicker is..."
+- **Wry confessional aside, in passing.** "It happens to everyone. You will be okay.
+  Probably." Self-deprecating, never a paragraph about the feeling.
+- **Match the POV to whose experience it is.** Second person for a reader-experience
+  piece (the brackets are about *you* picking movies: "you're going to have to put Beauty
+  and the Beast against The Emperor's New Groove"). First person for a build/debug saga
+  (it's about *her* doing the work: "then I got greedy"). Don't force one over the other.
+
+The internal work-vault carries the fuller version (`kayla-voice-cadence.md` + `voice/anchors.md`),
+which is tuned for terse Jira/Slack. This section is the blog-register subset; the two agree
+on the DNA (bite in the framing, dry body, flat kicker, specific detail, zero em-dashes).
+
 ### Signature moves (things the author likes)
 
 Weave these in where they land naturally — never force them, and don't let one
@@ -158,10 +191,11 @@ Before flipping a post live or pushing a copy edit:
 
 1. **Run the humanizer skill** over the changed post to strip AI-vocab tells and
    machine cadence.
-2. **Run a voice audit** — read the result against the house rules above
-   (snappy blurb, truthful framing, understated stakes, varied cadence). The
-   humanizer and the audit are complementary: the skill catches word-level
-   tells, the audit catches structure/framing the skill won't flag. Do both.
+2. **Run a voice audit** — read the result against the house rules AND the **Anchor
+   voice** section above (framing-not-every-line, a flat closing kicker, specific-weird-
+   detail). The test for any line: could it sit in the disney-bracket or qa-brain README
+   without sticking out? The humanizer catches word-level tells; the audit catches the
+   structure/framing it won't flag. Do both.
 3. Rebuild (`npx @11ty/eleventy`) and confirm the post writes clean.
 4. Then commit and push.
 
