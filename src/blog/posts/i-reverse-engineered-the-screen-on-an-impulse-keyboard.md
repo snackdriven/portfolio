@@ -20,3 +20,7 @@ Then I wanted my own images on it, and that&rsquo;s where it became actual work.
 I had Claude reading captures with me, and it was confident and wrong in the way I keep writing about here. It labeled the packet types backwards. It invented a tidy formula that fell apart the second real pixels went through it, then kept calling the number &ldquo;confirmed.&rdquo; Same trap as always: a source that&rsquo;s right about every row it has still isn&rsquo;t the whole room. The fix was the same boring thing every time: stop trusting the summary, run the actual numbers. Four thousand-odd packets either match your formula or they don&rsquo;t. Mine didn&rsquo;t, until it did.
 
 So there&rsquo;s a programmable tiny TV on my keyboard now, which, if you&rsquo;ve read anything else here, is my whole personality showing up in hardware. The reflex behind it is simple. When the thing you want gets taken back, or never offered, you build the version that&rsquo;s yours. The vendor wasn&rsquo;t going to hand me a 12-hour clock or my own pixels, so I took them. Right now it&rsquo;s running my 12-hour clock with a pink skull spinning on the GIF screen next to it. And the impulse buy has been retroactively reclassified as research. That&rsquo;s allowed. I checked.
+
+---
+
+**Correction, 2026-07-04:** the panel is 96 by 160, not the 112 by 137 I gave above. The size in bytes was right either way, about thirty thousand a frame, which is exactly how the wrong number got past me. Caught it going back in for round two.
