@@ -5,11 +5,11 @@ permalink: /the-keyboard-screen-was-the-easy-part.html
 tag: building
 hidden: true
 read: 3
-excerpt: "The screen was chapter one. Chapter two: a control app, a custom firmware, and a few days of disproving my own confident theories."
-description: "The screen was chapter one. Chapter two: a control app, a custom firmware, and a few days of disproving my own confident theories."
+excerpt: "Chapter two of the keyboard screen. I spent a week staring at bands so I could stare at bands."
+description: "Chapter two of the keyboard screen. I spent a week staring at bands so I could stare at bands."
 ogtitle: "The keyboard screen was the easy part · snackdriven.com"
 ---
-<p class="lead"><a href="/i-reverse-engineered-the-screen-on-an-impulse-keyboard.html">Last time</a> I cracked the little screen on my keyboard and put a 12-hour clock and a spinning pink skull on it. I called that the end of the story. It was the tutorial level. What I actually wanted crept in afterward: not just pixels on the screen, but the whole keyboard made mine. Recolor the factory rainbow to my own colors, keep the screen while I did it, and put something worth looking at on it, like whatever&rsquo;s playing. This is the messy part I skipped over.</p>
+<p class="lead">Okay, so. <a href="/i-reverse-engineered-the-screen-on-an-impulse-keyboard.html">Last time</a> I cracked the little screen on my keyboard and put a 12-hour clock and a spinning pink skull on it, and I called that the end of the story. It was the tutorial level. What I actually wanted crept in afterward: the whole keyboard made mine, not just pixels on a screen. Recolor the factory rainbow to my own colors, keep the screen while I did it, and put something worth looking at on it, like whatever&rsquo;s playing. That took a week. This is the messy part I skipped over.</p>
 
 The first thing I learned is that building the workbench is its own project. I wrote a little browser app, al80-studio, that drives the screen from a tab and cracked the lighting protocol, so I could bend the factory rainbow into a palette I actually chose. Set a value, read it back, and the keyboard repeats it to me with a confirmation byte stamped on top. You ask, it says the same thing back, and now you know it heard you.
 
@@ -33,4 +33,4 @@ Then the last twist, and it fits this post a little too well. The final command 
 
 By the end the pattern was hard to miss. I&rsquo;d been wrong about this keyboard over and over, sure of myself every time, and the last thing I gave up was the idea that my own fix was helping. Every version that made it worse was pointing right at the part I wasn&rsquo;t looking at.
 
-For a week the keyboard kept showing me last week&rsquo;s picture. Now it shows me this one: whatever&rsquo;s playing, holding still. The cover art&rsquo;s real, once I stopped handing Spotify a login it had already thrown away, three rounds before I caught on. The fix, after all of it, was two pauses and one deleted line: teach it to wait a beat, and to ignore my last instruction. Which is about the most I can say for myself most days, too.
+So, whew. For a week the keyboard kept showing me last week&rsquo;s picture. Now it shows me this one, cover art and all, once I got Spotify to stop throwing away my login three rounds running. The whole fix, after all of that, was two pauses and one deleted line. Anyway. I spent a week staring at bands so I could stare at bands.
