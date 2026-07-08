@@ -30,6 +30,8 @@ npm run serve          # local preview with --serve
   layout + `.post-meta` row), `topbar.njk`, `site-footer.njk`.
 - `eleventy.config.js` — defines the `ymd` date filter and the `visiblePost`
   collection.
+- `assets/blog.css` — blog feature stylesheet (layout, cards, article typography, inline expand,
+  terminal hero). Builds on CSS custom properties from `site.css`; link `site.css` first.
 - `portfolio/`, `assets/`, `404.html`, `CNAME` — passthrough-copied as-is.
 
 ## Front-matter schema (every post)
@@ -46,6 +48,7 @@ npm run serve          # local preview with --serve
 | `ogtitle` | yes | Convention: `"<title> · snackdriven.com"`. Middot separator, never a dash. |
 | `hidden` | optional | `true` = drafted/withheld from the listing. Omitting it (or `false`) = live. |
 | `badge` | optional | Small pill in the meta row (e.g. `placeholder`). Rare. |
+| `blogcss` | optional | `true` = link `blog.css` in `<head>`. Set for all posts via `posts.json`; also set on `index.njk`. |
 
 ## Publishing model
 
@@ -79,10 +82,13 @@ npm run serve          # local preview with --serve
   - `&ndash;` en dash (ranges only). Never `&mdash;`/em dash; see the AI-tell audit.
   - `&larr;` etc. for arrows
   - Match the surrounding text — existing posts are fully entity-encoded.
-- Known CSS hooks (don't invent new ones casually): `.wrap.reading`,
-  `.post-meta`, `.tag`, `.badge`, `.neon`, `.post-title`, `.lead`, `.backlink`.
-  Terminal/code snippets use `<pre><code>` with span classes `c` (comment),
-  `g` (green/pass), `m` (muted/pending), etc.
+- Known CSS hooks (don't invent new ones casually):
+  - **Layout/index:** `.wrap`, `.wrap.reading`, `.page-label`, `.page-title`, `.page-intro`, `.posts`
+  - **Terminal hero:** `.prompt-title`, `.prompt-title .host`, `.prompt-title .pmt`, `.prompt-title .cmd`, `.prompt-title .cursor`
+  - **Post cards:** `.post-card`, `.post-row`, `.post-row-title-row`, `.post-toggle`
+  - **Inline expand:** `.post-body-wrap`, `.post-body-inner`
+  - **Article:** `.single-post`, `.post-meta`, `.post-title`, `.neon`, `.tag`, `.badge`, `.lead`, `.backlink`
+  - **Code snippet spans** inside `<pre><code>`: `.c` = comment/muted, `.g` = green/pass, `.m` = magenta/pending
 
 ## Voice & style (house rules)
 
@@ -176,9 +182,11 @@ pile-up).
   turned on the writing. (e.g. the homepage's "the rest is committed, so
   technically it's research.")
 - **Easter eggs.** Small rewards for people who look closely. Existing ones:
-  the `console.log` status panel + neon-flicker script on the homepage, the
-  `>`-prompt SVG favicon, the terminal `PASS`/pending code block in
-  `hello-world`. Add more in that spirit.
+  the `console.log` status panel on the homepage (styled status panel, post count, "pending" line),
+  the neon-flicker on `.prompt-title .host span` letters (random single/run/cascade, respects
+  `prefers-reduced-motion`), the `>`-prompt SVG favicon, the terminal `PASS`/pending code block in
+  `hello-world`. Add more in that spirit. Note: the inline expand feature (`.post-card` →
+  `.post-body-wrap` height animation on `.post-row` click) is UX, not an Easter egg — don't remove it.
 - **Numbers motif.** The author favors **13, 22, 23, 16** (list is not
   exhaustive — more may surface). Where a number is arbitrary anyway — a count,
   a version, a throwaway quantity, an Easter egg — prefer one of these. Don't
