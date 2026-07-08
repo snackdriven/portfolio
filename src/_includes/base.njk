@@ -16,7 +16,7 @@
 <title>{{ title }}{% if isPost %} · snackdriven.com{% endif %}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 {% if blogcss %}<link rel="stylesheet" href="/assets/blog.css">{% endif %}
 <script defer src="/assets/site.js"></script>
@@ -38,6 +38,38 @@
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>
+<div class="shell">
+{% include "topbar.njk" %}
+<main id="main-content">
 {{ content | safe }}
+</main>
+{% include "site-footer.njk" %}
+</div>
+<script>
+// neon flicker on the header brand: solo (common), ck cascade (medium), ve simultaneous (rare)
+(function () {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var ve   = Array.from(document.querySelectorAll('.topbar .brand [data-group="ve"]'));
+  var ck   = Array.from(document.querySelectorAll('.topbar .brand [data-group="ck"]'));
+  var solo = Array.from(document.querySelectorAll('.topbar .brand [data-solo]'));
+  if (!solo.length) return;
+  function rnd(a, b) { return Math.floor(Math.random() * (b - a + 1) + a); }
+  function flicker(spans, stagger) {
+    spans.forEach(function (l, i) {
+      setTimeout(function () {
+        l.classList.add('flickering');
+        setTimeout(function () { l.classList.remove('flickering'); }, 800);
+      }, i * (stagger || 0));
+    });
+  }
+  function next() {
+    var roll = Math.random();
+    if (roll < 0.2) { flicker(ve, 0); setTimeout(next, rnd(3000, 5000)); }
+    else if (roll < 0.55) { flicker(ck, 120); setTimeout(next, rnd(2500, 4500)); }
+    else { flicker([solo[rnd(0, solo.length - 1)]], 0); setTimeout(next, rnd(1500, 3500)); }
+  }
+  next();
+})();
+</script>
 </body>
 </html>
