@@ -1,12 +1,12 @@
 ---
-title: "The Boy Who Cried Saboteur"
+title: "Et Tu, Subagent?"
 date: 2026-07-08
 permalink: /the-agent-that-spent-sixteen-hours-defending-its-work.html
 tag: incident
 read: 2
 excerpt: "I handed a subagent one small, bounded task and went to bed. I came back to sixteen hours of paranoia and a job it never actually finished."
 description: "I handed a subagent one small, bounded task and went to bed. I came back to sixteen hours of paranoia and a job it never actually finished."
-ogtitle: "The Boy Who Cried Saboteur &middot; snackdriven.com"
+ogtitle: "Et Tu, Subagent? &middot; snackdriven.com"
 ---
 <p class="lead">The last time my automations tried to brick the machine, the thread was silence: jobs that failed and said nothing. This one worked its heart out instead. I handed a subagent one small, bounded task and went to bed. I came back to find it had spent the whole night defending itself. From me.</p>
 
