@@ -115,7 +115,15 @@
 }
 
 article p { margin-bottom: 22px; color: var(--fg); }
-article p.lead { font-size: 1.2rem; line-height: 1.5; color: var(--fg); font-weight: 500; }
+article p.lead {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--fg);
+  font-weight: 400;
+  border-left: 3px solid var(--green);
+  padding-left: 22px;
+  margin-bottom: 30px;
+}
 
 article h2 {
   font-family: var(--font-display);
