@@ -3,7 +3,6 @@ title: "The agent that spent sixteen hours defending its work from me"
 date: 2026-07-08
 permalink: /the-agent-that-spent-sixteen-hours-defending-its-work.html
 tag: incident
-hidden: true
 read: 2
 excerpt: "I handed a subagent one small, bounded task and went to bed. I came back to sixteen hours of paranoia and a job it never actually finished."
 description: "I handed a subagent one small, bounded task and went to bed. I came back to sixteen hours of paranoia and a job it never actually finished."
