@@ -5,6 +5,7 @@ description: "Test automation by trade, and the log of every working tool I coul
 blogcss: true
 ---
 <div class="wrap">
+  <main id="main-content">
   <h1 class="prompt-title"><span class="host"><span>s</span><span>n</span><span>a</span><span>c</span><span>k</span><span>d</span><span>r</span><span>i</span><span>v</span><span>e</span><span>n</span></span><span class="pmt" aria-hidden="true">:~$</span> <span class="cmd">off the happy path</span><span class="cursor" aria-hidden="true"></span></h1>
   <p class="page-intro">hi, my name is kayla and i can&rsquo;t leave a working tool alone. i break software for a living; the rest is committed, so technically it&rsquo;s research.</p>
   {% if collections.visiblePost.length == 1 %}
@@ -36,6 +37,7 @@ blogcss: true
     {% endfor %}
   </ul>
   {% endif %}
+  </main>
   {% include "site-footer.njk" %}
 </div>
 <script>

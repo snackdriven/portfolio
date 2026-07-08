@@ -104,7 +104,23 @@ a:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
 .topbar nav { display: flex; gap: 20px; }
 .topbar nav a { color: var(--muted); }
 .topbar nav a:hover { color: var(--magenta); }
-.topbar nav a[aria-current="page"] { color: var(--green); }
+.topbar nav a[aria-current="page"] { color: var(--green); text-decoration: underline; text-underline-offset: 4px; }
+
+/* ---- skip link (off-screen until focused; keyboard/AT users only) ---- */
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -60px;
+  z-index: 100;
+  background: var(--green);
+  color: var(--bg);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  padding: 8px 14px;
+  border-radius: 4px;
+  transition: top 0.15s;
+}
+.skip-link:focus { top: 12px; color: var(--bg); }
 
 /* ---- mono metadata row + badge (shared by list cards and articles) ---- */
 .post-meta {
@@ -141,11 +157,6 @@ a:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
 }
 .links a { color: var(--muted); border-bottom: 1px solid var(--border); padding-bottom: 2px; }
 .links a:hover { color: var(--magenta); border-bottom-color: var(--magenta); }
-
-/* the trailing dot after the domain is a quiet link to the resume/portfolio. */
-.resume-dot { color: inherit; border-bottom: none; text-decoration: none; }
-.resume-dot:hover,
-.resume-dot:focus-visible { color: var(--magenta); }
 
 .domain {
   font-family: var(--font-mono);
