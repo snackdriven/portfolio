@@ -3,8 +3,6 @@ title: "The keyboard screen was the easy part"
 date: 2026-07-03
 permalink: /the-keyboard-screen-was-the-easy-part.html
 tag: building
-hidden: true
-# PUBLISH TODO: when this goes live, link "round two" in the 2026-07-04 correction on i-reverse-engineered-the-screen-on-an-impulse-keyboard.md to this post. The forward-link is allowed once this is no longer a draft.
 read: 3
 excerpt: "Chapter two of the keyboard screen. I spent a week staring at bands so I could stare at bands."
 description: "Chapter two of the keyboard screen. I spent a week staring at bands so I could stare at bands."
