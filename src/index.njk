@@ -23,28 +23,15 @@ blogcss: true
   <ul class="posts">
     {% for post in collections.visiblePost %}
     <li>
-      <div class="post-card" data-expanded="false">
-        <a class="post-row" href="{{ post.url }}" aria-expanded="false">
-          <div class="post-meta">
-            <span>{{ post.date | ymd }}</span>
-            <span class="tag">#{{ post.data.tag }}</span>
-            {% if post.data.badge %}<span class="badge">{{ post.data.badge }}</span>{% endif %}
-          </div>
-          <div class="post-row-title-row">
-            <h2>{{ post.data.title }}</h2>
-            <span class="post-toggle" aria-hidden="true">&#x25B8;</span>
-          </div>
-          <p>{{ post.data.excerpt }}</p>
-        </a>
-        <div class="post-body-wrap" aria-hidden="true" inert>
-          <div class="post-body-inner">
-            <article>
-              {{ post.templateContent | safe }}
-            </article>
-            <a class="backlink" href="{{ post.url }}">&rarr; permalink</a>
-          </div>
+      <a class="post-row" href="{{ post.url }}">
+        <div class="post-meta">
+          <span>{{ post.date | ymd }}</span>
+          <span class="tag">#{{ post.data.tag }}</span>
+          {% if post.data.badge %}<span class="badge">{{ post.data.badge }}</span>{% endif %}
         </div>
-      </div>
+        <h2>{{ post.data.title }}</h2>
+        <p>{{ post.data.excerpt }}</p>
+      </a>
     </li>
     {% endfor %}
   </ul>
@@ -80,42 +67,5 @@ blogcss: true
     else { flicker([letters[rnd(0, letters.length - 1)]], 0); setTimeout(next, rnd(1200, 2800)); } // single letter (common)
   }
   setTimeout(next, 1000);
-})();
-
-// Expand posts inline on click
-(function () {
-  document.querySelectorAll('.post-row').forEach(function (a) {
-    a.addEventListener('click', function (e) {
-      if (e.ctrlKey || e.metaKey || e.shiftKey || e.button !== 0) return;
-      e.preventDefault();
-      var card = a.closest('.post-card');
-      var wrap = card.querySelector('.post-body-wrap');
-      var inner = card.querySelector('.post-body-inner');
-      var isOpen = card.dataset.expanded === 'true';
-
-      if (isOpen) {
-        wrap.style.height = wrap.scrollHeight + 'px';
-        card.dataset.expanded = 'false';
-        a.setAttribute('aria-expanded', 'false');
-        wrap.setAttribute('aria-hidden', 'true');
-        wrap.setAttribute('inert', '');
-        requestAnimationFrame(function () {
-          requestAnimationFrame(function () {
-            wrap.style.height = '0';
-          });
-        });
-      } else {
-        card.dataset.expanded = 'true';
-        a.setAttribute('aria-expanded', 'true');
-        wrap.removeAttribute('aria-hidden');
-        wrap.removeAttribute('inert');
-        wrap.style.height = inner.scrollHeight + 'px';
-        wrap.addEventListener('transitionend', function onEnd(ev) {
-          if (ev.propertyName !== 'height') return;
-          if (card.dataset.expanded === 'true') wrap.style.height = 'auto';
-        }, { once: true });
-      }
-    });
-  });
 })();
 </script>
