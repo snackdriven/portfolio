@@ -23,4 +23,4 @@ So there&rsquo;s a programmable tiny TV on my keyboard now, which, if you&rsquo;
 
 ---
 
-**Correction, 2026-07-04:** the panel is 96 by 160, not the 112 by 137 I gave above. The size in bytes was right either way, about thirty thousand a frame, which is exactly how the wrong number got past me. Caught it going back in for round two.
+**Correction, 2026-07-04:** the panel is 96 by 160, not the 112 by 137 I gave above. The size in bytes was right either way, about thirty thousand a frame, which is exactly how the wrong number got past me. Caught it going back in for <a href="/the-keyboard-screen-was-the-easy-part.html">round two</a>.
