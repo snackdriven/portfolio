@@ -1,12 +1,12 @@
 ---
-title: "The week my own automations tried to brick my laptop"
+title: "Nobody Was Driving"
 date: 2026-06-12
 permalink: /the-week-my-own-automations-tried-to-brick-my-laptop.html
 tag: incident
 read: 2
 excerpt: "The worst one looked like a memory leak. iTerm went sludgy, the fans came up, the load average hit 401."
 description: "The worst one looked like a memory leak. iTerm went sludgy, the fans came up, the load average hit 401."
-ogtitle: "The week my own automations tried to brick my laptop · snackdriven.com"
+ogtitle: "Nobody Was Driving &middot; snackdriven.com"
 ---
 <p class="lead">The worst one looked like a memory leak. iTerm went sludgy, the fans came up, the load average hit 401. The culprit was a hook I&rsquo;d written to analyze my sessions when they end. It did the analysis by spawning a Claude session. A Claude session, when it ends, fires the session-end hook. Which spawns a Claude session. You can see where this goes. It audited its own auditor, about three kids per generation, until there were thirty-odd of them eating seven gigs of RAM and the machine was face down. I&rsquo;d reported it to myself as a leak. It was a fork bomb in my own handwriting.</p>
 
