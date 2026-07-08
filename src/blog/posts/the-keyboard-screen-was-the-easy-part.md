@@ -1,12 +1,12 @@
 ---
-title: "The keyboard screen was the easy part"
+title: "I Spent a Week Staring at Bands"
 date: 2026-07-03
 permalink: /the-keyboard-screen-was-the-easy-part.html
 tag: building
 read: 3
 excerpt: "Chapter two of the keyboard screen. I spent a week staring at bands so I could stare at bands."
 description: "Chapter two of the keyboard screen. I spent a week staring at bands so I could stare at bands."
-ogtitle: "The keyboard screen was the easy part · snackdriven.com"
+ogtitle: "I Spent a Week Staring at Bands &middot; snackdriven.com"
 ---
 <p class="lead">Okay, so. <a href="/i-reverse-engineered-the-screen-on-an-impulse-keyboard.html">Last time</a> I cracked the little screen on my keyboard and put a 12-hour clock and a spinning pink skull on it, and I called that the end of the story. It was the tutorial level. What I actually wanted crept in afterward: the whole keyboard made mine, not just pixels on a screen. Recolor the factory rainbow to my own colors, keep the screen while I did it, and put something worth looking at on it, like whatever&rsquo;s playing. That took a week. This is the messy part I skipped over.</p>
 
