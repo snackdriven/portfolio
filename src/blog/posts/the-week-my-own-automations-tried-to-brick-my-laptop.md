@@ -14,6 +14,6 @@ The quiet one was worse because it never said anything. A pile of my background 
 
 Same stretch had a backup job pushing my Claude memory to a private repo that couldn&rsquo;t be found, so it failed quietly for days. Plus the buddy file forking itself. Plus a plugin I scrapped after deciding it duplicated something that already shipped. Not a banner fortnight.
 
-The thread is silence. The fork bomb at least caught fire where I could see it. The cert failures and the dead backup returned exit code zero and did nothing. So most of what I built after isn&rsquo;t a feature, it&rsquo;s noise on purpose: a job that writes down why it failed, a watchdog that yells when the load spikes, a gate that makes a stale check explain itself.
+The thread is silence. The fork bomb at least caught fire where I could see it. The cert failures and the dead backup returned exit code zero and did nothing. So most of what I built after is noise on purpose: a job that writes down why it failed, a watchdog for load spikes, a gate that makes a stale check explain itself.
 
 The code is Claude&rsquo;s. The ideas, the specs, and apparently the disasters are mine.

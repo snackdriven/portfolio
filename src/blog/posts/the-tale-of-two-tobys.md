@@ -11,7 +11,7 @@ ogtitle: "The Tale of Two Tobys · snackdriven.com"
 ---
 <p class="lead">It was the best of names. It was the worst of names. It was, specifically, two of the worst of names, because the name was Toby and there were two of him.</p>
 
-Some background. Every terminal session I run gets a code name, pulled from a rotating themed cast so the cross-terminal sync doc reads like a roster instead of a wall of UUIDs. Monday&rsquo;s theme was The Office. The system that hands out these names has exactly one job and one promise: distinct per session. Nobody shares. That&rsquo;s the whole point of it.
+Some background. Every terminal session I run gets a code name, pulled from a rotating themed cast so the cross-terminal sync doc reads like a roster instead of a wall of UUIDs. Monday&rsquo;s theme was The Office. The system that hands out these names has exactly one job and one promise: distinct per session. Nobody shares.
 
 So when I looked over and saw two Toby Flendersons, that was a problem. Not a cosmetic one. A &ldquo;the thing that exists to prevent this exact situation has failed at the only thing it does&rdquo; one.
 
@@ -33,7 +33,7 @@ The bug was in how it answered &ldquo;who&rsquo;s alive.&rdquo; It checked exact
 
 Also incomplete.
 
-Because not every live session is on that list. A background spare process, the kind that gets pre-warmed and then handed real work, keeps its heartbeat somewhere else entirely: a presence file on disk, not a roster entry. It was alive. It was doing real work. It was holding Toby. And it was completely invisible to the one question that mattered.
+Because not every live session is on that list. A background spare process, the kind that gets pre-warmed and then handed real work, keeps its heartbeat somewhere else entirely: a presence file on disk, not a roster entry. It was alive, doing real work, holding Toby. And invisible to the one question that mattered.
 
 So the logic ran exactly as written. New session shows up, asks &ldquo;is Toby taken?&rdquo;, checks the roster, doesn&rsquo;t see the spare, concludes Toby is free, hands it out. Again. The check wasn&rsquo;t broken. It was looking at a list it trusted to be the whole world, and the world was bigger than the list.
 
@@ -51,4 +51,4 @@ Twenty tests pass, including a new one that recreates the exact two-Tobys scenar
 
 There is one Toby now.
 
-The background job that used to be the second Toby is, as of this afternoon, Pam Beesly-Halpert. Which, frankly, is a promotion.
+The background job that used to be the second Toby is, as of this afternoon, Pam Beesly-Halpert. Which is a promotion.
