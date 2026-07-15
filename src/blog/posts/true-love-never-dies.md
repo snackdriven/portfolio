@@ -16,7 +16,7 @@ Then December 2016 happened, and I&rsquo;m not over it. Pebble filed for insolve
 
 What I wear now is a round Samsung watch, because round is mostly what&rsquo;s left, and that&rsquo;s the other quiet crime here: the square watch is dead. Everyone chased the look of a real analog watch and abandoned the little rectangle, the one shape that actually fits a screen and a line of text. My Samsung needs a charger by dinner and would love to be my phone. It pings. It glows. It tracks. It nags. Somewhere in all of that the thing I wanted went missing, which was a watch that was mine, shaped the way I wanted, that otherwise left me alone.
 
-And then it came back, and here&rsquo;s the genuinely humiliating part: I learned that halfway through writing this. Deep in the rant, eulogizing everything I&rsquo;d lost, I went to check one date and the internet informed me that the watch I&rsquo;d written off is very much alive.
+And then it came back, and here&rsquo;s the genuinely humiliating part: I learned that halfway through writing this. Deep in the rant, eulogizing everything I&rsquo;d lost, I went to check one date and the internet informed me that the one that got away is very much alive.
 
 Guess who found out it was taking pre-orders and spent $200 in the same breath. It&rsquo;s me. Before I read who made it, before I finished the sentence I was in. The eulogy was still open in the next tab, half-written.
 
