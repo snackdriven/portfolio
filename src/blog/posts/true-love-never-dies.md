@@ -4,8 +4,8 @@ date: 2026-05-28
 permalink: /true-love-never-dies.html
 tag: reflection
 read: 2
-excerpt: "Fitbit bought Pebble in 2016 and switched it off. Nine years later it came back, and I made a noise I'm not proud of."
-description: "Fitbit bought Pebble in 2016 and switched it off. Nine years later it came back, and I made a noise I'm not proud of."
+excerpt: "Fitbit bought Pebble in 2016 and switched it off. Nine years later it came back, and I pre-ordered it before I'd finished mourning it."
+description: "Fitbit bought Pebble in 2016 and switched it off. Nine years later it came back, and I pre-ordered it before I'd finished mourning it."
 ogtitle: "True love never dies (it just files for insolvency) · snackdriven.com"
 ---
 <p class="lead">Fitbit bought Pebble in 2016, mostly for the parts, and quietly switched the whole thing off. It&rsquo;s been nine years and I&rsquo;m, if anything, deeper in mourning. The Pebble was a smartwatch that didn&rsquo;t want to be a phone. E-paper you could read in direct sun, real buttons, a week of battery while everyone else tapped out before lunch. It did a few things without once asking me for a cable.</p>
