@@ -18,8 +18,8 @@ What I wear now is a round Samsung watch, because round is mostly what&rsquo;s l
 
 And then it came back, and here&rsquo;s the genuinely humiliating part: I learned that halfway through writing this. Deep in the rant, eulogizing everything I&rsquo;d lost, I went to check one date and the internet informed me that the watch I was mourning is very much alive.
 
-Guess who found out it was taking pre-orders and spent $200 in the same breath. It&rsquo;s me. Before I read who made it, before I finished the sentence I was in. The eulogy was still open in the next tab, half-written, and I made a noise I&rsquo;m not proud of.
+Guess who found out it was taking pre-orders and spent $200 in the same breath. It&rsquo;s me. Before I read who made it, before I finished the sentence I was in. The eulogy was still open in the next tab, half-written.
 
 The Time 2, obviously, the direct descendant of the one I&rsquo;ve spent this whole post grieving. Google owns Fitbit now, and last year it open-sourced Pebble&rsquo;s software; Eric Migicovsky, the man who built the original, started a new company and shipped new ones, the Pebble 2 Duo and the Pebble Time 2. The thing I buried has a sequel.
 
-And I&rsquo;m still furious, to be clear. None of the last nine years was necessary. Someone bought a small good thing and switched it off, and a lot of us wore refurbs and community firmware for years just to keep the shape on our wrists. But the man who built the first one is building this one, the software&rsquo;s open now so nobody gets to quietly kill it again, and I get to find out what a Pebble looks like in 2026. Still furious about the years. Genuinely excited for the box on my doorstep. Both, as a treat.
+None of the last nine years was necessary. Someone bought a small good thing, switched it off, and left a lot of us on refurbs and community firmware just to keep the shape on our wrists. But the man who built the first one is building this one, the software&rsquo;s open now so nobody gets to quietly kill it again, and I get to see what a Pebble looks like in 2026. Furious about the years, excited for the box on my doorstep. Both, as a treat.
