@@ -31,14 +31,16 @@ module.exports = function (eleventyConfig) {
 
   // Visible posts (not hidden), newest first. The landing renders the single
   // post in full when there's one, and falls back to the card list at 2+.
-  eleventyConfig.addCollection("visiblePost", (api) =>
-    api.getFilteredByTag("post").filter((p) => !p.data.hidden).reverse()
-  );
+  let cache = null;
+  eleventyConfig.on('eleventy.before', () => { cache = null; });
 
-  // Chronological (oldest-first) for the Atom feed; feedPlugin reverses it -> newest-first.
-  eleventyConfig.addCollection("feedPosts", (api) =>
-    api.getFilteredByTag("post").filter((p) => !p.data.hidden)
-  );
+  const getVisible = (api) => {
+    if (!cache) cache = api.getFilteredByTag("post").filter((p) => !p.data.hidden);
+    return cache;
+  };
+
+  eleventyConfig.addCollection("visiblePost", (api) => getVisible(api).slice().reverse());
+  eleventyConfig.addCollection("feedPosts", (api) => getVisible(api).slice());
 
   return {
     dir: { input: "src", includes: "_includes", output: "_site" },
