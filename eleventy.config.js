@@ -3,11 +3,13 @@ const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (eleventyConfig) {
   // Static assets and the non-Eleventy pages are copied through as-is.
-  eleventyConfig.addPassthroughCopy({ assets: "assets" });
-  eleventyConfig.addPassthroughCopy({ portfolio: "portfolio" });
-  eleventyConfig.addPassthroughCopy({ "404.html": "404.html" });
-  eleventyConfig.addPassthroughCopy({ CNAME: "CNAME" });
-  eleventyConfig.addPassthroughCopy({ "robots.txt": "robots.txt" });
+  eleventyConfig.addPassthroughCopy({
+    assets: "assets",
+    portfolio: "portfolio",
+    "404.html": "404.html",
+    CNAME: "CNAME",
+    "robots.txt": "robots.txt"
+  });
 
   // Atom feed at /feed.xml (referenced from every page's <head>).
   eleventyConfig.addPlugin(feedPlugin, {
