@@ -4,11 +4,13 @@ const sanitizeHtml = require("sanitize-html");
 
 module.exports = function (eleventyConfig) {
   // Static assets and the non-Eleventy pages are copied through as-is.
-  eleventyConfig.addPassthroughCopy({ assets: "assets" });
-  eleventyConfig.addPassthroughCopy({ portfolio: "portfolio" });
-  eleventyConfig.addPassthroughCopy({ "404.html": "404.html" });
-  eleventyConfig.addPassthroughCopy({ CNAME: "CNAME" });
-  eleventyConfig.addPassthroughCopy({ "robots.txt": "robots.txt" });
+  eleventyConfig.addPassthroughCopy({
+    assets: "assets",
+    portfolio: "portfolio",
+    "404.html": "404.html",
+    CNAME: "CNAME",
+    "robots.txt": "robots.txt"
+  });
 
   // Atom feed at /feed.xml (referenced from every page's <head>).
   eleventyConfig.addPlugin(feedPlugin, {
@@ -44,16 +46,27 @@ module.exports = function (eleventyConfig) {
     });
   });
 
+  // Safe JSON dump to prevent XSS in <script type="application/ld+json">
+  eleventyConfig.addFilter("jsonDump", (value) => {
+    if (value === undefined) return "undefined";
+    return JSON.stringify(value)
+      .replace(/</g, '\\u003c')
+      .replace(/>/g, '\\u003e')
+      .replace(/&/g, '\\u0026');
+  });
+
   // Visible posts (not hidden), newest first. The landing renders the single
   // post in full when there's one, and falls back to the card list at 2+.
-  eleventyConfig.addCollection("visiblePost", (api) =>
-    api.getFilteredByTag("post").filter((p) => !p.data.hidden).reverse()
-  );
+  let cache = null;
+  eleventyConfig.on('eleventy.before', () => { cache = null; });
 
-  // Chronological (oldest-first) for the Atom feed; feedPlugin reverses it -> newest-first.
-  eleventyConfig.addCollection("feedPosts", (api) =>
-    api.getFilteredByTag("post").filter((p) => !p.data.hidden)
-  );
+  const getVisible = (api) => {
+    if (!cache) cache = api.getFilteredByTag("post").filter((p) => !p.data.hidden);
+    return cache;
+  };
+
+  eleventyConfig.addCollection("visiblePost", (api) => getVisible(api).slice().reverse());
+  eleventyConfig.addCollection("feedPosts", (api) => getVisible(api).slice());
 
   return {
     dir: { input: "src", includes: "_includes", output: "_site" },

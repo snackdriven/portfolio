@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "test": "node --test",
     "build": "eleventy",
     "serve": "eleventy --serve"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "jest": "^30.5.2",
+    "jest-environment-jsdom": "^30.5.2",
     "markdown-it": "^14.1.0",
     "sanitize-html": "^2.18.1"
   },

@@ -9,9 +9,18 @@
 (function () {
   var root = document.documentElement;
   var t;
+  var isScrolling = false;
   window.addEventListener('scroll', function () {
-    root.classList.add('scrolling');
+    if (!isScrolling) {
+      window.requestAnimationFrame(function() {
+        root.classList.add('scrolling');
+      });
+      isScrolling = true;
+    }
     clearTimeout(t);
-    t = setTimeout(function () { root.classList.remove('scrolling'); }, 700);
+    t = setTimeout(function () {
+      isScrolling = false;
+      root.classList.remove('scrolling');
+    }, 700);
   }, { passive: true });
 })();
