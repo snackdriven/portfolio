@@ -23,8 +23,25 @@ module.exports = function (eleventyConfig) {
     }
   });
 
-  // Allow raw HTML in markdown (the terminal code blocks rely on it).
-  eleventyConfig.setLibrary("md", markdownIt({ html: true, linkify: true }));
+  // Allow raw HTML in markdown (the terminal code blocks rely on it),
+  // but sanitize the output to prevent XSS.
+  const md = markdownIt({ html: true, linkify: true });
+  const sanitizeHtml = require("sanitize-html");
+
+  const originalRender = md.render.bind(md);
+  md.render = function(src, env) {
+    const html = originalRender(src, env);
+    return sanitizeHtml(html, {
+      allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img', 'pre', 'code', 'span', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div']),
+      allowedAttributes: {
+        ...sanitizeHtml.defaults.allowedAttributes,
+        '*': ['class', 'id', 'data-*'],
+        'a': ['href', 'name', 'target', 'rel'],
+        'img': ['src', 'srcset', 'alt', 'title', 'width', 'height', 'loading']
+      }
+    });
+  };
+  eleventyConfig.setLibrary("md", md);
 
   // YYYY-MM-DD for the post-meta rows and JSON-LD.
   eleventyConfig.addFilter("ymd", (d) => new Date(d).toISOString().slice(0, 10));
