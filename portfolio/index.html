@@ -762,19 +762,19 @@
     <span class="hero-sep print-hide">|</span>
     <span class="print-hide">Bentonville, AR (Remote)</span>
     <span class="hero-sep">|</span>
-    <a href="https://linkedin.com/in/snackdriven" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://linkedin.com/in/snackdriven" target="_blank">LinkedIn</a>
     <span class="hero-sep">|</span>
-    <a href="https://github.com/snackdriven" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://github.com/snackdriven" target="_blank">GitHub</a>
     <span class="hero-sep screen-hide">|</span>
-    <a href="https://snackdriven.com" target="_blank" rel="noopener" class="screen-hide">snackdriven.com</a>
+    <a href="https://snackdriven.com" target="_blank" class="screen-hide">snackdriven.com</a>
     <span class="hero-sep print-hide">|</span>
     <a href="/" class="print-hide">Blog</a>
     <span class="hero-sep print-hide">|</span>
     <div class="resume-menu print-hide" id="resume-menu">
       <button class="resume-menu-btn" id="resume-menu-btn" aria-haspopup="true" aria-expanded="false">Resume ▾</button>
       <div class="resume-menu-dropdown" id="resume-menu-dropdown" role="menu">
-        <a href="resume/kayla-young-resume-automation.pdf" target="_blank" rel="noopener" role="menuitem">Automation</a>
-        <a href="resume/kayla-young-resume-tools.pdf" target="_blank" rel="noopener" role="menuitem">Tooling</a>
+        <a href="resume/kayla-young-resume-automation.pdf" target="_blank" role="menuitem">Automation</a>
+        <a href="resume/kayla-young-resume-tools.pdf" target="_blank" role="menuitem">Tooling</a>
       </div>
     </div>
   </div>
@@ -1050,9 +1050,43 @@
     </div>
   </div>
 
-  <script defer src="/assets/neon-flicker.js"></script>
   <script>
-    window.initNeonFlicker('.hero h1 span[data-group="yl"]', '.hero h1 span[data-group="ie"]', '.hero h1 span[data-solo]');
+  // Neon flicker: solo (common), ie cascade (medium), yl simultaneous (rare)
+  (function() {
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const yl   = Array.from(document.querySelectorAll('.hero h1 span[data-group="yl"]'));
+      const ie   = Array.from(document.querySelectorAll('.hero h1 span[data-group="ie"]'));
+      const solo = Array.from(document.querySelectorAll('.hero h1 span[data-solo]'));
+
+      function randomFromInterval(from, to) {
+          return Math.floor(Math.random() * (to - from + 1) + from);
+      }
+
+      function flicker(spans, stagger) {
+          spans.forEach((l, idx) => {
+              setTimeout(() => {
+                  l.classList.add('flickering');
+                  setTimeout(() => l.classList.remove('flickering'), 800);
+              }, idx * (stagger || 0));
+          });
+      }
+
+      function next() {
+          const roll = Math.random();
+          if (roll < 0.2) {
+              flicker(yl, 0);
+              setTimeout(next, randomFromInterval(3000, 5000));
+          } else if (roll < 0.55) {
+              flicker(ie, 120);
+              setTimeout(next, randomFromInterval(2500, 4500));
+          } else {
+              flicker([solo[randomFromInterval(0, solo.length - 1)]], 0);
+              setTimeout(next, randomFromInterval(1500, 3500));
+          }
+      }
+
+      next();
+  })();
   </script>
 </footer>
 
