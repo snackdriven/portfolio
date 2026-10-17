@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "build": "eleventy",
-    "serve": "eleventy --serve"
+    "serve": "eleventy --serve",
+    "test": "node --test"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "jsdom": "^29.1.1",
     "markdown-it": "^14.1.0"
   },
   "dependencies": {
