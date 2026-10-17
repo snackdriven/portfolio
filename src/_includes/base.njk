@@ -26,8 +26,8 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": {{ title | dump | safe }},
-  "description": {{ description | dump | safe }},
+  "headline": {{ title | jsonDump | safe }},
+  "description": {{ description | jsonDump | safe }},
   "datePublished": "{{ date | ymd }}",
   "dateModified": "{{ date | ymd }}",
   "author": { "@type": "Person", "name": "Kayla Young", "url": "https://snackdriven.com/" },

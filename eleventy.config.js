@@ -29,6 +29,15 @@ module.exports = function (eleventyConfig) {
   // YYYY-MM-DD for the post-meta rows and JSON-LD.
   eleventyConfig.addFilter("ymd", (d) => new Date(d).toISOString().slice(0, 10));
 
+  // Safe JSON dump to prevent XSS in <script type="application/ld+json">
+  eleventyConfig.addFilter("jsonDump", (value) => {
+    if (value === undefined) return "undefined";
+    return JSON.stringify(value)
+      .replace(/</g, '\\u003c')
+      .replace(/>/g, '\\u003e')
+      .replace(/&/g, '\\u0026');
+  });
+
   // Visible posts (not hidden), newest first. The landing renders the single
   // post in full when there's one, and falls back to the card list at 2+.
   eleventyConfig.addCollection("visiblePost", (api) =>
