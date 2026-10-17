@@ -1,61 +1,35 @@
-const test = require('node:test');
-const assert = require('node:assert');
-const { JSDOM } = require('jsdom');
-const fs = require('fs');
-const path = require('path');
+/** @jest-environment jsdom */
 
-test('repo-shortcut tests', async (t) => {
-  let dom;
-  let window;
-  let document;
-  let openCalled = 0;
-  let openArgs = [];
+const fs = require('node:fs');
+const path = require('node:path');
 
-  t.beforeEach(() => {
-    dom = new JSDOM('<!DOCTYPE html><html><body><input id="test-input"></body></html>', {
-      runScripts: "dangerously"
-    });
-    window = dom.window;
-    document = window.document;
+const script = fs.readFileSync(path.join(__dirname, '../assets/repo-shortcut.js'), 'utf8');
 
-    // Mock window.open
-    openCalled = 0;
-    openArgs = [];
-    window.open = (...args) => {
-      openCalled++;
-      openArgs = args;
-    };
+beforeAll(() => {
+  window.eval(script);
+});
 
-    // Load and execute the script inside JSDOM
-    const scriptContent = fs.readFileSync(path.join(__dirname, '../assets/repo-shortcut.js'), 'utf8');
-    const scriptEl = document.createElement('script');
-    scriptEl.textContent = scriptContent;
-    document.body.appendChild(scriptEl);
-  });
+beforeEach(() => {
+  document.body.innerHTML = '<input id="test-input">';
+  window.open = jest.fn();
+});
 
-  await t.test('opens window on ? key press', () => {
-    const event = new window.KeyboardEvent('keydown', { key: '?' });
-    document.dispatchEvent(event);
-    assert.strictEqual(openCalled, 1);
-    assert.deepStrictEqual(openArgs, ['https://github.com/snackdriven/portfolio', '_blank', 'noopener,noreferrer']);
-  });
+afterEach(() => {
+  document.body.innerHTML = '';
+});
 
-  await t.test('does not open window on other key press', () => {
-    const event = new window.KeyboardEvent('keydown', { key: 'a' });
-    document.dispatchEvent(event);
-    assert.strictEqual(openCalled, 0);
-  });
+test('opens the repository for question mark', () => {
+  document.dispatchEvent(new KeyboardEvent('keydown', { key: '?', bubbles: true }));
+  expect(window.open).toHaveBeenCalledWith('https://github.com/snackdriven/portfolio', '_blank', 'noopener,noreferrer');
+});
 
-  await t.test('does not open window with modifier keys', () => {
-    const event = new window.KeyboardEvent('keydown', { key: '?', ctrlKey: true });
-    document.dispatchEvent(event);
-    assert.strictEqual(openCalled, 0);
-  });
+test('ignores other keys and modifier keys', () => {
+  document.dispatchEvent(new KeyboardEvent('keydown', { key: 'a', bubbles: true }));
+  document.dispatchEvent(new KeyboardEvent('keydown', { key: '?', ctrlKey: true, bubbles: true }));
+  expect(window.open).not.toHaveBeenCalled();
+});
 
-  await t.test('does not open window inside input', () => {
-    const input = document.getElementById('test-input');
-    const event = new window.KeyboardEvent('keydown', { key: '?', bubbles: true });
-    input.dispatchEvent(event);
-    assert.strictEqual(openCalled, 0);
-  });
+test('ignores editable fields', () => {
+  document.getElementById('test-input').dispatchEvent(new KeyboardEvent('keydown', { key: '?', bubbles: true }));
+  expect(window.open).not.toHaveBeenCalled();
 });
