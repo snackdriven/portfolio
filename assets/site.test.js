@@ -9,11 +9,13 @@ describe('Scrollbar visual behavior', () => {
 
     // Use fake timers
     jest.useFakeTimers();
+    window.requestAnimationFrame = (callback) => callback();
   });
 
   afterEach(() => {
     jest.clearAllTimers();
     jest.useRealTimers();
+    delete window.requestAnimationFrame;
   });
 
   it('adds the "scrolling" class to html on scroll and removes it after 700ms idle', () => {
