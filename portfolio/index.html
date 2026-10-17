@@ -1050,43 +1050,9 @@
     </div>
   </div>
 
+  <script defer src="/assets/neon-flicker.js"></script>
   <script>
-  // Neon flicker: solo (common), ie cascade (medium), yl simultaneous (rare)
-  (function() {
-      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      const yl   = Array.from(document.querySelectorAll('.hero h1 span[data-group="yl"]'));
-      const ie   = Array.from(document.querySelectorAll('.hero h1 span[data-group="ie"]'));
-      const solo = Array.from(document.querySelectorAll('.hero h1 span[data-solo]'));
-
-      function randomFromInterval(from, to) {
-          return Math.floor(Math.random() * (to - from + 1) + from);
-      }
-
-      function flicker(spans, stagger) {
-          spans.forEach((l, idx) => {
-              setTimeout(() => {
-                  l.classList.add('flickering');
-                  setTimeout(() => l.classList.remove('flickering'), 800);
-              }, idx * (stagger || 0));
-          });
-      }
-
-      function next() {
-          const roll = Math.random();
-          if (roll < 0.2) {
-              flicker(yl, 0);
-              setTimeout(next, randomFromInterval(3000, 5000));
-          } else if (roll < 0.55) {
-              flicker(ie, 120);
-              setTimeout(next, randomFromInterval(2500, 4500));
-          } else {
-              flicker([solo[randomFromInterval(0, solo.length - 1)]], 0);
-              setTimeout(next, randomFromInterval(1500, 3500));
-          }
-      }
-
-      next();
-  })();
+    window.initNeonFlicker('.hero h1 span[data-group="yl"]', '.hero h1 span[data-group="ie"]', '.hero h1 span[data-solo]');
   </script>
 </footer>
 
