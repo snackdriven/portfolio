@@ -66,14 +66,18 @@ for line in [
 ]:
     E.append(Paragraph(line, skills))
 
+ROLEBLOCK_TABLE_STYLE = TableStyle([
+    ('VALIGN', (0, 0), (-1, -1), 'TOP'),
+    ('LEFTPADDING', (0, 0), (-1, -1), 0),
+    ('RIGHTPADDING', (0, 0), (-1, -1), 0),
+    ('TOPPADDING', (0, 0), (-1, -1), 3),
+    ('BOTTOMPADDING', (0, 0), (-1, -1), 1)
+])
+
 def roleblock(role_text, date_text, bullets):
     t = Table([[Paragraph(role_text, role), Paragraph(date_text, dates)]],
               colWidths=[5.3 * inch, 1.8 * inch])
-    t.setStyle(TableStyle([('VALIGN', (0, 0), (-1, -1), 'TOP'),
-                           ('LEFTPADDING', (0, 0), (-1, -1), 0),
-                           ('RIGHTPADDING', (0, 0), (-1, -1), 0),
-                           ('TOPPADDING', (0, 0), (-1, -1), 3),
-                           ('BOTTOMPADDING', (0, 0), (-1, -1), 1)]))
+    t.setStyle(ROLEBLOCK_TABLE_STYLE)
     items = [t]
     for b in bullets:
         items.append(Paragraph(b, bullet, bulletText='\u2022'))
