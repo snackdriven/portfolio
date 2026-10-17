@@ -42,7 +42,7 @@
 <div class="shell">
 {% include "topbar.njk" %}
 <main id="main-content">
-{{ content | safe }}
+{{ content | sanitize | safe }}
 </main>
 {% include "site-footer.njk" %}
 </div>

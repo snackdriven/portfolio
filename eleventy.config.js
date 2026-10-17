@@ -1,5 +1,6 @@
 const markdownIt = require("markdown-it");
 const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
+const DOMPurify = require("isomorphic-dompurify");
 
 module.exports = function (eleventyConfig) {
   // Static assets and the non-Eleventy pages are copied through as-is.
@@ -25,6 +26,9 @@ module.exports = function (eleventyConfig) {
 
   // Allow raw HTML in markdown (the terminal code blocks rely on it).
   eleventyConfig.setLibrary("md", markdownIt({ html: true, linkify: true }));
+
+  // Sanitize HTML
+  eleventyConfig.addFilter("sanitize", (html) => DOMPurify.sanitize(html, { ADD_ATTR: ['target', 'rel'] }));
 
   // YYYY-MM-DD for the post-meta rows and JSON-LD.
   eleventyConfig.addFilter("ymd", (d) => new Date(d).toISOString().slice(0, 10));
