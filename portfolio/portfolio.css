@@ -1,8 +1,6 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  }
-
-  ::selection {
+::selection {
     background: var(--green);
     color: var(--bg);
   }
@@ -712,51 +710,4 @@
     color: var(--muted);
     letter-spacing: 0.2em;
     text-transform: uppercase;
-  }
-
-  .resume-menu {
-    position: relative;
-    display: inline-block;
-  }
-  .resume-menu-btn {
-    background: none;
-    border: none;
-    padding: 0;
-    font: inherit;
-    font-size: inherit;
-    color: var(--magenta);
-    cursor: pointer;
-    letter-spacing: inherit;
-  }
-  .resume-menu-btn:hover {
-    text-decoration: underline;
-  }
-  .resume-menu-dropdown {
-    display: none;
-    position: absolute;
-    top: calc(100% + 6px);
-    right: 0;
-    background: var(--bg-sidebar);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    min-width: 140px;
-    z-index: 100;
-    flex-direction: column;
-  }
-  .resume-menu-dropdown.open {
-    display: flex;
-  }
-  .resume-menu-dropdown a {
-    padding: 8px 14px;
-    color: var(--fg);
-    font-size: 0.85rem;
-    white-space: nowrap;
-    border-bottom: 1px solid var(--border);
-  }
-  .resume-menu-dropdown a:last-child {
-    border-bottom: none;
-  }
-  .resume-menu-dropdown a:hover {
-    color: var(--magenta);
-    background: var(--bg);
   }

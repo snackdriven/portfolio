@@ -1,5 +1,6 @@
 const markdownIt = require("markdown-it");
 const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
+const sanitizeHtml = require("sanitize-html");
 
 module.exports = function (eleventyConfig) {
   // Static assets and the non-Eleventy pages are copied through as-is.
@@ -25,8 +26,19 @@ module.exports = function (eleventyConfig) {
     }
   });
 
-  // Allow raw HTML in markdown (the terminal code blocks rely on it).
-  eleventyConfig.setLibrary("md", markdownIt({ html: true, linkify: true }));
+  // Preserve the posts' raw markup while stripping executable HTML and unsafe URLs.
+  const md = markdownIt({ html: true, linkify: true });
+  const render = md.render.bind(md);
+  md.render = (source, env) => sanitizeHtml(render(source, env), {
+    allowedTags: [...sanitizeHtml.defaults.allowedTags, "img", "span"],
+    allowedAttributes: {
+      ...sanitizeHtml.defaults.allowedAttributes,
+      "*": ["class", "id"],
+      a: ["href", "name", "target", "rel"],
+      img: ["src", "srcset", "alt", "title", "width", "height", "loading"],
+    },
+  });
+  eleventyConfig.setLibrary("md", md);
 
   // YYYY-MM-DD for the post-meta rows and JSON-LD.
   eleventyConfig.addFilter("ymd", (d) => new Date(d).toISOString().slice(0, 10));

@@ -17,8 +17,9 @@
 <title>Kayla Young - Senior QA Automation Engineer · Platform Tooling & AI-Driven Quality</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="/assets/site.css">
-  <link rel="stylesheet" href="portfolio.css">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
 <!-- Skip to main content link for accessibility -->
@@ -54,6 +55,55 @@
     </div>
   </div>
 </header>
+
+<style>
+  .resume-menu {
+    position: relative;
+    display: inline-block;
+  }
+  .resume-menu-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    font-size: inherit;
+    color: var(--magenta);
+    cursor: pointer;
+    letter-spacing: inherit;
+  }
+  .resume-menu-btn:hover {
+    text-decoration: underline;
+  }
+  .resume-menu-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    background: var(--bg-sidebar);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    min-width: 140px;
+    z-index: 100;
+    flex-direction: column;
+  }
+  .resume-menu-dropdown.open {
+    display: flex;
+  }
+  .resume-menu-dropdown a {
+    padding: 8px 14px;
+    color: var(--fg);
+    font-size: 0.85rem;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--border);
+  }
+  .resume-menu-dropdown a:last-child {
+    border-bottom: none;
+  }
+  .resume-menu-dropdown a:hover {
+    color: var(--magenta);
+    background: var(--bg);
+  }
+</style>
 
 <script>
 
