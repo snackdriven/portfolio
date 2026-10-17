@@ -1,5 +1,6 @@
 const markdownIt = require("markdown-it");
 const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
+const sanitizeHtml = require("sanitize-html");
 
 module.exports = function (eleventyConfig) {
   // Static assets and the non-Eleventy pages are copied through as-is.
@@ -25,24 +26,18 @@ module.exports = function (eleventyConfig) {
     }
   });
 
-  // Allow raw HTML in markdown (the terminal code blocks rely on it),
-  // but sanitize the output to prevent XSS.
+  // Preserve the posts' raw markup while stripping executable HTML and unsafe URLs.
   const md = markdownIt({ html: true, linkify: true });
-  const sanitizeHtml = require("sanitize-html");
-
-  const originalRender = md.render.bind(md);
-  md.render = function(src, env) {
-    const html = originalRender(src, env);
-    return sanitizeHtml(html, {
-      allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img', 'pre', 'code', 'span', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div']),
-      allowedAttributes: {
-        ...sanitizeHtml.defaults.allowedAttributes,
-        '*': ['class', 'id', 'data-*'],
-        'a': ['href', 'name', 'target', 'rel'],
-        'img': ['src', 'srcset', 'alt', 'title', 'width', 'height', 'loading']
-      }
-    });
-  };
+  const render = md.render.bind(md);
+  md.render = (source, env) => sanitizeHtml(render(source, env), {
+    allowedTags: [...sanitizeHtml.defaults.allowedTags, "img", "span"],
+    allowedAttributes: {
+      ...sanitizeHtml.defaults.allowedAttributes,
+      "*": ["class", "id"],
+      a: ["href", "name", "target", "rel"],
+      img: ["src", "srcset", "alt", "title", "width", "height", "loading"],
+    },
+  });
   eleventyConfig.setLibrary("md", md);
 
   // YYYY-MM-DD for the post-meta rows and JSON-LD.

@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "test": "node --test",
+    "test": "jest --testPathIgnorePatterns _site && node --test verification/markdown-security.cjs",
     "build": "eleventy",
-    "serve": "eleventy --serve",
-    "test": "jest"
+    "serve": "eleventy --serve"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
