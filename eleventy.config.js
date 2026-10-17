@@ -1,5 +1,6 @@
 const markdownIt = require("markdown-it");
 const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
+const sanitizeHtml = require("sanitize-html");
 
 module.exports = function (eleventyConfig) {
   // Static assets and the non-Eleventy pages are copied through as-is.
@@ -28,6 +29,14 @@ module.exports = function (eleventyConfig) {
 
   // YYYY-MM-DD for the post-meta rows and JSON-LD.
   eleventyConfig.addFilter("ymd", (d) => new Date(d).toISOString().slice(0, 10));
+
+  eleventyConfig.addFilter("sanitize", (content) => sanitizeHtml(content, {
+    allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img"]),
+    allowedAttributes: {
+      ...sanitizeHtml.defaults.allowedAttributes,
+      "*": ["class", "id"]
+    }
+  }));
 
   // Visible posts (not hidden), newest first. The landing renders the single
   // post in full when there's one, and falls back to the card list at 2+.
