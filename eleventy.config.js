@@ -31,8 +31,9 @@ module.exports = function (eleventyConfig) {
 
   // Safe JSON dump to prevent XSS in <script type="application/ld+json">
   eleventyConfig.addFilter("jsonDump", (value) => {
-    if (value === undefined) return "undefined";
-    return JSON.stringify(value)
+    const str = JSON.stringify(value);
+    if (str === undefined) return "undefined";
+    return str
       .replace(/</g, '\\u003c')
       .replace(/>/g, '\\u003e')
       .replace(/&/g, '\\u0026');
