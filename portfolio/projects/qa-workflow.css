@@ -1,9 +1,9 @@
 /* The portfolio's shared palette and type, scoped to this case study. */
 .qa-case { overflow-wrap: anywhere; }
-.qa-case .case-header { position: relative; padding: 48px 48px 32px; }
+.qa-case .case-header { position: relative; padding: 24px 48px; }
 .qa-case .case-header::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; background: var(--green); }
 .qa-case .case-header-inner { max-width: none; display: block; }
-.qa-case .site-name { font: 700 clamp(2rem, 5vw, 3.2rem)/1 var(--font-display); letter-spacing: .04em; text-shadow: var(--glow-green); }
+.qa-case .site-name { font: 600 1.05rem/1.5 var(--font-body); color: var(--fg); letter-spacing: 0; text-transform: none; text-shadow: none; }
 .qa-case .case-nav { margin-top: 18px; gap: 8px 24px; font-size: .88rem; }
 .qa-case .case-nav a { color: var(--fg); min-height: 32px; display: inline-flex; align-items: center; }
 .qa-case .case-nav a:hover { color: var(--magenta); }
@@ -36,7 +36,7 @@
 .qa-case .case-footer { border: 0; padding: 28px 0 40px; font-size: .88rem; }
 .qa-case .case-footer a { padding-block: 8px; }
 @media (max-width: 768px) {
-  .qa-case .case-header { padding: 32px 24px 24px; }
+  .qa-case .case-header { padding: 20px 24px; }
   .qa-case .case-intro { padding: 24px 24px 0; }
   .qa-case .case-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 20px; }
   .qa-case .case-layout { grid-template-columns: minmax(0, 1fr); }

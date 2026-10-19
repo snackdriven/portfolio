@@ -1,6 +1,6 @@
 # QA case-study visual alignment
 
-Compared the live `/portfolio/` page with the QA workflow case study. The page-specific stylesheet now uses the portfolio's green nameplate and left stripe, shared purple background and type, pink monospace headings, 200px sidebar, section rules, and inset evidence styling. The reading column stays bounded while the page chrome uses the portfolio's full-width layout.
+Compared the live `/portfolio/` page with the QA workflow case study. The page-specific stylesheet now uses the portfolio's compact plain name link and green left stripe, shared purple background and type, pink monospace headings, 200px sidebar, section rules, and inset evidence styling. The reading column stays bounded while the page chrome uses the portfolio's full-width layout.
 
 Only `qa-workflow.html` loads the new stylesheet. Shared styles, other project pages and case-study text are unchanged. A normalized text comparison with the parent revision passed.
 
