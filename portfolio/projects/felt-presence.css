@@ -17,6 +17,7 @@
   --paper-link: #694232;
   --font-body: "DM Sans", sans-serif;
   --font-display: "Literata", Georgia, serif;
+  overflow-wrap: anywhere;
 }
 .felt-case body { font-family: "DM Sans", sans-serif; }
 .felt-case a { text-decoration: underline; }
@@ -45,6 +46,7 @@
 .felt-case .contents a { padding-block: 9px; margin-block: 0; }
 .felt-case .case-body {
   position: relative;
+  min-width: 0;
   background: var(--paper);
   color: var(--ink);
   padding: clamp(26px, 4.5vw, 58px);
@@ -73,7 +75,7 @@
   .felt-case .case-lead { max-width: 60ch; }
   .felt-case .felt-scene { max-width: 680px; }
   .felt-case .case-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .felt-case .case-layout { grid-template-columns: 1fr; gap: 28px; }
+  .felt-case .case-layout { grid-template-columns: minmax(0, 1fr); gap: 28px; }
   .felt-case .contents { position: static; border-bottom: 1px solid var(--border); padding: 0 0 16px; }
   .felt-case .contents a { display: inline-block; margin-right: 16px; }
 }

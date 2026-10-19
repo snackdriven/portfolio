@@ -23,6 +23,14 @@ This change applies only to `/portfolio/projects/felt-presence.html` and its ded
 - Print styles reviewed for white paper, dark text, hidden hero/navigation, and one-column content. A new browser print rendering was not performed.
 - `git diff --check`: clean.
 
+## Enlarged-text follow-up — October 19, 2026
+
+- Reproduced the review finding on `14b8c91`: at a 360px viewport with the root font increased from 16px to 32px, document width reached 391px.
+- The page now uses a zero-minimum mobile article grid track, permits the article to shrink, and wraps otherwise unbreakable text. The wrapping fallback also covers the project facts.
+- Chromium: no horizontal document overflow at 320, 360, 390, 768, 850, 1024, or 1440px, at both 16px and 32px root font sizes. At 360px/32px, the document measured 350px wide and the article 326px wide (the viewport includes the scrollbar).
+- This is root-text enlargement, not browser zoom, physical-device testing, or a fresh print-pagination check.
+- `felt-presence-enlarged-text.png`: 360px viewport, 32px root text, article detail after the fix.
+
 ## Screenshots
 
 - `felt-presence-themed-hero.jpg`: desktop opening view.
