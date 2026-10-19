@@ -1,0 +1,91 @@
+/* The selected Workbench direction, scoped to this case study. */
+.qa-workflow .case-header-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.qa-workflow .case-header::before { display: none; }
+.qa-workflow .case-nav { margin-top: 0; }
+.qa-workflow .case-nav a { min-height: 44px; }
+.qa-workflow .case-intro { border: 0; padding-bottom: 0; }
+.qa-hero { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 56px); align-items: center; }
+.qa-workflow h1 { font-size: clamp(1.8rem, 3.1vw, 2.5rem); text-transform: none; letter-spacing: -.025em; line-height: 1.15; max-width: 24ch; text-wrap: balance; margin-bottom: 20px; }
+.qa-workflow .case-kicker, .qa-section-label { color: var(--magenta); }
+.qa-workflow .case-lead { font-size: 1rem; color: var(--muted); }
+.qa-workflow .case-result { font-size: .88rem; margin-top: 16px; }
+.qa-ownership { padding: 12px 0 12px 24px; border-left: 2px solid var(--magenta); }
+.qa-ownership h2 { font: 500 1rem/1.6 var(--font-body); color: var(--fg); margin: 0 0 12px; }
+.qa-ownership p { font-size: .9rem; color: var(--muted); margin: 0; }
+.qa-problem { max-width: 85ch; color: var(--muted); margin: 28px 0 0; font-size: .9rem; }
+.qa-jump { padding: 20px 48px 24px; display: flex; flex-wrap: wrap; gap: 6px 24px; font-size: .82rem; }
+.qa-jump a { color: var(--muted); padding-block: 8px; }
+.qa-jump a:hover { color: var(--green); }
+.qa-workflow .case-body { padding: 0 48px; max-width: none; }
+.qa-workflow .case-body h2 { font: 700 1.45rem/1.3 var(--font-display); text-transform: none; letter-spacing: -.015em; color: var(--fg); margin-bottom: 18px; }
+.qa-workflow .case-body section { display: block; border-bottom: 1px solid var(--border); padding-block: 32px; }
+.qa-workflow .case-body p { max-width: 78ch; color: var(--muted); }
+.qa-workflow .case-body .qa-section-label { font: .73rem/1.6 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--magenta); margin-bottom: 12px; }
+.qa-workflow .case-body .qa-workbench { padding: 0; background: var(--bg-sidebar); border: 1px solid var(--border); scroll-margin-top: 20px; }
+.qa-workbench-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px 24px; flex-wrap: wrap; padding: 18px 24px; border-bottom: 1px solid var(--border); }
+.qa-workflow .qa-workbench-header h2 { font: 500 .85rem/1.6 var(--font-body); margin: 0; }
+.qa-workflow .qa-workbench-header .figure-label { font-size: .68rem; margin: 0; color: var(--muted); }
+.qa-stages { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 7rem), 1fr)); border-bottom: 1px solid var(--border); }
+.qa-stages[hidden] { display: none; }
+.qa-stages button { appearance: none; min-width: 0; padding: 18px; background: transparent; border: 0; border-bottom: 3px solid transparent; color: var(--muted); font: 500 .82rem/1.5 var(--font-body); text-align: left; overflow-wrap: anywhere; cursor: pointer; }
+.qa-stages button span { display: block; font: .7rem/1.5 var(--font-mono); color: var(--cyan); margin-bottom: 8px; }
+.qa-stages button:hover { color: var(--fg); background: var(--bg); }
+.qa-stages button[aria-selected="true"] { color: var(--green); background: var(--bg); border-bottom-color: var(--green); }
+.qa-stages button:focus-visible, .qa-stage:focus-visible { outline: 3px solid var(--green); outline-offset: -4px; }
+.qa-stage { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 30px; padding: 28px; }
+.qa-stage[hidden] { display: none; }
+.qa-stage + .qa-stage { border-top: 1px solid var(--border); }
+.qa-workflow .qa-stage p { font-size: .9rem; }
+.qa-workflow .qa-stage .qa-stage-label { font: .7rem/1.6 var(--font-mono); text-transform: uppercase; letter-spacing: .05em; color: var(--cyan); margin-bottom: 10px; }
+.qa-stage h3 { font: 700 1.4rem/1.3 var(--font-display); margin: 0 0 16px; }
+.qa-stage aside { border-left: 1px solid var(--border); padding-left: 28px; }
+.qa-stage h4 { font: 500 1rem/1.5 var(--font-body); color: var(--magenta); margin: 0 0 12px; }
+.qa-stage a { text-decoration: underline; }
+.qa-workflow .qa-workbench-note { padding: 0 28px 22px; margin: 0; font-size: .72rem; max-width: none; }
+.qa-story-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
+.qa-story-pair section { min-width: 0; }
+.qa-corrections { margin: 26px 0; }
+.qa-corrections div { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 24px; padding: 18px 0; border-top: 1px solid var(--border); }
+.qa-corrections dt { color: var(--magenta); font: .8rem/1.6 var(--font-mono); }
+.qa-corrections dd { margin: 0; color: var(--muted); }
+.qa-evidence-detail { margin-top: 24px; }
+.qa-evidence-detail summary { color: var(--green); padding-block: 12px; cursor: pointer; }
+.qa-evidence-detail summary:focus-visible { outline: 3px solid var(--green); outline-offset: 4px; }
+.qa-workflow .evidence-example { margin: 18px 0 0; }
+.qa-workflow .evidence-table { overflow: visible; }
+.qa-workflow .evidence-table table { table-layout: fixed; }
+.qa-workflow .evidence-table th:first-child { width: 28%; }
+.qa-workflow .case-footer { margin-left: 0; padding: 28px 0 40px; }
+@media (max-width: 800px) {
+  .qa-hero { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .qa-workflow h1 { max-width: 30ch; }
+  .qa-ownership { padding-block: 6px; }
+  .qa-story-pair { grid-template-columns: minmax(0, 1fr); gap: 0; }
+}
+@media (max-width: 768px) {
+  .qa-jump { padding-inline: 24px; }
+  .qa-workflow .case-body { padding-inline: 24px; }
+  .qa-stage { grid-template-columns: minmax(0, 1fr); gap: 18px; padding: 22px; }
+  .qa-stage aside { border-left: 0; border-top: 1px solid var(--border); padding: 20px 0 0; }
+  .qa-stages button { padding: 14px 10px; }
+  .qa-corrections div { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+}
+@media (max-width: 520px) {
+  .qa-workbench-header { padding-inline: 20px; }
+  .qa-stage { padding: 20px; }
+  .qa-workflow .qa-workbench-note { padding-inline: 20px; }
+  .qa-workflow .evidence-table th, .qa-workflow .evidence-table td { padding: 10px 6px; }
+}
+@media print {
+  .qa-workflow { --bg: #fff; --bg-sidebar: #fff; --fg: #1a1a1a; --muted: #1a1a1a; --green: #1a1a1a; --cyan: #1a1a1a; --magenta: #1a1a1a; --border: #777; }
+  .qa-workflow .case-header, .qa-jump, .qa-stages { display: none; }
+  .qa-workflow .case-intro, .qa-workflow .case-body { padding: 0; }
+  .qa-hero, .qa-story-pair, .qa-stage, .qa-stage[hidden] { display: block; }
+  .qa-workflow h1 { font-size: 26pt; max-width: none; }
+  .qa-workflow .case-body .qa-workbench { background: none; border: 0; }
+  .qa-stage, .qa-workbench-header { padding: 12pt 0; }
+  .qa-stage aside { padding: 0; border: 0; }
+  .qa-workflow .case-body section { padding-block: 12pt; }
+  .qa-workflow .qa-workbench-note { padding: 0; }
+  .qa-workflow .qa-stage p, .qa-workflow .qa-stage h4, .qa-workflow .qa-stage-label, .qa-workflow .qa-section-label { color: #1a1a1a; }
+}
