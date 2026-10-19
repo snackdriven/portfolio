@@ -1,9 +1,11 @@
 const markdownIt = require("markdown-it");
 const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
 const sanitizeHtml = require("sanitize-html");
+const { versionStylesheets } = require("./tools/version-stylesheets.cjs");
 
 module.exports = function (eleventyConfig) {
-  // Static assets and the non-Eleventy pages are copied through as-is.
+  eleventyConfig.on('eleventy.after', ({ directories }) => versionStylesheets(directories.output));
+  // Copy static pages, then version their stylesheet links in eleventy.after.
   eleventyConfig.addPassthroughCopy({
     assets: "assets",
     portfolio: "portfolio",
