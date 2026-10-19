@@ -11,3 +11,9 @@ The account was checked against the retained run records and private Notion rese
 - Contents link reaches the validation section at 390px.
 - Desktop and mobile screenshots show the final copy: `qa-workflow-depth-desktop.png`, `qa-workflow-depth-mobile.png`.
 - Existing case-study layout and styling are unchanged. No physical-device, print, or screen-reader speech verification was performed for this copy update.
+
+## Voice follow-up
+
+- Applied the existing humanizer, voice-cadence, framing and prose-simplification guidance to the added sections.
+- Replaced report-like phrases with direct wording and separated the two review corrections into bullets. Technical facts, environment distinctions and AI attribution remain intact.
+- Refreshed the desktop and mobile screenshots; no horizontal overflow at 390px or 1440px with normal text.
