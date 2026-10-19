@@ -12,6 +12,8 @@ ogtitle: "dear diary, allegedly &middot; snackdriven.com"
 
 Day Crumbs already had a nightly journal. I wanted to bring in things I typed to Claude Code, including the small enjoyable bits and unfinished thoughts that do not belong in a release report. Work notes could supply context. They did not get to decide how I felt.
 
+Maybe a Spotify now-playing line, a la LiveJournal. Maybe a place for generated images I choose to keep. Those are possibilities, still to figure out. I want room for the stuff that makes a day feel like mine.
+
 The first local experiment found a short personal message, then attached the preceding assistant response as its explanation. That response was a work update. It was nearby in the transcript, which was enough to make the first scan confidently unhelpful.
 
 I pointed the investigation toward another conversation happening around the same time. That gave the message better context, but timing still did not establish what caused a feeling. Joining material across sources needed more work. The broader time-window approach remained a proposal.
@@ -22,6 +24,6 @@ A separate ledger tracked which items had been incorporated. Running the same in
 
 This was a local preview. Nothing was synced or scheduled. The append behavior had evidence behind it; context collection and the handoff to the nightly writer still needed agreement.
 
-The code was AI-generated. My requirements included keeping my words, allowing an untidy ending, and leaving missing context visibly missing. A useful diary could hold an unfinished thought without supplying a lesson underneath it.
+The code was AI-generated. My requirements included keeping my words and leaving missing context visibly missing.
 
 I would like to retain editing privileges over my own day.

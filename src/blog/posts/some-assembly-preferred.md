@@ -4,13 +4,13 @@ date: 2026-10-12
 permalink: /some-assembly-preferred.html
 tag: building
 read: 2
-excerpt: "My favorite albums could have been a list. Instead, they have layout controls."
-description: "My favorite albums could have been a list. Instead, they have layout controls."
+excerpt: "I saw a nine-album version online and laughed out loud. Only nine albums that shaped you?"
+description: "I saw a nine-album version online and laughed out loud. Only nine albums that shaped you?"
 ogtitle: "some assembly preferred &middot; snackdriven.com"
 ---
-<p class="lead">My favorite albums could have been a list. Instead, they have layout controls.</p>
+<p class="lead">I saw a version online with room for nine albums and laughed out loud. Someone could have only nine albums that shaped them?</p>
 
-I like building stuff. Sometimes that means starting with an idea I have seen somewhere else and finding the version I want to use. There is a lot of room between liking a concept and wanting every decision that came with it.
+I liked the idea. I wanted more room. I like building stuff, and sometimes that means taking an idea I have seen somewhere else and finding the version I want to use.
 
 The [album poster builder](https://albums.snackdriven.com/) lets you pick nine, twelve, or fifteen records, move the covers around, change the background, and export a poster. There are captions and a name subtitle. You can bring your own cover art. I wanted room to keep adjusting the collection until it looked like mine.
 

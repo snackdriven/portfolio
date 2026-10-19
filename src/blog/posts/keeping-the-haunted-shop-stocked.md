@@ -12,11 +12,13 @@ ogimagealt: "Felt Presence: letters from a haunted craft shop, with a publishing
 ---
 <p class="lead">I asked for something nice to hear. I got a haunted craft shop, a ghost discovering weighted blankets, and a pumpkin with a secret.</p>
 
-[Felt Presence](https://felt-presence.snackdriven.com/) started on October 7 with a tiny fictional bulletin. A moth was testing lamps. Miniature skeletons had added a conservatory to a dollhouse without being asked. One pumpkin was ceramic and keeping it quiet.
+[Felt Presence](https://felt-presence.snackdriven.com/) started on October 7 with a tiny fictional bulletin. The ghost was technically a paperweight. The moth&rsquo;s lamp-testing report said &ldquo;yes&rdquo; on every page. One pumpkin was ceramic but hadn&rsquo;t told the others.
 
-It became a cozy place for me to land. A nice reminder that things can be calm and we can be present. I wanted more installments spaced through the day, and somewhere to keep them. I chose the name, asked for a dedicated archive, and kept coming back to the shop.
+I was presented with a pumpkin that didn&rsquo;t fit in, a weighted blanket my nerves could use, and a moth approving tests based on vibes. It was what I needed.
 
-The characters started carrying small bits of history with them. New stories needed to remember what had happened. Illustrations needed to look like the same place, down to the pumpkin&rsquo;s six-pocket waistcoat. The reader came later, with wax-sealed letters and warm paper. The vines took several attempts to stop looking so obedient.
+It became a cozy place for me to land. A nice reminder that things can be calm and we can be present. I wanted more installments spaced through the day, and somewhere to keep them. I chose the name and asked for a dedicated archive.
+
+The characters started carrying small bits of history with them. New stories needed to remember what had happened. Illustrations needed to look like the same place, down to the pumpkin&rsquo;s six-pocket waistcoat. The reader came later, with wax-sealed letters and warm paper.
 
 AI generates the prose, artwork, and code. I shape the direction, choose what belongs, ask for corrections, and review how it all comes together. Keeping a gentle little world recognizable turned out to involve quite a lot of checking pockets.
 
@@ -30,4 +32,4 @@ I still review what it feels like to open a letter. Two competing timestamps and
 
 The [case study](/portfolio/projects/felt-presence.html) has more of the design and publishing details. The source archive stays private; the [shop](https://felt-presence.snackdriven.com/) is open.
 
-The skeletons can keep their unauthorized conservatory. I would like the next letter to arrive.
+The moth can keep approving things on vibes. I would like the next letter to arrive.
