@@ -17,3 +17,5 @@ The account was checked against the retained run records and private Notion rese
 - Applied the existing humanizer, voice-cadence, framing and prose-simplification guidance to the added sections.
 - Replaced report-like phrases with direct wording and separated the two review corrections into bullets. Technical facts, environment distinctions and AI attribution remain intact.
 - Refreshed the desktop and mobile screenshots; no horizontal overflow at 390px or 1440px with normal text.
+- Completed the pass across the remaining page: simplified workflow and release-reporting language, shortened the ending, and updated the facts to include evidence review. The debugging example, historical limits, and AI attribution remain explicit.
+- Final normal-text layout checks passed at 320, 390, 768, 1024 and 1440px. `qa-workflow-voice-desktop.png` shows the revised decisions section.
