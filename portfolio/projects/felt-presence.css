@@ -62,6 +62,8 @@
 .felt-case .case-body p { max-width: 70ch; }
 .felt-case .case-body section { margin-bottom: 38px; }
 .felt-case .case-body a { color: var(--paper-link); }
+.felt-case .evidence-table th { color: var(--ink); }
+.felt-case .evidence-table th, .felt-case .evidence-table td { border-color: #bfad85; }
 .felt-case .case-body a:hover { color: #3f2b22; }
 .felt-case .case-body a:focus-visible { outline-color: var(--paper-link); }
 .felt-case .case-body figure { background: #e8ddbf; border: 1px solid #bfad85; margin-block: 26px; padding: 22px; }
