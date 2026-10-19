@@ -29,10 +29,10 @@
 .felt-case .case-shell { padding-top: 34px; }
 .felt-case .back-link { color: var(--muted); font-size: .86rem; margin-bottom: 40px; padding-block: 6px; }
 .felt-hero { display: grid; grid-template-columns: minmax(0, 1fr); gap: 26px; }
-.felt-intro { max-width: 76ch; }
+.felt-intro { max-width: none; }
 .felt-overview { max-width: 76ch; }
 .felt-overview .case-lead { max-width: none; }
-.felt-case .felt-intro h1 { max-width: 28ch; margin-bottom: 0; }
+.felt-case .felt-intro h1 { max-width: none; font-size: clamp(1.5rem, calc(1.1rem + 1.5vw), 2.4rem); text-wrap: balance; margin-bottom: 0; }
 .felt-case .case-kicker { font: 400 1.6rem/1.3 "Caveat", cursive; letter-spacing: 0; text-transform: none; }
 .felt-case h1 { font: 400 clamp(2.15rem, 4vw, 3.35rem)/1.16 "Literata", Georgia, serif; letter-spacing: -.035em; max-width: 17ch; margin-block: 13px 24px; }
 .felt-case .case-lead { font-size: 1.05rem; line-height: 1.75; max-width: 48ch; }
@@ -100,7 +100,7 @@
   .felt-case body { background: #fff; color: #1a1a1a; }
   .felt-hero { display: block; }
   .felt-invitation, .felt-case .felt-scene { display: none; }
-  .felt-case h1 { max-width: none; font-size: 26pt; }
+  .felt-case .felt-intro h1 { max-width: none; font-size: 26pt; }
   .felt-case .case-kicker { font-size: 14pt; }
   .felt-case .case-shell { padding: 0; }
   .felt-case .case-lead { max-width: none; font-size: 12pt; }
