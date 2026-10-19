@@ -28,7 +28,11 @@
 .felt-case .case-nav a { display: inline-flex; align-items: center; min-height: 44px; }
 .felt-case .case-shell { padding-top: 34px; }
 .felt-case .back-link { color: var(--muted); font-size: .86rem; margin-bottom: 40px; padding-block: 6px; }
-.felt-hero { display: grid; grid-template-columns: .9fr 1.2fr; align-items: center; gap: clamp(28px, 4vw, 52px); }
+.felt-hero { display: grid; grid-template-columns: minmax(0, 1fr); gap: 26px; }
+.felt-intro { max-width: 76ch; }
+.felt-overview { max-width: 76ch; }
+.felt-overview .case-lead { max-width: none; }
+.felt-case .felt-intro h1 { max-width: 28ch; margin-bottom: 0; }
 .felt-case .case-kicker { font: 400 1.6rem/1.3 "Caveat", cursive; letter-spacing: 0; text-transform: none; }
 .felt-case h1 { font: 400 clamp(2.15rem, 4vw, 3.35rem)/1.16 "Literata", Georgia, serif; letter-spacing: -.035em; max-width: 17ch; margin-block: 13px 24px; }
 .felt-case .case-lead { font-size: 1.05rem; line-height: 1.75; max-width: 48ch; }
@@ -70,10 +74,10 @@
 .felt-case .case-footer a { padding-block: 8px; }
 @media (min-width: 1100px) { .felt-case .case-layout { gap: 48px; } }
 @media (max-width: 850px) {
-  .felt-hero { grid-template-columns: 1fr; gap: 32px; }
+  .felt-hero { gap: 24px; }
   .felt-case h1 { max-width: 24ch; }
   .felt-case .case-lead { max-width: 60ch; }
-  .felt-case .felt-scene { max-width: 680px; }
+  .felt-case .felt-scene { max-width: none; }
   .felt-case .case-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .felt-case .case-layout { grid-template-columns: minmax(0, 1fr); gap: 28px; }
   .felt-case .contents { position: static; border-bottom: 1px solid var(--border); padding: 0 0 16px; }
