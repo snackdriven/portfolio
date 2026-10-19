@@ -22,6 +22,6 @@ The table could render. A default filter had been suppressing the rows, and sear
 
 I came away with a much smaller concern: the page looked broken while a filter was active. Whether that default scope was intentional still needed an answer. The rendering diagnosis was withdrawn, and the recommendation was to leave this out of a standalone bug report.
 
-I like this part of QA, even when it makes the notes less exciting. Finding the next test that can overturn an explanation is useful work. So is letting it overturn the explanation.
+I love a non-issue. I can also start thinking about blast radius immediately, before the diagnosis is settled. A test that overturns the explanation saves me from chasing its consequences.
 
 Reset did more for that investigation than another paragraph would have.

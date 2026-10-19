@@ -3,39 +3,33 @@ title: "The ghosts still need a publishing schedule"
 date: 2026-10-19
 permalink: /keeping-the-haunted-shop-stocked.html
 tag: building
-read: 3
-excerpt: "A haunted craft shop, recurring stories and illustrations, and a publishing workflow that knows when a letter is actually ready."
-description: "A haunted craft shop, recurring stories and illustrations, and a publishing workflow that knows when a letter is actually ready."
+read: 2
+excerpt: "A little kindness became a haunted craft shop. Keeping that cozy place available acquired some technical requirements."
+description: "A little kindness became a haunted craft shop. Keeping that cozy place available acquired some technical requirements."
 ogtitle: "The ghosts still need a publishing schedule · snackdriven.com"
 ogimage: /assets/social/felt-presence.png
 ogimagealt: "Felt Presence: letters from a haunted craft shop, with a publishing workflow behind them."
 ---
-<p class="lead">I gave a fictional haunted craft shop a letter reader. Then it needed more letters. This is how a small design project acquires inventory management.</p>
+<p class="lead">I asked for something nice to hear. I got a haunted craft shop, a ghost discovering weighted blankets, and a pumpkin with a secret.</p>
 
-[Felt Presence](https://felt-presence.snackdriven.com/) is a shop that sends illustrated stories. There are seasonal details, stamps, and vines that took several attempts to stop looking so obedient. The reader needed to feel handmade while leaving enough room to read. I had opinions about both halves of that sentence.
+[Felt Presence](https://felt-presence.snackdriven.com/) started on October 7 with a tiny fictional bulletin. The ghost was technically a paperweight. The moth&rsquo;s lamp-testing report said &ldquo;yes&rdquo; on every page. One pumpkin was ceramic but hadn&rsquo;t told the others.
 
-Getting one installment onto a page was manageable. Keeping the shop stocked meant thinking about what happens before the page exists: the story, its illustration, the continuity between installments, and the point at which a pair is ready to publish.
+I was presented with a pumpkin that didn&rsquo;t fit in, a weighted blanket my nerves could use, and a moth approving tests based on vibes. It was what I needed.
 
-## A letter has two parts
+It became a cozy place for me to land. A nice reminder that things can be calm and we can be present. I wanted more installments spaced through the day, and somewhere to keep them. I chose the name and asked for a dedicated archive.
 
-I configured recurring AI-assisted story and illustration generation around the archive&rsquo;s continuity and visual references. I set the direction and workflow requirements, directed the implementation, and reviewed the reader and publication behavior. AI writes the code and generates the content.
+The characters started carrying small bits of history with them. New stories needed to remember what had happened. Illustrations needed to look like the same place, down to the pumpkin&rsquo;s six-pocket waistcoat. The reader came later, with wax-sealed letters and warm paper.
 
-The publication unit is a complete story and its accepted image. A successful generation step alone does not establish that the pair is ready. The archive needs the approval metadata and matching image checksum before the build can publish it.
+AI generates the prose, artwork, and code. I shape the direction, choose what belongs, ask for corrections, and review how it all comes together. Keeping a gentle little world recognizable turned out to involve quite a lot of checking pockets.
 
-That gives unfinished work somewhere honest to be: pending. A missing image stays missing. The page does not acquire a convincing placeholder and pretend the job is done.
+## Keeping the shop stocked
 
-## From archive to reader
+Recurring generation needed a reliable route into the reader. Each new installment needs its story and accepted illustration together. The build checks the approval record and image checksum; an incomplete pair waits. Retrying an archive step reuses the accepted image.
 
-Once a complete, accepted pair is archived and pushed, Cloudflare rebuilds the Eleventy reader. The new letter gets a public page without a separate manual publishing step.
+Once that pair is archived and pushed, Cloudflare rebuilds the reader. A publication test checks that a new approved pair appears without another edit to a curated list. Conflicting records stop the build, leaving the previous good version available.
 
-The build checks the pair and its metadata. Conflicting records fail deployment, leaving the previous good version available. An archive retry reuses the accepted image instead of asking for another one. There is enough variation in the stories without a retry quietly changing the illustration.
+I still review what it feels like to open a letter. Two competing timestamps and an awkward scroll both turned up there. The mechanics should give the shop room to be calm, including when someone opens it on their phone.
 
-The publication tests include a new approved pair joining the archive without an edit to the curated publication list. That is the useful handoff to check: can completed content reach the reader through the workflow that is supposed to publish it?
+The [case study](/portfolio/projects/felt-presence.html) has more of the design and publishing details. The source archive stays private; the [shop](https://felt-presence.snackdriven.com/) is open.
 
-## The part people actually open
-
-I still checked the unopened page, the opening interaction, and the letter itself. Automation can keep the archive moving and still leave you with two competing timestamps or an awkward scroll. Both turned up during review.
-
-The [case study](/portfolio/projects/felt-presence.html) has the reader views, design decisions, publication checks, and limits. The source archive stays private; the [shop](https://felt-presence.snackdriven.com/) is open.
-
-The vines can wander. I would prefer the publishing state stayed put.
+The moth can keep approving things on vibes. I would like the next letter to arrive.
