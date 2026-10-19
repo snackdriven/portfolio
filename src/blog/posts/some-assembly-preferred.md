@@ -25,7 +25,7 @@ The [film version](https://films.snackdriven.com/) gives movies the same treatme
 
 That is the part I enjoy: following an idea into its details. Choosing what someone can change, then checking whether the controls behave the way they suggest. The film search needed to understand that *1917* is a title, for example. Four digits were doing more work than expected.
 
-AI writes the code. I set the direction, work through the choices, test the result, and ask for revisions. Being able to try a version makes the next decision easier. Sometimes the mockup settles it. Sometimes using the thing exposes an entirely different problem.
+Being able to try a version makes the next decision easier. Sometimes the mockup settles it. Sometimes using the thing exposes an entirely different problem.
 
 The keyboard controls and movie brackets come from the same interest. I like getting a say in how a thing works and what it feels like. A small tool can be useful and still have room for taste, including mine.
 
