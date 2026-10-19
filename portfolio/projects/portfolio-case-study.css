@@ -1,5 +1,5 @@
 /* The portfolio's shared palette and type, shared by the standard portfolio case studies. */
-.portfolio-case { overflow-wrap: anywhere; }
+.portfolio-case { overflow-wrap: anywhere; max-width: 1320px; margin-inline: auto; }
 .portfolio-case .case-header { position: relative; padding: 24px 48px; }
 .portfolio-case .case-header::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; background: var(--green); }
 .portfolio-case .case-header-inner { max-width: none; display: block; }
@@ -49,7 +49,7 @@
   .portfolio-case .case-body { padding-inline: 24px; }
   .portfolio-case .case-body section { padding-block: 28px; }
 }
-@media (max-width: 400px) {
+@media (max-width: 359px) {
   .portfolio-case .case-facts { grid-template-columns: minmax(0, 1fr); }
   .portfolio-case figure { padding: 16px; }
 }
