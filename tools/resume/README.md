@@ -19,6 +19,13 @@ regular and bold instances (optical size 14, weights 400/700), derived from the
 bundled variable font with FontTools. This avoids the Type3 glyph output seen
 with the variable font. Keep the Inter license with all three font files.
 
-The renderer checks page count, embedded font subtype, and key extracted text
-before replacing the PDFs. Review the image as well; extraction alone does not
-establish compatibility with every applicant tracking system.
+The renderer enables Chromium's tagged PDF and document outline options. The
+HTML's English language, headings, lists, and links become PDF language metadata,
+structure tags, and heading bookmarks. Use a Python Playwright version that
+supports `page.pdf(tagged=True, outline=True)`.
+
+Before replacing the primary PDF, the renderer checks page count, font subtype,
+key extracted text, English language metadata, a real structure tree with heading,
+list and link roles, and bookmarks. Review the image as well; these checks do not
+establish PDF/UA compliance, screen-reader usability, or compatibility with every
+applicant tracking system.
