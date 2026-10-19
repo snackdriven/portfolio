@@ -1,0 +1,36 @@
+KAYLA YOUNG
+Senior QA Engineer | AI Workflows & Internal Tools
+Bentonville, AR | Remote | kayla@snackdriven.com
+snackdriven.com/portfolio | linkedin.com/in/snackdriven | github.com/snackdriven
+SUMMARY
+Senior QA Engineer with 6+ years of experience investigating complex software and designing practical
+QA workflows. Combines exploratory testing, evidence review, and AI-assisted implementation to turn
+scattered context into useful tools and actionable findings.
+EXPERIENCE
+Chorus Innovations Apr 2023 - Present | Remote
+Senior QA Engineer Sep 2026 - Present
+Directed and reviewed a four-day AI-assisted staging investigation: 250 documented findings grouped
+into 23 patterns, with data risks and coverage limits prioritized for handoff.
+Senior QA Specialist Sep 2024 - Sep 2026
+Tested conditional forms, role-based workflows, and data persistence through save and refresh cycles.
+Designed a personal release-visibility workflow combining ticket status, pull-request activity, and
+release discussions into Google Docs and Confluence documents used by colleagues.
+Software QA Specialist Apr 2023 - Sep 2024
+Tested applications across a React and GraphQL stack and a legacy no-code platform.
+Ultranauts Inc Feb 2020 - Feb 2023 | Remote
+Software Quality Engineer II Oct 2021 - Feb 2023
+Scoped exploratory and regression coverage for multi-role workflows and complex business rules;
+assessed automation value against maintenance cost.
+QA Tester / Software QA Engineer I Feb 2020 - Sep 2021
+Manual and exploratory testing across client projects.
+SELECTED PROJECTS
+Personal QA Workflow. Defined preparation packets, evidence-review steps, and visible missing-input
+states. Redesigned Kanban lanes around how work actually moved.
+AL80 Studio. Directed AI-assisted implementation and tested a keyboard control panel on hardware.
+Investigated stale-image behavior and validated timing and view-switch corrections on the device.
+Felt Presence. Directed an illustrated reader for a fictional haunted craft shop, refining seasonal details,
+composition, and reading flow.
+SKILLS & TOOLS
+QA: Exploratory testing, regression coverage, test planning, evidence review, risk prioritization
+Workflow implementation: AI-assisted implementation, tool configuration, Model Context Protocol (MCP)
+Tools & technologies: Playwright (AI-assisted investigation), Git, Jira, GitHub Actions, GraphQL, SQL familiarity

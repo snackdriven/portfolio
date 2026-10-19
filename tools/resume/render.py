@@ -9,8 +9,8 @@ with sync_playwright() as p:
     page = browser.new_page()
     page.goto(source.as_uri(), wait_until='load')
     page.evaluate('document.fonts.ready')
-    assert page.evaluate('document.fonts.check(\'700 29pt "Chakra Petch"\')')
-    assert page.evaluate('document.fonts.check(\'9.5pt "Inter"\')')
+    assert page.evaluate('document.fonts.check(\'700 26pt "Chakra Petch"\')')
+    assert page.evaluate('document.fonts.check(\'10.5pt "Inter"\')')
     page.pdf(path=str(output), format='Letter', print_background=True,
              display_header_footer=False)
     browser.close()
