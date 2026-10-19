@@ -1,0 +1,103 @@
+/* Felt Presence's public reader supplies the palette and type direction.
+   This sheet is loaded only by its portfolio case study. */
+@font-face { font-family: "Literata"; src: url("felt-fonts/literata.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "DM Sans"; src: url("felt-fonts/dm-sans.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Caveat"; src: url("felt-fonts/caveat.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+.felt-case {
+  --bg: #24281f;
+  --bg-sidebar: #2f3428;
+  --fg: #f3e6ca;
+  --green: #d5b57a;
+  --cyan: #87936e;
+  --magenta: #e0c895;
+  --muted: #c1b69b;
+  --border: #62634b;
+  --paper: #f3e6ca;
+  --ink: #493a2b;
+  --paper-link: #694232;
+  --font-body: "DM Sans", sans-serif;
+  --font-display: "Literata", Georgia, serif;
+}
+.felt-case body { font-family: "DM Sans", sans-serif; }
+.felt-case a { text-decoration: underline; }
+.felt-case a:hover { text-decoration-thickness: 2px; }
+.felt-case .case-header { border-bottom-width: 1px; padding-block: 24px; }
+.felt-case .site-name { font: 400 1.35rem/1.3 "Literata", Georgia, serif; text-transform: none; text-decoration: none; }
+.felt-case .case-nav { font-size: .88rem; }
+.felt-case .case-nav a { display: inline-flex; align-items: center; min-height: 44px; }
+.felt-case .case-shell { padding-top: 34px; }
+.felt-case .back-link { color: var(--muted); font-size: .86rem; margin-bottom: 40px; padding-block: 6px; }
+.felt-hero { display: grid; grid-template-columns: .9fr 1.2fr; align-items: center; gap: clamp(28px, 4vw, 52px); }
+.felt-case .case-kicker { font: 400 1.6rem/1.3 "Caveat", cursive; letter-spacing: 0; text-transform: none; }
+.felt-case h1 { font: 400 clamp(2.15rem, 4vw, 3.35rem)/1.16 "Literata", Georgia, serif; letter-spacing: -.035em; max-width: 17ch; margin-block: 13px 24px; }
+.felt-case .case-lead { font-size: 1.05rem; line-height: 1.75; max-width: 48ch; }
+.felt-invitation { margin-top: 20px; }
+.felt-invitation a { display: inline-flex; align-items: center; min-height: 44px; }
+.felt-case .felt-scene { margin: 0; padding: 0; border: 0; background: transparent; }
+.felt-scene img { display: block; width: 100%; height: auto; border: 6px solid #393b2a; outline: 1px solid #79684a; }
+.felt-scene figcaption { font-size: .73rem; line-height: 1.5; margin-top: 14px; color: var(--muted); }
+.felt-case .case-facts { margin-block: 42px 48px; padding-block: 23px; gap: 24px; }
+.felt-case .case-facts dt { font: 500 .83rem/1.4 "DM Sans", sans-serif; letter-spacing: 0; text-transform: none; }
+.felt-case .case-facts dd { color: var(--muted); line-height: 1.6; font-size: .85rem; }
+.felt-case .case-layout { grid-template-columns: 135px minmax(0, 1fr); gap: 32px; align-items: start; }
+.felt-case .contents { padding-top: 18px; }
+.felt-case .contents h2 { font: 400 1.1rem/1.4 "Literata", Georgia, serif; text-transform: none; }
+.felt-case .contents a { padding-block: 9px; margin-block: 0; }
+.felt-case .case-body {
+  position: relative;
+  background: var(--paper);
+  color: var(--ink);
+  padding: clamp(26px, 4.5vw, 58px);
+  border: 1px solid #c6b28a;
+  box-shadow: 0 12px 30px #10150c38;
+  font: 400 1rem/1.85 "Literata", Georgia, serif;
+}
+.felt-case .case-body h2 { font: 500 1.4rem/1.4 "Literata", Georgia, serif; color: var(--ink); margin-bottom: 18px; letter-spacing: -.02em; }
+.felt-case .case-body p { max-width: 70ch; }
+.felt-case .case-body section { margin-bottom: 38px; }
+.felt-case .case-body a { color: var(--paper-link); }
+.felt-case .case-body a:hover { color: #3f2b22; }
+.felt-case .case-body a:focus-visible { outline-color: var(--paper-link); }
+.felt-case .case-body figure { background: #e8ddbf; border: 1px solid #bfad85; margin-block: 26px; padding: 22px; }
+.felt-case .case-body .figure-label { color: #67543d; font: 500 .78rem/1.6 "DM Sans", sans-serif; letter-spacing: 0; text-transform: none; }
+.felt-case .reconstruction { margin-top: 16px; gap: 18px; }
+.felt-case .reconstruction div { background: transparent; border-left: 2px solid #7b8664; padding: 0 0 0 14px; font-size: .9rem; }
+.felt-case .reconstruction strong { color: #493a2b; font: 600 .8rem/1.6 "DM Sans", sans-serif; margin-bottom: 5px; }
+.felt-case .case-body figcaption { color: #67543d; font: 400 .78rem/1.6 "DM Sans", sans-serif; }
+.felt-case .case-footer { border-color: #bfad85; font: 400 .85rem/1.6 "DM Sans", sans-serif; }
+.felt-case .case-footer a { padding-block: 8px; }
+@media (min-width: 1100px) { .felt-case .case-layout { gap: 48px; } }
+@media (max-width: 850px) {
+  .felt-hero { grid-template-columns: 1fr; gap: 32px; }
+  .felt-case h1 { max-width: 24ch; }
+  .felt-case .case-lead { max-width: 60ch; }
+  .felt-case .felt-scene { max-width: 680px; }
+  .felt-case .case-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .felt-case .case-layout { grid-template-columns: 1fr; gap: 28px; }
+  .felt-case .contents { position: static; border-bottom: 1px solid var(--border); padding: 0 0 16px; }
+  .felt-case .contents a { display: inline-block; margin-right: 16px; }
+}
+@media (max-width: 450px) {
+  .felt-case .case-facts { gap: 22px; margin-block: 32px; }
+  .felt-case .case-facts dd { font-size: .82rem; }
+  .felt-case .case-shell { padding-inline: 20px; }
+  .felt-case .case-body { padding: 28px 22px; margin-inline: -8px; }
+  .felt-case .case-body figure { padding: 18px 14px; }
+}
+@media print {
+  .felt-case { --bg: #fff; --paper: #fff; --ink: #1a1a1a; --fg: #1a1a1a; --muted: #1a1a1a; --green: #1a1a1a; --border: #777; --paper-link: #1a1a1a; }
+  .felt-case body { background: #fff; color: #1a1a1a; }
+  .felt-hero { display: block; }
+  .felt-invitation, .felt-case .felt-scene { display: none; }
+  .felt-case h1 { max-width: none; font-size: 26pt; }
+  .felt-case .case-kicker { font-size: 14pt; }
+  .felt-case .case-shell { padding: 0; }
+  .felt-case .case-lead { max-width: none; font-size: 12pt; }
+  .felt-case .case-facts { margin-block: 18pt; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .felt-case .case-layout { display: block; }
+  .felt-case .case-body { padding: 0; margin: 0; border: 0; box-shadow: none; font-size: 11pt; line-height: 1.5; }
+  .felt-case .case-body h2 { font-size: 15pt; }
+  .felt-case .case-body figure { background: #fff; border-color: #777; padding: 12pt; }
+  .felt-case .case-body .figure-label, .felt-case .case-body figcaption, .felt-case .reconstruction strong { color: #1a1a1a; }
+  .felt-case .reconstruction div { border-color: #777; }
+}
