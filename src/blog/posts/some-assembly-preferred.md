@@ -4,13 +4,13 @@ date: 2026-10-12
 permalink: /some-assembly-preferred.html
 tag: building
 read: 2
-excerpt: "I saw a nine-album version online and laughed out loud. Only nine albums that shaped you?"
-description: "I saw a nine-album version online and laughed out loud. Only nine albums that shaped you?"
+excerpt: "Monthly Spotify playlists since 2019, and a lot of music I would have trouble leaving out."
+description: "Monthly Spotify playlists since 2019, and a lot of music I would have trouble leaving out."
 ogtitle: "some assembly preferred &middot; snackdriven.com"
 ---
-<p class="lead">I saw a version online with room for nine albums and laughed out loud. Someone could have only nine albums that shaped them?</p>
+<p class="lead">I saw a version online with room for nine albums and laughed out loud. I was going to have trouble narrowing mine down.</p>
 
-I like a weird amount of music, and I&rsquo;ve been making monthly Spotify playlists since 2019. Nine slots felt optimistic.
+I like a weird amount of music, and I&rsquo;ve been making monthly Spotify playlists since 2019. Some of my favorites are trash, and they still helped make me who I am. I wanted room for all of that.
 
 I liked the idea enough to want my own version. I like building stuff, and sometimes that means taking an idea I have seen somewhere else and finding the version I want to use.
 
@@ -24,4 +24,4 @@ AI writes the code. I set the direction, work through the choices, test the resu
 
 The keyboard controls and movie brackets come from the same interest. I like getting a say in how a thing works and what it feels like. A small tool can be useful and still have room for taste, including mine.
 
-Nine choices was never going to be enough.
+Fifteen is a start.
