@@ -4,8 +4,11 @@ eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{%- for page in collections.all %}{%- if not page.url.endsWith(".xml") %}
-  <url><loc>https://snackdriven.com{{ page.url }}</loc></url>
-{%- endif %}{%- endfor %}
-  <url><loc>https://snackdriven.com/portfolio/</loc></url>
+  <url><loc>https://snackdriven.com/</loc></url>
+{%- for url in portfolioPages %}
+  <url><loc>https://snackdriven.com{{ url }}</loc></url>
+{%- endfor %}
+{%- for post in collections.visiblePost %}
+  <url><loc>https://snackdriven.com{{ post.url }}</loc></url>
+{%- endfor %}
 </urlset>

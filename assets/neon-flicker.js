@@ -32,3 +32,6 @@ window.initNeonFlicker = function(rareSelector, mediumSelector, soloSelector) {
 
   next();
 };
+
+// This script is deferred, so the brand exists before initialization runs.
+window.initNeonFlicker('.topbar .brand [data-group="ve"]', '.topbar .brand [data-group="ck"]', '.topbar .brand [data-solo]');

@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "test": "jest --testPathIgnorePatterns _site && node --test verification/markdown-security.cjs verification/stylesheet-cache.cjs",
+    "test": "jest --testPathIgnorePatterns _site && node --test verification/markdown-security.cjs verification/stylesheet-cache.cjs verification/site-reliability.cjs verification/release-policy.cjs",
     "build": "eleventy",
-    "serve": "eleventy --serve"
+    "serve": "eleventy --serve",
+    "test:artifact": "node --test verification/published-inventory.cjs && node tools/site-smoke.cjs --local"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
