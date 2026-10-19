@@ -711,3 +711,50 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
   }
+
+/* Selected work uses the site's existing project typography and section grid. */
+.projects-content { max-width: 1080px; width: 100%; }
+.projects-intro { max-width: 70ch; margin-bottom: 26px; font-size: 1.03rem; line-height: 1.7; }
+.supporting-work { max-width: 70ch; margin-top: 26px; color: var(--muted); font-size: .91rem; line-height: 1.6; }
+.supporting-work a { color: var(--green); text-decoration: underline; text-underline-offset: 3px; }
+.project-list { display: grid; gap: 20px; }
+.project {
+  grid-template-columns: 2.3rem minmax(0, 1fr);
+  gap: 18px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  background: var(--bg-sidebar);
+}
+.project:last-child { border-bottom: 1px solid var(--border); }
+.project-num { color: var(--magenta); padding-top: 5px; }
+.project-name { color: var(--fg); font-size: 1.12rem; line-height: 1.4; margin-top: 7px; }
+.project-tech { margin: 0; color: var(--cyan); }
+.project-desc { color: var(--fg); max-width: 72ch; font-size: 0.96rem; margin-top: 14px; }
+.project-impact { max-width: 72ch; margin-top: 14px; font-size: 0.9rem; line-height: 1.5; }
+.project-context { margin-top: 12px; color: var(--muted); font-size: 0.82rem; }
+.project-link {
+  display: inline-block;
+  margin-top: 18px;
+  margin-right: 20px;
+  padding: 7px 0;
+  color: var(--green);
+  border-bottom: 1px solid currentColor;
+  font-weight: 600;
+}
+.project-link:hover { color: var(--magenta); }
+.project-link-secondary { color: var(--fg); }
+.stack-content { max-width: none; width: 100%; }
+.contact-links { margin-top: 18px; }
+.contact-links a { color: var(--green); text-decoration: underline; text-underline-offset: 3px; }
+a:focus-visible { outline: 3px solid var(--green); outline-offset: 4px; }
+@media (max-width: 600px) {
+  .project { grid-template-columns: 1fr; gap: 2px; padding: 20px; }
+  .project-num { padding: 0; }
+  .project-link { margin-top: 12px; }
+}
+.print-contact { display: none; }
+@media print {
+  .hero-contact { display: none !important; }
+  .print-contact { display: block; margin-top: 4px; font-size: 9pt; color: #6b7280 !important; }
+}
