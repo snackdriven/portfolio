@@ -5,6 +5,7 @@ layout: base.njk
   <header class="rail rail-post">
     <div class="post-meta">
       <span>{{ date | ymd }}</span>
+      {% if updated %}<span>updated {{ updated | ymd }}</span>{% endif %}
       <span class="tag">#{{ tag }}</span>
       <span>~{{ read }} min read</span>
       {% if badge %}<span class="badge">{{ badge }}</span>{% endif %}

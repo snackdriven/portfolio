@@ -21,6 +21,7 @@
   border-right: 1px solid var(--border);
 }
 .reading { min-width: 0; max-width: 620px; line-height: 1.7; font-size: 1.05rem; }
+.post-update { font-size: .88rem; color: var(--muted); border-left: 2px solid var(--teal); padding-left: 16px; }
 
 /* index rail: compact prompt hero + bio */
 .rail-home .prompt-title { font-size: 1rem; line-height: 1.4; margin-bottom: 16px; white-space: nowrap; }

@@ -1,13 +1,15 @@
 ---
 title: "Unknown skill: buddy"
 date: 2026-04-15
+updated: 2026-10-19
 permalink: /unknown-skill-buddy.html
 tag: meta
 read: 2
-excerpt: "Claude Code's terminal pet lasted a week before an update deleted him. Mine's a skill: deterministic, decaying, and update-proof."
-description: "Claude Code's terminal pet lasted a week before an update deleted him. Mine's a skill: deterministic, decaying, and update-proof."
+excerpt: "Claude Code's terminal pet lasted a week before an update deleted him. Mine's a skill: deterministic, decaying, and mine to maintain."
+description: "Claude Code's terminal pet lasted a week before an update deleted him. Mine's a skill: deterministic, decaying, and mine to maintain."
 ogtitle: "Unknown skill: buddy · snackdriven.com"
 ---
+<p class="post-update">Updated 2026-10-19: the companion lives in <a href="https://github.com/snackdriven/better-buddy">better-buddy</a>, with the rest of the terminal setup in <a href="https://github.com/snackdriven/claude-setup">claude-setup</a>. This post describes the original build; it does not promise compatibility with every later Claude Code update.</p>
 <p class="lead">The corner of my statusline went quiet one morning, and when I typed <code>/buddy</code> I got back &ldquo;Unknown skill: buddy.&rdquo;</p>
 
 For about a week Claude Code had shipped one. It started as an April Fools easter egg that leaked early, and Anthropic ran with it: a little ASCII animal that lived in your terminal, one of eighteen species, with a rarity rolled on hatch, tied to your account so it was yours specifically. Mine sat in the corner making a face. Then v2.1.97 pulled it, no warning, on the grounds that it had been a joke the whole time. Which was true. People wrote a petition. People pinned themselves to the old version so theirs wouldn&rsquo;t die.

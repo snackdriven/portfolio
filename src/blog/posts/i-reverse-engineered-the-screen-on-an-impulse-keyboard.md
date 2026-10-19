@@ -1,6 +1,7 @@
 ---
 title: "One Line of Modulo"
 date: 2026-07-01
+updated: 2026-10-19
 permalink: /i-reverse-engineered-the-screen-on-an-impulse-keyboard.html
 tag: building
 hidden: false
@@ -9,6 +10,7 @@ excerpt: "The AI said impossible. Reddit said only the vendor app could touch th
 description: "The AI said impossible. Reddit said only the vendor app could touch the screen. It was one line of modulo."
 ogtitle: "One Line of Modulo &middot; snackdriven.com"
 ---
+<p class="post-update">Updated 2026-10-19: the browser app and debugging record now have their own homes. <a href="https://snackdriven.github.io/al80-studio/">Try AL80 Studio</a> or <a href="/portfolio/projects/al80-studio.html">read the case study</a>, including what happened when the transfer logs and physical screen disagreed.</p>
 <p class="lead">I&rsquo;m at this desk most of my waking hours, so a good keyboard isn&rsquo;t a small thing. The upgrade was overdue. I&rsquo;d been on a Logitech MX Keys. Lovely, flat, completely screenless. So when the AL80 turned up in a Prime Day lightning deal with a little color screen above the arrow keys, the timing was right and I grabbed it. I lasted under a week before I couldn&rsquo;t leave the screen alone.</p>
 
 Out of the box you drive that screen through the vendor&rsquo;s web app. It shows a 24-hour clock and lets you upload pictures, and that&rsquo;s the whole menu. I wanted a 12-hour clock. Reasonable request. Not on offer. And when I asked around, the answer was that it couldn&rsquo;t be done. The AI I asked said the 12-hour clock was impossible; Reddit&rsquo;s verdict was blunter, that the screen only changes through YUNZII&rsquo;s own app and VIA can&rsquo;t touch it. So I opened up the HID traffic myself to see what the web app was actually saying to the thing.

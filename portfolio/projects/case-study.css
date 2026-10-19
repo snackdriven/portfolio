@@ -73,3 +73,12 @@ figcaption { margin-top: 16px; color: var(--muted); font-size: .84rem; }
   p, li { orphans: 3; widows: 3; }
   .audit-bar { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
 }
+/* Actual product views and explicitly synthetic evidence examples. */
+.case-result { max-width: 72ch; margin-top: 18px; color: var(--muted); line-height: 1.65; }
+.case-result strong { color: var(--fg); }
+.product-proof img { display: block; width: 100%; height: auto; border: 1px solid var(--border); }
+.evidence-table { overflow-x: auto; }
+.evidence-table table { width: 100%; border-collapse: collapse; font-size: .9rem; text-align: left; }
+.evidence-table caption { text-align: left; font-weight: 600; padding-bottom: 16px; }
+.evidence-table th, .evidence-table td { padding: 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.evidence-table th { color: var(--fg); }

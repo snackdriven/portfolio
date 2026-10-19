@@ -27,6 +27,8 @@
   }
 
   body {
+    max-width: 1320px;
+    margin-inline: auto;
     background: var(--bg);
     color: var(--fg);
     font-family: "Inter", -apple-system, system-ui, sans-serif;
@@ -619,7 +621,7 @@
     .hero-top { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 20px; }
     /* Replace span-fragmented name with clean text for ATS */
     .hero h1 { font-size: 0 !important; }
-    .hero h1::before { content: "KAYLA YOUNG"; font-size: 18pt; font-weight: 700; letter-spacing: 0.05em; color: #059669 !important; font-family: "Inter", sans-serif !important; }
+    .hero h1::before { content: "KAYLA YOUNG (GILBERT)"; font-size: 18pt; font-weight: 700; letter-spacing: 0.05em; color: #059669 !important; font-family: "Inter", sans-serif !important; }
     .hero h1 span { display: none !important; }
     .hero .title { font-size: 11pt; font-weight: 500; letter-spacing: 0.02em; color: #dc2626 !important; }
     .hero .updated { display: none; }
