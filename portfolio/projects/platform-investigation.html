@@ -6,20 +6,21 @@
 <title>Platform QA investigation | Kayla Young</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="case-study.css">
+<link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="case-study.css"><link rel="stylesheet" href="portfolio-case-study.css">
 <script defer src="/assets/site.js"></script>
 </head>
-<body>
+<body class="portfolio-case">
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="case-header"><div class="case-header-inner"><a class="site-name" href="/portfolio/">Kayla Young</a><nav class="case-nav" aria-label="Site"><a href="/portfolio/#selected-projects">Projects</a><a href="/portfolio/#experience">Experience</a><a href="mailto:kayla@snackdriven.com">Contact</a></nav></div></header>
 <main id="main-content" class="case-shell">
+<div class="case-intro">
 <a class="back-link" href="/portfolio/#selected-projects">&larr; Back to selected projects</a>
 <p class="case-kicker">Professional QA investigation</p>
 <h1>Making a platform-wide QA investigation usable</h1>
 <p class="case-lead">A platform-wide investigation needs a useful ending. I directed an AI-assisted staging pass, reviewed the evidence, and turned a large set of findings into patterns, data risks, and decisions for product and engineering.</p>
 <dl class="case-facts"><div><dt>Scope</dt><dd>Four-day staging pass; one QA account, Chromium, seeded data</dd></div><div><dt>My role</dt><dd>Test strategy, investigation direction, evidence review, reporting</dd></div><div><dt>Findings</dt><dd>250 documented findings in 23 recurring patterns</dd></div><div><dt>Handoff</dt><dd>Five decisions routed to product and engineering owners</dd></div></dl>
-<div class="case-layout">
-<nav class="contents" aria-label="On this page"><h2>Contents</h2><a href="#problem">Problem</a><a href="#decisions">Decisions</a><a href="#validation">Validation</a><a href="#evidence">Evidence</a><a href="#limits">Limits</a></nav>
+</div><div class="case-layout">
+<nav class="contents" aria-label="On this page"><div class="contents-inner"><h2>Contents</h2><a href="#problem">Problem</a><a href="#decisions">Decisions</a><a href="#validation">Validation</a><a href="#evidence">Evidence</a><a href="#limits">Limits</a></div></nav>
 <article class="case-body">
 <section id="problem"><h2>Problem</h2><p>A new platform had reached staging ahead of launch decisions. The team needed to know which observations threatened data, which appeared connected, and which depended on a product decision about intended behavior. A long list of issues would leave that sorting work to the reader.</p><p>My job was to make the investigation usable: show the relationships, prioritize the risks, and be clear about where coverage stopped.</p></section>
 <section id="decisions"><h2>Decisions and implementation</h2><p>I organized the pass across application sections, administration settings, and cross-page behavior. I directed AI-assisted browser harnesses and checked their work. A Save click was the beginning of the check: refresh, stale forms, repeated actions, and changes elsewhere could tell a different story.</p><p>I grouped the 250 documented findings into 23 patterns and prioritized data risks for the handoff. The readout separated observed behavior from questions about intended behavior. Five unresolved decisions went to product and engineering owners.</p>
