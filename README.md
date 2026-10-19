@@ -1,6 +1,8 @@
 # Kayla Young
 
-Test automation and internal tooling. Bentonville, AR (remote).
+**I find bugs for money and introduce them for fun.**
+
+Senior QA Engineer · AI Workflows & Internal Tools. Bentonville, AR (remote).
 
 **Live site:** [snackdriven.com](https://snackdriven.com)
 

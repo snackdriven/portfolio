@@ -1,0 +1,39 @@
+KAYLA YOUNG
+Senior QA Engineer | AI Workflows & Internal Tools
+Bentonville, AR | Remote | kayla@snackdriven.com
+snackdriven.com/portfolio | linkedin.com/in/snackdriven | github.com/snackdriven
+SUMMARY
+Senior QA Engineer with 6+ years of experience debugging complex software and turning recurring QA
+headaches into practical workflows. Designs and tests AI-assisted internal tools, brings scattered context
+together, and turns findings into clear next steps.
+EXPERIENCE
+Chorus Innovations Apr 2023 - Present | Remote
+Senior QA Engineer Sep 2026 - Present
+Directed a platform-wide, four-day AI-assisted staging investigation; reviewed evidence for 250
+documented findings and organized them into 23 recurring failure patterns to prioritize data risks.
+Senior QA Specialist Sep 2024 - Sep 2026
+Investigated failures in conditional forms, role-based workflows, and data persistence across save and
+refresh cycles.
+Designed a personal release-reporting workflow that combined Jira status, GitHub pull requests, and
+release discussions into Google Docs and Confluence updates used by colleagues.
+Software QA Specialist Apr 2023 - Sep 2024
+Tested applications across a React and GraphQL stack and a legacy no-code platform.
+Ultranauts Inc Feb 2020 - Feb 2023 | Remote
+Software Quality Engineer II Oct 2021 - Feb 2023
+Planned exploratory and regression testing for multi-role workflows and complex business rules;
+identified where automation would justify its maintenance cost.
+QA Tester / Software QA Engineer I Feb 2020 - Sep 2021
+Manual and exploratory testing across client projects.
+SELECTED PROJECTS
+Personal QA Workflow. Designed test-preparation runbooks and review steps that flag missing
+context. Reworked Kanban lanes from ownership to pipeline stages after trying the board on real tasks.
+AL80 Studio. Directed AI-assisted implementation of a keyboard control panel. Debugged a screen that
+kept the old picture despite successful transfer logs; confirmed timing and view-switch fixes on
+hardware.
+Felt Presence. Shaped an illustrated letter reader for a fictional haunted craft shop, refining seasonal
+details, visual balance, and reading flow to make room for both atmosphere and usability.
+SKILLS & TOOLS
+QA: Debugging, exploratory and regression testing, test planning, defect investigation, risk prioritization
+AI workflows: Workflow design and orchestration, output verification, tool configuration, Model Context
+Protocol (MCP)
+Tools & technologies: Playwright (AI-assisted investigation), Git, Jira, GitHub Actions, GraphQL, SQL familiarity
