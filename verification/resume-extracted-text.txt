@@ -3,9 +3,9 @@ Senior QA Engineer | AI Workflows & Internal Tools
 Bentonville, AR | Remote | kayla@snackdriven.com
 snackdriven.com/portfolio | linkedin.com/in/snackdriven | github.com/snackdriven
 SUMMARY
-Senior QA Engineer with 6+ years of experience debugging complex software behavior and improving
-how QA work gets done. Designs and tests AI-assisted workflows and internal tools, connecting scattered
-context, reviewing evidence, and turning findings into clear next steps.
+Senior QA Engineer with 6+ years of experience debugging complex software and turning recurring QA
+headaches into practical workflows. Designs and tests AI-assisted internal tools, brings scattered context
+together, and turns findings into clear next steps.
 EXPERIENCE
 Chorus Innovations Apr 2023 - Present | Remote
 Senior QA Engineer Sep 2026 - Present
@@ -26,12 +26,12 @@ QA Tester / Software QA Engineer I Feb 2020 - Sep 2021
 Manual and exploratory testing across client projects.
 SELECTED PROJECTS
 Personal QA Workflow. Designed test-preparation runbooks and review steps that flag missing
-context. Changed Kanban lanes from ownership to pipeline stages after testing the board in use.
-AL80 Studio. Directed AI-assisted implementation of a keyboard control panel. Debugged an image
-transfer that reported success but showed the old picture; confirmed timing and view-switch fixes on
+context. Reworked Kanban lanes from ownership to pipeline stages after trying the board on real tasks.
+AL80 Studio. Directed AI-assisted implementation of a keyboard control panel. Debugged a screen that
+kept the old picture despite successful transfer logs; confirmed timing and view-switch fixes on
 hardware.
-Felt Presence. Shaped an illustrated reader for a fictional haunted craft shop, refining seasonal details,
-visual balance, and the flow of opening and reading a letter.
+Felt Presence. Shaped an illustrated letter reader for a fictional haunted craft shop, refining seasonal
+details, visual balance, and reading flow to make room for both atmosphere and usability.
 SKILLS & TOOLS
 QA: Debugging, exploratory and regression testing, test planning, defect investigation, risk prioritization
 AI workflows: Workflow design and orchestration, output verification, tool configuration, Model Context
