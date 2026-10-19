@@ -10,7 +10,9 @@ ogtitle: "some assembly preferred &middot; snackdriven.com"
 ---
 <p class="lead">I saw a version online with room for nine albums and laughed out loud. Someone could have only nine albums that shaped them?</p>
 
-I liked the idea. I wanted more room. I like building stuff, and sometimes that means taking an idea I have seen somewhere else and finding the version I want to use.
+I like a weird amount of music, and I&rsquo;ve been making monthly Spotify playlists since 2019. Nine slots felt optimistic.
+
+I liked the idea enough to want my own version. I like building stuff, and sometimes that means taking an idea I have seen somewhere else and finding the version I want to use.
 
 The [album poster builder](https://albums.snackdriven.com/) lets you pick nine, twelve, or fifteen records, move the covers around, change the background, and export a poster. There are captions and a name subtitle. You can bring your own cover art. I wanted room to keep adjusting the collection until it looked like mine.
 
