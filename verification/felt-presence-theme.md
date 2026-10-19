@@ -9,6 +9,7 @@ This change applies only to `/portfolio/projects/felt-presence.html` and its ded
 - The image is labeled as an illustration from the public reader. The existing process diagram remains labeled as a reconstruction.
 - The three font files match the reader's existing font assets; their accompanying SIL Open Font License texts are included in `portfolio/projects/felt-fonts/`.
 - No private story text, original character reference art, or private archive content was added.
+- The publishing section was checked against the current reader deployment documentation and the archive/catalog test source. It distinguishes recurring AI-assisted generation/archiving from the push-triggered Cloudflare build, and retains pending-pair, approval, checksum, retry, and last-good-deployment boundaries. These reader tests were inspected, not rerun during this portfolio-only update.
 
 ## Validation
 
@@ -28,3 +29,5 @@ This change applies only to `/portfolio/projects/felt-presence.html` and its ded
 - `felt-presence-themed-mobile.jpg`: 390px mobile opening view.
 - `felt-presence-themed-desktop-reading.jpg`: desktop paper/content detail.
 - `felt-presence-themed-mobile-reading.jpg`: 390px mobile paper/content detail.
+- `felt-presence-publishing-desktop.jpg`: automatic-publication section on desktop.
+- `felt-presence-publishing-mobile.jpg`: automatic-publication section at 390px.
