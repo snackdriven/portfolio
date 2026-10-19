@@ -746,6 +746,7 @@
 .project-link-secondary { color: var(--fg); }
 .stack-content { max-width: none; width: 100%; }
 .contact-links { margin-top: 18px; }
+.section-content > .about-text + .about-text { margin-top: 16px; }
 .contact-links a { color: var(--green); text-decoration: underline; text-underline-offset: 3px; }
 a:focus-visible { outline: 3px solid var(--green); outline-offset: 4px; }
 @media (max-width: 600px) {

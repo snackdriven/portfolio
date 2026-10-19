@@ -20,7 +20,7 @@ module.exports = function (eleventyConfig) {
     metadata: {
       language: "en",
       title: "snackdriven.com — the log",
-      subtitle: "Test automation by trade, and the log of every working tool I couldn't leave alone.",
+      subtitle: "Debugging by trade. Useful tools, odd little projects, and the decisions behind them.",
       base: "https://snackdriven.com/",
       author: { name: "Kayla Young" }
     }
