@@ -10,8 +10,6 @@ ogtitle: "a very convincing empty table &middot; snackdriven.com"
 ---
 <p class="lead">The request returned 25 records. The table showed none. Reset had some information for us.</p>
 
-*Written October 19, 2026, from my June 24 work notes. Product details omitted.*
-
 A dashboard widget was empty despite a successful request with actual data in it. Reloading changed nothing. Searching for a value in the response still produced zero rows. A neighboring widget worked. The console had no complaints.
 
 The AI-assisted investigation was building a convincing rendering-bug diagnosis. I had enough evidence to keep looking. Filing it needed one more thing: a row that should appear under the widget&rsquo;s intended filters.

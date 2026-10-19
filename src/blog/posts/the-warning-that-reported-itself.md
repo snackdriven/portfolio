@@ -10,8 +10,6 @@ ogtitle: "the warning that reported itself &middot; snackdriven.com"
 ---
 <p class="lead">The report explained why a reminder kept firing on quotations. The reminder fired on the report.</p>
 
-*Written October 19, 2026, from my July 15 work notes.*
-
 After [my automations spent a while failing quietly](/the-week-my-own-automations-tried-to-brick-my-laptop.html), I wanted checks that said something when work went wrong. Claude writes the code; I set the requirements and decide whether the result is useful. By July, some of those checks needed a closer look.
 
 One hook checked wording. It could spot a phrase in a draft, but it also spotted the same phrase in a quotation documenting a previous false alarm. Its request to correct that quotation arrived while the report about this problem was being written.

@@ -10,8 +10,6 @@ ogtitle: "adjacent to the tests &middot; snackdriven.com"
 ---
 <p class="lead">The new test case was valid Python. It was also sitting outside the test list.</p>
 
-*Written October 19, 2026, from my September 9 work notes.*
-
 I use small checks to keep my AI-assisted workflow from declaring victory too early. Those checks have tests. This investigation was about whether the tests would notice if the checks broke.
 
 Mutation testing gives that question something concrete to work with: deliberately change the code, then run the tests. If they pass after an important behavior disappears, there is something to investigate. Some mutations leave behavior unchanged, so a surviving mutation needs inspection before it becomes a defect.
