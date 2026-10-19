@@ -6,20 +6,21 @@
 <title>AL80 Studio | Kayla Young</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="case-study.css">
+<link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="case-study.css"><link rel="stylesheet" href="portfolio-case-study.css">
 <script defer src="/assets/site.js"></script>
 </head>
-<body>
+<body class="portfolio-case">
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="case-header"><div class="case-header-inner"><a class="site-name" href="/portfolio/">Kayla Young</a><nav class="case-nav" aria-label="Site"><a href="/portfolio/#selected-projects">Projects</a><a href="/portfolio/#experience">Experience</a><a href="mailto:kayla@snackdriven.com">Contact</a></nav></div></header>
 <main id="main-content" class="case-shell">
+<div class="case-intro">
 <a class="back-link" href="/portfolio/#selected-projects">&larr; Back to selected projects</a>
 <p class="case-kicker">Personal hardware project</p>
 <h1>AL80 Studio: testing beyond the preview</h1>
 <p class="case-lead">The browser preview was promising. Then I tried it on the keyboard. I shaped its screen, lighting, and keymap controls through AI-assisted implementation, and used the physical device to find out what actually worked.</p>
 <dl class="case-facts"><div><dt>Context</dt><dd>Personal project for the YUNZII AL80 keyboard</dd></div><div><dt>My role</dt><dd>Interaction design, implementation direction, troubleshooting, on-device validation</dd></div><div><dt>Components</dt><dd>Browser control panel and local host</dd></div><div><dt>Status</dt><dd>Public project; documented device tests are historical</dd></div></dl>
-<div class="case-layout">
-<nav class="contents" aria-label="On this page"><h2>Contents</h2><a href="#problem">Problem</a><a href="#decisions">Decisions</a><a href="#validation">Validation</a><a href="#evidence">Evidence</a><a href="#limits">Limits</a></nav>
+</div><div class="case-layout">
+<nav class="contents" aria-label="On this page"><div class="contents-inner"><h2>Contents</h2><a href="#problem">Problem</a><a href="#decisions">Decisions</a><a href="#validation">Validation</a><a href="#evidence">Evidence</a><a href="#limits">Limits</a></div></nav>
 <article class="case-body">
 <section id="problem"><h2>Problem</h2><p>A tiny keyboard screen comes with a surprisingly full-sized set of questions. What should it display? Who controls it? What happens when an alert interrupts? And after sending a new picture, did the screen actually change? Preparing, previewing, transferring, and displaying content each needed a check.</p><p>AL80 Studio brings controls into a browser interface. A local host supports continuously updated screen content. The browser can prepare and preview content offline; sending it requires a device connection.</p></section>
 <section id="decisions"><h2>Decisions and implementation</h2><p>I decided how the controls should be arranged and how the screen should behave, directed AI-assisted implementation, and tested the result on hardware. One important choice was giving one host process ownership of the display. Panels supply content, the host rotates them, and alerts can interrupt before handing control back.</p><p>That made switching, interruptions, and reconnecting part of the test plan. Control placement mattered too: a setting should make sense where someone finds it, with a clear connection to the thing it changes.</p>

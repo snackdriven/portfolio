@@ -1,0 +1,65 @@
+/* The portfolio's shared palette and type, shared by the standard portfolio case studies. */
+.portfolio-case { overflow-wrap: anywhere; }
+.portfolio-case .case-header { position: relative; padding: 24px 48px; }
+.portfolio-case .case-header::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; background: var(--green); }
+.portfolio-case .case-header-inner { max-width: none; display: block; }
+.portfolio-case .site-name { font: 600 1.05rem/1.5 var(--font-body); color: var(--fg); letter-spacing: 0; text-transform: none; text-shadow: none; }
+.portfolio-case .case-nav { margin-top: 18px; gap: 8px 24px; font-size: .88rem; }
+.portfolio-case .case-nav a { color: var(--fg); min-height: 32px; display: inline-flex; align-items: center; }
+.portfolio-case .case-nav a:hover { color: var(--magenta); }
+.portfolio-case .case-shell { max-width: none; padding: 0; }
+.portfolio-case .case-intro { padding: 32px 48px 0; border-bottom: 3px solid var(--border); }
+.portfolio-case .back-link { color: var(--muted); font-size: .85rem; margin-bottom: 28px; padding-block: 8px; }
+.portfolio-case .case-kicker { color: var(--cyan); font-size: .8rem; }
+.portfolio-case h1 { max-width: 28ch; color: var(--green); text-transform: uppercase; letter-spacing: .025em; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; margin: 16px 0 24px; }
+.portfolio-case .case-lead { max-width: 70ch; color: var(--fg); font-size: 1.05rem; line-height: 1.7; }
+.portfolio-case .case-facts { max-width: 1120px; margin: 32px 0 0; padding: 24px 0 30px; border-bottom: 0; gap: 24px; }
+.portfolio-case .case-facts dt { color: var(--magenta); }
+.portfolio-case .case-facts dd { font-size: .86rem; color: var(--muted); }
+.portfolio-case .case-layout { grid-template-columns: 200px minmax(0, 1fr); gap: 0; }
+.portfolio-case .contents { position: static; align-self: stretch; padding: 44px 24px 44px 48px; background: var(--bg-sidebar); border-right: 3px solid var(--border); }
+.portfolio-case .contents-inner { position: sticky; top: 32px; }
+.portfolio-case .contents h2 { color: var(--magenta); letter-spacing: .15em; font-size: .85rem; }
+.portfolio-case .contents a { padding: 8px 0; margin: 4px 0; min-height: 38px; }
+.portfolio-case .contents a:hover { color: var(--green); }
+.portfolio-case .case-body { min-width: 0; padding: 0 48px; max-width: 1000px; font-size: .98rem; line-height: 1.7; }
+.portfolio-case .case-body section { padding: 40px 0; margin: 0; border-bottom: 3px solid var(--border); }
+.portfolio-case .case-body h2 { font: 500 1rem/1.5 var(--font-mono); text-transform: uppercase; letter-spacing: .15em; color: var(--magenta); margin-bottom: 24px; }
+.portfolio-case .case-body p { max-width: 76ch; }
+.portfolio-case .case-body section > :last-child { margin-bottom: 0; }
+.portfolio-case figure { border-left: 3px solid var(--green); }
+.portfolio-case .figure-label { color: var(--cyan); letter-spacing: .04em; line-height: 1.6; }
+.portfolio-case .flow { gap: 8px; }
+.portfolio-case .flow span { font-size: .75rem; }
+.portfolio-case .reconstruction { margin-top: 24px; }
+.portfolio-case .reconstruction div { padding: 14px 16px; }
+.portfolio-case .case-footer { border: 0; padding: 28px 0 40px; font-size: .88rem; }
+.portfolio-case .case-footer a { padding-block: 8px; }
+@media (max-width: 768px) {
+  .portfolio-case .case-header { padding: 20px 24px; }
+  .portfolio-case .case-intro { padding: 24px 24px 0; }
+  .portfolio-case .case-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 20px; }
+  .portfolio-case .case-layout { grid-template-columns: minmax(0, 1fr); }
+  .portfolio-case .contents { padding: 20px 24px; border-right: 0; border-bottom: 2px solid var(--border); }
+  .portfolio-case .contents-inner { position: static; }
+  .portfolio-case .contents h2 { margin-bottom: 8px; }
+  .portfolio-case .contents a { display: inline-block; margin: 0 16px 0 0; }
+  .portfolio-case .case-body { padding-inline: 24px; }
+  .portfolio-case .case-body section { padding-block: 28px; }
+}
+@media (max-width: 400px) {
+  .portfolio-case .case-facts { grid-template-columns: minmax(0, 1fr); }
+  .portfolio-case figure { padding: 16px; }
+}
+@media print {
+  .portfolio-case .case-intro { padding: 0; border: 0; }
+  .portfolio-case h1 { font-size: 26pt; color: #1a1a1a; letter-spacing: 0; text-transform: none; max-width: none; }
+  .portfolio-case .case-lead { font-size: 12pt; color: #1a1a1a; }
+  .portfolio-case .case-facts { margin-block: 16pt; padding: 0; }
+  .portfolio-case .case-facts dt, .portfolio-case .case-facts dd, .portfolio-case .figure-label { color: #1a1a1a; }
+  .portfolio-case .case-body { padding: 0; max-width: none; font-size: 11pt; line-height: 1.5; }
+  .portfolio-case .case-body section { padding: 0; margin-bottom: 20pt; border: 0; }
+  .portfolio-case .case-body h2 { color: #1a1a1a; letter-spacing: 0; text-transform: none; }
+  .portfolio-case figure { border-color: #777; }
+  .portfolio-case .case-footer { display: none; }
+}
