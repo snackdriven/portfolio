@@ -276,6 +276,8 @@
   .hero-contact a:hover {
     color: var(--magenta);
   }
+  .availability { margin-top: 12px; font: .8rem/1.6 var(--font-mono); color: var(--muted); }
+  .hero-contact a[href$=".pdf"] { text-decoration: underline; text-underline-offset: 4px; }
   .hero-sep {
     margin: 0 10px;
     color: var(--border);
@@ -296,7 +298,7 @@
     .hero-contact > span:not(.hero-sep) {
       margin-right: 16px;
     }
-    .hero-contact a { padding: 6px 0; }
+    .hero-contact a { padding: 10px 0; min-height: 44px; display: inline-flex; align-items: center; }
   }
 
   /* SECTION LAYOUT */
@@ -364,6 +366,7 @@
     color: var(--green);
     font-weight: 500;
   }
+  .about-text a { color: var(--green); text-decoration: underline; text-underline-offset: 4px; }
 
   /* EXPERIENCE */
   .job {
