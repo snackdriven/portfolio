@@ -6,20 +6,21 @@
 <title>Reviewable QA work | Kayla Young</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="case-study.css">
+<link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="case-study.css"><link rel="stylesheet" href="qa-workflow.css">
 <script defer src="/assets/site.js"></script>
 </head>
-<body>
+<body class="qa-case">
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="case-header"><div class="case-header-inner"><a class="site-name" href="/portfolio/">Kayla Young</a><nav class="case-nav" aria-label="Site"><a href="/portfolio/#selected-projects">Projects</a><a href="/portfolio/#experience">Experience</a><a href="mailto:kayla@snackdriven.com">Contact</a></nav></div></header>
 <main id="main-content" class="case-shell">
+<div class="case-intro">
 <a class="back-link" href="/portfolio/#selected-projects">&larr; Back to selected projects</a>
 <p class="case-kicker">Personal QA tooling</p>
 <h1>Turning scattered context into reviewable QA work</h1>
 <p class="case-lead">A personal QA workspace with version control and strong opinions about how AI should behave. I designed the workflow to bring ticket context, prior findings, and release information into runbooks I could actually work from.</p>
 <dl class="case-facts"><div><dt>Context</dt><dd>Personal tooling for my QA work</dd></div><div><dt>My role</dt><dd>Workflow design, tool configuration, AI-assisted implementation direction, testing</dd></div><div><dt>Evidence</dt><dd>Runbooks and evidence reviews; release documents used by colleagues</dd></div><div><dt>Status</dt><dd>Workflows evolved; release-documentation automation retired</dd></div></dl>
-<div class="case-layout">
-<nav class="contents" aria-label="On this page"><h2>Contents</h2><a href="#problem">Problem</a><a href="#decisions">Decisions</a><a href="#validation">Validation</a><a href="#evidence">Evidence</a><a href="#limits">Limits</a></nav>
+</div><div class="case-layout">
+<nav class="contents" aria-label="On this page"><div class="contents-inner"><h2>Contents</h2><a href="#problem">Problem</a><a href="#decisions">Decisions</a><a href="#validation">Validation</a><a href="#evidence">Evidence</a><a href="#limits">Limits</a></div></nav>
 <article class="case-body">
 <section id="problem"><h2>Problem</h2><p>A ticket rarely arrives with everything needed to test it. The useful context might be in a code change, an old finding, a discussion, or a release note. I kept having to reconstruct the task before I could investigate it.</p><p>I wanted that groundwork in one usable packet: what should happen, what had gone wrong before, where to look for regressions, and which sources the system could not check. Missing context needed a label, not a confident guess.</p></section>
 <section id="decisions"><h2>Decisions and implementation</h2><p>I defined the behavior, configured the tools, and directed AI-assisted implementation. I tested the runbooks, investigation tools, and evidence-review views on real tasks, then refined how they worked together.</p><p>If a source couldn't be checked, the packet had to say so. An unavailable system and an empty result mean different things. I kept preparation, investigation, independent review, and the human decision separate.</p>
