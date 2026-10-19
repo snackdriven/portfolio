@@ -16,6 +16,11 @@ I liked the idea enough to want my own version. I like building stuff, and somet
 
 The [album poster builder](https://albums.snackdriven.com/) lets you pick nine, twelve, or fifteen records, move the covers around, change the background, and export a poster. There are captions and a name subtitle. You can bring your own cover art. I wanted room to keep adjusting the collection until it looked like mine.
 
+<figure class="post-figure">
+  <a href="/assets/blog/albums-board-in-progress.png"><img src="/assets/blog/albums-board-in-progress.png" width="550" height="1008" loading="lazy" alt="My album poster board with ten covers selected in a fifteen-slot grid, including Jawbreaker, System of a Down, Matchbox Twenty, and Tech N9ne. Five slots remain empty."></a>
+  <figcaption>My board in progress: ten picks, five spaces left. Select the image to see it full size.</figcaption>
+</figure>
+
 The [film version](https://films.snackdriven.com/) gives movies the same treatment. Both keep the board in your browser, with backups and share links. The links leave uploaded images out; those stay with the browser and backup. A little poster maker still has decisions about what belongs in a shared copy.
 
 That is the part I enjoy: following an idea into its details. Choosing what someone can change, then checking whether the controls behave the way they suggest. The film search needed to understand that *1917* is a title, for example. Four digits were doing more work than expected.
