@@ -50,3 +50,26 @@ figcaption { margin-top: 16px; color: var(--muted); font-size: .84rem; }
 }
 @media (max-width: 450px) { .case-facts { grid-template-columns: 1fr; } figure { padding: 16px; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+@media print {
+  @page { margin: 18mm; }
+  :root { color-scheme: light; }
+  body { background: #fff; color: #1a1a1a; font-size: 11pt; line-height: 1.5; }
+  .case-header, .back-link, .contents, .case-footer { display: none; }
+  .case-shell { max-width: none; margin: 0; padding: 0; }
+  .case-layout { display: block; }
+  h1 { max-width: none; font-size: 26pt; }
+  .case-lead { font-size: 12pt; }
+  .case-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 20pt 0; }
+  .case-facts, figure, .reconstruction div, .flow span { border-color: #777; }
+  .case-kicker, .figure-label, .case-facts dt, .case-body h2,
+  .reconstruction strong, .flow b, figcaption, a { color: #1a1a1a; }
+  a { text-decoration: underline; }
+  figure, .reconstruction div { background: #fff; }
+  figure { padding: 12pt; }
+  .case-body section { margin-bottom: 22pt; }
+  h1, h2, .figure-label { break-after: avoid; }
+  .case-facts, figure { break-inside: avoid; }
+  p, li { orphans: 3; widows: 3; }
+  .audit-bar { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
