@@ -750,3 +750,8 @@ a:focus-visible { outline: 3px solid var(--green); outline-offset: 4px; }
   .project-num { padding: 0; }
   .project-link { margin-top: 12px; }
 }
+.print-contact { display: none; }
+@media print {
+  .hero-contact { display: none !important; }
+  .print-contact { display: block; margin-top: 4px; font-size: 9pt; color: #6b7280 !important; }
+}
