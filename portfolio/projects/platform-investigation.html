@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A four-day staging QA investigation organized around evidence, recurring patterns, data risk, and coverage limits.">
+<title>Platform QA investigation | Kayla Young</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="case-header"><div class="case-header-inner"><a class="site-name" href="/portfolio/">Kayla Young</a><nav class="case-nav" aria-label="Site"><a href="/portfolio/#selected-projects">Projects</a><a href="/portfolio/#experience">Experience</a><a href="mailto:kayla@snackdriven.com">Contact</a></nav></div></header>
+<main id="main-content" class="case-shell">
+<a class="back-link" href="/portfolio/#selected-projects">&larr; Back to selected projects</a>
+<p class="case-kicker">Professional QA investigation</p>
+<h1>Making a platform-wide QA investigation usable</h1>
+<p class="case-lead">I directed and checked an AI-assisted staging investigation, then organized the findings around recurring patterns, data risks, and unresolved decisions.</p>
+<dl class="case-facts"><div><dt>Scope</dt><dd>Four-day staging pass; one QA account, Chromium, seeded data</dd></div><div><dt>My role</dt><dd>Test strategy, investigation direction, evidence review, reporting</dd></div><div><dt>Findings</dt><dd>250 documented findings in 23 recurring patterns</dd></div><div><dt>Handoff</dt><dd>Five decisions routed to product and engineering owners</dd></div></dl>
+<div class="case-layout">
+<nav class="contents" aria-label="On this page"><h2>Contents</h2><a href="#problem">Problem</a><a href="#decisions">Decisions</a><a href="#validation">Validation</a><a href="#evidence">Evidence</a><a href="#limits">Limits</a></nav>
+<article class="case-body">
+<section id="problem"><h2>Problem</h2><p>A new platform had reached staging before launch decisions. An undifferentiated issue list would not tell readers which observations threatened data, which appeared to share a cause, or where intended behavior still needed a product decision.</p><p>The investigation needed a readout that made those relationships visible, along with the limits of what had actually been tested.</p></section>
+<section id="decisions"><h2>Decisions and implementation</h2><p>I organized the pass across application sections, administration settings, and cross-page behavior. I directed AI-assisted browser harnesses and checked their work. The investigation looked beyond an initial save to refresh, stale forms, repeated actions, and state changes elsewhere.</p><p>I grouped the 250 documented findings into 23 patterns and prioritized data risks for the handoff. The readout separated observed behavior from questions about intended behavior. Five unresolved decisions went to product and engineering owners.</p>
+<figure><p class="figure-label">Illustrative reconstruction · No product data</p><div class="reconstruction"><div><strong>Finding</strong>A saved setting appears to revert after a refresh.</div><div><strong>Evidence needed</strong>Record the save, refresh, and readback as separate observations.</div><div><strong>Risk</strong>A user may rely on a state that did not persist.</div><div><strong>Open decision</strong>Who defines the intended persistence behavior?</div><div><strong>Untested scope</strong>Other accounts and devices are outside this pass.</div></div><figcaption>This fictional readout demonstrates the reporting structure. It is not a product screenshot or an actual finding.</figcaption></figure></section>
+<section id="validation"><h2>Validation and correction</h2><p>I used repeat checks and a second review that tried to disprove higher-impact findings. Some claims changed: configuration checks led to withdrawals, and one result moved to a flaky classification when a second run did not establish it. A persistence claim required a real save and readback before it could be stated as stored data.</p><p>The footage-to-description audit kept full matches separate from partial support and steps the recording did not show. A clip showing a Save click, for example, would not by itself prove persistence after reload.</p></section>
+<section id="evidence"><h2>Evidence and results</h2><p>The four-day pass produced 250 documented findings organized into 23 patterns. The readout highlighted 22 data risks covering 53 flagged issues and routed five unresolved decisions. It gave readers a prioritized summary with detailed evidence behind it.</p>
+<figure><p class="figure-label">Evidence audit · 314 rows</p><div class="audit-bar" role="img" aria-label="Of 314 evidence rows, 239 matched, 55 were partially supported, and 20 were not shown on video"><span></span><span></span><span></span></div><div class="audit-key"><span>239 matched</span><span>55 partial</span><span>20 not shown on video</span></div><figcaption>These 314 audit rows are evidence rows, not additional bugs. The split does not establish full video verification for every finding.</figcaption></figure>
+<p>The readout was circulated to engineering leadership. This case ends at investigation and handoff; it does not claim completed fixes.</p></section>
+<section id="limits"><h2>Limits and next pass</h2><p>Coverage used one QA account, Chromium, and seeded staging data. Two windows on one account did not establish cross-user behavior. The work did not establish cross-device behavior or full platform coverage.</p><p>A next pass could turn the recurring patterns into repeatable probes, include deferred coverage, and identify decision owners before testing begins. The documented findings guide that work; they do not replace it.</p></section>
+<footer class="case-footer"><a href="al80-studio.html">Next: AL80 Studio &rarr;</a><a href="mailto:kayla@snackdriven.com">Contact Kayla</a></footer>
+</article></div></main>
+</body></html>

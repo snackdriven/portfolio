@@ -2,334 +2,124 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<script defer src="/assets/repo-shortcut.js"></script>
-<script defer src="/assets/site.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Kayla Young, Senior QA Automation Engineer. Platform test infrastructure, agentic QA workflows, and AI workflow tooling. Quality across 8 products; 14 automation scripts in production.">
-<meta property="og:title" content="Kayla Young - Senior QA Automation Engineer">
-<meta property="og:description" content="Platform test infrastructure, agentic QA workflows, and AI workflow tooling. Portfolio and work history.">
-<meta property="og:url" content="https://snackdriven.com">
+<meta name="description" content="Kayla Young, Senior QA Engineer. Selected QA investigations, personal workflow tools, and a hardware project.">
+<meta property="og:title" content="Kayla Young | Senior QA Engineer">
+<meta property="og:description" content="Selected QA investigations, personal workflow tools, and a hardware project.">
+<meta property="og:url" content="https://snackdriven.com/portfolio/">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://snackdriven.com/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%234AEEA0'>%3E</text></svg>">
-<title>Kayla Young - Senior QA Automation Engineer · Platform Tooling & AI-Driven Quality</title>
+<title>Kayla Young | Senior QA Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="stylesheet" href="portfolio.css">
+<script defer src="/assets/repo-shortcut.js"></script>
+<script defer src="/assets/site.js"></script>
 </head>
 <body>
-<!-- Skip to main content link for accessibility -->
 <a href="#main-content" class="skip-link">Skip to main content</a>
-
-<!-- HERO -->
 <header class="hero">
   <div class="hero-top">
-    <h1><span data-solo>K</span>a<span data-group="yl">y</span><span data-group="yl">l</span>a <span data-solo>Y</span><span data-solo>o</span>u<span data-group="ie">n</span><span data-group="ie">g</span></h1>
-    <div class="title">Senior QA Automation Engineer &middot; Platform Tooling &amp; AI-Driven Quality</div>
+    <h1>Kayla Young</h1>
+    <div class="title">Senior QA Engineer &middot; AI Workflows &amp; Internal Tools</div>
   </div>
-  <div class="hero-contact">
-    <a href="mailto:kayla@snackdriven.com">kayla@snackdriven.com</a>
-    <span class="hero-sep">|</span>
-    <a href="tel:3134442213">(313) 444-2213</a>
-    <span class="hero-sep print-hide">|</span>
-    <span class="print-hide">Bentonville, AR (Remote)</span>
-    <span class="hero-sep">|</span>
-    <a href="https://linkedin.com/in/snackdriven" target="_blank" rel="noopener">LinkedIn</a>
-    <span class="hero-sep">|</span>
-    <a href="https://github.com/snackdriven" target="_blank" rel="noopener">GitHub</a>
-    <span class="hero-sep screen-hide">|</span>
-    <a href="https://snackdriven.com" target="_blank" rel="noopener" class="screen-hide">snackdriven.com</a>
-    <span class="hero-sep print-hide">|</span>
-    <a href="/" class="print-hide">Blog</a>
-    <span class="hero-sep print-hide">|</span>
-    <div class="resume-menu print-hide" id="resume-menu">
-      <button class="resume-menu-btn" id="resume-menu-btn" aria-haspopup="true" aria-expanded="false">Resume ▾</button>
-      <div class="resume-menu-dropdown" id="resume-menu-dropdown" role="menu">
-        <a href="resume/kayla-young-resume-automation.pdf" target="_blank" rel="noopener" role="menuitem">Automation</a>
-        <a href="resume/kayla-young-resume-tools.pdf" target="_blank" rel="noopener" role="menuitem">Tooling</a>
-      </div>
-    </div>
-  </div>
+  <nav class="hero-contact" aria-label="Portfolio links">
+    <a href="#selected-projects">Projects</a><span class="hero-sep" aria-hidden="true">|</span>
+    <a href="#experience">Experience</a><span class="hero-sep" aria-hidden="true">|</span>
+    <a href="mailto:kayla@snackdriven.com">Email</a><span class="hero-sep" aria-hidden="true">|</span>
+    <a href="https://linkedin.com/in/snackdriven">LinkedIn</a><span class="hero-sep" aria-hidden="true">|</span>
+    <a href="https://github.com/snackdriven">GitHub</a><span class="hero-sep" aria-hidden="true">|</span>
+    <a href="/">Blog</a>
+  </nav>
 </header>
-
-<style>
-  .resume-menu {
-    position: relative;
-    display: inline-block;
-  }
-  .resume-menu-btn {
-    background: none;
-    border: none;
-    padding: 0;
-    font: inherit;
-    font-size: inherit;
-    color: var(--magenta);
-    cursor: pointer;
-    letter-spacing: inherit;
-  }
-  .resume-menu-btn:hover {
-    text-decoration: underline;
-  }
-  .resume-menu-dropdown {
-    display: none;
-    position: absolute;
-    top: calc(100% + 6px);
-    right: 0;
-    background: var(--bg-sidebar);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    min-width: 140px;
-    z-index: 100;
-    flex-direction: column;
-  }
-  .resume-menu-dropdown.open {
-    display: flex;
-  }
-  .resume-menu-dropdown a {
-    padding: 8px 14px;
-    color: var(--fg);
-    font-size: 0.85rem;
-    white-space: nowrap;
-    border-bottom: 1px solid var(--border);
-  }
-  .resume-menu-dropdown a:last-child {
-    border-bottom: none;
-  }
-  .resume-menu-dropdown a:hover {
-    color: var(--magenta);
-    background: var(--bg);
-  }
-</style>
-
-<script>
-
-
-(function() {
-  const btn = document.getElementById('resume-menu-btn');
-  const dropdown = document.getElementById('resume-menu-dropdown');
-  btn.addEventListener('click', function(e) {
-    e.stopPropagation();
-    const open = dropdown.classList.toggle('open');
-    btn.setAttribute('aria-expanded', open);
-  });
-  document.addEventListener('click', function() {
-    dropdown.classList.remove('open');
-    btn.setAttribute('aria-expanded', false);
-  });
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && dropdown.classList.contains('open')) {
-      dropdown.classList.remove('open');
-      btn.setAttribute('aria-expanded', false);
-      btn.focus();
-    }
-  });
-})();
-</script>
-
 <main id="main-content">
-<!-- 01 ABOUT -->
-<section class="section">
-  <div class="section-label">
-    <span class="section-number">01</span>
-    <h2 class="section-name">About</h2>
-  </div>
-  <div class="section-content">
-    <p class="about-text">
-      I build quality infrastructure, not just test cases. Eight behavioral health products, no staging on the legacy platform, 350+ runtime-generated form fields: instead of doing the same manual work forever, I built a config-driven Playwright harness with LLM-assisted selector resolution plus 14 internal tools. Documentation down to an hour a week, 63-section forms to one-click autofill. I direct AI coding agents the way I run test strategy: point at the friction, verify the output, ship what survives. The tools are documented and config-driven on purpose: shared infrastructure, not personal scripts.
-    </p>
+<section class="section" aria-labelledby="about-heading">
+  <div class="section-label"><span class="section-number">01</span><h2 class="section-name" id="about-heading">About</h2></div>
+  <div class="section-content"><p class="about-text">I investigate how software behaves, build tools around repetitive work, and turn complicated findings into something people can act on. My work combines hands-on QA with AI-assisted implementation. I define the problem, shape the workflow, test the result, and refine it against real use.</p></div>
+</section>
+<section class="section print-hide" id="selected-projects" aria-labelledby="projects-heading">
+  <div class="section-label"><span class="section-number">02</span><h2 class="section-name" id="projects-heading">Selected Projects</h2></div>
+  <div class="section-content projects-content">
+    <div class="project-list">
+      <article class="project">
+        <div class="project-num">01</div><div>
+          <p class="project-tech">Personal QA tooling</p>
+          <h3 class="project-name">Turning scattered context into reviewable QA work</h3>
+          <p class="project-desc">I shaped a personal workflow system that brings together ticket context, prior findings, and release information. I defined the behavior, configured tools, directed AI-assisted implementation, and refined the preparation, review, and handoff steps when real use exposed gaps.</p>
+          <p class="project-impact">Ticket-specific runbooks, review and recovery practices, and historical release documents used by colleagues.</p>
+          <p class="project-context">Workflow design · Tool configuration · Testing and refinement</p>
+          <a class="project-link" href="projects/qa-workflow.html">Read the QA workflow case study <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </article>
+      <article class="project">
+        <div class="project-num">02</div><div>
+          <p class="project-tech">Professional QA investigation</p>
+          <h3 class="project-name">Making a platform-wide QA investigation usable</h3>
+          <p class="project-desc">I directed and checked an AI-assisted staging investigation, then organized its findings around recurring patterns, data risks, and unresolved product decisions. The readout made the evidence and coverage limits visible alongside the results.</p>
+          <p class="project-impact">Four days · 250 documented findings · 23 recurring patterns.</p>
+          <p class="project-context">Test strategy · Evidence review · Risk reporting</p>
+          <a class="project-link" href="projects/platform-investigation.html">Read the platform investigation case study <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </article>
+      <article class="project">
+        <div class="project-num">03</div><div>
+          <p class="project-tech">Personal hardware project</p>
+          <h3 class="project-name">AL80 Studio: testing beyond the preview</h3>
+          <p class="project-desc">I shaped a control panel for my keyboard’s screen, lighting, and keymap through AI-assisted implementation and hands-on hardware testing. I refined control placement, screen ownership, and switching behavior against what the keyboard actually did.</p>
+          <p class="project-impact">Browser interface, local host, and a documented display fix confirmed on the keyboard.</p>
+          <p class="project-context">Interaction design · Troubleshooting · On-device validation</p>
+          <a class="project-link" href="projects/al80-studio.html">Read the AL80 Studio case study <span aria-hidden="true">&rarr;</span></a>
+          <a class="project-link project-link-secondary" href="https://snackdriven.github.io/al80-studio/">View the public project <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
-
-<!-- 02 EXPERIENCE -->
-<section class="section">
-  <div class="section-label">
-    <span class="section-number">02</span>
-    <h2 class="section-name">Experience</h2>
-  </div>
+<section class="section" id="experience" aria-labelledby="experience-heading">
+  <div class="section-label"><span class="section-number">03</span><h2 class="section-name" id="experience-heading">Experience</h2></div>
   <div class="section-content">
-
-    <!-- Chorus Innovations -->
     <div class="job">
-      <div class="job-header">
-        <span class="job-company">Chorus Innovations</span>
-        <span class="job-separator">&middot;</span>
-        <span class="job-tenure">Apr 2023 &ndash; Present &nbsp;/&nbsp; Remote</span>
+      <div class="job-header"><span class="job-company">Chorus Innovations</span><span class="job-separator">&middot;</span><span class="job-tenure">Apr 2023 &ndash; Present · Remote</span></div>
+      <div class="job-sub"><div class="job-sub-header"><span class="job-role">Senior QA Engineer</span><span class="job-period-inline">Sep 2026 &ndash; Present</span></div>
+        <ul class="job-highlights"><li>Directed a four-day AI-assisted staging investigation. Organized 250 documented findings into 23 recurring patterns, prioritized data risks, and made coverage limits visible in the readout.</li><li>Designed personal tools and workflows for QA preparation, investigation, and evidence review. Historical release documents produced through one workflow were used by colleagues.</li></ul>
       </div>
-
-      <div class="job-sub">
-        <div class="job-sub-header">
-          <span class="job-role">Senior QA Specialist</span>
-          <span class="job-period-inline">Sep 2024 &ndash; Present</span>
-        </div>
-        <ul class="job-highlights">
-          <li>Ran the first QA pass on a new multi-tenant platform's staging environment: 250 confirmed issues in four days, each reproduced twice and recorded on video, using AI-assisted browser harnesses I directed. The 22 data-risk findings (silent overwrites, corrupted vitals values, a permissions gap) were filed first; the written readout was shared with the engineering org by the VP of Engineering.</li>
-          <li>Eight products. Every manual process I don't eliminate becomes permanent overhead, so I built automation tooling instead.</li>
-          <li>Codified multi-role workflows (doctors, nurses, admins, patients) with 20+ conditional paths into reusable test architecture. Runtime-generated UI means the models have to survive vendor push cycles, not just fixed states.</li>
-          <li>Built 14 custom scripts (video analysis, form autofill, test plan generation, Jira release summaries). Documentation overhead went from ~4 hrs/wk to under 1.</li>
-          <li>Verify PHI data persists through save/refresh cycles: patient records, appointment states, billing data. These are medical records; accuracy isn't optional.</li>
-        </ul>
+      <div class="job-sub"><div class="job-sub-header"><span class="job-role">Senior QA Specialist</span><span class="job-period-inline">Sep 2024 &ndash; Sep 2026</span></div>
+        <ul class="job-highlights"><li>Tested complex workflows and developed reusable documentation, checklists, and tools around recurring QA work.</li></ul>
       </div>
-
-      <div class="job-sub">
-        <div class="job-sub-header">
-          <span class="job-role">Software QA Specialist</span>
-          <span class="job-period-inline">Apr 2023 &ndash; Sep 2024</span>
-        </div>
-        <ul class="job-highlights">
-          <li>Inherited an environment too unstable to automate directly. Built incrementally: manual templates → checklists → scripts. By promotion, those iterations were the full QA toolkit.</li>
-        </ul>
+      <div class="job-sub"><div class="job-sub-header"><span class="job-role">Software QA Specialist</span><span class="job-period-inline">Apr 2023 &ndash; Sep 2024</span></div>
+        <ul class="job-highlights"><li>Tested applications across a React and GraphQL stack and a legacy no-code platform.</li></ul>
       </div>
     </div>
-
-    <!-- Ultranauts Inc -->
     <div class="job">
-      <div class="job-header">
-        <span class="job-company">Ultranauts Inc</span>
-        <span class="job-separator">&middot;</span>
-        <span class="job-tenure">Feb 2020 &ndash; Feb 2023 &nbsp;/&nbsp; Remote</span>
+      <div class="job-header"><span class="job-company">Ultranauts Inc</span><span class="job-separator">&middot;</span><span class="job-tenure">Feb 2020 &ndash; Feb 2023 · Remote</span></div>
+      <div class="job-sub"><div class="job-sub-header"><span class="job-role">Software Quality Engineer II</span><span class="job-period-inline">Oct 2021 &ndash; Feb 2023</span></div>
+        <ul class="job-highlights"><li>Scoped exploratory and regression coverage across client products with multi-role workflows and complex business rules.</li><li>Assessed where automation would provide useful coverage and where its maintenance cost called for another approach.</li></ul>
       </div>
-
-      <div class="job-sub">
-        <div class="job-sub-header">
-          <span class="job-role">Software Quality Engineer II</span>
-          <span class="job-period-inline">Oct 2021 &ndash; Feb 2023</span>
-        </div>
-        <ul class="job-highlights">
-          <li>Scoped test strategy for clients including Slack, GoodLeap, and Global Citizen: what to automate, and what to skip because the maintenance cost would outweigh the coverage.</li>
-          <li>Built Selenium automation for workflows where manual regression wasn't sustainable: multi-step forms, conditional logic, role-based access controls across codebases I didn't control and requirements that were still being written.</li>
-        </ul>
-      </div>
-
-      <div class="job-sub print-hide">
-        <div class="job-sub-header">
-          <span class="job-role">SQA Engineer I &amp; Tester</span>
-          <span class="job-period-inline">Feb 2020 &ndash; Sep 2021</span>
-        </div>
-        <ul class="job-highlights">
-          <li>Manual and exploratory testing across multiple client projects. Scoped coverage for requirements that were still being written.</li>
-        </ul>
+      <div class="job-sub print-hide"><div class="job-sub-header"><span class="job-role">SQA Engineer I &amp; Tester</span><span class="job-period-inline">Feb 2020 &ndash; Sep 2021</span></div>
+        <ul class="job-highlights"><li>Manual and exploratory testing across multiple client projects.</li></ul>
       </div>
     </div>
-
   </div>
 </section>
-
-<!-- 03 SKILLS -->
-<section class="section" id="section-skills">
-  <div class="section-label">
-    <span class="section-number">03</span>
-    <h2 class="section-name">Stack</h2>
-  </div>
-  <div class="section-content" style="max-width: none;">
+<section class="section" id="section-skills" aria-labelledby="stack-heading">
+  <div class="section-label"><span class="section-number">04</span><h2 class="section-name" id="stack-heading">Stack</h2></div>
+  <div class="section-content stack-content">
     <div class="skills-grid">
-      <div class="skills-category">
-        <div class="skills-category-name">Languages</div>
-        <ul class="skills-list">
-          <li>TypeScript</li>
-          <li>Python</li>
-          <li>SQL</li>
-          <li>Node.js</li>
-        </ul>
-      </div>
-
-      <div class="skills-category">
-        <div class="skills-category-name">AI & APIs</div>
-        <ul class="skills-list">
-          <li>Claude API + Code</li>
-          <li>Gemini API</li>
-          <li>Agentic workflows</li>
-          <li>AI enablement</li>
-          <li>MCP protocol</li>
-          <li>GraphQL</li>
-        </ul>
-      </div>
-
-      <div class="skills-category">
-        <div class="skills-category-name">Testing</div>
-        <ul class="skills-list">
-          <li>Playwright</li>
-          <li>Selenium</li>
-          <li>Cypress</li>
-        </ul>
-      </div>
-
-      <div class="skills-category">
-        <div class="skills-category-name">Toolchain</div>
-        <ul class="skills-list">
-          <li>GitHub Actions</li>
-          <li>Kubernetes</li>
-          <li>Jenkins</li>
-          <li>Docker</li>
-          <li>Git</li>
-          <li>Jira</li>
-        </ul>
-      </div>
-
-      <div class="skills-category">
-        <div class="skills-category-name">Frontend</div>
-        <ul class="skills-list">
-          <li>React</li>
-          <li>Tailwind</li>
-        </ul>
-      </div>
-
-      <div class="skills-category">
-        <div class="skills-category-name">Domain</div>
-        <ul class="skills-list">
-          <li>Behavioral health SaaS</li>
-          <li>HIPAA</li>
-        </ul>
-      </div>
-
+      <div class="skills-category"><h3 class="skills-category-name">Implementation</h3><ul class="skills-list"><li>AI-assisted implementation</li><li>Tool configuration</li><li>Testing and refinement</li></ul></div>
+      <div class="skills-category"><h3 class="skills-category-name">Workflows &amp; APIs</h3><ul class="skills-list"><li>Agentic workflows</li><li>Claude and Gemini APIs</li><li>MCP and GraphQL</li></ul></div>
+      <div class="skills-category"><h3 class="skills-category-name">Testing &amp; Toolchain</h3><ul class="skills-list"><li>Playwright, Selenium, Cypress</li><li>Git, Jira, GitHub Actions</li><li>Docker, Jenkins, Kubernetes</li></ul></div>
     </div>
-
   </div>
 </section>
-
-<!-- 04 LOOKING FOR -->
-<section class="section print-hide" id="section-target">
-  <div class="section-label">
-    <span class="section-number">04</span>
-    <h2 class="section-name">Looking For</h2>
-  </div>
-  <div class="section-content">
-    <p class="about-text">
-      Best fit: a platform or quality-engineering team building the test infrastructure everyone else relies on, or an enablement team putting AI workflows into daily use. Automation frameworks, agentic QA workflows, internal tooling, and the documentation that makes them stick. The job is &ldquo;make quality scale without hiring an army to do it.&rdquo; Healthcare or regulated SaaS a plus. Remote,&nbsp;mid-size.
-    </p>
-  </div>
+<section class="section print-hide" id="section-target" aria-labelledby="looking-heading">
+  <div class="section-label"><span class="section-number">05</span><h2 class="section-name" id="looking-heading">Looking For</h2></div>
+  <div class="section-content"><p class="about-text">I'm interested in internal tools, AI workflow implementation, and QA roles with room to build practical systems around the work. I'm based in Arkansas and looking for fully remote work.</p>
+  <p class="contact-links"><a href="mailto:kayla@snackdriven.com">Email Kayla</a> · <a href="resume/kayla-young-resume-automation.pdf">Automation résumé</a> · <a href="resume/kayla-young-resume-tools.pdf">Tooling résumé</a></p></div>
 </section>
-
-
 </main>
-
-<footer class="footer">
-  <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
-
-
-    <div style="display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
-      <div style="font-size: 0.9rem;">
-        Kayla Young // 2026
-      </div>
-    </div>
-  </div>
-
-  <script defer src="/assets/neon-flicker.js"></script>
-  <script>
-    window.initNeonFlicker('.hero h1 span[data-group="yl"]', '.hero h1 span[data-group="ie"]', '.hero h1 span[data-solo]');
-  </script>
-</footer>
-
-<script>
-// 👀 oh, a dev. hi.
-console.log('%c  SUITE  kayla-young.spec  ', 'background:#A78BFA;color:#2D2B3A;font-family:"DM Mono",monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:2px;');
-console.log('%c\n  ✓  is a real person, not a landing page template\n  ✓  finds the edge case you swore couldn\'t happen\n  ✓  actually reads the ticket before testing\n  ✓  you should hire her\n', 'color:#4AEEA0;font-family:"DM Mono",monospace;font-size:11px;line-height:1.9;');
-console.log('%c  4 passing', 'color:#B5B2C8;font-family:"DM Mono",monospace;font-size:11px;');
-console.log('%c\n  → kayla@snackdriven.com\n', 'color:#72C5D9;font-family:"DM Mono",monospace;font-size:11px;');
-</script>
-
+<footer class="footer">Kayla Young // 2026</footer>
 </body>
 </html>
