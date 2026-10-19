@@ -1,0 +1,120 @@
+/* The original portfolio's frame, navigation and section rhythm.
+   Only the overview and standard case pages load this file. Felt stays separate. */
+.portfolio-overview,
+.portfolio-case {
+  --portfolio-canvas: 1320px;
+  --portfolio-rail: 200px;
+  --portfolio-gutter: 48px;
+  max-width: var(--portfolio-canvas);
+  margin-inline: auto;
+}
+
+.portfolio-overview .portfolio-nav,
+.portfolio-case .portfolio-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0;
+  margin-top: 12px;
+  font: 400 .88rem/1.6 var(--font-body);
+}
+.portfolio-overview .portfolio-nav a,
+.portfolio-case .portfolio-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  color: var(--fg);
+  text-decoration: none;
+}
+.portfolio-nav a:hover { color: var(--magenta); }
+.portfolio-nav a[href$=".pdf"] { text-decoration: underline; text-underline-offset: 4px; }
+.portfolio-nav .hero-sep { color: var(--border); margin-inline: 10px; }
+
+.portfolio-overview .section { grid-template-columns: var(--portfolio-rail) minmax(0, 1fr); }
+.portfolio-overview .hero,
+.portfolio-overview .section-content { padding-inline: var(--portfolio-gutter); }
+.portfolio-overview .section-label { padding-left: var(--portfolio-gutter); }
+.portfolio-case .case-header { padding-inline: var(--portfolio-gutter); }
+.portfolio-case .case-intro { padding-inline: var(--portfolio-gutter); }
+.portfolio-case .case-layout { display: block; }
+.portfolio-case .contents {
+  padding: 16px var(--portfolio-gutter);
+  border-right: 0;
+  border-bottom: 3px solid var(--border);
+}
+.portfolio-case .contents-inner {
+  position: static;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 24px;
+}
+.portfolio-case .contents h2 { margin: 0; font-size: .73rem; }
+.portfolio-case .contents a { display: inline-flex; align-items: center; min-height: 44px; margin: 0; }
+.portfolio-case .case-body { max-width: none; padding: 0; line-height: 1.7; }
+.portfolio-case .case-body section {
+  display: grid;
+  grid-template-columns: var(--portfolio-rail) minmax(0, 1fr);
+  padding: 0;
+}
+.portfolio-case .case-body .case-section-label {
+  min-width: 0;
+  overflow-wrap: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 40px 24px 40px var(--portfolio-gutter);
+  margin: 0;
+  border-right: 3px solid var(--border);
+  background: var(--bg-sidebar);
+  font: 500 1rem/1.6 var(--font-mono);
+  letter-spacing: .2em;
+}
+.portfolio-case .case-section-number { font-size: .85rem; letter-spacing: .3em; }
+.portfolio-case .case-section-content { min-width: 0; max-width: 1080px; width: 100%; padding: 44px var(--portfolio-gutter) 52px; }
+.portfolio-case .case-section-content > :last-child { margin-bottom: 0; }
+.portfolio-case .case-section-content p { max-width: 76ch; }
+.portfolio-case .case-footer { margin-left: var(--portfolio-rail); padding: 24px var(--portfolio-gutter); }
+
+@media (max-width: 768px) {
+  .portfolio-overview,
+  .portfolio-case { --portfolio-gutter: 24px; }
+  .portfolio-overview .portfolio-nav a,
+  .portfolio-case .portfolio-nav a { min-height: 44px; padding: 10px 0; margin-right: 16px; }
+  .portfolio-nav .hero-sep { display: none; }
+  .portfolio-overview .section,
+  .portfolio-case .case-body section { grid-template-columns: minmax(0, 1fr); }
+  .portfolio-case .case-nav { display: flex; font-size: .88rem; }
+  .portfolio-case .contents-inner { gap: 0 20px; }
+  .portfolio-case .contents h2 { flex-basis: 100%; }
+  .portfolio-case .case-body .case-section-label {
+    flex-direction: row;
+    align-items: baseline;
+    padding: 24px 24px 16px;
+    border-right: 0;
+    border-bottom: 2px solid var(--border);
+    overflow-wrap: normal;
+  }
+  .portfolio-case .case-section-content { padding: 24px; }
+  .portfolio-case .case-footer { margin-left: 0; }
+}
+
+@media print {
+  .portfolio-overview .hero { padding-inline: 24px; }
+  .portfolio-overview .section-content,
+  .portfolio-case .case-intro { padding-inline: 0; }
+  .portfolio-overview .section,
+  .portfolio-case .case-body section { display: block; }
+  .portfolio-case .case-body .case-section-label {
+    display: block;
+    padding: 0;
+    margin-bottom: 12pt;
+    border: 0;
+    background: none;
+    color: #1a1a1a;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+  .portfolio-case .case-section-number { display: none; }
+  .portfolio-case .case-section-content { padding: 0; }
+}
