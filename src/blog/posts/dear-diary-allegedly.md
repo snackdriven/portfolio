@@ -24,6 +24,6 @@ A separate ledger tracked which items had been incorporated. Running the same in
 
 This was a local preview. Nothing was synced or scheduled. The append behavior had evidence behind it; context collection and the handoff to the nightly writer still needed agreement.
 
-The code was AI-generated. My requirements included keeping my words and leaving missing context visibly missing.
+I wanted it to keep my words and say when it was missing context.
 
 I would like to retain editing privileges over my own day.

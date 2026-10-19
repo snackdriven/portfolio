@@ -24,6 +24,4 @@ An old docstring then made the count look wrong: it said eleven examples, while 
 
 That one fixture raised detection from 22 of 78 mutations to 28 of 78 for that check. The other survivors still needed investigation; this fixed one demonstrated gap.
 
-I direct the checks and review the evidence. The generated edit needed that review as much as the code it was supposed to test.
-
 The test was nearby. We eventually introduced it to the others.

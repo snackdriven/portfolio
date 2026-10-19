@@ -20,7 +20,7 @@ It became a cozy place for me to land. A nice reminder that things can be calm a
 
 The characters started carrying small bits of history with them. New stories needed to remember what had happened. Illustrations needed to look like the same place, down to the pumpkin&rsquo;s six-pocket waistcoat. The reader came later, with wax-sealed letters and warm paper.
 
-AI generates the prose, artwork, and code. I shape the direction, choose what belongs, ask for corrections, and review how it all comes together. Keeping a gentle little world recognizable turned out to involve quite a lot of checking pockets.
+The stories and illustrations are AI-generated. I choose what belongs and ask for corrections. Keeping a gentle little world recognizable turned out to involve quite a lot of checking pockets.
 
 ## Keeping the shop stocked
 
