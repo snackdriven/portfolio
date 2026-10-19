@@ -29,7 +29,7 @@ module.exports = function (eleventyConfig) {
   // Preserve the posts' raw markup while stripping executable HTML and unsafe URLs.
   const md = markdownIt({ html: true, linkify: true });
   const render = md.render.bind(md);
-  md.render = (source, env) => sanitizeHtml(render(source, env), {
+  const sanitizeOptions = {
     allowedTags: [...sanitizeHtml.defaults.allowedTags, "img", "span"],
     allowedAttributes: {
       ...sanitizeHtml.defaults.allowedAttributes,
@@ -37,7 +37,8 @@ module.exports = function (eleventyConfig) {
       a: ["href", "name", "target", "rel"],
       img: ["src", "srcset", "alt", "title", "width", "height", "loading"],
     },
-  });
+  };
+  md.render = (source, env) => sanitizeHtml(render(source, env), sanitizeOptions);
   eleventyConfig.setLibrary("md", md);
 
   // YYYY-MM-DD for the post-meta rows and JSON-LD.
