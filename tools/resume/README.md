@@ -8,3 +8,7 @@ The checked-in PDF is served at `/portfolio/resume/kayla-young-resume.pdf`.
 Rendering is manual; the site build copies the committed PDF without requiring
 Playwright. Keep the single-column layout, standard headings, and selectable text.
 Review the rendered page after each change and confirm it remains one page.
+
+The site's Chakra Petch and Inter fonts are bundled in `fonts/` with their SIL
+Open Font License notices. The PDF embeds these fonts; rendering does not require
+Google Fonts access or a local font installation.
