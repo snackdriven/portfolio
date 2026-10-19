@@ -3,13 +3,23 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="How Kayla Young shaped Felt Presence, from its illustrated story reader to recurring AI-assisted content and automatic publishing.">
+<meta property="og:title" content="Felt Presence | Kayla Young (Gilbert)">
+<meta property="og:description" content="How Kayla Young shaped Felt Presence, from its illustrated story reader to recurring AI-assisted content and automatic publishing.">
+<meta property="og:url" content="https://snackdriven.com/portfolio/projects/felt-presence.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://snackdriven.com/assets/social/felt-presence.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Felt Presence: a project by Kayla Young (Gilbert).">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://snackdriven.com/assets/social/felt-presence.png">
+<link rel="canonical" href="https://snackdriven.com/portfolio/projects/felt-presence.html">
 <title>Felt Presence | Kayla Young</title>
 <link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="case-study.css"><link rel="stylesheet" href="felt-presence.css">
 <script defer src="/assets/site.js"></script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="case-header"><div class="case-header-inner"><a class="site-name" href="/portfolio/">Kayla Young</a><nav class="case-nav" aria-label="Site"><a href="/portfolio/#selected-projects">Projects</a><a href="/portfolio/#experience">Experience</a><a href="mailto:kayla@snackdriven.com">Contact</a></nav></div></header>
+<header class="case-header"><div class="case-header-inner"><a class="site-name" href="/portfolio/">Kayla Young (Gilbert)</a><nav class="case-nav" aria-label="Site"><a href="/portfolio/#selected-projects">Projects</a><a href="/portfolio/#experience">Experience</a><a href="/portfolio/resume/kayla-young-resume.pdf">Resume PDF</a><a href="mailto:kayla@snackdriven.com">Contact</a></nav></div></header>
 <main id="main-content" class="case-shell">
 <a class="back-link" href="/portfolio/#selected-projects">&larr; Back to selected projects</a>
 <div class="felt-hero">
@@ -20,6 +30,7 @@
 <figure class="felt-scene"><img src="felt-presence-workshop.png" width="1536" height="1024" alt="An imagined after-hours craft shop: a ceramic pumpkin at a botanical computer, a mouthless quilted ghost with a laptop, skeletons reading together, a moth on a lamp, and a tiny mote beside a spool on the shelf." fetchpriority="high"><figcaption>Workshop concept by mote (dot) · Portfolio illustration, not a reader screenshot</figcaption></figure>
 <div class="felt-overview">
 <p class="case-lead">A fictional haunted craft shop needed somewhere to send its letters. I shaped an illustrated reader with seasonal details and wandering greenery, then connected its recurring AI-assisted content workflow to automatic publishing.</p>
+<p class="case-result"><strong>Result:</strong> An illustrated public reader with recurring generation and automatic publishing for complete, accepted story/image pairs.</p>
 <p class="felt-invitation"><a href="https://felt-presence.snackdriven.com/">Step inside the shop</a></p>
 </div>
 </div>
@@ -32,7 +43,9 @@
 <figure><p class="figure-label">Illustrative reconstruction · No private story art</p><div class="reconstruction"><div><strong>Decision</strong>Let seasonal details reach the blank edges without crowding the letter.</div><div><strong>Iteration</strong>Reduce symmetry, soften the vines, and add warmer fall color.</div><div><strong>Check</strong>Review the unopened page at its intended size and remove scrolling that interrupted the opening view.</div></div><figcaption>This diagram summarizes a documented design cycle. It is not a screenshot of the reader or an example of private artwork.</figcaption></figure></section>
 <section id="publishing"><h2>Keeping the shop stocked</h2><p>I configured recurring AI-assisted story and illustration generation around the archive’s continuity and visual references. I connected that workflow to publication: once a complete story and accepted image are archived and pushed, Cloudflare rebuilds the Eleventy reader. Each new letter gets a place in the shop without a separate manual publishing step.</p><p>Generation and publishing have separate jobs. The build checks story/image pairs and approval metadata; incomplete pairs stay pending. Image checksums must match, conflicting records fail deployment, and the previous good version stays live. An archive retry reuses the accepted image instead of generating another one. Even a haunted shop benefits from sensible stock control.</p></section>
 <section id="validation"><h2>Validation and refinement</h2><p>I checked the whole experience: the unopened page, the moment of opening, and the letter itself. The vines needed enough presence to feel intentional while leaving the story in charge. That review caught the extra scroll and competing date and time labels.</p><p>The publication tests also cover a new approved story/image pair joining the archive automatically, without changing the curated publication list. That checks the handoff between archived content and a new public page.</p></section>
-<section id="evidence"><h2>Evidence and result</h2><p>The public reader presents illustrated letters from the fictional shop. It provides a direct way to see the reading experience described here: <a href="https://felt-presence.snackdriven.com/">visit Felt Presence</a>.</p><p>My documented decisions include the seasonal treatment, stamps, vine placement, reading flow, and the handoff from recurring generation to automatic publication. Completed, approved installments publish from the private archive; unfinished pairs wait.</p></section>
+<section id="evidence"><h2>Evidence and result</h2>
+<figure class="product-proof"><a href="https://felt-presence.snackdriven.com/"><img src="/assets/projects/felt-reader-closed.jpg" width="2560" height="1223" loading="lazy" alt="The public Felt Presence reader with a shop illustration, dated envelope, Open letter control, and archive navigation."></a><figcaption>The actual public reader before opening a letter, captured October 19, 2026. This is separate from the workshop illustration above.</figcaption></figure>
+<figure class="product-proof"><img src="/assets/projects/felt-reader-open.jpg" width="2545" height="1216" loading="lazy" alt="An opened Felt Presence letter with readable story text, a Close letter button, and story navigation."><figcaption>The same installment after opening: the story takes the main reading space, with a clear route back to the envelope.</figcaption></figure><p>The public reader presents illustrated letters from the fictional shop. It provides a direct way to see the reading experience described here: <a href="https://felt-presence.snackdriven.com/">visit Felt Presence</a>.</p><p>My documented decisions include the seasonal treatment, stamps, vine placement, reading flow, and the handoff from recurring generation to automatic publication. Completed, approved installments publish from the private archive; unfinished pairs wait.</p></section>
 <section id="limits"><h2>Limits and lessons</h2><p>The workshop above is an alternate-universe portfolio illustration, not a reader screenshot or a new story installment. The source archive and original art references remain private; the process diagram is a labeled reconstruction. I owned the creative direction, experience requirements, implementation guidance, and iterative review; the implementation was AI-assisted.</p><p>Atmosphere lives in small decisions. Vine placement, a repeated timestamp, or one awkward scroll can change the whole feeling. Getting those details right is part of making the story readable.</p></section>
 <footer class="case-footer"><a href="qa-workflow.html">Next: QA workflow &rarr;</a><a href="mailto:kayla@snackdriven.com">Contact Kayla</a></footer>
 </article></div></main>

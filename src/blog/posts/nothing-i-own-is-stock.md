@@ -1,6 +1,7 @@
 ---
 title: "Nothing I own is stock"
 date: 2026-03-13
+updated: 2026-10-19
 permalink: /nothing-i-own-is-stock.html
 tag: reflection
 read: 3
@@ -8,6 +9,7 @@ excerpt: "I have never left a device the way it shipped. Not one. On the compuls
 description: "I have never left a device the way it shipped. Not one. On the compulsion to personalize everything I own, and why stock never lasts."
 ogtitle: "Nothing I own is stock · snackdriven.com"
 ---
+<p class="post-update">Updated 2026-10-19: the examples here span several builds. This update adds links to the current public projects and reflects the site&rsquo;s clearer navigation.</p>
 <!-- factory reset: not found -->
 <p class="lead">I have never owned a piece of technology I left the way it came. I went looking for an exception while writing this. There isn&rsquo;t one.</p>
 
@@ -25,4 +27,6 @@ The phone in my pocket runs a launcher its maker never shipped, the watch shows 
 
 And don&rsquo;t get me started on game mods. That one needs its own post, and probably its own support group. I have opened a game to add a single texture pack and closed it four hours later with a load order two hundred deep, the thing slower to boot than it ran stock, which felt at the time like a fair trade.
 
-You&rsquo;re reading the largest mod I&rsquo;ve pulled yet. This site is hand-built, no template, and there&rsquo;s a resume hiding in the full stop of the domain at the bottom of the page because a plain link felt too obvious. I couldn&rsquo;t leave the blog stock either. Somewhere there is a version of me who buys a thing, uses it exactly as intended, and gets on with her day. I&rsquo;ve never met her. I assume she came that way from the factory.
+You&rsquo;re reading the largest mod I&rsquo;ve pulled yet. This site is custom-built, no template, and there&rsquo;s still a shortcut hiding in the full stop of the domain at the bottom. There are plain portfolio and resume links now too, for people with better things to do than inspect punctuation. I couldn&rsquo;t leave the blog stock either. Somewhere there is a version of me who buys a thing, uses it exactly as intended, and gets on with her day. I&rsquo;ve never met her. I assume she came that way from the factory.
+
+<p>Current public projects: <a href="https://github.com/snackdriven/better-buddy">the terminal pet</a> and <a href="https://snackdriven.github.io/al80-studio/">the keyboard controls</a>. Links added in the October 19 update.</p>

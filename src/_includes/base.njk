@@ -8,7 +8,12 @@
 <meta property="og:description" content="{{ description }}">
 <meta property="og:url" content="https://snackdriven.com{{ page.url }}">
 <meta property="og:type" content="{{ ogtype or 'website' }}">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://snackdriven.com{{ ogimage or '/assets/social/site.png' }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ ogimagealt or 'snackdriven.com: debugging, useful tools, and a little weirdness.' }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://snackdriven.com{{ ogimage or '/assets/social/site.png' }}">
 <link rel="canonical" href="https://snackdriven.com{{ page.url }}">
 <link rel="alternate" type="application/rss+xml" title="snackdriven.com — the log" href="/feed.xml">
 <meta name="theme-color" content="#2D2B3A">
@@ -29,8 +34,8 @@
   "headline": {{ title | jsonDump | safe }},
   "description": {{ description | jsonDump | safe }},
   "datePublished": "{{ date | ymd }}",
-  "dateModified": "{{ date | ymd }}",
-  "author": { "@type": "Person", "name": "Kayla Young", "url": "https://snackdriven.com/" },
+  "dateModified": "{{ (updated or date) | ymd }}",
+  "author": { "@type": "Person", "name": "Kayla Young", "alternateName": "Kayla Gilbert", "url": "https://snackdriven.com/" },
   "url": "https://snackdriven.com{{ page.url }}",
   "mainEntityOfPage": { "@type": "WebPage", "@id": "https://snackdriven.com{{ page.url }}" }
 }
