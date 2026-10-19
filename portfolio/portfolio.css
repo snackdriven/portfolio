@@ -714,6 +714,9 @@
 
 /* Selected work uses the site's existing project typography and section grid. */
 .projects-content { max-width: 1080px; width: 100%; }
+.projects-intro { max-width: 70ch; margin-bottom: 26px; font-size: 1.03rem; line-height: 1.7; }
+.supporting-work { max-width: 70ch; margin-top: 26px; color: var(--muted); font-size: .91rem; line-height: 1.6; }
+.supporting-work a { color: var(--green); text-decoration: underline; text-underline-offset: 3px; }
 .project-list { display: grid; gap: 20px; }
 .project {
   grid-template-columns: 2.3rem minmax(0, 1fr);
