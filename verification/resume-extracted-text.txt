@@ -11,8 +11,8 @@ Chorus Innovations Apr 2023 - Present | Remote
 Senior QA Engineer Sep 2026 - Present
 Directed a platform-wide, four-day AI-assisted staging investigation; reviewed evidence for 250
 documented findings and organized them into 23 recurring failure patterns to prioritize data risks.
-Work with product and engineering to clarify expected behavior, scope risk-based checks, and define
-what a fix needs to demonstrate.
+Own care-module test automation strategy across backend, API contract, and UI layers; work with
+product and engineering on risk-based checks and fix criteria.
 Senior QA Specialist Sep 2024 - Sep 2026
 Investigated failures in conditional forms, role-based workflows, and data persistence across save and
 refresh cycles.
