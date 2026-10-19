@@ -16,6 +16,9 @@ npm run serve          # local preview with --serve
   publishes to Pages on every push to `main`. There is no separate release
   step — merging/pushing to `main` *is* "push live."
 - `_site/` and `node_modules/` are gitignored; never commit them.
+- After building, local stylesheet links in generated and copied HTML receive a
+  content hash in `?v=`. `tools/version-stylesheets.cjs` handles this; edit source
+  CSS normally rather than manually adding version strings to templates.
 - After `npm install`, revert any incidental `package-lock.json` churn before
   committing content-only changes.
 - Always run the build once before pushing; confirm the changed post writes

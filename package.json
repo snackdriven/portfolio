@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "test": "jest --testPathIgnorePatterns _site && node --test verification/markdown-security.cjs",
+    "test": "jest --testPathIgnorePatterns _site && node --test verification/markdown-security.cjs verification/stylesheet-cache.cjs",
     "build": "eleventy",
     "serve": "eleventy --serve"
   },

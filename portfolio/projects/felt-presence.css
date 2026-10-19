@@ -90,6 +90,9 @@
   .felt-case .case-body { padding: 28px 22px; margin-inline: -8px; }
   .felt-case .case-body figure { padding: 18px 14px; }
 }
+@media (max-width: 380px) {
+  .felt-case .case-nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 20px; width: 100%; }
+}
 @media print {
   .felt-case { --bg: #fff; --paper: #fff; --ink: #1a1a1a; --fg: #1a1a1a; --muted: #1a1a1a; --green: #1a1a1a; --border: #777; --paper-link: #1a1a1a; }
   .felt-case body { background: #fff; color: #1a1a1a; }
