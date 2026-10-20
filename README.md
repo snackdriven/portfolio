@@ -15,3 +15,7 @@ This repo holds my portfolio and blog. The case studies cover the problem, the d
 - [kayla@snackdriven.com](mailto:kayla@snackdriven.com)
 - [linkedin.com/in/snackdriven](https://linkedin.com/in/snackdriven)
 - [github.com/snackdriven](https://github.com/snackdriven)
+
+## Commits and releases
+
+See [RELEASE.md](RELEASE.md) for Commitizen commands, SemVer and changelog maintenance.
