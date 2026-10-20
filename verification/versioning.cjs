@@ -3,10 +3,10 @@ const assert = require('node:assert/strict');
 const { checkRelease } = require('../tools/check-release.cjs');
 
 const lock = version => ({ version, packages: { '': { version } } });
-const notes = (version = '1.0.0', date = '2026-10-20') => `# Changelog\n\n## [Unreleased]\n\n## [${version}] - ${date}\n\n### Added\n\n- Site baseline.\n\n[${version}]: https://github.com/snackdriven/portfolio/tree/baseline\n`;
+const notes = (version = '1.0.0', date = '2026-10-20') => `# Changelog\n\nSee keepachangelog.com and semver.org.\n\n## [Unreleased]\n\n## [${version}] - ${date}\n\n### Added\n\n- Site baseline.\n\n[${version}]: https://github.com/snackdriven/portfolio/tree/baseline\n`;
 
 test('accepts synchronized stable and prerelease versions', () => {
-  for (const version of ['1.0.0', '1.1.0-rc.1']) {
+  for (const version of ['1.0.0', '1.1.0-rc.1', '1.1.0+build.1']) {
     assert.deepEqual(checkRelease({ version }, lock(version), notes(version)), []);
   }
 });
@@ -30,6 +30,18 @@ test('rejects missing release notes, invalid dates, duplicate or unordered relea
     [notes().replace('[1.0.0]: https://', '[missing]: https://'), /Missing changelog link/]
   ]) {
     assert.match(checkRelease({ version: '1.0.0' }, lock('1.0.0'), changelog).join(), expected);
+  }
+});
+
+test('preserves the untagged baseline but requires matching dated notes for tags', () => {
+  const baseline = '# Changelog\n\nkeepachangelog.com semver.org\n\n## [Unreleased]\n\n### Added\n\n- Tooling.\n';
+  assert.deepEqual(checkRelease({ version: '1.0.0' }, lock('1.0.0'), baseline), []);
+  assert.match(checkRelease({ version: '1.0.1' }, lock('1.0.1'), baseline).join(), /Newest changelog/);
+  assert.match(checkRelease({ version: '1.0.0' }, lock('1.0.0'), baseline, { GITHUB_REF_TYPE: 'tag', GITHUB_REF_NAME: 'v1.0.0' }).join(), /dated, curated/);
+  assert.match(checkRelease({ version: '1.0.0' }, lock('1.0.0'), notes(), { GITHUB_REF_TYPE: 'tag', GITHUB_REF_NAME: 'v1.0.1' }).join(), /Tag must match/);
+  assert.deepEqual(checkRelease({ version: '1.0.0' }, lock('1.0.0'), notes(), { GITHUB_REF_TYPE: 'tag', GITHUB_REF_NAME: 'v1.0.0' }), []);
+  for (const pending of ['### Other\n\n- Test.', '### Added\n', '### Added\n\n- First.\n\n### Added\n\n- Again.']) {
+    assert.ok(checkRelease({ version: '1.0.0' }, lock('1.0.0'), baseline.replace('### Added\n\n- Tooling.', pending)).length);
   }
 });
 

@@ -3,7 +3,7 @@
 ## Commits
 
 Use Node.js 22.12 or later and install the locked dependencies with `npm ci`.
-Stage the files for one change, then run `npm run commit` to use commitlint's
+Stage the files for one change, then run `npm run commit` to use czg's
 interactive prompts. No global install or Git hook is required. Use a short
 imperative summary and an optional scope:
 
@@ -36,8 +36,8 @@ entry when notable; they do not require a version bump for every commit.
 
 Maintain `CHANGELOG.md` by hand for readers, using only relevant Keep a Changelog
 groups: Added, Changed, Deprecated, Removed, Fixed, and Security. Do not paste the
-Git log or invent historical releases. The initial `1.0.0` entry records the
-existing site at adoption and points to its baseline commit.
+Git log or invent historical releases. The existing `1.0.0` package version is an untagged configuration baseline.
+Earlier history is not reconstructed or assigned release numbers.
 
 ## Prepare a release PR
 
@@ -53,7 +53,7 @@ lockfile together without making a commit or tag. Then:
 1. Move the relevant `[Unreleased]` entries into a new `## [X.Y.Z] - YYYY-MM-DD`
    section immediately below it. Keep `[Unreleased]` for the next changes.
 2. Add a version comparison link. For the first release, compare the baseline
-   commit `9655755` to the intended `vX.Y.Z` tag; later compare release tags.
+   commit `4d0d00d` to the intended `vX.Y.Z` tag; later compare release tags.
    Update the `[Unreleased]` link to compare that tag to `main`.
 3. Run `npm run release:check`, `npm test`, `npm run build`, and
    `npm run test:artifact`.
