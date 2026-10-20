@@ -31,6 +31,7 @@ test('configures the site, feed, filters, and visible collections', () => {
   expect(calls.plugins[0].options.collection).toEqual({ name: 'feedPosts', limit: 0 });
   expect(calls.filters.get('ymd')('2023-10-27T10:00:00Z')).toBe('2023-10-27');
   expect(calls.filters.get('jsonDump')('</script>')).toBe('"\\u003c/script\\u003e"');
+  expect(calls.filters.get('jsonDump')(undefined)).toBe('undefined');
   expect(calls.collections.has('visiblePost')).toBe(true);
   expect(calls.collections.has('feedPosts')).toBe(true);
   expect(calls.events.map((event) => event.name)).toContain('eleventy.before');
