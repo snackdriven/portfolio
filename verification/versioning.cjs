@@ -33,14 +33,16 @@ test('rejects missing release notes, invalid dates, duplicate or unordered relea
   }
 });
 
-test('Commitizen offers content commits and produces a conventional message', async () => {
-  const adapter = require('cz-conventional-changelog');
-  let message;
-  await adapter.prompter({ prompt: async questions => {
-    assert.ok(questions.find(q => q.name === 'type').choices.some(choice => choice.value === 'post'));
-    return { type: 'chore', scope: 'release', subject: 'configure versioning', body: '', isBreaking: false, isIssueAffected: false };
-  } }, output => { message = output; });
-  // The adapter invokes its callback asynchronously after the prompt resolves.
-  await new Promise(resolve => setImmediate(resolve));
-  assert.equal(message, 'chore(release): configure versioning');
+test('commitlint accepts content and conventional commits and rejects unstructured messages', () => {
+  const path = require('node:path');
+  const { spawnSync } = require('node:child_process');
+  const cli = path.join(path.dirname(require.resolve('@commitlint/cli/package.json')), 'cli.js');
+  for (const message of ['post: tighten keyboard blurb', 'chore(release): configure versioning', 'fix: restore focus\n\nBREAKING CHANGE: use the new URL']) {
+    const result = spawnSync(process.execPath, [cli], { input: message, encoding: 'utf8' });
+    assert.equal(result.status, 0, result.stdout + result.stderr);
+  }
+  for (const message of ['update stuff', 'unknown: update stuff']) {
+    const result = spawnSync(process.execPath, [cli], { input: message, encoding: 'utf8' });
+    assert.equal(result.status, 1, result.stdout + result.stderr);
+  }
 });

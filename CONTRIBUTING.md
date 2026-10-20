@@ -2,9 +2,10 @@
 
 ## Commits
 
-Install the locked dependencies with `npm ci`. Stage the files for one change,
-then run `npm run commit` to use Commitizen's prompts. No global install or Git
-hook is required. Use a short imperative summary and an optional scope:
+Use Node.js 22.12 or later and install the locked dependencies with `npm ci`.
+Stage the files for one change, then run `npm run commit` to use commitlint's
+interactive prompts. No global install or Git hook is required. Use a short
+imperative summary and an optional scope:
 
 ```text
 feat(portfolio): add project filters
@@ -14,9 +15,10 @@ chore(release): prepare 1.0.1
 ```
 
 The prompt also offers `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`,
-and `revert`. Describe incompatible changes in the prompt's `BREAKING CHANGE`
-field. Use the same convention for PR titles when squash merging. Existing
-commit history is retained; Commitizen guides new commits without enforcing a hook.
+and `revert`. Describe incompatible changes in a
+`BREAKING CHANGE: ...` footer. Use the same convention for PR titles when squash merging. Existing
+commit history is retained; czg guides new commits; commitlint validates messages without enforcing a hook.
+To validate a message without creating a commit, pipe it to `npm run commit:check`.
 
 ## Versions and changelog
 

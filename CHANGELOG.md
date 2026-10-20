@@ -8,7 +8,7 @@ Notable changes to the portfolio and blog are recorded here, following
 
 ### Added
 
-- Commitizen prompts for conventional commits, including the existing `post:` type.
+- Interactive czg prompts and commitlint message validation, including the existing `post:` type.
 - Version and changelog consistency checks in CI, with a documented release process.
 
 ## [1.0.0] - 2026-10-20
