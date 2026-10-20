@@ -10,6 +10,12 @@ This repo holds my portfolio and blog. The case studies cover the problem, the d
 
 **[Portfolio](https://snackdriven.com/portfolio/)** · [Blog](https://snackdriven.com/)
 
+## Development
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for Commitizen (`npm run commit`),
+Semantic Versioning, validation, and release steps. Notable changes are in
+[CHANGELOG.md](CHANGELOG.md).
+
 ## Contact
 
 - [kayla@snackdriven.com](mailto:kayla@snackdriven.com)

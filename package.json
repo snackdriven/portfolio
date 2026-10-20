@@ -3,19 +3,79 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "test": "jest --testPathIgnorePatterns _site && node --test verification/markdown-security.cjs verification/stylesheet-cache.cjs verification/site-reliability.cjs verification/release-policy.cjs",
+    "test": "jest --testPathIgnorePatterns _site && node --test verification/markdown-security.cjs verification/stylesheet-cache.cjs verification/site-reliability.cjs verification/release-policy.cjs verification/versioning.cjs",
     "build": "eleventy",
     "serve": "eleventy --serve",
-    "test:artifact": "node --test verification/published-inventory.cjs && node tools/site-smoke.cjs --local"
+    "test:artifact": "node --test verification/published-inventory.cjs && node tools/site-smoke.cjs --local",
+    "commit": "cz",
+    "release:check": "node tools/check-release.cjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "commitizen": "^4.3.2",
+    "cz-conventional-changelog": "^3.3.0",
     "jest": "^30.5.2",
     "jest-environment-jsdom": "^30.5.2",
-    "markdown-it": "^14.1.0"
+    "markdown-it": "^14.1.0",
+    "semver": "^7.8.5"
   },
   "dependencies": {
     "@11ty/eleventy-plugin-rss": "^3.0.0",
     "sanitize-html": "^2.18.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog",
+      "types": {
+        "feat": {
+          "description": "A new feature",
+          "title": "Features"
+        },
+        "fix": {
+          "description": "A bug fix",
+          "title": "Bug fixes"
+        },
+        "post": {
+          "description": "Blog or portfolio content",
+          "title": "Content"
+        },
+        "docs": {
+          "description": "Documentation only",
+          "title": "Documentation"
+        },
+        "style": {
+          "description": "Formatting without behavior changes",
+          "title": "Styles"
+        },
+        "refactor": {
+          "description": "Restructure without adding a feature or fixing a bug",
+          "title": "Refactoring"
+        },
+        "perf": {
+          "description": "A performance improvement",
+          "title": "Performance"
+        },
+        "test": {
+          "description": "Add or correct tests",
+          "title": "Tests"
+        },
+        "build": {
+          "description": "Build tooling or dependencies",
+          "title": "Build"
+        },
+        "ci": {
+          "description": "Continuous integration",
+          "title": "CI"
+        },
+        "chore": {
+          "description": "Repository maintenance",
+          "title": "Chores"
+        },
+        "revert": {
+          "description": "Revert a previous commit",
+          "title": "Reverts"
+        }
+      }
+    }
   }
 }

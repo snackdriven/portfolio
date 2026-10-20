@@ -14,7 +14,8 @@ npm run serve          # local preview with --serve
 
 - **Deploy is push-to-`main`.** `.github/workflows/deploy.yml` builds and
   publishes to Pages on every push to `main`. There is no separate release
-  step — merging/pushing to `main` *is* "push live."
+  deployment gate - merging/pushing to `main` *is* "push live." Versioned release
+  snapshots are documented separately in `CONTRIBUTING.md` and `CHANGELOG.md`.
 - `_site/` and `node_modules/` are gitignored; never commit them.
 - After building, local stylesheet links in generated and copied HTML receive a
   content hash in `?v=`. `tools/version-stylesheets.cjs` handles this; edit source
@@ -204,6 +205,11 @@ Before flipping a post live or pushing a copy edit:
 
 ## Commit conventions
 
+- Use `npm run commit` for Commitizen prompts. Use conventional commit types and
+  PR titles; `post` is included for blog and portfolio content.
 - Content commits are prefixed `post:` with a short imperative summary
   (e.g. `post: tighten keyboard blurb`).
 - Keep commits scoped to the files you actually changed.
+- Add notable changes under `[Unreleased]` in `CHANGELOG.md`. Follow the SemVer
+  release process in `CONTRIBUTING.md`; run `npm run release:check` before pushing.
+- Never create release tags or publish releases unless that action is authorized.
