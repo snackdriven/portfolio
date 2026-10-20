@@ -17,16 +17,29 @@ window.initNeonFlicker = function(rareSelector, mediumSelector, soloSelector) {
   }
 
   function next() {
+    const THRESHOLD_RARE = 0.2;
+    const THRESHOLD_MEDIUM = 0.55;
+
+    const STAGGER_NONE = 0;
+    const STAGGER_MEDIUM = 120;
+
+    const DELAY_RARE_MIN = 3000;
+    const DELAY_RARE_MAX = 5000;
+    const DELAY_MEDIUM_MIN = 2500;
+    const DELAY_MEDIUM_MAX = 4500;
+    const DELAY_SOLO_MIN = 1500;
+    const DELAY_SOLO_MAX = 3500;
+
     var roll = Math.random();
-    if (roll < 0.2) {
-      flicker(rare, 0);
-      setTimeout(next, rnd(3000, 5000));
-    } else if (roll < 0.55) {
-      flicker(medium, 120);
-      setTimeout(next, rnd(2500, 4500));
+    if (roll < THRESHOLD_RARE) {
+      flicker(rare, STAGGER_NONE);
+      setTimeout(next, rnd(DELAY_RARE_MIN, DELAY_RARE_MAX));
+    } else if (roll < THRESHOLD_MEDIUM) {
+      flicker(medium, STAGGER_MEDIUM);
+      setTimeout(next, rnd(DELAY_MEDIUM_MIN, DELAY_MEDIUM_MAX));
     } else {
-      flicker([solo[rnd(0, solo.length - 1)]], 0);
-      setTimeout(next, rnd(1500, 3500));
+      flicker([solo[rnd(0, solo.length - 1)]], STAGGER_NONE);
+      setTimeout(next, rnd(DELAY_SOLO_MIN, DELAY_SOLO_MAX));
     }
   }
 
