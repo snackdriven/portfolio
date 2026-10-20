@@ -11,7 +11,7 @@ test('PRs validate the tested artifact without deployment privileges; main deplo
   const validate = workflow.jobs.validate;
   assert.equal(validate.permissions, undefined);
   const commands = validate.steps.filter(step => step.run).map(step => step.run);
-  for (const [before, after] of [['npm ci', 'npm test'], ['npm test', 'npm run build'], ['npm run build', 'npm run test:artifact']]) {
+  for (const [before, after] of [['npm ci', 'npm run release:check'], ['npm run release:check', 'npm test'], ['npm test', 'npm run build'], ['npm run build', 'npm run test:artifact']]) {
     assert.ok(commands.indexOf(before) >= 0 && commands.indexOf(after) > commands.indexOf(before), `${before} gates ${after}`);
   }
   assert.ok(validate.steps.every(step => !step['continue-on-error']), 'failed validation cannot be ignored');

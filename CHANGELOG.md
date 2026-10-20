@@ -9,7 +9,7 @@ and numbered releases follow [Semantic Versioning](https://semver.org/spec/v2.0.
 
 ### Added
 
-- Commitizen commit prompts, SemVer release preparation and CI checks for commit titles and curated release notes.
+- Interactive czg commit prompts, commitlint message validation, SemVer release preparation and CI checks for commit titles and curated release notes.
 
 This log starts with adoption of these conventions. Earlier history has not
 been reconstructed or assigned release numbers.

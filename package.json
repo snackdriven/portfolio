@@ -3,19 +3,29 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "test": "jest --testPathIgnorePatterns _site && node --test verification/markdown-security.cjs verification/stylesheet-cache.cjs verification/site-reliability.cjs verification/release-policy.cjs",
+    "test": "jest --testPathIgnorePatterns _site && node --test verification/markdown-security.cjs verification/stylesheet-cache.cjs verification/site-reliability.cjs verification/release-policy.cjs verification/versioning.cjs",
     "build": "eleventy",
     "serve": "eleventy --serve",
-    "test:artifact": "node --test verification/published-inventory.cjs && node tools/site-smoke.cjs --local"
+    "test:artifact": "node --test verification/published-inventory.cjs && node tools/site-smoke.cjs --local",
+    "commit": "czg --config=.czrc.cjs",
+    "release:check": "node tools/check-release.cjs",
+    "commit:check": "commitlint"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.4",
+    "czg": "^1.14.0",
     "jest": "^30.5.2",
     "jest-environment-jsdom": "^30.5.2",
-    "markdown-it": "^14.1.0"
+    "markdown-it": "^14.1.0",
+    "semver": "^7.8.5"
   },
   "dependencies": {
     "@11ty/eleventy-plugin-rss": "^3.0.0",
     "sanitize-html": "^2.18.1"
+  },
+  "engines": {
+    "node": ">=22.12.0"
   }
 }
