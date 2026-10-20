@@ -2,13 +2,13 @@
 
 **I find bugs for money and introduce them for fun.**
 
-Senior QA Engineer Â· AI Workflows & Internal Tools. Bentonville, AR (remote).
+Senior QA Engineer · AI Workflows & Internal Tools. Bentonville, AR (remote).
 
 The work I keep coming back to: finding out why something broke, making a tool for the part that got annoying, and occasionally giving a haunted craft shop a publishing schedule.
 
 This repo holds my portfolio and blog. The case studies cover the problem, the decisions, and the evidence behind the result.
 
-**[Portfolio](https://snackdriven.com/portfolio/)** Â· [Blog](https://snackdriven.com/)
+**[Portfolio](https://snackdriven.com/portfolio/)** · [Blog](https://snackdriven.com/)
 
 ## Development
 
