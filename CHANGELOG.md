@@ -7,6 +7,10 @@ and numbered releases follow [Semantic Versioning](https://semver.org/spec/v2.0.
 
 ## [Unreleased]
 
+### Changed
+
+- Jules PR titles are corrected before commitlint runs, preserving the custom `post` type.
+
 ### Added
 
 - Interactive czg commit prompts, commitlint message validation, SemVer release preparation and CI checks for commit titles and curated release notes.
