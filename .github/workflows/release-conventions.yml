@@ -75,7 +75,7 @@ jobs:
           cache: npm
       - run: npm ci
       - name: Test Jules title normalization
-        run: node --test .github/tests/jules-pr-titles.test.cjs
+        run: node --test .github/tests/jules-pr-titles.check.cjs
       - name: Check squash commit title
         if: github.event_name == 'pull_request'
         env:
