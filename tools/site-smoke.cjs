@@ -22,7 +22,7 @@ async function read(url, type, status = 200) {
 }
 async function smoke() {
   const styles = new Set();
-  for (const url of critical) {
+  await Promise.all(critical.map(async (url) => {
     const html = (await read(url, 'text/html')).toString();
     assert.match(html, /<h1\b/i, `${url} heading`);
     assert.ok(html.includes(`href="${production}${url}"`), `${url} canonical`);
@@ -32,9 +32,9 @@ async function smoke() {
       const css = new URL(href, new URL(url, production));
       if (css.origin === production) styles.add(css.pathname + css.search);
     }
-  }
+  }));
   assert.ok(styles.size, 'critical pages have local styles');
-  for (const href of styles) {
+  await Promise.all([...styles].map(async (href) => {
     const url = new URL(href, production);
     const bytes = await fs.readFile(fileFor(url.pathname));
     const hash = createHash('sha256').update(bytes).digest('hex').slice(0, 12);
@@ -45,7 +45,7 @@ async function smoke() {
       assert.ok(response.headers.get('content-type')?.includes('text/css'), `${href} content type`);
       assert.deepEqual(Buffer.from(await response.arrayBuffer()), bytes, `${href} served stylesheet`);
     }
-  }
+  }));
   const pdf = await read('/portfolio/resume/kayla-young-resume.pdf', 'application/pdf');
   assert.equal(pdf.subarray(0, 5).toString(), '%PDF-');
   await read('/sitemap.xml', 'xml');
