@@ -1,8 +1,8 @@
 window.initNeonFlicker = function(rareSelector, mediumSelector, soloSelector) {
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var rare   = Array.from(document.querySelectorAll(rareSelector));
-  var medium = Array.from(document.querySelectorAll(mediumSelector));
-  var solo   = Array.from(document.querySelectorAll(soloSelector));
+  const rare   = Array.from(document.querySelectorAll(rareSelector));
+  const medium = Array.from(document.querySelectorAll(mediumSelector));
+  const solo   = Array.from(document.querySelectorAll(soloSelector));
   if (!solo.length) return;
 
   function rnd(a, b) { return Math.floor(Math.random() * (b - a + 1) + a); }
@@ -30,7 +30,7 @@ window.initNeonFlicker = function(rareSelector, mediumSelector, soloSelector) {
     const DELAY_SOLO_MIN = 1500;
     const DELAY_SOLO_MAX = 3500;
 
-    var roll = Math.random();
+    const roll = Math.random();
     if (roll < THRESHOLD_RARE) {
       flicker(rare, STAGGER_NONE);
       setTimeout(next, rnd(DELAY_RARE_MIN, DELAY_RARE_MAX));

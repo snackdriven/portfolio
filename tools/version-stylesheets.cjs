@@ -6,6 +6,8 @@ const { createHash } = require('node:crypto');
 // stylesheet gets a new URL, so a deployment cannot reuse an older CSS response.
 async function versionStylesheets(outputDirectory) {
   const root = path.resolve(outputDirectory);
+  const hashCache = new Map();
+
   async function visit(directory) {
     for (const entry of await fs.readdir(directory, { withFileTypes: true })) {
       const file = path.join(directory, entry.name);
@@ -19,8 +21,14 @@ async function versionStylesheets(outputDirectory) {
         const url = new URL(href[2], `https://site.test/${path.relative(root, file).split(path.sep).join('/')}`);
         const cssFile = path.resolve(root, '.' + decodeURIComponent(url.pathname));
         if (!cssFile.startsWith(root + path.sep) || !cssFile.endsWith('.css')) continue;
-        const css = await fs.readFile(cssFile);
-        const hash = createHash('sha256').update(css).digest('hex').slice(0, 12);
+
+        let hash = hashCache.get(cssFile);
+        if (!hash) {
+          const css = await fs.readFile(cssFile);
+          hash = createHash('sha256').update(css).digest('hex').slice(0, 12);
+          hashCache.set(cssFile, hash);
+        }
+
         url.searchParams.set('v', hash);
         const nextHref = href[2].split(/[?#]/)[0] + url.search + url.hash;
         result = result.replace(match[0], match[0].replace(href[0], `href=${href[1]}${nextHref}${href[1]}`));

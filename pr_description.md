@@ -1,13 +1,6 @@
-## ⚡ Performance Improvement: Caching Fonts in Social Preview Builder
+🧹 [Code Health] Use const instead of var in neon-flicker.js
 
-💡 **What:**
-Introduced a dictionary-based cache for font loading in `tools/build_social_previews.py`. The `font()` helper now caches instantiated `ImageFont.truetype` objects using a `(name, size)` tuple as the key, avoiding redundant disk I/O parsing in the main render loop.
-
-🎯 **Why:**
-The original implementation loaded font files from disk multiple times per card in the `CARDS` loop, causing unnecessary CPU and file I/O overhead. Since the fonts are static, we only need to parse them once.
-
-📊 **Measured Improvement:**
-Measured over a loop of 50 total preview generation iterations:
-- **Baseline:** ~28.99s
-- **Modified:** ~26.20s
-- **Improvement:** ~9.61% performance boost.
+🎯 **What:** Replaced `var` declarations with `const` for variables `rare`, `medium`, `solo`, and `roll` in `assets/neon-flicker.js`.
+💡 **Why:** To improve code health and maintainability by preventing unintended reassignments and scoping issues associated with `var`.
+✅ **Verification:** Verified by running `npm test` successfully. Visually verified by taking a screenshot using a Playwright script targeting the local development server to ensure no visual regressions in rendering.
+✨ **Result:** Improved readability and robustness of `assets/neon-flicker.js` without altering its behavior.

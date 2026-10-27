@@ -7,9 +7,9 @@
    to <html> on scroll and removed after a short idle, and site.css only
    paints the thumb green while that class is present. */
 (function () {
-  var root = document.documentElement;
-  var t;
-  var isScrolling = false;
+  const root = document.documentElement;
+  let t;
+  let isScrolling = false;
   window.addEventListener('scroll', function () {
     if (!isScrolling) {
       window.requestAnimationFrame(function() {
