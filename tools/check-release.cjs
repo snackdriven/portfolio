@@ -7,7 +7,8 @@ function canonicalVersion(version) {
   return parsed && `${parsed.version}${parsed.build.length ? `+${parsed.build.join('.')}` : ''}` === version;
 }
 
-function checkRelease(pkg, lock, changelog, env = {}) {
+
+function validateVersions(pkg, lock) {
   const errors = [];
   const version = pkg.version;
   if (!canonicalVersion(version)) {
@@ -16,6 +17,12 @@ function checkRelease(pkg, lock, changelog, env = {}) {
   if (lock.version !== version || lock.packages?.['']?.version !== version) {
     errors.push('package.json and both package-lock.json versions must match.');
   }
+  return errors;
+}
+
+
+function validateChangelogBasics(changelog) {
+  const errors = [];
   const headings = [...changelog.matchAll(/^## (.+)$/gm)].map(match => match[1].trim());
   if (headings.shift() !== '[Unreleased]') errors.push('First changelog section must be ## [Unreleased].');
   if (!changelog.includes('keepachangelog.com') || !changelog.includes('semver.org')) {
@@ -30,6 +37,12 @@ function checkRelease(pkg, lock, changelog, env = {}) {
   if (pending.split(/^### .+$/m).slice(1).some(section => !/^- \S/m.test(section))) {
     errors.push('Unreleased categories must not be empty.');
   }
+  return { errors, headings };
+}
+
+
+function validateReleases(headings, changelog, version) {
+  const errors = [];
   const versions = [];
   for (const heading of headings) {
     const match = /^\[([^\]]+)\] - (\d{4}-\d{2}-\d{2})$/.exec(heading);
@@ -54,11 +67,27 @@ function checkRelease(pkg, lock, changelog, env = {}) {
   if (versions[0] !== version && !(versions.length === 0 && version === '1.0.0')) {
     errors.push('Newest changelog release must match package.json version.');
   }
+  return { errors, versions };
+}
+
+
+function validateTags(env, version, versions) {
+  const errors = [];
   if (env.GITHUB_REF_TYPE === 'tag') {
     if (env.GITHUB_REF_NAME !== `v${version}`) errors.push('Tag must match package.json version.');
     if (!versions.includes(version)) errors.push('Tagged releases need dated, curated release notes.');
   }
   return errors;
+}
+
+function checkRelease(pkg, lock, changelog, env = {}) {
+  const version = pkg.version;
+  const versionErrors = validateVersions(pkg, lock);
+  const { errors: changelogErrors, headings } = validateChangelogBasics(changelog);
+  const { errors: releaseErrors, versions } = validateReleases(headings, changelog, version);
+  const tagErrors = validateTags(env, version, versions);
+
+  return [...versionErrors, ...changelogErrors, ...releaseErrors, ...tagErrors];
 }
 
 if (require.main === module) {
