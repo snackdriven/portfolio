@@ -3,10 +3,13 @@ const fs = require('node:fs');
 const path = require('node:path');
 // Disabling activation, hiding the fallback, or breaking roving keyboard focus
 // must make these tests fail. Use the actual page markup and production script.
-const html = () => fs.readFileSync(path.join(__dirname, '../portfolio/projects/qa-workflow.html'), 'utf8');
+const htmlContent = fs.readFileSync(path.join(__dirname, '../portfolio/projects/qa-workflow.html'), 'utf8');
+const scriptFile = path.join(__dirname, '../portfolio/projects/qa-workflow.js');
+const scriptContent = fs.existsSync(scriptFile) ? fs.readFileSync(scriptFile, 'utf8') : '';
+
+const html = () => htmlContent;
 const enhance = () => {
-  const file = path.join(__dirname, '../portfolio/projects/qa-workflow.js');
-  if (fs.existsSync(file)) window.eval(fs.readFileSync(file, 'utf8'));
+  if (scriptContent) window.eval(scriptContent);
 };
 beforeEach(() => {
   document.documentElement.innerHTML = html().replace(/<!DOCTYPE html>/i, '');
