@@ -4,7 +4,7 @@
     if (event.key !== '?' || !event.altKey || event.ctrlKey || event.metaKey ||
         event.repeat || event.isComposing || event.defaultPrevented) return;
 
-    var target = event.target;
+    const target = event.target;
     if (target instanceof Element &&
         (target.closest('input, textarea, select, [contenteditable]:not([contenteditable="false"])') || target.isContentEditable)) return;
 
