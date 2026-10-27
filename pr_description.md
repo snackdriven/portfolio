@@ -1,9 +1,6 @@
-💡 **What:** Extracted the configuration object for `sanitizeHtml` into a static constant `sanitizeOptions` located outside the `md.render` function in `eleventy.config.js`.
+🧹 [Code Health] Use const instead of var in neon-flicker.js
 
-🎯 **Why:** Previously, the `sanitizeHtml` configuration object was being re-created dynamically inside the `md.render` callback on every single render execution. By pulling the configuration out into a static object, we eliminate the unnecessary object instantiation and object spreading/cloning overhead, resulting in improved CPU performance and lower memory usage overhead during site build.
-
-📊 **Measured Improvement:**
-Using a custom benchmark (50k iterations of `md.render` on a simple markdown string):
-- **Baseline (inline config):** ~5.037 seconds
-- **Optimized (extracted config):** ~4.566 seconds
-- **Improvement:** Reduced processing time by about 9%, establishing a clear and reproducible performance benefit.
+🎯 **What:** Replaced `var` declarations with `const` for variables `rare`, `medium`, `solo`, and `roll` in `assets/neon-flicker.js`.
+💡 **Why:** To improve code health and maintainability by preventing unintended reassignments and scoping issues associated with `var`.
+✅ **Verification:** Verified by running `npm test` successfully. Visually verified by taking a screenshot using a Playwright script targeting the local development server to ensure no visual regressions in rendering.
+✨ **Result:** Improved readability and robustness of `assets/neon-flicker.js` without altering its behavior.
