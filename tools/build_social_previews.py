@@ -17,8 +17,13 @@ CARDS = {
     'platform-investigation': ('250 findings.\n23 recurring patterns.', 'a four-day staging investigation, with its coverage limits attached.'),
 }
 
+_font_cache = {}
+
 def font(name, size):
-    return ImageFont.truetype(str(FONTS / name), size)
+    key = (name, size)
+    if key not in _font_cache:
+        _font_cache[key] = ImageFont.truetype(str(FONTS / name), size)
+    return _font_cache[key]
 
 def render():
     OUT.mkdir(parents=True, exist_ok=True)
