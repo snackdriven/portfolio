@@ -12,7 +12,7 @@ ogtitle: "dictated, not read · snackdriven.com"
 
 Meanwhile, sitting in another repository since April, I had a thing called `meat-suit`.
 
-`meat-suit` started from a premise I still agree with: every app that wants to know about your life makes you report to it, and asking *&ldquo;how are you feeling on a scale of 1 to 10?&rdquo;* is what ruins the answer. My April solution was a local FastAPI chat tab with four selectable personas (`the CEO`, `the Feral BFF`, `the Almanac`, and `the Innkeeper`). The active persona was a goldfish with opinions that could only see the last twenty messages, while behind a one-way wall `Scribe` pulled JSON out of the chat exhaust and `Weaver` showed up at 23:59 to write the daily entry.
+`meat-suit` started from a premise I still agree with: every app that wants to know about your life makes you report to it, and asking *&ldquo;how are you feeling on a scale of 1 to 10?&rdquo;* is what ruins the answer. My April solution was a local FastAPI chat tab with four selectable personas (`the CEO`, `the Feral BFF`, `the Almanac`, and `the Innkeeper`). The active persona was a goldfish with opinions that could only see the last twenty messages, while behind a one-way wall `Scribe` pulled JSON out of the chat exhaust and `Weaver` showed up at 23:59 to write the daily entry. (Yes, TL;DR: too much, too weird, and not remotely thought through beforehand.)
 
 It took the 1-to-10 question out of the room, but it replaced it with a room I had to remember to walk into. I already spend all day talking to assistants in five other windows while doing real work. Opening a sixth tab just to banter with an innkeeper so a background script can take notes is still homework, just with better lighting.
 
