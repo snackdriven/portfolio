@@ -13,6 +13,7 @@ and numbered releases follow [Semantic Versioning](https://semver.org/spec/v2.0.
 
 ### Added
 
+- Blog post on pattern recognition across eighty-eight repositories and keeping fifteen small planners separate.
 - Public information, privacy, and terms pages for the personal-use Kit Google connector, plus Google site ownership verification.
 - Interactive czg commit prompts, commitlint message validation, SemVer release preparation and CI checks for commit titles and curated release notes.
 
