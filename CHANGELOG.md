@@ -13,6 +13,7 @@ and numbered releases follow [Semantic Versioning](https://semver.org/spec/v2.0.
 
 ### Added
 
+- Blog post on wiring twenty-two years of scattered journals into `friends-locked` as a single read-only archive surface.
 - Blog post following up on `dear diary, allegedly` with the `daycatcher` revamp and grounded narrative writer.
 - Blog post on pattern recognition across eighty-eight repositories and keeping fifteen small planners separate.
 - Public information, privacy, and terms pages for the personal-use Kit Google connector, plus Google site ownership verification.
