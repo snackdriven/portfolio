@@ -4,8 +4,8 @@ date: 2026-10-28
 permalink: /friends-locked-even-from-me.html
 tag: building
 read: 2
-excerpt: "Hours after swearing off grand unified apps, I wired twenty-two years of scattered journals into one place. Hear me out: I didn't build an aggregator of everything. I just fed one empty app the content that belonged to it."
-description: "Hours after swearing off grand unified apps, I wired twenty-two years of scattered journals into one place. Hear me out: I didn't build an aggregator of everything. I just fed one empty app the content that belonged to it."
+excerpt: "Hours after swearing off grand unified apps, I wired twenty-two years of old journals into the one empty app I built for them last fall."
+description: "Hours after swearing off grand unified apps, I wired twenty-two years of old journals into the one empty app I built for them last fall."
 ogtitle: "Friends-locked (even from me) · snackdriven.com"
 ---
 <p class="lead">Earlier today I published a whole post about why I refuse to assimilate my <a href="/dont-talk-to-me-or-my-fifteen-planners-ever-again.html">fifteen planners</a> into one big app. Roughly four hours later, I finished merging twenty-two years of journals into a single surface. But hear me out: most of it was already written, and I&rsquo;m only wiring content in, not building an aggregator of all things.</p>
