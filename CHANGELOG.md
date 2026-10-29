@@ -13,6 +13,7 @@ and numbered releases follow [Semantic Versioning](https://semver.org/spec/v2.0.
 
 ### Added
 
+- Blog post on salvaging the 928-ticket `ATLAS` QA profile, retiring gamified testing coaches, and batch-distilling the 3,408-pin memory vault.
 - Blog post on wiring twenty-two years of scattered journals into `friends-locked` as a single read-only archive surface.
 - Blog post following up on `dear diary, allegedly` with the `daycatcher` revamp and grounded narrative writer.
 - Blog post on pattern recognition across eighty-eight repositories and keeping fifteen small planners separate.
