@@ -24,8 +24,20 @@ HTML's English language, headings, lists, and links become PDF language metadata
 structure tags, and heading bookmarks. Use a Python Playwright version that
 supports `page.pdf(tagged=True, outline=True)`.
 
+Chromium emits `Strong` tags in this pre-PDF-2.0 export. The renderer adds a
+`Strong` to `Span` role mapping, following the
+[PDF Association's compatibility guidance](https://pdfa.org/download-area/cheat-sheets/StandardStructureElements.pdf).
+This preserves the HTML emphasis and PDF appearance while letting older tagged
+readers include the project names and skills labels. The pypdf document clone
+preserves the catalog, structure tree, metadata, bookmarks, and annotations.
+
 Before replacing the primary PDF, the renderer checks page count, font subtype,
 key extracted text, English language metadata, a real structure tree with heading,
-list and link roles, and bookmarks. Review the image as well; these checks do not
+list and link roles, bookmarks, and all four contact/portfolio link annotations.
+It also follows marked-content references in the structure tree and verifies that
+all three project names and three skills labels remain in tagged reading content.
+For an independent consumer check, run `pdfinfo -struct-text portfolio/resume/kayla-young-resume.pdf`
+when Poppler is available. Confirm the six labels appear without structure errors.
+Review the image as well; these checks do not
 establish PDF/UA compliance, screen-reader usability, or compatibility with every
 applicant tracking system.

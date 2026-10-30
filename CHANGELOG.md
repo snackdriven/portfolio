@@ -9,7 +9,14 @@ and numbered releases follow [Semantic Versioning](https://semver.org/spec/v2.0.
 
 ### Changed
 
+- Put selected work ahead of the full introduction and give the professional platform investigation a project entry.
+- Use a consistent Personal QA Workflow project name and remove repeated evidence counts.
 - Jules PR titles are corrected before commitlint runs, preserving the custom `post` type.
+
+### Fixed
+
+- Include all four case studies in the next-project journey and restore the shared profile/blog routes on the Felt Presence case page.
+- Map PDF 2.0 Strong tags to legacy Span roles in the PDF 1.4 resume so project and skills labels remain available to tagged-text readers.
 
 ### Added
 
