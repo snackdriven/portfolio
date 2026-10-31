@@ -82,3 +82,19 @@ figcaption { margin-top: 16px; color: var(--muted); font-size: .84rem; }
 .evidence-table caption { text-align: left; font-weight: 600; padding-bottom: 16px; }
 .evidence-table th, .evidence-table td { padding: 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
 .evidence-table th { color: var(--fg); }
+
+/* On narrow screens each evidence record reads as a label followed by its text.
+   Explicit roles in the HTML preserve table relationships when display changes. */
+@media screen and (max-width: 520px) {
+  .evidence-table table, .evidence-table tbody, .evidence-table tr { display: block; width: 100%; }
+  .evidence-table caption { display: block; }
+  .evidence-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .evidence-table tbody tr { padding: 16px 0; border-bottom: 1px solid var(--border); }
+  .evidence-table th[scope="row"], .evidence-table td { display: block; width: auto !important; padding: 0 !important; border: 0; }
+  .evidence-table th[scope="row"] { margin-bottom: 8px; overflow-wrap: normal; }
+  .evidence-table td { font-size: .9rem; line-height: 1.7; }
+  .felt-case .evidence-table tbody tr { border-color: #bfad85; }
+}
+@media print {
+  .portfolio-case { --bg: #fff; --bg-sidebar: #fff; --fg: #1a1a1a; --muted: #1a1a1a; --green: #1a1a1a; --cyan: #1a1a1a; --magenta: #1a1a1a; --border: #777; }
+}
