@@ -9,12 +9,15 @@ and numbered releases follow [Semantic Versioning](https://semver.org/spec/v2.0.
 
 ### Changed
 
+- Refine the portfolio into a visual project grid with existing product previews, shorter summaries, and a dedicated platform-investigation readout.
 - Put selected work ahead of the full introduction and give the professional platform investigation a project entry.
 - Use a consistent Personal QA Workflow project name and remove repeated evidence counts.
 - Jules PR titles are corrected before commitlint runs, preserving the custom `post` type.
 
 ### Fixed
 
+- Stack case-study evidence records on narrow screens so their labels stay readable, and keep the platform case legible in print.
+- Give all portfolio pages the existing terminal favicon.
 - Include all four case studies in the next-project journey and restore the shared profile/blog routes on the Felt Presence case page.
 - Map PDF 2.0 Strong tags to legacy Span roles in the PDF 1.4 resume so project and skills labels remain available to tagged-text readers.
 

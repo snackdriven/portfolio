@@ -76,6 +76,10 @@
 .portfolio-case .case-section-content p { max-width: 76ch; }
 .portfolio-case .case-footer { margin-left: var(--portfolio-rail); padding: 24px var(--portfolio-gutter); }
 
+@media (max-width: 1080px) and (min-width: 769px) {
+  .portfolio-overview { --portfolio-rail: 160px; --portfolio-gutter: 32px; }
+}
+
 @media (max-width: 768px) {
   .portfolio-overview,
   .portfolio-case { --portfolio-gutter: 24px; }
