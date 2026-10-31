@@ -1,8 +1,9 @@
 ---
 layout: base.njk
 ---
-<article class="layout">
-  <header class="rail rail-post">
+<article class="layout post-layout">
+  <header class="post-header">
+    <a class="post-back" href="/">&larr; back to the log</a>
     <div class="post-meta">
       <span>{{ date | ymd }}</span>
       {% if updated %}<span>updated {{ updated | ymd }}</span>{% endif %}
@@ -10,10 +11,12 @@ layout: base.njk
       <span>~{{ read }} min read</span>
       {% if badge %}<span class="badge">{{ badge }}</span>{% endif %}
     </div>
+    <h1 class="neon post-title">{{ title }}</h1>
   </header>
   <div class="reading">
-    <h1 class="neon post-title">{{ title }}</h1>
+    <div class="post-content">
     {{ content | safe }}
+    </div>
     <a class="backlink" href="/">&larr; back to the log</a>
   </div>
 </article>
