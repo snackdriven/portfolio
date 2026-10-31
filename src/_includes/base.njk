@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://snackdriven.com{{ ogimage or '/assets/social/site.png' }}">
 <link rel="canonical" href="https://snackdriven.com{{ page.url }}">
-<link rel="alternate" type="application/rss+xml" title="snackdriven.com — the log" href="/feed.xml">
+<link rel="alternate" type="application/atom+xml" title="snackdriven.com — the log" href="/feed.xml">
 <meta name="theme-color" content="#2D2B3A">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%234AEEA0'>%3E</text></svg>">
 <title>{{ title }}{% if isPost %} · snackdriven.com{% endif %}</title>
@@ -43,7 +43,7 @@
 </script>
 {% endif %}
 </head>
-<body>
+<body class="{% if isPost %}blog-post{% elif page.url == '/' %}blog-index{% else %}blog-page{% endif %}">
 <a href="#main-content" class="skip-link">Skip to content</a>
 <div class="shell">
 {% include "topbar.njk" %}

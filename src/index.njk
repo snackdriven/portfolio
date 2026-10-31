@@ -4,7 +4,7 @@ title: "snackdriven · off the happy path"
 description: "Debugging by trade. Useful tools, odd little projects, and the decisions behind them."
 blogcss: true
 ---
-<div class="layout">
+<div class="layout index-layout">
   <div class="rail rail-home">
     <h1 class="prompt-title"><span class="pmt" aria-hidden="true">~$</span> <span class="cmd">off the happy path</span><span class="cursor" aria-hidden="true"></span></h1>
     <p class="page-intro">hi, i&rsquo;m kayla. i find bugs for money and introduce them for fun. mostly i build the tools i wish existed, then pick at the output until it feels right. some of it&rsquo;s serious. some of it&rsquo;s a disney bracket.</p>
@@ -26,10 +26,12 @@ blogcss: true
     <ul class="posts">
       {% for post in collections.visiblePost %}
       <li>
-        <a class="post-row" href="{{ post.url }}">
+        <a class="post-row{% if loop.first %} post-featured{% endif %}" href="{{ post.url }}">
+          {% if loop.first %}<span class="entry-label">latest entry</span>{% endif %}
           <div class="post-meta">
             <span>{{ post.date | ymd }}</span>
             <span class="tag">#{{ post.data.tag }}</span>
+            <span>~{{ post.data.read }} min read</span>
             {% if post.data.badge %}<span class="badge">{{ post.data.badge }}</span>{% endif %}
           </div>
           <h2>{{ post.data.title }}</h2>

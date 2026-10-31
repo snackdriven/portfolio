@@ -9,6 +9,7 @@ and numbered releases follow [Semantic Versioning](https://semver.org/spec/v2.0.
 
 ### Changed
 
+- Give the blog a featured latest entry, quieter archive rows, and centered article layouts with metadata beside the title, while retaining the existing palette and post wording.
 - Refine the portfolio into a visual project grid with existing product previews, shorter summaries, and a dedicated platform-investigation readout.
 - Put selected work ahead of the full introduction and give the professional platform investigation a project entry.
 - Use a consistent Personal QA Workflow project name and remove repeated evidence counts.
@@ -16,6 +17,7 @@ and numbered releases follow [Semantic Versioning](https://semver.org/spec/v2.0.
 
 ### Fixed
 
+- Wrap long inline code on mobile, stop the blog cursor under reduced motion, use a readable light print treatment, and label the Atom subscription link correctly.
 - Stack case-study evidence records on narrow screens so their labels stay readable, and keep the platform case legible in print.
 - Give all portfolio pages the existing terminal favicon.
 - Include all four case studies in the next-project journey and restore the shared profile/blog routes on the Felt Presence case page.
