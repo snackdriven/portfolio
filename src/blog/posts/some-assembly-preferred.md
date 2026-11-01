@@ -1,12 +1,12 @@
 ---
-title: "some assembly preferred"
+title: "Some assembly preferred"
 date: 2026-10-12
 permalink: /some-assembly-preferred.html
 tag: building
 read: 2
 excerpt: "Monthly Spotify playlists since 2019, and a lot of music I would have trouble leaving out."
 description: "Monthly Spotify playlists since 2019, and a lot of music I would have trouble leaving out."
-ogtitle: "some assembly preferred &middot; snackdriven.com"
+ogtitle: "Some assembly preferred · snackdriven.com"
 ---
 <p class="lead">I saw a version online with room for nine albums and laughed out loud. I was going to have trouble narrowing mine down.</p>
 

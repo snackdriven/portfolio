@@ -1,5 +1,5 @@
 ---
-title: "I ran a script on my own github and met a stranger"
+title: "I ran a script on my own GitHub and met a stranger"
 date: 2026-06-15
 permalink: /i-ran-a-script-on-my-own-github-and-met-a-stranger.html
 tag: reflection
@@ -7,7 +7,7 @@ hidden: true
 read: 1
 excerpt: "I ran one command against my own GitHub account this week to see what was there."
 description: "I ran one command against my own GitHub account this week to see what was there."
-ogtitle: "I ran a script on my own github and met a stranger · snackdriven.com"
+ogtitle: "I ran a script on my own GitHub and met a stranger · snackdriven.com"
 ---
 <p class="lead">I ran one command against my own GitHub account this week to see what was there. Seventy-eight repositories. I could have named maybe twenty-five without looking.</p>
 

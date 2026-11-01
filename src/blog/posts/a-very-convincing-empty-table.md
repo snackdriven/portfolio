@@ -1,12 +1,12 @@
 ---
-title: "a very convincing empty table"
+title: "A very convincing empty table"
 date: 2026-06-24
 permalink: /a-very-convincing-empty-table.html
 tag: reflection
 read: 2
 excerpt: "The request returned 25 records. The table showed none. Reset had some information for us."
 description: "The request returned 25 records. The table showed none. Reset had some information for us."
-ogtitle: "a very convincing empty table &middot; snackdriven.com"
+ogtitle: "A very convincing empty table · snackdriven.com"
 ---
 <p class="lead">The request returned 25 records. The table showed none. Reset had some information for us.</p>
 

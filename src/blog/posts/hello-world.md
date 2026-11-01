@@ -1,5 +1,5 @@
 ---
-title: "Test 001: Hello, World"
+title: "Test 001: Hello, world"
 date: 2026-06-17
 permalink: /hello-world.html
 tag: meta
@@ -8,7 +8,7 @@ read: 2
 badge: placeholder
 excerpt: "Cat ipsum dolor sit amet. The obligatory first commit, filled with placeholder purrs until the real words land."
 description: "The obligatory first post, a placeholder while the real log spins up."
-ogtitle: "Test 001: Hello, World · snackdriven.com"
+ogtitle: "Test 001: Hello, world · snackdriven.com"
 ---
 <p class="lead">Cat ipsum dolor sit amet, hate dog and stare at owner accusingly then wink, but love to play with owner&rsquo;s hair tie. If you&rsquo;re reading it, the deploy worked. Consider this the first green check, served warm with a side of placeholder.</p>
 

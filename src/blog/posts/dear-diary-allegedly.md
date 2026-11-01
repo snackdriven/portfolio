@@ -1,12 +1,12 @@
 ---
-title: "dear diary, allegedly"
+title: "Dear diary, allegedly"
 date: 2026-10-01
 permalink: /dear-diary-allegedly.html
 tag: building
 read: 2
 excerpt: "A diary importer that could preserve my edits. Understanding my day was going to take longer."
 description: "A diary importer that could preserve my edits. Understanding my day was going to take longer."
-ogtitle: "dear diary, allegedly &middot; snackdriven.com"
+ogtitle: "Dear diary, allegedly · snackdriven.com"
 ---
 <p class="lead">I wanted a diary that could remember the day without improving the plot.</p>
 
