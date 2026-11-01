@@ -20,7 +20,7 @@ The rest of my GitHub is the same story in three other costumes.
 
 There are six versions of the QA cockpit I use at my day job, born from the exact moment in the `riff-tracks` README when someone asks *&ldquo;did that ship?&rdquo;* and the room goes quiet. It started as `ATLAS` and `jira-wrapper` in November, turned into `jira-local` in March (full description: *&ldquo;Jira, but bearable&rdquo;*), and finally settled in June as `qa-brain` in the browser and `radar` in the terminal.
 
-There are eight versions of a memory spine so I can stop spending the first ten minutes of every AI session reminding a very polite amnesia patient who I am: `cc-sessions`, `hum`, `memory-shack`, `chronicle` (*&ldquo;hi Claude, yes we&rsquo;re still working on the same project&rdquo;*), `narrator`, `operator-vault`, and now `operator-core-mini`, `lumi`, and `dotclaude`.
+There are nine versions of a memory spine so I can stop spending the first ten minutes of every AI session reminding a very polite amnesia patient who I am: `cc-sessions`, `hum`, `memory-shack`, `chronicle` (*&ldquo;hi Claude, yes we&rsquo;re still working on the same project&rdquo;*), `narrator`, `operator-vault`, and now `operator-core-mini`, `lumi`, and `dotclaude`.
 
 Whatever is left over is a tournament bracket or a poster generator (`bad-movie-bracket`, `disney-bracket`, `albums-poster-builder`, `movies-poster-builder`), because apparently I need a formal seeding algorithm to settle arguments about *The Emperor&rsquo;s New Groove*.
 

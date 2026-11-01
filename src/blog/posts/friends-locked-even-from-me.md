@@ -4,8 +4,8 @@ date: 2026-10-28
 permalink: /friends-locked-even-from-me.html
 tag: building
 read: 2
-excerpt: "It's not what it looks like, I swear."
-description: "It's not what it looks like, I swear."
+excerpt: "I moved twenty-two years of journals into one app. It's not what it looks like, I swear."
+description: "I moved twenty-two years of journals into one app. It's not what it looks like, I swear."
 ogtitle: "Friends-locked (even from me) · snackdriven.com"
 ---
 <p class="lead">Earlier today I published a whole post about why I refuse to assimilate my <a href="/dont-talk-to-me-or-my-fifteen-planners-ever-again.html">fifteen planners</a> into one big app. Roughly four hours later, I finished merging twenty-two years of journals into a single surface. But hear me out: most of it was already written, and I&rsquo;m only wiring content in, not building an aggregator of all things.</p>

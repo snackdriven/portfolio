@@ -4,15 +4,15 @@ date: 2026-10-29
 permalink: /challenge-complete-adequate-performance.html
 tag: tooling
 read: 3
-excerpt: "In November, I built a QA dashboard that awarded experience points for regulatory denial letters. Even then, the fifth coach personality was a mute button."
-description: "In November, I built a QA dashboard that awarded experience points for regulatory denial letters. Even then, the fifth coach personality was a mute button."
+excerpt: "In November 2025, I built a QA dashboard that awarded experience points for regulatory denial letters. Even then, the fifth coach personality was a mute button."
+description: "In November 2025, I built a QA dashboard that awarded experience points for regulatory denial letters. Even then, the fifth coach personality was a mute button."
 ogtitle: "Challenge complete. Adequate performance. · snackdriven.com"
 ---
 <p class="lead">After counting the eighty-eight repositories in <a href="/dont-talk-to-me-or-my-fifteen-planners-ever-again.html">Don&rsquo;t talk to me or my fifteen planners ever again</a>, I ran a salvage script across the older directories before archiving them. Inside <code>ATLAS</code>, the first of my six QA cockpits from November 2025, sat a sixteen-kilobyte file I had forgotten generating: <code>kayla_gilbert_profile.json</code>.</p>
 
 `ATLAS` was built against a local SQLite dump of 6,194 healthcare workflow tickets covering February through October 2025. The JSON file was my nine-month slice of the database: **928 tickets**, or fifteen percent of the board.
 
-Broken down by type, **845** of those were QA subtasks, **59** were bugs, and **19** were standalone tasks. **909** (`98.0%`) were marked Done at an average turnaround of **3.5 days**, working out to roughly **24 tickets a week** and peaking in August 2025 at **105 tickets** in a single month. Around **350** of the subtasks covered clinical and office review workflows or state-mandated authorization, deferral, and denial letters. Another **120** covered case-status rules, bed boards, and task drawers.
+The breakdown was **845** QA subtasks, **59** bugs, **19** standalone tasks, **1** spike, **2** stories, and **2** epics. **909** (`98.0%`) were marked Done at an average turnaround of **3.5 days**, working out to roughly **24 tickets a week** and peaking in August 2025 at **105 tickets** in a single month. Around **350** of the subtasks covered clinical and office review workflows or state-mandated authorization, deferral, and denial letters. Another **120** covered case-status rules, bed boards, and task drawers.
 
 Having pulled nine months of real regulatory testing history into one place, November-me immediately wrote `migrations/002_gamification_enhancement.sql`.
 

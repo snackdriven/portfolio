@@ -391,9 +391,6 @@
     color: var(--green);
     transition: color 0.2s;
   }
-  .job-company:hover {
-    color: var(--magenta);
-  }
   .job-separator {
     color: var(--magenta);
     font-weight: bold;
