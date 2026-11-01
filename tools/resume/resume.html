@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><title>Kayla Young (Gilbert) - Resume</title>
+<html lang="en"><head><meta charset="utf-8"><title>Kayla Young - Resume</title>
 <style>
 @font-face { font-family: "Chakra Petch"; src: url("fonts/ChakraPetch-Bold.ttf") format("truetype"); font-weight: 700; }
 @font-face { font-family: "Inter"; src: url("fonts/Inter-Regular.ttf") format("truetype"); font-weight: 400; }
@@ -8,11 +8,11 @@
 * { box-sizing: border-box; }
 body { margin: 0; color: #352f3f; font: 10.25pt/1.25 "Inter", Arial, sans-serif; font-feature-settings: "calt" 0, "liga" 0; }
 header { border-top: 3pt solid #167887; padding-top: 6pt; padding-bottom: 6pt; border-bottom: .7pt solid #ded5e5; }
-h1 { font: 700 26pt/1.05 "Chakra Petch", Arial, sans-serif; letter-spacing: .6pt; text-transform: uppercase; color: #49335f; margin: 0 0 5pt; }
+h1 { font: 700 26pt/1.05 "Chakra Petch", Arial, sans-serif; letter-spacing: .6pt; color: #49335f; margin: 0 0 5pt; }
 .headline { color: #167887; font-size: 10.5pt; font-weight: bold; margin: 0 0 8pt; }
 .contact { color: #665d70; font-size: 9pt; line-height: 1.4; margin: 0; }
 a { color: inherit; text-decoration: none; }
-h2 { margin: 8pt 0 4pt; padding-bottom: 3pt; border-bottom: .6pt solid #ded5e5; color: #704a88; font-size: 9.5pt; letter-spacing: 0; text-transform: uppercase; }
+h2 { margin: 8pt 0 4pt; padding-bottom: 3pt; border-bottom: .6pt solid #ded5e5; color: #704a88; font-size: 9.5pt; letter-spacing: 0; }
 p { margin: 0 0 5pt; }
 .row { display: flex; justify-content: space-between; align-items: baseline; gap: 12pt; }
 .company { font-size: 11pt; font-weight: bold; color: #49335f; }
@@ -25,33 +25,35 @@ li::marker { color: #167887; font-size: 8pt; }
 .project strong, .skills strong { color: #49335f; }
 .skills p { margin-bottom: 3pt; font-size: 10pt; }
 </style></head><body>
-<header><h1>Kayla Young (Gilbert)</h1>
+<header><h1>Kayla Young</h1>
 <p class="headline">Senior QA Engineer | AI Workflows &amp; Internal Tools</p>
 <p class="contact">Bentonville, AR | Remote | <a href="mailto:kayla@snackdriven.com">kayla@snackdriven.com</a><br>
 <a href="https://snackdriven.com/portfolio/">snackdriven.com/portfolio</a> | <a href="https://linkedin.com/in/snackdriven">linkedin.com/in/snackdriven</a> | <a href="https://github.com/snackdriven">github.com/snackdriven</a></p></header>
 <h2>Summary</h2>
-<p>Senior QA Engineer with 6+ years investigating complex workflows, persistence failures, and ambiguous requirements. Designs practical AI-assisted tools and review steps that turn scattered context into work people can act on.</p>
+<p>QA engineer with 6+ years of experience. I investigate healthcare workflows, define acceptance checks, and design AI-assisted tools that make the work easier to verify.</p>
 <h2>Experience</h2>
 <div class="row"><span class="company">Chorus Innovations</span><span class="date">Apr 2023 - Present | Remote</span></div>
+<ul><li>Coordinated release readiness across April-October 2026: reconciled scope, prepared release candidates, checked deployed builds, and handed status to engineering and delivery.</li></ul>
 <div class="row"><span class="role">Senior QA Engineer</span><span class="date">Sep 2026 - Present</span></div>
 <ul>
-<li>Directed a platform-wide, four-day AI-assisted staging investigation; reviewed evidence for 250 documented findings and organized them into 23 recurring failure patterns to prioritize data risks.</li>
-<li>Own care-module test automation strategy across backend, API contract, and UI layers; work with product and engineering on risk-based checks and fix criteria.</li>
+<li>Directed a four-day AI-assisted staging investigation. Reviewed 250 documented findings, grouped them into 23 patterns, and prioritized data risks for engineering.</li>
+<li>Own care-module automation strategy across backend, API-contract, and UI layers; clarify risk and fix criteria with product and engineering.</li>
 </ul>
 <div class="row"><span class="role">Senior QA Specialist</span><span class="date">Sep 2024 - Sep 2026</span></div>
-<ul><li>Investigated failures in conditional forms, role-based workflows, and data persistence across save and refresh cycles.</li><li>Designed a personal release-reporting workflow that combined Jira status, GitHub pull requests, and release discussions into Google Docs and Confluence updates used by colleagues.</li></ul>
+<ul><li>Investigated conditional forms, role-based workflows, and persistence after save and refresh.</li><li>Maintained personal release tooling that combined Jira, GitHub, and deployment context into updates used by colleagues; corrected stale results and retired unused publishing paths.</li></ul>
 <div class="row"><span class="role">Software QA Specialist</span><span class="date">Apr 2023 - Sep 2024</span></div>
-<ul><li>Tested healthcare applications across React, GraphQL, and a legacy no-code platform; documented exploratory, regression, and smoke coverage in Jira and Testmo.</li></ul>
+<ul><li>Tested healthcare applications across React, GraphQL, and a legacy no-code platform. Documented exploratory, regression, and smoke coverage in Jira and Testmo.</li></ul>
 <div class="row"><span class="company">Ultranauts Inc</span><span class="date">Feb 2020 - Feb 2023 | Remote</span></div>
 <div class="row"><span class="role">Software Quality Engineer II</span><span class="date">Oct 2021 - Feb 2023</span></div>
-<ul><li>Planned exploratory and regression testing for multi-role workflows and complex business rules; identified where automation would justify its maintenance cost.</li></ul>
+<ul><li>Planned exploratory and regression tests for multi-role workflows and complex rules. Weighed automation benefits against maintenance cost.</li></ul>
 <div class="row"><span class="role">QA Tester / Software QA Engineer I</span><span class="date">Feb 2020 - Sep 2021</span></div>
 <p>Manual and exploratory testing across client projects.</p>
-<h2>Selected Projects</h2>
-<p class="project"><strong>Personal QA Workflow.</strong> Designed runbooks and evidence reviews connecting ticket context, recordings, HAR logs, and GraphQL state. Review caught mislabeled screenshots, environment mix-ups, and saved settings that differed after reload.</p>
-<p class="project"><strong>AL80 Studio.</strong> Directed AI-assisted implementation of a keyboard control panel. Debugged a screen that kept the old picture despite successful transfer logs; confirmed timing and view-switch fixes on hardware.</p>
-<p class="project"><strong>Felt Presence.</strong> Shaped a haunted craft shop's reader and recurring AI-assisted content workflow. Connected approved story/image pairs to automatic publishing, with checks that keep incomplete pairs pending.</p>
-<h2>Skills &amp; Tools</h2>
+<h2>Selected projects</h2>
+<p>Personal builds: I define the behavior and checks; AI writes the code.</p>
+<p class="project"><strong>Personal QA workflow.</strong> Designed runbooks linking ticket context, recordings, HAR logs, and GraphQL state. Review caught misleading screenshots and reports that overstated coverage.</p>
+<p class="project"><strong>AL80 Studio.</strong> Shaped keyboard controls and confirmed timing/view-switch fixes on hardware when successful transfer logs still left the old picture on screen.</p>
+<p class="project"><strong>Felt Presence.</strong> Shaped an illustrated reader for a haunted craft shop. Complete, approved story/image pairs publish; unfinished pairs wait.</p>
+<h2>Skills &amp; tools</h2>
 <div class="skills">
 <p><strong>QA:</strong> Debugging, exploratory and regression testing, test planning, defect investigation, risk prioritization</p>
 <p><strong>AI workflows:</strong> Workflow design and orchestration, output verification, tool configuration, Model Context Protocol (MCP)</p>
