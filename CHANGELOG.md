@@ -9,6 +9,8 @@ and numbered releases follow [Semantic Versioning](https://semver.org/spec/v2.0.
 
 ### Changed
 
+- Shorten portfolio summaries and case-study prose while retaining evidence, attribution, and material limits.
+
 - Add a dated release-readiness case study with engineering and delivery handoffs, and surface sustained professional ownership in the portfolio.
 - Distinguish retired Google Docs publishing jobs from the separate markdown and Confluence release-reporting paths, and document dated tracker-maintenance decisions.
 - Add dated AL80 maintenance and measured Felt reader-fit examples, plus a public Now Screaming regression reference.
