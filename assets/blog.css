@@ -1,8 +1,8 @@
 /* Blog reading and archive layouts, with the approved Sharper neon treatment. */
-.blog-index, .blog-post { --bg-sidebar: #211F2F; --border: #454157; }
+.blog-index, .blog-post { --bg-sidebar: var(--bg-inset); --border: var(--border-strong); }
 .blog-index .topbar nav, .blog-post .topbar nav { font-family: var(--font-body); }
 .blog-index .post-row .post-meta, .blog-post .post-header .post-meta { text-transform: none; letter-spacing: 0; }
-.blog-index .post-title, .blog-post .post-title { font-weight: 600; text-transform: none; text-shadow: 0 0 7px rgba(74, 238, 160, .14); }
+.blog-index .post-title, .blog-post .post-title { font-weight: 600; text-transform: none; text-shadow: var(--glow-heading); }
 .shell { max-width: 1120px; margin: 0 auto; padding: 36px 32px 64px; }
 .layout { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 56px; align-items: start; line-height: 1.7; }
 .rail { position: sticky; top: 36px; align-self: start; padding-right: 28px; border-right: 1px solid var(--border); }
