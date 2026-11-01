@@ -14,15 +14,22 @@
   color-scheme: dark;
 
   /* palette */
-  --bg: #2D2B3A;
+  --site-bg: #2D2B3A;
+  --bg: var(--site-bg);
   --bg-sidebar: #252336;
-  --fg: #E0DEE8;
-  --green: #4AEEA0;
+  --site-fg: #E0DEE8;
+  --fg: var(--site-fg);
+  --site-green: #4AEEA0;
+  --green: var(--site-green);
   --cyan: #A78BFA;
   --teal: #72C5D9;
-  --magenta: #FF6B9D;
+  --site-magenta: #FF6B9D;
+  --magenta: var(--site-magenta);
   --muted: #B5B2C8;
   --border: #3D3A50;
+  --bg-inset: #211F2F;
+  --border-strong: #454157;
+  --glow-heading: 0 0 7px rgba(74, 238, 160, .14);
 
   /* type families */
   --font-display: "Chakra Petch", sans-serif;

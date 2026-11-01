@@ -9,6 +9,7 @@ and numbered releases follow [Semantic Versioning](https://semver.org/spec/v2.0.
 
 ### Changed
 
+- Extend the Sharper neon palette, restrained glow, selective monospace, and sentence casing to the portfolio and shared case-study navigation.
 - Standardize blog titles, social titles, introduction, and navigation labels to sentence case while preserving proper names and acronyms.
 - Apply the approved Sharper neon blog theme with deeper purple surfaces, lighter heading glow, original title capitalization, and more selective monospace type.
 - Give the blog a featured latest entry, quieter archive rows, and centered article layouts with metadata beside the title, while retaining the existing palette and post wording.
