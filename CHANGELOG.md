@@ -9,6 +9,7 @@ and numbered releases follow [Semantic Versioning](https://semver.org/spec/v2.0.
 
 ### Changed
 
+- Standardize blog titles, social titles, introduction, and navigation labels to sentence case while preserving proper names and acronyms.
 - Apply the approved Sharper neon blog theme with deeper purple surfaces, lighter heading glow, original title capitalization, and more selective monospace type.
 - Give the blog a featured latest entry, quieter archive rows, and centered article layouts with metadata beside the title, while retaining the existing palette and post wording.
 - Refine the portfolio into a visual project grid with existing product previews, shorter summaries, and a dedicated platform-investigation readout.
@@ -18,6 +19,7 @@ and numbered releases follow [Semantic Versioning](https://semver.org/spec/v2.0.
 
 ### Fixed
 
+- Render social-title separators as actual middle dots instead of escaped entity text.
 - Wrap long inline code on mobile, stop the blog cursor under reduced motion, use a readable light print treatment, and label the Atom subscription link correctly.
 - Stack case-study evidence records on narrow screens so their labels stay readable, and keep the platform case legible in print.
 - Give all portfolio pages the existing terminal favicon.

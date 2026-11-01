@@ -1,12 +1,12 @@
 ---
-title: "the warning that reported itself"
+title: "The warning that reported itself"
 date: 2026-07-15
 permalink: /the-warning-that-reported-itself.html
 tag: tooling
 read: 2
 excerpt: "The report explained why a reminder kept firing on quotations. The reminder fired on the report."
 description: "The report explained why a reminder kept firing on quotations. The reminder fired on the report."
-ogtitle: "the warning that reported itself &middot; snackdriven.com"
+ogtitle: "The warning that reported itself · snackdriven.com"
 ---
 <p class="lead">The report explained why a reminder kept firing on quotations. The reminder fired on the report.</p>
 

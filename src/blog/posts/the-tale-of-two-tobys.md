@@ -1,5 +1,5 @@
 ---
-title: "The Tale of Two Tobys"
+title: "The tale of two Tobys"
 date: 2026-06-22
 permalink: /the-tale-of-two-tobys.html
 tag: incident
@@ -7,7 +7,7 @@ hidden: false
 read: 3
 excerpt: "It was the best of names. It was the worst of names."
 description: "It was the best of names. It was the worst of names."
-ogtitle: "The Tale of Two Tobys · snackdriven.com"
+ogtitle: "The tale of two Tobys · snackdriven.com"
 ---
 <p class="lead">It was the best of names. It was the worst of names. It was, specifically, two of the worst of names, because the name was Toby and there were two of him.</p>
 

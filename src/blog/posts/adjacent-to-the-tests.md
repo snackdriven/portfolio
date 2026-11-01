@@ -1,12 +1,12 @@
 ---
-title: "adjacent to the tests"
+title: "Adjacent to the tests"
 date: 2026-09-09
 permalink: /adjacent-to-the-tests.html
 tag: tooling
 read: 2
 excerpt: "The new test case was valid Python. It was also sitting outside the test list."
 description: "The new test case was valid Python. It was also sitting outside the test list."
-ogtitle: "adjacent to the tests &middot; snackdriven.com"
+ogtitle: "Adjacent to the tests · snackdriven.com"
 ---
 <p class="lead">The new test case was valid Python. It was also sitting outside the test list.</p>
 

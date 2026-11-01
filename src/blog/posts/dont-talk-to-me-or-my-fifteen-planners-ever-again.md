@@ -1,12 +1,12 @@
 ---
-title: "Don't Talk to Me or My Fifteen Planners Ever Again"
+title: "Don't talk to me or my fifteen planners ever again"
 date: 2026-10-28
 permalink: /dont-talk-to-me-or-my-fifteen-planners-ever-again.html
 tag: reflection
 read: 2
 excerpt: "I don't actually have eighty-eight repositories. I have fifteen planners, three other ideas in false mustaches, and a habit of starting fresh on Saturdays."
 description: "I don't actually have eighty-eight repositories. I have fifteen planners, three other ideas in false mustaches, and a habit of starting fresh on Saturdays."
-ogtitle: "Don't Talk to Me or My Fifteen Planners Ever Again · snackdriven.com"
+ogtitle: "Don't talk to me or my fifteen planners ever again · snackdriven.com"
 ---
 <p class="lead">I caught myself mid-sentence this week saying I wanted to &ldquo;assimilate some of what I&rsquo;ve built over and over again,&rdquo; and then immediately trailed off with <em>maybe I shouldn&rsquo;t</em>.</p>
 

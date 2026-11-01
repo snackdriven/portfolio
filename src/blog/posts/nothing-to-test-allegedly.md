@@ -1,12 +1,12 @@
 ---
-title: "nothing to test, allegedly"
+title: "Nothing to test, allegedly"
 date: 2026-09-16
 permalink: /nothing-to-test-allegedly.html
 tag: tooling
 read: 2
 excerpt: "Bad credentials came back as an empty queue. HTTP 200 was being generous."
 description: "Bad credentials came back as an empty queue. HTTP 200 was being generous."
-ogtitle: "nothing to test, allegedly &middot; snackdriven.com"
+ogtitle: "Nothing to test, allegedly · snackdriven.com"
 ---
 <p class="lead">With deliberately bad credentials, the search returned an empty queue and HTTP 200. A remarkably polite refusal.</p>
 

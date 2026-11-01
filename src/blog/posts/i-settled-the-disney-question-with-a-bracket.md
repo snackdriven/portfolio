@@ -1,5 +1,5 @@
 ---
-title: "I settled the disney question with a bracket"
+title: "I settled the Disney question with a bracket"
 date: 2026-02-21
 permalink: /i-settled-the-disney-question-with-a-bracket.html
 tag: building
@@ -7,7 +7,7 @@ hidden: true
 read: 1
 excerpt: "At some point I decided the only honest way to rank 70 Disney and Pixar movies was a single-elimination bracket."
 description: "At some point I decided the only honest way to rank 70 Disney and Pixar movies was a single-elimination bracket."
-ogtitle: "I settled the disney question with a bracket · snackdriven.com"
+ogtitle: "I settled the Disney question with a bracket · snackdriven.com"
 ---
 <p class="lead">At some point I decided the only honest way to rank 70 Disney and Pixar movies was a single-elimination bracket. Not a list. A tournament. Sixty-nine matchups where you pick Up over Coco and then sit with it. The tagline I gave it is &ldquo;No good choices,&rdquo; which is both the marketing and a warning.</p>
 

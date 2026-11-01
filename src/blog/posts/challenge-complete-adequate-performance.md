@@ -1,14 +1,14 @@
 ---
-title: "Challenge Complete. Adequate Performance."
+title: "Challenge complete. Adequate performance."
 date: 2026-10-29
 permalink: /challenge-complete-adequate-performance.html
 tag: tooling
 read: 3
 excerpt: "In November, I built a QA dashboard that awarded experience points for regulatory denial letters. Even then, the fifth coach personality was a mute button."
 description: "In November, I built a QA dashboard that awarded experience points for regulatory denial letters. Even then, the fifth coach personality was a mute button."
-ogtitle: "Challenge Complete. Adequate Performance. · snackdriven.com"
+ogtitle: "Challenge complete. Adequate performance. · snackdriven.com"
 ---
-<p class="lead">After counting the eighty-eight repositories in <a href="/dont-talk-to-me-or-my-fifteen-planners-ever-again.html">Don&rsquo;t Talk to Me or My Fifteen Planners Ever Again</a>, I ran a salvage script across the older directories before archiving them. Inside <code>ATLAS</code>, the first of my six QA cockpits from November 2025, sat a sixteen-kilobyte file I had forgotten generating: <code>kayla_gilbert_profile.json</code>.</p>
+<p class="lead">After counting the eighty-eight repositories in <a href="/dont-talk-to-me-or-my-fifteen-planners-ever-again.html">Don&rsquo;t talk to me or my fifteen planners ever again</a>, I ran a salvage script across the older directories before archiving them. Inside <code>ATLAS</code>, the first of my six QA cockpits from November 2025, sat a sixteen-kilobyte file I had forgotten generating: <code>kayla_gilbert_profile.json</code>.</p>
 
 `ATLAS` was built against a local SQLite dump of 6,194 healthcare workflow tickets covering February through October 2025. The JSON file was my nine-month slice of the database: **928 tickets**, or fifteen percent of the board.
 

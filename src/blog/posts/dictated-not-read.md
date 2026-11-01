@@ -1,12 +1,12 @@
 ---
-title: "dictated, not read"
+title: "Dictated, not read"
 date: 2026-10-27
 permalink: /dictated-not-read.html
 tag: building
 read: 2
 excerpt: "Six months from four fictional roommates in a FastAPI chat tab to a silent collector with a subpoena."
 description: "Six months from four fictional roommates in a FastAPI chat tab to a silent collector with a subpoena."
-ogtitle: "dictated, not read · snackdriven.com"
+ogtitle: "Dictated, not read · snackdriven.com"
 ---
 <p class="lead">At the start of the month, in <a href="/dear-diary-allegedly.html">dear diary, allegedly</a>, the journal importer was still a local preview with a trust problem. It could append a dated paragraph to <code>day-crumbs</code> without clobbering my edits, and it respected the 3 a.m. Chicago cutoff for when a day actually ends, but it also looked at a short personal message in a transcript, grabbed the work update sitting next to it, and confidently decided the first was about the second.</p>
 

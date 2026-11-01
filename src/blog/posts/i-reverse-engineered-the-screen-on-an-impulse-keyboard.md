@@ -1,5 +1,5 @@
 ---
-title: "One Line of Modulo"
+title: "One line of modulo"
 date: 2026-07-01
 updated: 2026-10-19
 permalink: /i-reverse-engineered-the-screen-on-an-impulse-keyboard.html
@@ -8,7 +8,7 @@ hidden: false
 read: 2
 excerpt: "The AI said impossible. Reddit said only the vendor app could touch the screen. It was one line of modulo."
 description: "The AI said impossible. Reddit said only the vendor app could touch the screen. It was one line of modulo."
-ogtitle: "One Line of Modulo &middot; snackdriven.com"
+ogtitle: "One line of modulo · snackdriven.com"
 ---
 <p class="post-update">Updated 2026-10-19: the browser app and debugging record now have their own homes. <a href="https://snackdriven.github.io/al80-studio/">Try AL80 Studio</a> or <a href="/portfolio/projects/al80-studio.html">read the case study</a>, including what happened when the transfer logs and physical screen disagreed.</p>
 <p class="lead">I&rsquo;m at this desk most of my waking hours, so a good keyboard isn&rsquo;t a small thing. The upgrade was overdue. I&rsquo;d been on a Logitech MX Keys. Lovely, flat, completely screenless. So when the AL80 turned up in a Prime Day lightning deal with a little color screen above the arrow keys, the timing was right and I grabbed it. I lasted under a week before I couldn&rsquo;t leave the screen alone.</p>
