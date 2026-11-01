@@ -7,7 +7,7 @@ from pypdf.generic import DictionaryObject, NameObject
 
 
 READING_LABELS = [
-    'Personal QA Workflow.', 'AL80 Studio.', 'Felt Presence.',
+    'Personal QA workflow.', 'AL80 Studio.', 'Felt Presence.',
     'QA:', 'AI workflows:', 'Tools & technologies:',
 ]
 
@@ -127,7 +127,7 @@ def render():
     assert roles.count('/H1') == 1 and roles.count('/H2') == 4, 'Expected name and section heading tags.'
     assert '/L' in roles and '/LI' in roles and '/Link' in roles, 'Expected semantic lists and contact links.'
     assert reader.outline, 'Expected heading-based PDF bookmarks.'
-    assert reader.metadata.title == 'Kayla Young (Gilbert) - Resume', 'Expected the resume document title.'
+    assert reader.metadata.title == 'Kayla Young - Resume', 'Expected the resume document title.'
     expected_links = {
         'mailto:kayla@snackdriven.com', 'https://snackdriven.com/portfolio/',
         'https://linkedin.com/in/snackdriven', 'https://github.com/snackdriven',
@@ -146,7 +146,7 @@ def render():
         descriptor = descriptor.get_object() if descriptor else {}
         assert any(key in descriptor for key in ['/FontFile', '/FontFile2', '/FontFile3']), f'Expected embedded font: {font.get("/BaseFont")}'
     text = reader.pages[0].extract_text()
-    for required in ['KAYLA YOUNG (GILBERT)', 'Chorus Innovations', 'Ultranauts', '250', '23', 'HAR', 'GraphQL', 'Felt Presence']:
+    for required in ['Kayla Young', 'Chorus Innovations', 'Ultranauts', '250', '23', 'HAR', 'GraphQL', 'Felt Presence']:
         assert required in text, f'Missing extracted resume content: {required}'
     reading_text = ' '.join(structure_text(reader).split())
     for label in READING_LABELS:
