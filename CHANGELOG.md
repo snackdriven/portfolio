@@ -9,6 +9,8 @@ and numbered releases follow [Semantic Versioning](https://semver.org/spec/v2.0.
 
 ### Changed
 
+- Surface role intent and the documented engineering handoff, and connect the log and portfolio with selected QA writing.
+- Extend the QA workflow's dated examples through later API/UI runs and October harness review while preserving coverage limits.
 - Extend the Sharper neon palette, restrained glow, selective monospace, and sentence casing to the portfolio and shared case-study navigation.
 - Standardize blog titles, social titles, introduction, and navigation labels to sentence case while preserving proper names and acronyms.
 - Apply the approved Sharper neon blog theme with deeper purple surfaces, lighter heading glow, original title capitalization, and more selective monospace type.
@@ -20,6 +22,8 @@ and numbered releases follow [Semantic Versioning](https://semver.org/spec/v2.0.
 
 ### Fixed
 
+- Complete the 928-ticket category breakdown, correct the nine-tool count, and clarify November 2025 in the latest preview.
+- Make the resume file type visible in navigation and remove the hover effect from noninteractive employer names.
 - Render social-title separators as actual middle dots instead of escaped entity text.
 - Wrap long inline code on mobile, stop the blog cursor under reduced motion, use a readable light print treatment, and label the Atom subscription link correctly.
 - Stack case-study evidence records on narrow screens so their labels stay readable, and keep the platform case legible in print.
