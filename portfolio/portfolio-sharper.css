@@ -6,6 +6,7 @@
     line-height: 1.15; text-shadow: var(--glow-heading);
   }
   .portfolio-overview .hero .title { font-family: var(--font-body); text-transform: none; letter-spacing: 0; line-height: 1.6; }
+  .portfolio-overview .role-interest { max-width: 72ch; margin-top: 16px; color: var(--muted); font: .95rem/1.65 var(--font-body); }
   .portfolio-overview .section-name, .portfolio-overview .skills-category-name {
     font-family: var(--font-body); font-weight: 600; text-transform: none; letter-spacing: 0; line-height: 1.5;
   }
