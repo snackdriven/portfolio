@@ -9,6 +9,7 @@ and numbered releases follow [Semantic Versioning](https://semver.org/spec/v2.0.
 
 ### Changed
 
+- Apply the approved Sharper neon blog theme with deeper purple surfaces, lighter heading glow, original title capitalization, and more selective monospace type.
 - Give the blog a featured latest entry, quieter archive rows, and centered article layouts with metadata beside the title, while retaining the existing palette and post wording.
 - Refine the portfolio into a visual project grid with existing product previews, shorter summaries, and a dedicated platform-investigation readout.
 - Put selected work ahead of the full introduction and give the professional platform investigation a project entry.

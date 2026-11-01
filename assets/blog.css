@@ -1,10 +1,15 @@
-/* Blog reading and archive layouts. The palette and type tokens live in site.css. */
+/* Blog reading and archive layouts, with the approved Sharper neon treatment. */
+.blog-index, .blog-post { --bg-sidebar: #211F2F; --border: #454157; }
+.blog-index .topbar nav, .blog-post .topbar nav { font-family: var(--font-body); }
+.blog-index .post-row .post-meta, .blog-post .post-header .post-meta { text-transform: none; letter-spacing: 0; }
+.blog-index .post-title, .blog-post .post-title { font-weight: 600; text-transform: none; text-shadow: 0 0 7px rgba(74, 238, 160, .14); }
 .shell { max-width: 1120px; margin: 0 auto; padding: 36px 32px 64px; }
 .layout { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 56px; align-items: start; line-height: 1.7; }
 .rail { position: sticky; top: 36px; align-self: start; padding-right: 28px; border-right: 1px solid var(--border); }
 .reading { min-width: 0; max-width: 740px; font-size: 1.05rem; line-height: 1.8; }
 .rail-post .post-meta { flex-direction: column; align-items: flex-start; gap: 10px; }
-.rail-home .prompt-title { margin-bottom: 20px; font: 500 clamp(1.5rem, 2.3vw, 1.9rem)/1.3 var(--font-mono); letter-spacing: -.04em; }
+.rail-home .prompt-title { margin-bottom: 20px; font: 600 clamp(1.5rem, 2.3vw, 1.9rem)/1.2 var(--font-display); letter-spacing: -.035em; }
+.blog-index .prompt-title .pmt, .blog-index .prompt-title .cursor { display: none; }
 .prompt-title .pmt { color: var(--muted); font-size: .75em; }
 .prompt-title .cmd { color: var(--cyan); }
 .cursor { display: inline-block; width: .1em; height: 1em; margin-left: .12em; vertical-align: -.12em; background: var(--green); animation: cursor-blink 1.4s steps(1) infinite; }
@@ -14,13 +19,13 @@
 .posts > li + li { border-bottom: 1px solid var(--border); }
 .post-row { display: block; padding: 26px 4px; }
 .post-row .post-meta { margin-bottom: 10px; gap: 8px 16px; font-size: .7rem; letter-spacing: .06em; }
-.post-row h2 { font: 700 1.35rem/1.3 var(--font-display); letter-spacing: -.01em; color: var(--fg); margin-bottom: 10px; text-transform: lowercase; }
+.post-row h2 { font: 600 1.35rem/1.3 var(--font-display); letter-spacing: -.01em; color: var(--fg); margin-bottom: 10px; text-transform: none; }
 .post-row p { color: var(--muted); font-size: .94rem; line-height: 1.7; max-width: 68ch; }
 .post-row:hover h2 { color: var(--magenta); }
 .post-row:focus-visible { outline-offset: 6px; }
 .post-featured { padding: 28px; border: 1px solid var(--border); border-top: 3px solid var(--green); background: var(--bg-sidebar); margin-bottom: 6px; }
 .post-featured h2 { font-size: clamp(1.6rem, 2.6vw, 2rem); line-height: 1.2; color: var(--green); }
-.entry-label { display: block; margin-bottom: 24px; color: var(--cyan); font: .72rem/1.5 var(--font-mono); }
+.entry-label { display: block; margin-bottom: 24px; color: var(--cyan); font: .75rem/1.5 var(--font-body); }
 /* Keep title, metadata and prose together instead of reserving an empty date rail. */
 .post-layout { display: block; max-width: 740px; margin-inline: auto; }
 .post-header { margin-bottom: 32px; }
@@ -96,13 +101,14 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 40px 0; }
 @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
 @media print {
   :root { color-scheme: light; --bg: #fff; --bg-sidebar: #fff; --fg: #1a1a1a; --muted: #333; --green: #1a1a1a; --cyan: #1a1a1a; --magenta: #1a1a1a; --teal: #1a1a1a; --border: #999; }
+  .blog-index, .blog-post { --bg-sidebar: #fff; --border: #999; }
   @page { margin: 18mm; }
   body { background: #fff; }
   .shell { max-width: none; padding: 0; }
   .layout { display: block; }
   .topbar, .site-footer, .post-back, .backlink, .cursor { display: none; }
   .rail { position: static; border: 0; padding: 0; margin-bottom: 24pt; }
-  .post-title { text-shadow: none; font-size: 24pt; }
+  .blog-index .post-title, .blog-post .post-title, .post-title { text-shadow: none; font-size: 24pt; }
   .reading, article p.lead { font-size: 11pt; line-height: 1.6; }
   .post-featured { padding: 12pt; background: none; }
   .post-row { break-inside: avoid; }
