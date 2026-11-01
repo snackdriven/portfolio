@@ -9,6 +9,10 @@ and numbered releases follow [Semantic Versioning](https://semver.org/spec/v2.0.
 
 ### Changed
 
+- Add a dated release-readiness case study with engineering and delivery handoffs, and surface sustained professional ownership in the portfolio.
+- Distinguish retired Google Docs publishing jobs from the separate markdown and Confluence release-reporting paths, and document dated tracker-maintenance decisions.
+- Add dated AL80 maintenance and measured Felt reader-fit examples, plus a public Now Screaming regression reference.
+
 - Surface role intent and the documented engineering handoff, and connect the log and portfolio with selected QA writing.
 - Extend the QA workflow's dated examples through later API/UI runs and October harness review while preserving coverage limits.
 - Extend the Sharper neon palette, restrained glow, selective monospace, and sentence casing to the portfolio and shared case-study navigation.

@@ -1,0 +1,8 @@
+.release-timeline { list-style: none; padding: 0; margin: 28px 0 0; }
+.release-timeline li { position: relative; padding: 0 0 28px 26px; border-left: 1px solid var(--border); }
+.release-timeline li:last-child { padding-bottom: 0; }
+.release-timeline li::before { content: ""; position: absolute; left: -4px; top: 8px; width: 7px; height: 7px; background: var(--green); }
+.release-case .release-date { color: var(--magenta); font: .78rem/1.7 var(--font-mono); margin-bottom: 8px; }
+.release-timeline h3 { margin: 0 0 10px; font: 600 1.06rem/1.5 var(--font-body); color: var(--fg); }
+.release-timeline p:last-child { margin-bottom: 0; }
+@media print { .release-timeline li { break-inside: avoid; } .release-timeline li::before { background: #1a1a1a; } .release-case .release-date { color: #1a1a1a; } }
