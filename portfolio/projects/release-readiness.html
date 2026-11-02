@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Recurring release readiness: reconciling scope, preparing candidates, checking deployed builds, and coordinating engineering and delivery handoffs.">
-<meta property="og:title" content="Release readiness | Kayla Young (Gilbert)">
+<meta property="og:title" content="Release readiness | Kayla Young">
 <meta property="og:description" content="Recurring release readiness: reconciling scope, preparing candidates, checking deployed builds, and coordinating engineering and delivery handoffs.">
 <meta property="og:url" content="https://snackdriven.com/portfolio/projects/release-readiness.html">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://snackdriven.com/assets/social/portfolio.png">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Kayla Young (Gilbert): QA, useful tools, and a little weirdness.">
+<meta property="og:image:alt" content="Kayla Young: QA, useful tools, and a little weirdness.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://snackdriven.com/assets/social/portfolio.png">
 <link rel="canonical" href="https://snackdriven.com/portfolio/projects/release-readiness.html">
@@ -24,7 +24,7 @@
 </head>
 <body class="portfolio-case release-case">
 <a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="case-header"><div class="case-header-inner"><a class="site-name" href="/portfolio/">Kayla Young (Gilbert)</a><nav class="case-nav portfolio-nav" aria-label="Portfolio links">
+<header class="case-header"><div class="case-header-inner"><a class="site-name" href="/portfolio/">Kayla Young</a><nav class="case-nav portfolio-nav" aria-label="Portfolio links">
     <a href="/portfolio/#selected-projects">Projects</a><span class="hero-sep" aria-hidden="true">|</span>
     <a href="/portfolio/#experience">Experience</a><span class="hero-sep" aria-hidden="true">|</span>
     <a href="/portfolio/resume/kayla-young-resume.pdf">Resume PDF</a><span class="hero-sep" aria-hidden="true">|</span>
@@ -42,7 +42,7 @@
 <p class="case-result"><strong>Team use:</strong> Colleagues relied on my release cuts; delivery used my production update to plan customer communication.</p>
 <dl class="case-facts"><div><dt>Period</dt><dd>Dated examples from April&ndash;October 2026</dd></div><div><dt>My responsibility</dt><dd>Release preparation, readiness checks, and handoffs</dd></div></dl>
 </div><div class="case-layout">
-<nav class="contents" aria-label="On this page"><div class="contents-inner"><h2>On this page</h2><a href="#problem">Problem</a><a href="#decisions">Decisions</a><a href="#continuity">Over time</a><a href="#team-use">Team use</a><a href="#limits">Scope</a></div></nav>
+<nav class="contents" aria-label="On this page"><div class="contents-inner"><h2>On this page</h2><a href="#problem">Problem</a><a href="#decisions">Decisions</a><a href="#continuity">Over time</a><a href="#team-use">Team use</a><a href="#shared-qa">Shared QA changes</a><a href="#limits">Scope</a></div></nav>
 <article class="case-body">
 <section id="problem"><h2 class="case-section-label"><span class="case-section-number" aria-hidden="true">01</span><span>Problem</span></h2><div class="case-section-content"><p>Ticket status, merged code, and deployed builds could disagree. I reconciled them so engineering knew what to test and delivery knew what had reached production.</p></div></section>
 <section id="decisions"><h2 class="case-section-label"><span class="case-section-number" aria-hidden="true">02</span><span>Decisions</span></h2><div class="case-section-content"><p>I checked scope against merged code and tags, kept environment status separate, and repeated smokes when candidates changed. Infrastructure colleagues handled their production steps.</p><p>My tools assembled Jira, GitHub, and release context. AI helped with implementation and drafts; I reviewed the evidence and controlled posting. <a href="qa-workflow.html">See the review workflow</a>.</p></div></section>
@@ -54,7 +54,8 @@
 <li><p class="release-date">October 22, 2026</p><h3>Follow through after a re-cut.</h3><p>Updated the change record and confirmed it by readback. Escalated a queued deployment to the runner-infrastructure owner.</p></li>
 </ol></div></section>
 <section id="team-use"><h2 class="case-section-label"><span class="case-section-number" aria-hidden="true">04</span><span>Team use</span></h2><div class="case-section-content"><p>In July, a colleague relied on my release cuts and acknowledged the release-hygiene work. In October, delivery replied that it would notify the customer of the production update.</p></div></section>
-<section id="limits"><h2 class="case-section-label"><span class="case-section-number" aria-hidden="true">05</span><span>Scope</span></h2><div class="case-section-content"><p>These retained records show recurring work, not every release. Infrastructure and release decisions were shared. They establish no incident-reduction metric, team adoption of my scripts, or confirmation that the customer message was sent.</p></div></section>
+<section id="shared-qa"><h2 class="case-section-label"><span class="case-section-number" aria-hidden="true">05</span><span>Shared QA changes</span></h2><div class="case-section-content"><p>In July, I directed AI-assisted fixes to shared end-to-end test setup and worked through engineering review. The change made missing or broken modules fail immediately and limited retries to transient database-connection failures.</p><p>Retained review and merge records show the setup changes and companion testing documentation reached the shared repository. They do not establish a measured reduction in flaky tests.</p></div></section>
+<section id="limits"><h2 class="case-section-label"><span class="case-section-number" aria-hidden="true">06</span><span>Scope</span></h2><div class="case-section-content"><p>Dated records show recurring QA preparation and handoffs across April&ndash;October 2026. Release decisions and production responsibilities were shared. These records include no incident-reduction metric.</p></div></section>
 <footer class="case-footer"><a href="platform-investigation.html">Next: Platform QA investigation &rarr;</a><a href="mailto:kayla@snackdriven.com">Contact Kayla</a></footer>
 </article></div></main>
 </body></html>

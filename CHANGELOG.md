@@ -9,6 +9,8 @@ and numbered releases follow [Semantic Versioning](https://semver.org/spec/v2.0.
 
 ### Changed
 
+- Clarify AI-assisted QA workflow ownership, add reviewed shared test-setup changes, and tighten case-study scope and attribution.
+
 - Lead the portfolio with QA investigation and validation, with tool building as a supporting strength.
 
 - Apply the approved portfolio layout and humanized copy, restore the original letter flicker and console Easter egg, and align product previews and body typography.
