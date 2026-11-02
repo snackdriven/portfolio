@@ -9,6 +9,8 @@ and numbered releases follow [Semantic Versioning](https://semver.org/spec/v2.0.
 
 ### Changed
 
+- Recompose the portfolio overview around a clear introduction, professional work, personal builds, concise experience, and a contact close; retain the shared palette and case-study routes.
+
 - Refresh the single-page resume with sustained release ownership, concise project summaries, and the preferred public name Kayla Young.
 
 - Shorten portfolio summaries and case-study prose while retaining evidence, attribution, and material limits.
