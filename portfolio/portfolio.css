@@ -40,6 +40,7 @@ html { scroll-behavior:smooth; scroll-padding-top:24px; }
 #portfolio-overview .pr-evidence > div + div { margin-top:17px; }
 #portfolio-overview .pr-evidence dt { font-size:0.6875rem; color:var(--magenta); margin-bottom:5px; font-weight:500; }
 #portfolio-overview .pr-evidence dd { font-size:0.8125rem; color:var(--fg); }
+#portfolio-overview .pr-evidence dd a { color:var(--green); text-decoration:underline; text-underline-offset:3px; }
 #portfolio-overview .pr-case .pr-link { margin-top:8px; }
 #portfolio-overview .pr-personal { padding-top:28px; }
 #portfolio-overview .pr-personal .pr-section-head { margin-bottom:13px; }
