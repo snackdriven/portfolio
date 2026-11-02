@@ -11,7 +11,7 @@
 <meta property="og:image" content="https://snackdriven.com/assets/social/portfolio.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Kayla Young (Gilbert): QA, useful tools, and a little weirdness.">
+<meta property="og:image:alt" content="Kayla Young: QA, useful tools, and a little weirdness.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://snackdriven.com/assets/social/portfolio.png">
 <link rel="canonical" href="https://snackdriven.com/portfolio/">
@@ -22,124 +22,131 @@
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="stylesheet" href="portfolio.css">
-<link rel="stylesheet" href="portfolio-system.css">
 <script defer src="/assets/repo-shortcut.js"></script>
 <script defer src="/assets/site.js"></script>
-<link rel="stylesheet" href="portfolio-sharper.css">
 </head>
 <body class="portfolio-overview">
 <a href="#main-content" class="skip-link">Skip to main content</a>
-<header class="hero">
-  <div class="hero-top">
-    <h1>Kayla Young (Gilbert)</h1>
-    <div class="title">Senior QA engineer</div>
-  </div>
-  <p class="role-interest">Interested in AI workflow and internal-tool roles, and QA roles with room to build.</p>
-  <nav class="hero-contact portfolio-nav" aria-label="Portfolio links">
-    <a href="#selected-projects">Projects</a><span class="hero-sep" aria-hidden="true">|</span>
-    <a href="#experience">Experience</a><span class="hero-sep" aria-hidden="true">|</span>
-    <a href="resume/kayla-young-resume.pdf">Resume PDF</a><span class="hero-sep" aria-hidden="true">|</span>
-    <a href="mailto:kayla@snackdriven.com">Email</a><span class="hero-sep" aria-hidden="true">|</span>
-    <a href="https://linkedin.com/in/snackdriven">LinkedIn</a><span class="hero-sep" aria-hidden="true">|</span>
-    <a href="https://github.com/snackdriven" title="Source shortcut: Alt+?">GitHub</a><span class="hero-sep" aria-hidden="true">|</span>
+<header class="overview-header page-width">
+  <a class="site-name" href="/portfolio/" aria-label="Kayla Young, portfolio home">Kayla Young</a>
+  <nav aria-label="Portfolio links">
+    <a href="#selected-projects">Work</a>
+    <a href="#about-heading">About</a>
+    <a href="#experience">Experience</a>
     <a href="/">Log</a>
+    <a class="nav-resume" href="resume/kayla-young-resume.pdf">Resume PDF</a>
   </nav>
-  <p class="availability">Arkansas &middot; looking for fully remote work</p>
-  <p class="print-contact">kayla@snackdriven.com · github.com/snackdriven · linkedin.com/in/snackdriven</p>
 </header>
-<main id="main-content">
+<main id="main-content" class="page-width">
+  <section class="overview-hero" aria-labelledby="intro-heading">
+    <p class="hero-role">Senior QA engineer &middot; AI workflows &amp; internal tools</p>
+    <h1 id="intro-heading">I find bugs for money and introduce them for fun.</h1>
+    <p class="hero-intro">I investigate software and build tools around the awkward parts.</p>
+    <div class="hero-actions"><a class="button" href="#selected-projects">Explore the work <span aria-hidden="true">&darr;</span></a><a class="text-link" href="mailto:kayla@snackdriven.com">Email Kayla</a></div>
+    <p class="availability">Arkansas &middot; Fully remote</p>
+    <p class="role-interest">Interested in AI workflow and internal-tool roles, and QA with room to build.</p>
+  </section>
 
-<section class="section print-hide" id="selected-projects" aria-labelledby="projects-heading">
-  <div class="section-label"><span class="section-number">01</span><h2 class="section-name" id="projects-heading">Selected projects</h2></div>
-  <div class="section-content projects-content">
-    <p class="projects-intro">I find bugs for money and introduce them for fun.</p>
-    <div class="project-list">
-      <article class="project project-release">
-        <div class="release-card-copy"><div class="project-card-heading"><p class="project-tech">Professional work &middot; April&ndash;October 2026</p><h3 class="project-name"><a href="projects/release-readiness.html">Release readiness</a></h3></div>
-        <p class="project-desc">I reconciled scope, prepared release candidates, and coordinated engineering and delivery handoffs.</p>
-        <p class="project-impact">Engineering relied on my cuts; delivery used my production updates.</p>
-        <div class="project-actions"><a class="project-link" href="projects/release-readiness.html">Follow the release handoff <span aria-hidden="true">&rarr;</span></a></div></div>
-        <ol class="release-card-flow" aria-label="Release responsibilities"><li><span>01 / Scope</span>Reconcile tickets and merged code</li><li><span>02 / Readiness</span>Check the candidate and deployed build</li><li><span>03 / Handoff</span>Keep engineering and delivery aligned</li></ol>
-      </article>
-      <article class="project">
-        <div class="project-card-heading"><p class="project-tech">Professional work</p><h3 class="project-name"><a href="projects/platform-investigation.html">Platform QA investigation</a></h3></div>
-        <div class="project-preview project-readout"><span class="preview-number">250</span><span class="preview-label">documented findings</span><div class="preview-detail"><span>23 recurring patterns</span><span>5 decisions for owners</span></div></div>
-        <p class="project-desc">I directed an AI-assisted staging pass and prioritized the findings for product and engineering.</p>
-        <p class="project-impact">The VP of Engineering shared the readout with the team.</p>
-        <div class="project-actions"><a class="project-link" href="projects/platform-investigation.html">Read the investigation <span aria-hidden="true">&rarr;</span></a></div>
-      </article>
-      <article class="project">
-        <div class="project-card-heading"><p class="project-tech">Personal QA tooling</p><h3 class="project-name"><a href="projects/qa-workflow.html">Personal QA workflow</a></h3></div>
-        <div class="project-preview project-workflow"><ol aria-label="Workflow summary"><li>Source context</li><li>Investigation</li><li>Independent review</li><li>Human verdict</li></ol><p>Missing evidence stays visible.</p></div>
-        <p class="project-desc">I designed runbooks that connect ticket context, prior findings, and release information.</p>
-        <p class="project-impact">Review caught misleading screenshots, environment labels, and saved-state claims.</p>
-        <div class="project-actions"><a class="project-link" href="projects/qa-workflow.html">Explore the QA workflow <span aria-hidden="true">&rarr;</span></a></div>
-      </article>
-      <article class="project">
-        <div class="project-card-heading"><p class="project-tech">Personal hardware project</p><h3 class="project-name"><a href="projects/al80-studio.html">AL80 Studio</a></h3></div>
-        <figure class="project-preview project-image"><img src="/assets/projects/al80-offline.jpg" width="1265" height="889" loading="lazy" alt="AL80 Studio controls with a disconnected device preview."><figcaption>Actual app &middot; Disconnected preview</figcaption></figure>
-        <p class="project-desc">The logs said success. The keyboard kept the old picture. I directed AI-assisted fixes and tested them on hardware.</p>
-        <p class="project-impact">Timing and view-switch fixes confirmed on the physical keyboard.</p>
-        <div class="project-actions"><a class="project-link" href="projects/al80-studio.html">Read the hardware story <span aria-hidden="true">&rarr;</span></a><a class="project-link project-link-secondary" href="https://snackdriven.github.io/al80-studio/">Open the app <span aria-hidden="true">&nearr;</span></a></div>
-      </article>
-      <article class="project">
-        <div class="project-card-heading"><p class="project-tech">Personal creative project</p><h3 class="project-name"><a href="projects/felt-presence.html">Felt Presence</a></h3></div>
-        <figure class="project-preview project-image"><img src="/assets/projects/felt-reader-closed.jpg" width="2560" height="1223" loading="lazy" alt="Felt Presence reader with its illustrated shop and unopened letter."><figcaption>Actual reader &middot; Before opening a letter</figcaption></figure>
-        <p class="project-desc">I shaped an illustrated reader for a haunted craft shop and connected recurring AI-assisted generation to publishing.</p>
-        <p class="project-impact">Approved story/image pairs publish; unfinished pairs wait. The vines remain unruly.</p>
-        <div class="project-actions"><a class="project-link" href="projects/felt-presence.html">Read the shop story <span aria-hidden="true">&rarr;</span></a><a class="project-link project-link-secondary" href="https://felt-presence.snackdriven.com/">Visit the reader <span aria-hidden="true">&nearr;</span></a></div>
-      </article>
-    </div>
-    <p class="supporting-work">Also: <a href="https://now-screaming.snackdriven.com/">Now Screaming</a>, for horror movies I meant to see, and an <a href="https://albums.snackdriven.com/">album poster builder</a>.</p><p class="supporting-work">Now Screaming&rsquo;s August watched-state work continued in October. Its <a href="https://github.com/snackdriven/now-screaming/blob/e7b1d104931c64c1079cac8359e54f14a68d0dc3/tests/browser/hero-watched.spec.mjs">browser regression</a> checks marking, reloading, unmarking, and empty states.</p>
-  </div>
-</section>
-<section class="section" aria-labelledby="about-heading">
-  <div class="section-label"><span class="section-number">02</span><h2 class="section-name" id="about-heading">About</h2></div>
-  <div class="section-content"><p class="about-text">I work on healthcare QA, test strategy, and <a href="projects/release-readiness.html">release readiness</a>. I turn <a href="projects/platform-investigation.html">broad investigations into prioritized readouts</a>.</p><p class="about-text">I have 6+ years in QA and build tools I wish existed. Sometimes a Kanban board. Sometimes a haunted craft shop.</p><p class="about-text">For personal builds, AI writes the code. I define the behavior, direct implementation, and test the result. Then I pick at it.</p><p class="supporting-work selected-writing">More QA work in the log: <a href="/a-very-convincing-empty-table.html">A very convincing empty table</a>, <a href="/nothing-to-test-allegedly.html">Nothing to test, allegedly</a>, and <a href="/adjacent-to-the-tests.html">Adjacent to the tests</a>.</p></div>
-</section>
-<section class="section" id="experience" aria-labelledby="experience-heading">
-  <div class="section-label"><span class="section-number">03</span><h2 class="section-name" id="experience-heading">Experience</h2></div>
-  <div class="section-content">
-    <div class="job">
-      <div class="job-header"><span class="job-company">Chorus Innovations</span><span class="job-separator">&middot;</span><span class="job-tenure">Apr 2023 &ndash; Present · Remote</span></div>
-      <ul class="job-highlights"><li>Coordinated release readiness across April&ndash;October 2026: scope, candidates, smoke checks, and engineering/delivery handoffs. <a href="projects/release-readiness.html">Read the case study</a>.</li></ul>
-      <div class="job-sub"><div class="job-sub-header"><span class="job-role">Senior QA engineer</span><span class="job-period-inline">Sep 2026 &ndash; Present</span></div>
-        <ul class="job-highlights"><li>Directed a four-day AI-assisted staging investigation. Reviewed 250 documented findings, grouped them into 23 patterns, and prioritized data risks with coverage limits attached.</li><li>Own backend, API-contract, and UI test strategy for care modules: vitals, appointments, consents, medications, and overview.</li><li>Investigate conditional workflows and persistence across React, GraphQL, and a legacy no-code platform. Clarify expected behavior with product and engineering.</li></ul>
-      </div>
-      <div class="job-sub"><div class="job-sub-header"><span class="job-role">Senior QA specialist</span><span class="job-period-inline">Sep 2024 &ndash; Sep 2026</span></div>
-        <ul class="job-highlights"><li>Investigated conditional forms, role-based workflows, and persistence after save and refresh.</li><li>Designed personal tooling that combined Jira, GitHub, and release context into updates used by colleagues. The Google Docs poster retired in September 2026; the markdown and Confluence paths were separate.</li></ul>
-      </div>
-      <div class="job-sub"><div class="job-sub-header"><span class="job-role">Software QA specialist</span><span class="job-period-inline">Apr 2023 &ndash; Sep 2024</span></div>
-        <ul class="job-highlights"><li>Tested React/GraphQL applications and a legacy no-code platform.</li></ul>
+  <section id="selected-projects" class="work-section" aria-labelledby="projects-heading">
+    <div class="section-heading"><h2 id="projects-heading">Selected work</h2><p>The decisions, debugging, and checks behind it.</p></div>
+
+    <div class="work-group" aria-labelledby="professional-heading">
+      <h3 id="professional-heading" class="group-heading">At work</h3>
+      <div class="professional-list">
+        <article class="project professional-project">
+          <div class="project-copy">
+            <p class="project-context">Professional QA &middot; April&ndash;October 2026</p>
+            <h4 class="project-name"><a href="projects/release-readiness.html">Release readiness</a></h4>
+            <p class="project-desc">Across recurring releases, I reconciled scope, prepared release candidates, and checked what was actually deployed.</p>
+            <p class="project-impact">Engineering relied on my cuts; delivery used my production updates.</p>
+            <a class="project-link text-link" href="projects/release-readiness.html">Follow the handoff <span aria-hidden="true">&rarr;</span></a>
+          </div>
+          <ol class="release-path" aria-label="Release workflow summary">
+            <li><strong>Scope</strong><span>Tickets and merged code</span></li>
+            <li><strong>Readiness</strong><span>The candidate and deployed build</span></li>
+            <li><strong>Handoff</strong><span>Engineering and delivery</span></li>
+          </ol>
+        </article>
+        <article class="project professional-project">
+          <div class="project-copy">
+            <p class="project-context">Professional QA &middot; Four-day staging investigation</p>
+            <h4 class="project-name"><a href="projects/platform-investigation.html">Platform QA investigation</a></h4>
+            <p class="project-desc">I directed an AI-assisted staging pass and grouped reviewed findings into patterns, data risks, and decisions for product and engineering.</p>
+            <p class="project-impact">The VP of Engineering shared the readout with the team.</p>
+            <a class="project-link text-link" href="projects/platform-investigation.html">Read the investigation <span aria-hidden="true">&rarr;</span></a>
+          </div>
+          <div class="readout-summary"><p>Readout summary</p><dl><div><dt>250</dt><dd>Documented findings</dd></div><div><dt>23</dt><dd>Recurring patterns</dd></div><div><dt>5</dt><dd>Decisions for owners</dd></div></dl></div>
+        </article>
       </div>
     </div>
-    <div class="job">
-      <div class="job-header"><span class="job-company">Ultranauts Inc</span><span class="job-separator">&middot;</span><span class="job-tenure">Feb 2020 &ndash; Feb 2023 · Remote</span></div>
-      <div class="job-sub"><div class="job-sub-header"><span class="job-role">Software quality engineer II</span><span class="job-period-inline">Oct 2021 &ndash; Feb 2023</span></div>
-        <ul class="job-highlights"><li>Planned exploratory and regression testing for multi-role workflows and complex business rules.</li><li>Weighed automation benefits against maintenance cost.</li></ul>
+
+    <div class="work-group" aria-labelledby="builds-heading">
+      <h3 id="builds-heading" class="group-heading">Things I built</h3>
+      <p class="build-method">For personal builds, AI writes the code. I define the behavior and acceptance checks, direct implementation, and test the result.</p>
+      <div class="build-grid">
+        <article class="project workflow-project">
+          <div class="project-copy">
+            <p class="project-context">Personal QA tooling</p>
+            <h4 class="project-name"><a href="projects/qa-workflow.html">Personal QA workflow</a></h4>
+            <p class="project-desc">I wanted one packet I could start testing from: context, expected behavior, and the gaps still showing.</p>
+            <p class="project-impact">Review caught a loading screen labeled as a saved result.</p>
+            <a class="project-link text-link" href="projects/qa-workflow.html">Inside the workflow <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+        <article class="project build-project">
+          <a class="product-image" href="projects/al80-studio.html" aria-label="Read the AL80 Studio case study"><img src="/assets/projects/al80-offline.jpg" width="1265" height="889" loading="lazy" alt="AL80 Studio controls and a disconnected keyboard-display preview."></a>
+          <p class="image-note">Actual app &middot; Disconnected preview</p>
+          <div class="project-copy">
+            <p class="project-context">Personal hardware project</p>
+            <h4 class="project-name"><a href="projects/al80-studio.html">AL80 Studio</a></h4>
+            <p class="project-desc">A browser tool for my keyboard&rsquo;s display. The logs said success; the keyboard kept the old picture. I confirmed the timing and view-switch fix on hardware.</p>
+            <div class="project-actions"><a class="project-link text-link" href="projects/al80-studio.html">How I checked it <span aria-hidden="true">&rarr;</span></a><a class="secondary-link" href="https://snackdriven.github.io/al80-studio/">Open the app <span aria-hidden="true">&nearr;</span></a></div>
+          </div>
+        </article>
+        <article class="project build-project">
+          <a class="product-image" href="projects/felt-presence.html" aria-label="Read the Felt Presence case study"><img src="/assets/projects/felt-reader-closed.jpg" width="2560" height="1223" loading="lazy" alt="Felt Presence: an illustrated shop and an unopened letter."></a>
+          <p class="image-note">Actual reader &middot; Before opening a letter</p>
+          <div class="project-copy">
+            <p class="project-context">Personal creative project</p>
+            <h4 class="project-name"><a href="projects/felt-presence.html">Felt Presence</a></h4>
+            <p class="project-desc">An illustrated haunted-shop reader. The first vines were too tidy. I shaped the opening view and the workflow that publishes complete story/image pairs.</p>
+            <div class="project-actions"><a class="project-link text-link" href="projects/felt-presence.html">Inside the reader <span aria-hidden="true">&rarr;</span></a><a class="secondary-link" href="https://felt-presence.snackdriven.com/">Visit the shop <span aria-hidden="true">&nearr;</span></a></div>
+          </div>
+        </article>
       </div>
-      <div class="job-sub print-hide"><div class="job-sub-header"><span class="job-role">QA tester / software QA engineer I</span><span class="job-period-inline">Feb 2020 &ndash; Sep 2021</span></div>
-        <ul class="job-highlights"><li>Manual and exploratory testing across multiple client projects.</li></ul>
-      </div>
+      <p class="supporting-work">Also in the repo pile: <a href="https://now-screaming.snackdriven.com/">Now Screaming</a> and an <a href="https://albums.snackdriven.com/">album poster builder</a>. Now Screaming&rsquo;s <a href="https://github.com/snackdriven/now-screaming/blob/e7b1d104931c64c1079cac8359e54f14a68d0dc3/tests/browser/hero-watched.spec.mjs">watched-state regression</a> follows a mark, reload, and unmark.</p>
     </div>
-  </div>
-</section>
-<section class="section" id="section-skills" aria-labelledby="stack-heading">
-  <div class="section-label"><span class="section-number">04</span><h2 class="section-name" id="stack-heading">Stack</h2></div>
-  <div class="section-content stack-content">
-    <div class="skills-grid">
-      <div class="skills-category"><h3 class="skills-category-name">AI workflows</h3><ul class="skills-list"><li>Workflow design and orchestration</li><li>AI-assisted implementation</li><li>Output verification and tool configuration</li></ul></div>
-      <div class="skills-category"><h3 class="skills-category-name">Quality &amp; debugging</h3><ul class="skills-list"><li>Exploratory and regression testing</li><li>Defect investigation and test planning</li><li>Evidence review and risk prioritization</li></ul></div>
-      <div class="skills-category"><h3 class="skills-category-name">Tools &amp; technologies</h3><ul class="skills-list"><li>Playwright for AI-assisted investigation</li><li>Git, Jira, GitHub Actions, GraphQL</li><li>Model Context Protocol (MCP)</li><li>SQL familiarity</li></ul></div>
+  </section>
+
+  <section class="about-section" aria-labelledby="about-heading">
+    <div class="about-copy">
+      <h2 id="about-heading">About</h2>
+      <p>I have 6+ years in QA and build tools I wish existed. Sometimes a Kanban board. Sometimes a haunted craft shop.</p>
+      <div class="selected-writing"><h3>From the log</h3><a href="/a-very-convincing-empty-table.html">A very convincing empty table</a><a href="/nothing-to-test-allegedly.html">Nothing to test, allegedly</a><a href="/adjacent-to-the-tests.html">Adjacent to the tests</a></div>
     </div>
-  </div>
-</section>
-<section class="section print-hide" id="section-target" aria-labelledby="looking-heading">
-  <div class="section-label"><span class="section-number">05</span><h2 class="section-name" id="looking-heading">Looking for</h2></div>
-  <div class="section-content"><p class="about-text">Give me an awkward workflow or software that breaks its promises. I like shaping the fix and testing the edges.</p>
-  <p class="contact-links"><a href="mailto:kayla@snackdriven.com">Email Kayla</a> · <a href="resume/kayla-young-resume.pdf">Resume PDF</a></p></div>
-</section>
+    <div id="section-skills" class="skills">
+      <h3 id="stack-heading">What I work with</h3>
+      <dl><div><dt>AI workflows</dt><dd>Workflow design and orchestration, AI-assisted implementation, output verification, tool configuration, MCP</dd></div><div><dt>Quality &amp; debugging</dt><dd>Exploratory and regression testing, test planning, defect investigation, evidence review, risk prioritization</dd></div><div><dt>Tools</dt><dd>Playwright for AI-assisted investigation, Git, Jira, GitHub Actions, GraphQL, SQL familiarity</dd></div></dl>
+    </div>
+  </section>
+
+  <section id="experience" class="experience-section" aria-labelledby="experience-heading">
+    <div class="section-heading"><h2 id="experience-heading">Experience</h2><a class="text-link" href="resume/kayla-young-resume.pdf">The one-page resume <span aria-hidden="true">&nearr;</span></a></div>
+    <div class="employer">
+      <div><h3>Chorus Innovations</h3><p class="employment-meta">Apr 2023 &ndash; Present &middot; Remote</p><p class="employment-summary">Healthcare QA across React, GraphQL, and a legacy no-code platform. Care-module test strategy, conditional workflows, and persistence.</p></div>
+      <ol class="role-history"><li><h4>Senior QA engineer</h4><p>Sep 2026 &ndash; Present</p></li><li><h4>Senior QA specialist</h4><p>Sep 2024 &ndash; Sep 2026</p></li><li><h4>Software QA specialist</h4><p>Apr 2023 &ndash; Sep 2024</p></li></ol>
+    </div>
+    <div class="employer">
+      <div><h3>Ultranauts Inc</h3><p class="employment-meta">Feb 2020 &ndash; Feb 2023 &middot; Remote</p><p class="employment-summary">Exploratory and regression testing for multi-role workflows and complex rules. Weighed automation benefits against maintenance cost.</p></div>
+      <ol class="role-history"><li><h4>Software quality engineer II</h4><p>Oct 2021 &ndash; Feb 2023</p></li><li><h4>QA tester / software QA engineer I</h4><p>Feb 2020 &ndash; Sep 2021</p></li></ol>
+    </div>
+  </section>
+
+  <section id="section-target" class="contact-section" aria-labelledby="looking-heading">
+    <div><h2 id="looking-heading">Give me an awkward workflow.</h2><p>I like shaping the fix and testing the edges.</p><p class="print-only">kayla@snackdriven.com &middot; snackdriven.com/portfolio/</p></div>
+    <div class="contact-actions"><a class="button" href="mailto:kayla@snackdriven.com">Email Kayla</a><a class="text-link" href="resume/kayla-young-resume.pdf">Resume PDF</a></div>
+  </section>
 </main>
-<footer class="footer">Kayla Young (Gilbert) // 2026</footer>
+<footer class="overview-footer page-width"><p>Kayla Young &middot; 2026</p><nav aria-label="Elsewhere"><a href="https://linkedin.com/in/snackdriven">LinkedIn</a><a href="https://github.com/snackdriven" title="Source shortcut: Alt+?">GitHub</a><a href="/">The log</a></nav></footer>
 </body>
 </html>
