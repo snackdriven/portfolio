@@ -24,129 +24,52 @@
 <link rel="stylesheet" href="portfolio.css">
 <script defer src="/assets/repo-shortcut.js"></script>
 <script defer src="/assets/site.js"></script>
+<script defer src="/assets/neon-flicker.js"></script>
+<script defer src="portfolio.js"></script>
 </head>
 <body class="portfolio-overview">
-<a href="#main-content" class="skip-link">Skip to main content</a>
-<header class="overview-header page-width">
-  <a class="site-name" href="/portfolio/" aria-label="Kayla Young, portfolio home">Kayla Young</a>
-  <nav aria-label="Portfolio links">
-    <a href="#selected-projects">Work</a>
-    <a href="#about-heading">About</a>
-    <a href="#experience">Experience</a>
-    <a href="/">Log</a>
-    <a class="nav-resume" href="resume/kayla-young-resume.pdf">Resume PDF</a>
-  </nav>
-</header>
-<main id="main-content" class="page-width">
-  <section class="overview-hero" aria-labelledby="intro-heading">
-    <p class="hero-role">Senior QA engineer &middot; AI workflows &amp; internal tools</p>
-    <h1 id="intro-heading">I find bugs for money and introduce them for fun.</h1>
-    <p class="hero-intro">I investigate software and build tools around the awkward parts.</p>
-    <div class="hero-actions"><a class="button" href="#selected-projects">Explore the work <span aria-hidden="true">&darr;</span></a><a class="text-link" href="mailto:kayla@snackdriven.com">Email Kayla</a></div>
-    <p class="availability">Arkansas &middot; Fully remote</p>
-    <p class="role-interest">Interested in AI workflow and internal-tool roles, and QA with room to build.</p>
-  </section>
-
-  <section id="selected-projects" class="work-section" aria-labelledby="projects-heading">
-    <div class="section-heading"><h2 id="projects-heading">Selected work</h2><p>The decisions, debugging, and checks behind it.</p></div>
-
-    <div class="work-group" aria-labelledby="professional-heading">
-      <h3 id="professional-heading" class="group-heading">At work</h3>
-      <div class="professional-list">
-        <article class="project professional-project">
-          <div class="project-copy">
-            <p class="project-context">Professional QA &middot; April&ndash;October 2026</p>
-            <h4 class="project-name"><a href="projects/release-readiness.html">Release readiness</a></h4>
-            <p class="project-desc">Across recurring releases, I reconciled scope, prepared release candidates, and checked what was actually deployed.</p>
-            <p class="project-impact">Engineering relied on my cuts; delivery used my production updates.</p>
-            <a class="project-link text-link" href="projects/release-readiness.html">Follow the handoff <span aria-hidden="true">&rarr;</span></a>
-          </div>
-          <ol class="release-path" aria-label="Release workflow summary">
-            <li><strong>Scope</strong><span>Tickets and merged code</span></li>
-            <li><strong>Readiness</strong><span>The candidate and deployed build</span></li>
-            <li><strong>Handoff</strong><span>Engineering and delivery</span></li>
-          </ol>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div id="portfolio-overview" class="portfolio-shell">
+  <header class="pr-top"><a class="pr-host" href="/portfolio/"><span>&gt;</span> snackdriven.com</a><nav aria-label="Portfolio"><a href="#selected-projects">Work</a><a href="/">The log</a><a href="resume/kayla-young-resume.pdf">Resume</a><a href="mailto:kayla@snackdriven.com">Email</a></nav></header>
+  <main id="main-content">
+  <section class="pr-hero" aria-labelledby="pr-name"><h1 id="pr-name" class="pr-name" aria-label="Kayla Young"><span aria-hidden="true"><span class="pr-glyph" data-solo>K</span>a<span class="pr-glyph" data-group="yl">y</span><span class="pr-glyph" data-group="yl">l</span>a <span class="pr-glyph" data-solo>Y</span><span class="pr-glyph" data-solo>o</span>u<span class="pr-glyph" data-group="ie">n</span><span class="pr-glyph" data-group="ie">g</span></span><span class="pr-cursor" aria-hidden="true">_</span></h1><p class="pr-role">Senior QA engineer &middot; AI workflows &amp; internal tools</p><div class="pr-introduction"><div><h2 class="pr-promise">I build tools I wish existed, and I&rsquo;m picky about how they work.</h2><div class="pr-actions"><a class="pr-button" href="#selected-projects">Explore the work</a><a class="pr-link" href="resume/kayla-young-resume.pdf">One-page resume</a></div></div><aside class="pr-intro-side"><p><strong>6+ years in QA</strong>Healthcare software, test strategy, and release readiness.</p><p><strong>Arkansas &middot; Fully remote</strong>AI workflows, internal tools, and QA with room to build.</p></aside></div></section>
+  <section id="selected-projects" class="pr-selected" aria-labelledby="projects-heading">
+    <div class="pr-section-head"><h2 id="projects-heading">Selected work</h2></div>
+    <article class="project pr-case">
+      <div><p class="pr-context">Professional QA &middot; April&ndash;October 2026</p><h3>Release readiness</h3><a class="project-link pr-link" href="projects/release-readiness.html">Read the case study</a></div>
+      <dl class="pr-evidence"><div><dt>My work</dt><dd>I compared ticket scope with merged code, prepared release candidates, and checked what was actually deployed.</dd></div><div><dt>The result</dt><dd>Engineering relied on my release cuts; delivery used my production updates.</dd></div></dl>
+    </article>
+    <article class="project pr-case">
+      <div><p class="pr-context">Professional QA</p><h3>Platform investigation</h3><a class="project-link pr-link" href="projects/platform-investigation.html">Read the case study</a></div>
+      <dl class="pr-evidence"><div><dt>My work</dt><dd>I directed a four-day AI-assisted staging investigation and reviewed the evidence. I grouped 250 documented findings into 23 recurring patterns and five decisions for owners.</dd></div><div><dt>The result</dt><dd>The VP of Engineering shared the readout with the team.</dd></div></dl>
+    </article>
+    <section class="pr-personal" aria-labelledby="pr-personal-title">
+      <div class="pr-section-head"><h2 id="pr-personal-title">Tools I designed and tested</h2></div>
+      <p class="pr-attribution">AI writes the code for my personal builds. I define behavior and acceptance checks, direct implementation, and test the result.</p>
+      <article class="project pr-workflow">
+        <div><p class="pr-context">Personal QA tooling</p><h3>A QA packet I can actually use.</h3><p class="pr-copy">I designed runbooks that bring ticket context and prior findings into a QA packet I can test from.</p><a class="project-link pr-link" href="projects/qa-workflow.html">Inside the workflow</a></div>
+        <div><p class="pr-review">Review caught incorrect environment labels and a loading screen presented as a saved result.</p><details><summary>A test-design decision</summary><p>Stored vitals and server rules needed GraphQL checks. BMI calculated in the interface needed UI coverage. For persistence checks, I compared recordings, HAR logs, and GraphQL values after reload, using an unaffected option as a control.</p></details></div>
+      </article>
+      <div class="pr-products">
+        <article class="project">
+          <figure><a class="pr-preview" href="projects/al80-studio.html" aria-label="Read the AL80 Studio case study"><img src="/assets/projects/al80-offline.jpg" width="1265" height="889" loading="lazy" alt="AL80 Studio controls and a disconnected keyboard-display preview."></a><figcaption>Actual app &middot; Disconnected preview</figcaption></figure>
+          <h3>AL80 Studio</h3><p class="pr-copy">A browser control panel for my keyboard&rsquo;s display. I shaped the controls and directed implementation.</p>
+          <dl class="pr-evidence"><div><dt>What I verified</dt><dd>The keyboard acknowledged every block and kept showing the old picture. I confirmed the timing and view-switch fix on the device.</dd></div></dl>
+          <div class="pr-product-links"><a class="project-link pr-link" href="projects/al80-studio.html">Read the case study</a><a class="pr-secondary" href="https://snackdriven.github.io/al80-studio/">Open the app</a></div>
         </article>
-        <article class="project professional-project">
-          <div class="project-copy">
-            <p class="project-context">Professional QA &middot; Four-day staging investigation</p>
-            <h4 class="project-name"><a href="projects/platform-investigation.html">Platform QA investigation</a></h4>
-            <p class="project-desc">I directed an AI-assisted staging pass and grouped reviewed findings into patterns, data risks, and decisions for product and engineering.</p>
-            <p class="project-impact">The VP of Engineering shared the readout with the team.</p>
-            <a class="project-link text-link" href="projects/platform-investigation.html">Read the investigation <span aria-hidden="true">&rarr;</span></a>
-          </div>
-          <div class="readout-summary"><p>Readout summary</p><dl><div><dt>250</dt><dd>Documented findings</dd></div><div><dt>23</dt><dd>Recurring patterns</dd></div><div><dt>5</dt><dd>Decisions for owners</dd></div></dl></div>
+        <article class="project">
+          <figure><a class="pr-preview" href="projects/felt-presence.html" aria-label="Read the Felt Presence case study"><img src="/assets/projects/felt-reader-closed.jpg" width="2560" height="1223" loading="lazy" alt="Felt Presence: an illustrated shop and an unopened letter."></a><figcaption>Actual reader &middot; Before opening a letter</figcaption></figure>
+          <h3>Felt Presence</h3><p class="pr-copy">An illustrated haunted-shop reader. I shaped the opening view and directed a workflow that publishes accepted story/image pairs.</p>
+          <dl class="pr-evidence"><div><dt>What I checked</dt><dd>I checked screen fit and whether publishing stopped when acceptance checks failed.</dd></div></dl>
+          <div class="pr-product-links"><a class="project-link pr-link" href="projects/felt-presence.html">Read the case study</a><a class="pr-secondary" href="https://felt-presence.snackdriven.com/">Visit the shop</a></div>
         </article>
       </div>
-    </div>
-
-    <div class="work-group" aria-labelledby="builds-heading">
-      <h3 id="builds-heading" class="group-heading">Things I built</h3>
-      <p class="build-method">For personal builds, AI writes the code. I define the behavior and acceptance checks, direct implementation, and test the result.</p>
-      <div class="build-grid">
-        <article class="project workflow-project">
-          <div class="project-copy">
-            <p class="project-context">Personal QA tooling</p>
-            <h4 class="project-name"><a href="projects/qa-workflow.html">Personal QA workflow</a></h4>
-            <p class="project-desc">I wanted one packet I could start testing from: context, expected behavior, and the gaps still showing.</p>
-            <p class="project-impact">Review caught a loading screen labeled as a saved result.</p>
-            <a class="project-link text-link" href="projects/qa-workflow.html">Inside the workflow <span aria-hidden="true">&rarr;</span></a>
-          </div>
-        </article>
-        <article class="project build-project">
-          <a class="product-image" href="projects/al80-studio.html" aria-label="Read the AL80 Studio case study"><img src="/assets/projects/al80-offline.jpg" width="1265" height="889" loading="lazy" alt="AL80 Studio controls and a disconnected keyboard-display preview."></a>
-          <p class="image-note">Actual app &middot; Disconnected preview</p>
-          <div class="project-copy">
-            <p class="project-context">Personal hardware project</p>
-            <h4 class="project-name"><a href="projects/al80-studio.html">AL80 Studio</a></h4>
-            <p class="project-desc">A browser tool for my keyboard&rsquo;s display. The logs said success; the keyboard kept the old picture. I confirmed the timing and view-switch fix on hardware.</p>
-            <div class="project-actions"><a class="project-link text-link" href="projects/al80-studio.html">How I checked it <span aria-hidden="true">&rarr;</span></a><a class="secondary-link" href="https://snackdriven.github.io/al80-studio/">Open the app <span aria-hidden="true">&nearr;</span></a></div>
-          </div>
-        </article>
-        <article class="project build-project">
-          <a class="product-image" href="projects/felt-presence.html" aria-label="Read the Felt Presence case study"><img src="/assets/projects/felt-reader-closed.jpg" width="2560" height="1223" loading="lazy" alt="Felt Presence: an illustrated shop and an unopened letter."></a>
-          <p class="image-note">Actual reader &middot; Before opening a letter</p>
-          <div class="project-copy">
-            <p class="project-context">Personal creative project</p>
-            <h4 class="project-name"><a href="projects/felt-presence.html">Felt Presence</a></h4>
-            <p class="project-desc">An illustrated haunted-shop reader. The first vines were too tidy. I shaped the opening view and the workflow that publishes complete story/image pairs.</p>
-            <div class="project-actions"><a class="project-link text-link" href="projects/felt-presence.html">Inside the reader <span aria-hidden="true">&rarr;</span></a><a class="secondary-link" href="https://felt-presence.snackdriven.com/">Visit the shop <span aria-hidden="true">&nearr;</span></a></div>
-          </div>
-        </article>
-      </div>
-      <p class="supporting-work">Also in the repo pile: <a href="https://now-screaming.snackdriven.com/">Now Screaming</a> and an <a href="https://albums.snackdriven.com/">album poster builder</a>. Now Screaming&rsquo;s <a href="https://github.com/snackdriven/now-screaming/blob/e7b1d104931c64c1079cac8359e54f14a68d0dc3/tests/browser/hero-watched.spec.mjs">watched-state regression</a> follows a mark, reload, and unmark.</p>
-    </div>
+    </section>
   </section>
-
-  <section class="about-section" aria-labelledby="about-heading">
-    <div class="about-copy">
-      <h2 id="about-heading">About</h2>
-      <p>I have 6+ years in QA and build tools I wish existed. Sometimes a Kanban board. Sometimes a haunted craft shop.</p>
-      <div class="selected-writing"><h3>From the log</h3><a href="/a-very-convincing-empty-table.html">A very convincing empty table</a><a href="/nothing-to-test-allegedly.html">Nothing to test, allegedly</a><a href="/adjacent-to-the-tests.html">Adjacent to the tests</a></div>
-    </div>
-    <div id="section-skills" class="skills">
-      <h3 id="stack-heading">What I work with</h3>
-      <dl><div><dt>AI workflows</dt><dd>Workflow design and orchestration, AI-assisted implementation, output verification, tool configuration, MCP</dd></div><div><dt>Quality &amp; debugging</dt><dd>Exploratory and regression testing, test planning, defect investigation, evidence review, risk prioritization</dd></div><div><dt>Tools</dt><dd>Playwright for AI-assisted investigation, Git, Jira, GitHub Actions, GraphQL, SQL familiarity</dd></div></dl>
-    </div>
-  </section>
-
-  <section id="experience" class="experience-section" aria-labelledby="experience-heading">
-    <div class="section-heading"><h2 id="experience-heading">Experience</h2><a class="text-link" href="resume/kayla-young-resume.pdf">The one-page resume <span aria-hidden="true">&nearr;</span></a></div>
-    <div class="employer">
-      <div><h3>Chorus Innovations</h3><p class="employment-meta">Apr 2023 &ndash; Present &middot; Remote</p><p class="employment-summary">Healthcare QA across React, GraphQL, and a legacy no-code platform. Care-module test strategy, conditional workflows, and persistence.</p></div>
-      <ol class="role-history"><li><h4>Senior QA engineer</h4><p>Sep 2026 &ndash; Present</p></li><li><h4>Senior QA specialist</h4><p>Sep 2024 &ndash; Sep 2026</p></li><li><h4>Software QA specialist</h4><p>Apr 2023 &ndash; Sep 2024</p></li></ol>
-    </div>
-    <div class="employer">
-      <div><h3>Ultranauts Inc</h3><p class="employment-meta">Feb 2020 &ndash; Feb 2023 &middot; Remote</p><p class="employment-summary">Exploratory and regression testing for multi-role workflows and complex rules. Weighed automation benefits against maintenance cost.</p></div>
-      <ol class="role-history"><li><h4>Software quality engineer II</h4><p>Oct 2021 &ndash; Feb 2023</p></li><li><h4>QA tester / software QA engineer I</h4><p>Feb 2020 &ndash; Sep 2021</p></li></ol>
-    </div>
-  </section>
-
-  <section id="section-target" class="contact-section" aria-labelledby="looking-heading">
-    <div><h2 id="looking-heading">Give me an awkward workflow.</h2><p>I like shaping the fix and testing the edges.</p><p class="print-only">kayla@snackdriven.com &middot; snackdriven.com/portfolio/</p></div>
-    <div class="contact-actions"><a class="button" href="mailto:kayla@snackdriven.com">Email Kayla</a><a class="text-link" href="resume/kayla-young-resume.pdf">Resume PDF</a></div>
-  </section>
-</main>
-<footer class="overview-footer page-width"><p>Kayla Young &middot; 2026</p><nav aria-label="Elsewhere"><a href="https://linkedin.com/in/snackdriven">LinkedIn</a><a href="https://github.com/snackdriven" title="Source shortcut: Alt+?">GitHub</a><a href="/">The log</a></nav></footer>
+    <section id="experience" class="pr-background" aria-label="Background and writing"><div><h2 id="about-heading" class="pr-small-heading">Background</h2><p>Senior QA engineer at Chorus Innovations.<br>Chorus, 2023&ndash;present &middot; Ultranauts, 2020&ndash;2023.</p><a class="pr-link" href="resume/kayla-young-resume.pdf">Experience and skills in the resume</a></div><div class="pr-writing"><h2 class="pr-small-heading">How I think, in the log</h2><a href="/a-very-convincing-empty-table.html">A very convincing empty table</a><a href="/nothing-to-test-allegedly.html">Nothing to test, allegedly</a><a href="/adjacent-to-the-tests.html">Adjacent to the tests</a></div></section>
+    <section id="section-target" class="pr-close" aria-labelledby="looking-heading"><h2 id="looking-heading">I find bugs for money and introduce them for fun.</h2><div class="pr-close-links"><a class="pr-link" href="mailto:kayla@snackdriven.com">Email</a><a class="pr-link" href="resume/kayla-young-resume.pdf">Resume</a></div><p class="print-only">kayla@snackdriven.com &middot; snackdriven.com/portfolio/</p></section>
+  </main>
+  <footer class="pr-footer"><span>Kayla Young &middot; 2026</span><nav aria-label="Elsewhere"><a href="https://github.com/snackdriven" title="Source shortcut: Alt+?">GitHub</a><a href="https://linkedin.com/in/snackdriven">LinkedIn</a><a href="/">The log</a></nav></footer>
+</div>
 </body>
 </html>
