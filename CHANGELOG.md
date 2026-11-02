@@ -9,6 +9,8 @@ and numbered releases follow [Semantic Versioning](https://semver.org/spec/v2.0.
 
 ### Changed
 
+- Apply the approved portfolio layout and humanized copy, restore the original letter flicker and console Easter egg, and align product previews and body typography.
+
 - Recompose the portfolio overview around a clear introduction, professional work, personal builds, concise experience, and a contact close; retain the shared palette and case-study routes.
 
 - Refresh the single-page resume with sustained release ownership, concise project summaries, and the preferred public name Kayla Young.
