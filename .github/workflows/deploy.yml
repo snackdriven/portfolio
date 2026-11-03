@@ -11,7 +11,7 @@ permissions:
 
 concurrency:
   group: pages-${{ github.event_name == 'pull_request' && github.ref || 'main' }}
-  cancel-in-progress: false
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   validate:
@@ -37,28 +37,25 @@ jobs:
     permissions:
       pages: write
       id-token: write
+      contents: read
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    outputs:
-      page_url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
-  smoke:
-    needs: deploy
-    runs-on: ubuntu-latest
-    steps:
+
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
+
       - uses: actions/download-artifact@v4
         with:
           name: github-pages
           path: deployed-artifact
-      - run: mkdir -p _site && tar -xf deployed-artifact/artifact.tar -C _site
-      - run: node tools/site-smoke.cjs
+
+      - name: Verify live deployment smoke
         env:
-          SMOKE_BASE_URL: ${{ needs.deploy.outputs.page_url }}
+          SMOKE_BASE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          mkdir -p _site && tar -xf deployed-artifact/artifact.tar -C _site
+          node tools/site-smoke.cjs

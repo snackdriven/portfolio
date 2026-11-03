@@ -9,15 +9,16 @@ on:
 
 permissions:
   contents: read
+  pull-requests: write
+
+concurrency:
+  group: release-conventions-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  normalize-title:
+  release-policy:
     runs-on: ubuntu-latest
-    timeout-minutes: 2
-    permissions:
-      pull-requests: write
-    outputs:
-      title: ${{ steps.title.outputs.result }}
+    timeout-minutes: 5
     steps:
       # This job only reads PR metadata; it never checks out or runs PR code.
       - name: Normalize Jules PR title
@@ -61,11 +62,6 @@ jobs:
             });
             core.info("Normalized Jules PR title to Conventional Commits.");
             return title;
-  release-policy:
-    needs: normalize-title
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           persist-credentials: false
@@ -79,7 +75,7 @@ jobs:
       - name: Check squash commit title
         if: github.event_name == 'pull_request'
         env:
-          PR_TITLE: ${{ needs.normalize-title.outputs.title }}
+          PR_TITLE: ${{ steps.title.outputs.result }}
         run: printf '%s\n' "$PR_TITLE" | npm run commit:check
       - name: Validate SemVer and curated changelog
         run: npm run release:check
