@@ -5,13 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#15131B">
-<title>Page not found · snackdriven.com</title>
+<title>Ooh, piece of candy · snackdriven.com</title>
 <link rel="stylesheet" href="/assets/site.css">
 <style>
-  .missing-page { max-width: 42rem; margin: 12vh auto; padding: 2rem; }
-  .missing-page h1 { margin: 1rem 0; color: var(--green); }
-  .missing-page p { margin: 1rem 0; line-height: 1.7; }
-  .missing-page nav { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 2rem; }
+  .missing-page { max-width: 38rem; margin: 12vh auto; padding: 2rem; text-align: center; }
+  .missing-candy { margin-bottom: 1.5rem; display: inline-block; }
+  .missing-page .pmt-line { font-family: "DM Mono", monospace; font-size: 0.95rem; color: var(--green, #B7E65F); margin-bottom: 0.5rem; }
+  .missing-page h1 { margin: 0.5rem 0 1rem; color: var(--text, #F0ECE5); font-size: 2.2rem; font-weight: 700; letter-spacing: -0.02em; }
+  .missing-page p { margin: 1rem auto; line-height: 1.7; color: var(--text-muted, #B9B1C4); max-width: 28rem; }
+  .missing-page nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.75rem; margin-top: 2rem; font-family: "DM Mono", monospace; font-size: 0.9rem; }
+  .missing-page nav a { color: var(--brand, #AF98F1); border-bottom: 1px dashed var(--brand, #AF98F1); text-decoration: none; padding-bottom: 2px; }
+  .missing-page nav a:hover { color: var(--green, #B7E65F); border-bottom-color: var(--green, #B7E65F); }
 </style>
 <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/brand/component-appearance-tokens.css">
@@ -19,13 +23,71 @@
 </head>
 <body>
 <main class="missing-page">
-  <p>404</p>
-  <h1>Page not found.</h1>
-  <p>The link may be old, or the address may have a typo. The rest of the site is still here.</p>
+  <div class="missing-candy">
+    <svg viewBox="0 0 90 90" width="120" height="120" aria-hidden="true">
+      <defs>
+        <filter id="soft-shadow" x="-30%" y="-30%" width="160%" height="160%">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+        </filter>
+        <clipPath id="bold-k-top-404"><rect x="-20" y="-10" width="60" height="22"/></clipPath>
+        <clipPath id="bold-k-bot-404"><rect x="-20" y="12" width="60" height="30"/></clipPath>
+      </defs>
+      <!-- Ambient cast shadow -->
+      <ellipse cx="46" cy="74" rx="24" ry="5" fill="#000000" opacity="0.45" filter="url(#soft-shadow)"/>
+      <!-- Ground contact shadows -->
+      <ellipse cx="54" cy="75" rx="12" ry="2.8" fill="#000000" opacity="0.85"/>
+      <ellipse cx="44" cy="73.5" rx="14" ry="2.2" fill="#000000" opacity="0.65"/>
+
+      <!-- Tilted Dropped Candy -->
+      <g transform="rotate(35 40 40) translate(0 4)">
+        <polygon points="26,34 6,21 11,39 26,44" fill="#AF98F1" opacity="0.8" stroke="#F0ECE5" stroke-width="1.8" stroke-linejoin="round"/>
+        <polygon points="26,40 11,39 8,56 26,46" fill="#8B70D7" opacity="0.8" stroke="#F0ECE5" stroke-width="1.8" stroke-linejoin="round"/>
+        <line x1="16" y1="34" x2="23" y2="38" stroke="#B7E65F" stroke-width="2" stroke-linecap="round"/>
+        <polygon points="54,34 74,27 69,41 54,43" fill="#AF98F1" opacity="0.8" stroke="#F0ECE5" stroke-width="1.8" stroke-linejoin="round"/>
+        <polygon points="54,39 69,41 72,55 54,45" fill="#8B70D7" opacity="0.8" stroke="#F0ECE5" stroke-width="1.8" stroke-linejoin="round"/>
+        <rect x="23" y="21" width="34" height="38" rx="9" fill="#24212C" stroke="#F0ECE5" stroke-width="2"/>
+        <g transform="translate(32 28)">
+          <g clip-path="url(#bold-k-top-404)">
+            <g fill="#8B70D7" transform="translate(-5 0)"><path d="M0 24V0H6V14.5L12 8.5H18.5L11 15L19 24H13L6 16.5V24Z"/></g>
+            <g fill="#42B9AA" transform="translate(-1 0)"><path d="M0 24V0H6V14.5L12 8.5H18.5L11 15L19 24H13L6 16.5V24Z"/></g>
+            <g fill="#F0ECE5" transform="translate(-3 0)"><path d="M0 24V0H6V14.5L12 8.5H18.5L11 15L19 24H13L6 16.5V24Z"/></g>
+          </g>
+          <g clip-path="url(#bold-k-bot-404)" fill="#F0ECE5">
+            <path d="M0 24V0H6V14.5L12 8.5H18.5L11 15L19 24H13L6 16.5V24Z"/>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </div>
+  <p class="pmt-line">~$ 404: off the happy path</p>
+  <h1 id="missing-title">Page not found.</h1>
+  <p id="missing-copy">Looks like you followed a trail off the map. That address doesn't exist, but the rest of the pantry is still intact.</p>
   <nav aria-label="Recovery">
-    <a href="/portfolio/">Browse the portfolio</a>
-    <a href="/">Read the log</a>
+    <a href="/">&larr; Back to the log</a>
+    <a href="/portfolio/">Browse the portfolio &rarr;</a>
   </nav>
 </main>
+<script>
+(function() {
+  const lines = [
+    {
+      title: "Ooh, piece of candy.",
+      copy: "Looks like you followed a trail off the map. That address doesn't exist, but the rest of the pantry is still intact."
+    },
+    {
+      title: "The birds ate the breadcrumbs.",
+      copy: "Hansel and Gretel dropped breadcrumbs; you followed candy. Now you're off the happy path and there isn't even a gingerbread cottage here."
+    }
+  ];
+  const pick = lines[Math.floor(Math.random() * lines.length)];
+  const t = document.getElementById("missing-title");
+  const c = document.getElementById("missing-copy");
+  if (t && c) {
+    t.textContent = pick.title;
+    c.textContent = pick.copy;
+    document.title = pick.title + " · snackdriven.com";
+  }
+})();
+</script>
 </body>
 </html>

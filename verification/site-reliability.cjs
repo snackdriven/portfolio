@@ -47,7 +47,7 @@ for (const isPost of [false, true]) {
       assert.equal(brand.querySelector('.sd-brand-icon')?.getAttribute('alt'), '', 'candy is decorative beside the named wordmark');
       const wordmark = brand.querySelector('.sd-brand-wordmark');
       assert.equal(wordmark?.getAttribute('src'), '/assets/brand/wordmark-tidy200-dark.svg');
-      assert.equal(wordmark?.getAttribute('alt'), 'snackdriven_', 'brand link keeps an accessible name');
+      assert.equal(wordmark?.getAttribute('alt'), 'snackdriven', 'brand link keeps an accessible name');
       const styles = [...document.querySelectorAll('link[rel="stylesheet"]')].map(link => link.getAttribute('href'));
       assert.deepEqual(styles.slice(-2), ['/assets/brand/component-appearance-tokens.css', '/assets/brand-v2.css']);
       assert.equal(document.querySelector('.skip-link')?.getAttribute('href'), '#main-content');
