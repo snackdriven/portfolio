@@ -9,6 +9,10 @@ and numbered releases follow [Semantic Versioning](https://semver.org/spec/v2.0.
 
 ### Changed
 
+- Preserve underlines on inline portfolio evidence links in the v2.3 branding.
+
+- Preview the v2.3 Snackdriven identity across the log, portfolio, and standard case studies with local fonts and approved candy assets; retain Felt Presence's presentation.
+
 - Clarify AI-assisted QA workflow ownership, add reviewed shared test-setup changes, and tighten case-study scope and attribution.
 
 - Lead the portfolio with QA investigation and validation, with tool building as a supporting strength.
