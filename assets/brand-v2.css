@@ -173,6 +173,7 @@
   #portfolio-overview .pr-button:hover { background: var(--ca-surfaceSubtle); color: var(--ca-text); }
   #portfolio-overview .pr-link, #portfolio-overview .pr-evidence dd a,
   #portfolio-overview .pr-writing a { color: var(--ca-interactive); text-decoration: none; }
+  #portfolio-overview .pr-evidence dd a { text-decoration: underline; }
   #portfolio-overview .pr-small-heading { color: var(--ca-brand); font-size: 16px; }
   #portfolio-overview .pr-background { margin-top: 48px; padding-block: 32px; }
   #portfolio-overview .pr-close { padding-block: 32px; }
