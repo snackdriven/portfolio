@@ -1,0 +1,73 @@
+{
+  "version": "2.3.0-local.1",
+  "maintainer": "OpenAI Codex",
+  "entry": "index.html",
+  "tokens": "tokens.json",
+  "stylesheet": "snackdriven.css",
+  "starter": "starter.html",
+  "wordmarks": {
+    "largeDark": "assets/wordmark.svg",
+    "largeLight": "assets/wordmark-light.svg",
+    "compact160Dark": "assets/wordmark-compact-dark.svg",
+    "compact160Light": "assets/wordmark-compact-light.svg",
+    "compact200Dark": "assets/wordmark-tidy200-dark.svg",
+    "compact200Light": "assets/wordmark-tidy200-light.svg",
+    "oneColorDark": "assets/wordmark-clean-dark.svg",
+    "oneColorLight": "assets/wordmark-clean-light.svg"
+  },
+  "icon": {
+    "selected": "assets/icon.svg",
+    "selectedLight": "assets/icon-light.svg",
+    "favicon": "assets/favicon.svg",
+    "faviconLight": "assets/favicon-light.svg",
+    "faviconIco": "exports/snackdriven-favicon.ico",
+    "faviconLightIco": "exports/snackdriven-favicon-light.ico",
+    "avatarSvg": "assets/avatar-candy.svg",
+    "avatarLightSvg": "assets/avatar-candy-light.svg",
+    "avatarPng": "exports/snackdriven-avatar-512.png",
+    "avatarLightPng": "exports/snackdriven-avatar-light-512.png",
+    "source": "candy-a2.json",
+    "retired": "sources/history/soft-serve-retired/README.md",
+    "oneInkDark": "assets/candy-one-ink-dark.svg",
+    "oneInkLight": "assets/candy-one-ink-light.svg"
+  },
+  "fonts": {
+    "main": "fonts/Manrope.ttf",
+    "supporting": "fonts/DMMono.ttf",
+    "pixel": "fonts/PressStart2P.ttf",
+    "licenses": [
+      "fonts/Manrope-OFL.txt",
+      "fonts/DMMono-OFL.txt",
+      "fonts/PressStart2P-OFL.txt"
+    ]
+  },
+  "proofs": {
+    "applications": "brand-proofs.html",
+    "banner": "exports/snackdriven-brand-banner-1280x320.png",
+    "printPdf": "exports/snackdriven-brand-sheet-a4.pdf",
+    "printSource": "brand-print.html"
+  },
+  "deferred": "DECISIONS-LEFT.md",
+  "history": "sources/history; previous assets remain preserved",
+  "approvalScope": "Use approvals.json; application proof placement and deferred decisions are not newly approved.",
+  "symbolHierarchy": {
+    "primaryIcon": "Approved candy A2 for favicon, avatar and compact branding; dark/light treatments",
+    "supportingCharacter": "None; bear dropped by user from active brand",
+    "wordmarkSignature": "Shift-left k remains integrated in snackdriven_; no separate k symbol required",
+    "authority": "User: candy it i s- drop soft serve",
+    "approval": "Candy A2 primary; integrated k signature; bear and soft serve retired"
+  },
+  "footerAside": {
+    "component": "footer-aside.html",
+    "styles": "footer-aside.css",
+    "approval": "B footer command approved",
+    "scope": "Optional end-of-reading aside; no mascot popover"
+  },
+  "styles": {
+    "compiled": "snackdriven.css",
+    "roleAliases": "component-appearance-tokens.css",
+    "refinements": "system-refinements.css",
+    "source": "tokens.json"
+  },
+  "currentUseKit": "current-use-kit.zip"
+}

@@ -18,8 +18,7 @@ test('PRs validate the tested artifact without deployment privileges; main deplo
   assert.equal(workflow.jobs.deploy.needs, 'validate');
   assert.match(workflow.jobs.deploy.if, /refs\/heads\/main/);
   assert.match(workflow.jobs.deploy.if, /event_name != 'pull_request'/);
-  assert.deepEqual(workflow.jobs.deploy.permissions, { pages: 'write', 'id-token': 'write' });
-  assert.equal(workflow.jobs.smoke.needs, 'deploy');
-  assert.ok(workflow.jobs.smoke.steps.some(step => step.uses?.startsWith('actions/download-artifact@')));
-  assert.ok(workflow.jobs.smoke.steps.some(step => step.run === 'node tools/site-smoke.cjs'));
+  assert.deepEqual(workflow.jobs.deploy.permissions, { pages: 'write', 'id-token': 'write', contents: 'read' });
+  assert.ok(workflow.jobs.deploy.steps.some(step => step.uses?.startsWith('actions/download-artifact@')));
+  assert.ok(workflow.jobs.deploy.steps.some(step => step.run?.includes('node tools/site-smoke.cjs')));
 });

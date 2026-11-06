@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark" data-ornament="signal">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,12 +17,9 @@
 <meta name="twitter:image" content="https://snackdriven.com{{ ogimage or '/assets/social/site.png' }}">
 <link rel="canonical" href="https://snackdriven.com{{ page.url }}">
 <link rel="alternate" type="application/atom+xml" title="snackdriven.com — the log" href="/feed.xml">
-<meta name="theme-color" content="#2D2B3A">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%234AEEA0'>%3E</text></svg>">
+<meta name="theme-color" content="#15131B">
+<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
 <title>{{ title }}{% if isPost %} · snackdriven.com{% endif %}</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 {% if blogcss %}<link rel="stylesheet" href="/assets/blog.css">{% endif %}
 <script defer src="/assets/site.js"></script>
@@ -42,6 +39,8 @@
 }
 </script>
 {% endif %}
+<link rel="stylesheet" href="/assets/brand/component-appearance-tokens.css">
+<link rel="stylesheet" href="/assets/brand-v2.css">
 </head>
 <body class="{% if isPost %}blog-post{% elif page.url == '/' %}blog-index{% else %}blog-page{% endif %}">
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -52,6 +51,5 @@
 </main>
 {% include "site-footer.njk" %}
 </div>
-<script defer src="/assets/neon-flicker.js"></script>
 </body>
 </html>

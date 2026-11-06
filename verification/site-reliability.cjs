@@ -8,7 +8,7 @@ const root = path.resolve(__dirname, '..');
 
 for (const isPost of [false, true]) {
   for (const reduced of [false, true]) {
-    test(`${isPost ? 'post' : 'home'} initializes deferred neon without errors (reduced motion: ${reduced})`, async () => {
+    test(`${isPost ? 'post' : 'home'} initializes steady branding without errors (reduced motion: ${reduced})`, async () => {
       const env = new nunjucks.Environment(new nunjucks.FileSystemLoader(path.join(root, 'src/_includes')));
       env.addFilter('jsonDump', JSON.stringify);
       env.addFilter('ymd', () => '2026-10-19');
@@ -19,7 +19,8 @@ for (const isPost of [false, true]) {
       console.on('jsdomError', error => errors.push(error.message));
       class LocalAssets extends ResourceLoader {
         fetch(url) {
-          if (url.endsWith('/assets/neon-flicker.js')) return Promise.resolve(fs.readFileSync(path.join(root, 'assets/neon-flicker.js')));
+          const asset = new URL(url).pathname;
+          if (asset.startsWith('/assets/') && asset.endsWith('.js')) return Promise.resolve(fs.readFileSync(path.join(root, asset)));
           return Promise.resolve(Buffer.from(''));
         }
       }
@@ -32,11 +33,27 @@ for (const isPost of [false, true]) {
       });
       await new Promise(resolve => dom.window.addEventListener('load', resolve));
       assert.deepEqual(errors, []);
-      assert.equal(timers.length > 0, !reduced);
-      if (!reduced) {
-        timers[0]();
-        assert.ok(dom.window.document.querySelector('.topbar .flickering'));
-      }
+      const document = dom.window.document;
+      assert.equal(timers.length, 0, 'branding never schedules automatic motion');
+      assert.equal(document.querySelector('script[src*="neon-flicker"]'), null);
+      assert.equal(document.querySelector('.flickering'), null);
+      assert.equal(document.documentElement.dataset.theme, 'dark');
+      assert.equal(document.documentElement.dataset.ornament, 'signal');
+      assert.equal(document.querySelector('link[rel="icon"]')?.getAttribute('href'), '/assets/brand/favicon.svg');
+      const brand = document.querySelector('.topbar a.sd-brand');
+      assert.equal(brand?.getAttribute('href'), '/');
+      assert.equal(brand.getAttribute('aria-current'), isPost ? null : 'page');
+      assert.equal(brand.querySelector('.sd-brand-icon')?.getAttribute('src'), '/assets/brand/icon.svg');
+      assert.equal(brand.querySelector('.sd-brand-icon')?.getAttribute('alt'), '', 'candy is decorative beside the named wordmark');
+      const wordmark = brand.querySelector('.sd-brand-wordmark');
+      assert.equal(wordmark?.getAttribute('src'), '/assets/brand/wordmark-tidy200-dark.svg');
+      assert.equal(wordmark?.getAttribute('alt'), 'snackdriven_', 'brand link keeps an accessible name');
+      const styles = [...document.querySelectorAll('link[rel="stylesheet"]')].map(link => link.getAttribute('href'));
+      assert.deepEqual(styles.slice(-2), ['/assets/brand/component-appearance-tokens.css', '/assets/brand-v2.css']);
+      assert.equal(document.querySelector('.skip-link')?.getAttribute('href'), '#main-content');
+      assert.ok(document.getElementById('main-content'));
+      const navigation = document.querySelector('nav[aria-label="Site"]');
+      for (const href of ['/', '/portfolio/', '/portfolio/resume/kayla-young-resume.pdf']) assert.ok(navigation.querySelector(`a[href="${href}"]`));
       dom.window.close();
     });
   }
