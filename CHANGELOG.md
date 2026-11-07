@@ -38,7 +38,7 @@ and numbered releases follow [Semantic Versioning](https://semver.org/spec/v2.0.
 - Refine the portfolio into a visual project grid with existing product previews, shorter summaries, and a dedicated platform-investigation readout.
 - Put selected work ahead of the full introduction and give the professional platform investigation a project entry.
 - Use a consistent Personal QA Workflow project name and remove repeated evidence counts.
-- Jules PR titles are corrected before commitlint runs, preserving the custom `post` type.
+- PR titles are validated against Conventional Commits before commitlint runs, preserving the custom `post` type.
 
 ### Fixed
 

@@ -1,6 +1,6 @@
 # Felt Presence puppet theatre
 
-- Replaces the computer workshop hero with the approved puppet-theatre illustration. Art direction credit: mote (dot).
+- Replaces the computer workshop hero with the approved puppet-theatre illustration.
 - Exact accepted PNG, unchanged: 1536 x 1024 pixels, 2,739,557 bytes. SHA256: `d01140cc32a3a5031067bd4cbf9e727d389c02a768756bb910fdb82f373b28a1`.
 - The full scene scales proportionally using the existing responsive image styles; no character or shelf detail is cropped. Descriptive alt text identifies the shared theatre scene, and the caption describes making it together in the shop.
 - The Limits section retains the alternate-universe portfolio boundary. This does not introduce a story installment. Original reference art and story archive are not included.
