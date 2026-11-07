@@ -1,0 +1,7 @@
+{
+  "layout": "post.njk",
+  "tags": ["post"],
+  "blogcss": true,
+  "isPost": true,
+  "ogtype": "article"
+}

@@ -1,0 +1,14 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://snackdriven.com/</loc></url>
+{%- for url in portfolioPages %}
+  <url><loc>https://snackdriven.com{{ url }}</loc></url>
+{%- endfor %}
+{%- for post in collections.visiblePost %}
+  <url><loc>https://snackdriven.com{{ post.url }}</loc></url>
+{%- endfor %}
+</urlset>

@@ -1,0 +1,54 @@
+/* Sharper neon connects the portfolio to the log. Case-study compositions stay intact. */
+@media screen {
+  .portfolio-overview, .portfolio-case { --bg-sidebar: var(--bg-inset); --border: var(--border-strong); }
+  .portfolio-overview .hero h1, .portfolio-overview .hero h1 span {
+    font-weight: 600; text-transform: none; letter-spacing: -.015em;
+    line-height: 1.15; text-shadow: var(--glow-heading);
+  }
+  .portfolio-overview .hero .title { font-family: var(--font-body); text-transform: none; letter-spacing: 0; line-height: 1.6; }
+  .portfolio-overview .section-name, .portfolio-overview .skills-category-name {
+    font-family: var(--font-body); font-weight: 600; text-transform: none; letter-spacing: 0; line-height: 1.5;
+  }
+  .portfolio-overview .job-company, .portfolio-overview .job-role {
+    font-family: var(--font-body); text-transform: none; letter-spacing: 0;
+  }
+  .portfolio-overview .job-company { font-weight: 600; }
+  .portfolio-overview .job-tenure, .portfolio-overview .job-period, .portfolio-overview .job-period-inline {
+    text-transform: none; letter-spacing: .02em;
+  }
+  .portfolio-overview .project-tech { font-family: var(--font-body); font-size: .78rem; }
+  .portfolio-overview .project-name, .portfolio-overview .preview-number { font-weight: 600; }
+  .portfolio-overview .footer { text-transform: none; letter-spacing: 0; }
+  .portfolio-case h1 { font-weight: 600; text-transform: none; text-shadow: var(--glow-heading); }
+  .portfolio-case .site-name { color: var(--green); text-shadow: var(--glow-heading); }
+  .portfolio-case .case-kicker, .portfolio-case .figure-label, .portfolio-case .case-facts dt {
+    font-family: var(--font-body); text-transform: none; letter-spacing: 0;
+  }
+  .portfolio-case .contents h2 { font-family: var(--font-body); font-weight: 600; text-transform: none; letter-spacing: 0; }
+  .portfolio-case .case-body h2 { font-weight: 600; text-transform: none; letter-spacing: -.01em; }
+  .portfolio-case .case-body .case-section-label {
+    font-family: var(--font-body); font-weight: 600; text-transform: none; letter-spacing: 0;
+  }
+  .qa-workflow .case-body .qa-section-label { font-family: var(--font-body); text-transform: none; letter-spacing: 0; }
+  .qa-workflow .qa-stage .qa-stage-label { text-transform: none; letter-spacing: 0; }
+  .portfolio-case .qa-stage h3 { font-weight: 600; }
+  /* A shared site header frames Felt's illustrated, warm-paper case study. */
+  .felt-case .case-header {
+    --bg: var(--site-bg); --fg: var(--site-fg); --green: var(--site-green); --magenta: var(--site-magenta);
+    --border: var(--border-strong); --font-body: "Inter", system-ui, sans-serif;
+    background: var(--bg); color: var(--fg); border-bottom: 1px solid var(--border);
+  }
+  .felt-case .case-header .site-name { font: 600 1.05rem/1.5 var(--font-body); color: var(--green); text-shadow: var(--glow-heading); }
+  .felt-case .case-header a { font-family: var(--font-body); text-decoration: none; }
+  .felt-case .case-header .case-nav a { color: var(--fg); }
+  .felt-case .case-header a:hover { color: var(--magenta); }
+}
+@media print {
+  .portfolio-overview .hero h1, .portfolio-overview .hero .title, .portfolio-overview .section-name,
+  .portfolio-overview .job-company, .portfolio-overview .skills-category-name {
+    text-transform: none; letter-spacing: 0;
+  }
+  .portfolio-case .case-kicker, .portfolio-case .figure-label,
+  .portfolio-case .case-facts dt, .qa-workflow .case-body .qa-section-label,
+  .qa-workflow .qa-stage .qa-stage-label { text-transform: none; letter-spacing: 0; }
+}
