@@ -8,6 +8,8 @@
 .rail { position: sticky; top: 36px; align-self: start; padding-right: 28px; border-right: 1px solid var(--border); }
 .reading { min-width: 0; max-width: 740px; font-size: 1.05rem; line-height: 1.8; }
 .rail-post .post-meta { flex-direction: column; align-items: flex-start; gap: 10px; }
+.rail-home .rail-candy { margin-bottom: 24px; width: 64px; height: 64px; }
+.rail-home .rail-candy img { display: block; width: 100%; height: auto; }
 .rail-home .prompt-title { margin-bottom: 20px; font: 600 clamp(1.5rem, 2.3vw, 1.9rem)/1.2 var(--font-display); letter-spacing: -.035em; }
 .blog-index .prompt-title .pmt, .blog-index .prompt-title .cursor { display: none; }
 .prompt-title .pmt { color: var(--muted); font-size: .75em; }
@@ -63,6 +65,9 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 40px 0; }
 .post-figure img { display: block; max-width: 100%; height: auto; border: 1px solid var(--border); border-radius: 4px; }
 .post-figure figcaption { margin-top: 12px; color: var(--muted); font-size: .83rem; line-height: 1.65; }
 .post-update { font-size: .88rem; line-height: 1.7; color: var(--muted); border-left: 2px solid var(--teal); padding-left: 18px; }
+.post-endmark { display: flex; align-items: center; justify-content: center; gap: 16px; margin: 48px 0 28px; }
+.post-endmark .endmark-line { flex: 1; height: 1px; background: var(--border); }
+.post-endmark .endmark-candy { width: 28px; height: 28px; flex-shrink: 0; display: block; }
 .backlink { display: inline-flex; align-items: center; min-height: 44px; margin-top: 24px; padding-block: 12px; font: .78rem/1.6 var(--font-mono); color: var(--muted); }
 .site-footer .links { gap: 4px 22px; }
 .site-footer .links a { display: inline-flex; align-items: center; min-height: 44px; border: 0; }
@@ -74,6 +79,7 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 40px 0; }
   .shell { padding: 24px 24px 48px; }
   .layout { display: block; }
   .rail { position: static; border-right: 0; border-bottom: 1px solid var(--border); padding: 0 0 26px; margin-bottom: 28px; }
+  .rail-home .rail-candy { width: 48px; height: 48px; margin-bottom: 16px; }
   .rail-home .prompt-title { font-size: 1.6rem; max-width: 22ch; }
   .rail-home .page-intro { max-width: 62ch; }
   .rail-post { border: 0; padding: 0; margin-bottom: 16px; }

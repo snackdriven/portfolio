@@ -18,6 +18,7 @@
   "icon": {
     "selected": "assets/icon.svg",
     "selectedLight": "assets/icon-light.svg",
+    "candySweet": "assets/candy-sweet.svg",
     "favicon": "assets/favicon.svg",
     "faviconLight": "assets/favicon-light.svg",
     "faviconIco": "exports/snackdriven-favicon.ico",
@@ -51,11 +52,11 @@
   "history": "sources/history; previous assets remain preserved",
   "approvalScope": "Use approvals.json; application proof placement and deferred decisions are not newly approved.",
   "symbolHierarchy": {
-    "primaryIcon": "Approved K2 candy sweet for header and responsive branding; K1 monogram tile for favicon; dark treatments",
+    "primaryIcon": "Approved K1 monogram tile for topbars; K2 candy sweet for bio rail and post end-marks; dark treatments",
     "supportingCharacter": "None; bear dropped by user from active brand",
     "wordmarkSignature": "Clean snackdriven without trailing underscore; Tier 2 severed lowercase k",
-    "authority": "User: dropped trailing underscore, severed Tier 2 glitch k, K2 candy sweet mark",
-    "approval": "Candy sweet K2 primary; glitch k favicon K1; clean snackdriven wordmark (no underscore)"
+    "authority": "User: dropped trailing underscore, severed Tier 2 glitch k, K1 header tile, K2 candy sweet mark",
+    "approval": "Monogram tile K1 header icon; candy sweet K2 bio/endmark; glitch k favicon K1; clean snackdriven wordmark (no underscore)"
   },
   "footerAside": {
     "component": "footer-aside.html",
