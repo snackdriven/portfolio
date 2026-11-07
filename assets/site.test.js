@@ -3,9 +3,14 @@
  */
 
 describe('Scrollbar visual behavior', () => {
+  let consoleSpy;
+
   beforeEach(() => {
     // Reset the DOM
     document.documentElement.className = '';
+
+    // Silence console easter egg during scrollbar tests
+    consoleSpy = jest.spyOn(console, 'log').mockImplementation(() => {});
 
     // Use fake timers
     jest.useFakeTimers();
@@ -13,6 +18,7 @@ describe('Scrollbar visual behavior', () => {
   });
 
   afterEach(() => {
+    consoleSpy.mockRestore();
     jest.clearAllTimers();
     jest.useRealTimers();
     delete window.requestAnimationFrame;
@@ -79,5 +85,23 @@ describe('Scrollbar visual behavior', () => {
 
     // The 'scrolling' class should be removed
     expect(root.classList.contains('scrolling')).toBe(false);
+  });
+});
+
+describe('Developer console greeting', () => {
+  it('logs the spec suite easter egg', () => {
+    const spy = jest.spyOn(console, 'log').mockImplementation(() => {});
+    jest.isolateModules(() => {
+      require('./site.js');
+    });
+    expect(spy).toHaveBeenCalledWith(
+      expect.stringContaining('SUITE'),
+      expect.any(String)
+    );
+    expect(spy).toHaveBeenCalledWith(
+      expect.stringContaining('kayla@snackdriven.com'),
+      expect.any(String)
+    );
+    spy.mockRestore();
   });
 });

@@ -24,3 +24,14 @@
     }, 700);
   }, { passive: true });
 })();
+
+/* 👀 oh, a dev. hi. */
+(function () {
+  if (typeof console === 'undefined' || !console.log) return;
+  try {
+    console.log('%c  SUITE  kayla-young.spec  ', 'background:#AF98F1;color:#15131B;font-family:"DM Mono",monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:2px;');
+    console.log('%c\n  ✓  is a real person, not a landing page template\n  ✓  finds the edge case you swore couldn\'t happen\n  ✓  actually reads the ticket before testing\n  ✓  you should hire her\n', 'color:#B7E65F;font-family:"DM Mono",monospace;font-size:11px;line-height:1.9;');
+    console.log('%c  4 passing', 'color:#B5B2C8;font-family:"DM Mono",monospace;font-size:11px;');
+    console.log('%c\n  → kayla@snackdriven.com\n', 'color:#42B9AA;font-family:"DM Mono",monospace;font-size:11px;');
+  } catch (_) {}
+})();
