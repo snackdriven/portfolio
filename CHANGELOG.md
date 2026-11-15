@@ -60,6 +60,8 @@ and numbered releases follow [Semantic Versioning](https://semver.org/spec/v2.0.
 
 ### Added
 
+- Publish "Permission is not proof", a short post on keeping what an agent was allowed to do separate from what actually changed.
+
 - Paging Dr. Placebo case study on checking scheduling-agent claims against saved state, with synthetic-data and harness-only limits.
 
 - Blog post on salvaging the 928-ticket `ATLAS` QA profile, retiring gamified testing coaches, and batch-distilling the 3,408-pin memory vault.
