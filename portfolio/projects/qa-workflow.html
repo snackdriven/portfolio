@@ -2,16 +2,16 @@
 <html lang="en" data-theme="dark" data-ornament="signal">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="How Kayla Young designed an AI-assisted QA workflow that cross-checks requirements, recordings, network evidence, and saved state.">
+<meta name="description" content="How Kayla Young designed QA handoffs from source context through investigation, adversarial review and a human verdict, with saved-state evidence.">
 <meta property="og:title" content="Personal QA workflow | Kayla Young">
-<meta property="og:description" content="How Kayla Young designed an AI-assisted QA workflow that cross-checks requirements, recordings, network evidence, and saved state.">
+<meta property="og:description" content="How Kayla Young designed QA handoffs from source context through investigation, adversarial review and a human verdict, with saved-state evidence.">
 <meta property="og:url" content="https://snackdriven.com/portfolio/projects/qa-workflow.html">
 <meta property="og:type" content="article">
-<meta property="og:image" content="https://snackdriven.com/assets/social/qa-workflow.png">
+<meta property="og:image" content="https://snackdriven.com/assets/social/qa-workflow.png?v=127598232c05">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Personal QA workflow: a project by Kayla Young.">
+<meta property="og:image:alt" content="From investigation to a human verdict. Kayla Young: Healthcare QA and AI workflows.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://snackdriven.com/assets/social/qa-workflow.png">
+<meta name="twitter:image" content="https://snackdriven.com/assets/social/qa-workflow.png?v=127598232c05">
 <link rel="canonical" href="https://snackdriven.com/portfolio/projects/qa-workflow.html">
 <title>Personal QA workflow | Kayla Young</title>
 <link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="case-study.css"><link rel="stylesheet" href="portfolio-case-study.css"><link rel="stylesheet" href="../portfolio-system.css"><link rel="stylesheet" href="qa-workflow.css">
@@ -37,7 +37,7 @@
 <div class="case-intro">
 <a class="back-link" href="/portfolio/#selected-projects">&larr; Back to selected projects</a>
 <div class="qa-hero">
-<div><p class="case-kicker">Personal QA workflow</p><h1>A QA packet I can actually use.</h1><p class="case-lead">I designed runbooks that bring ticket context, prior findings, and release information together.</p><p class="case-result"><strong>Result:</strong> Review caught misleading screenshots, environment labels, and saved-state claims.</p></div>
+<div><p class="case-kicker">Personal QA workflow</p><h1>A QA packet I can actually use.</h1><p class="case-lead">I designed handoffs from source context and investigation through adversarial review to a human verdict, then corrected the workflow when its evidence was misleading.</p><p class="case-result"><strong>Result:</strong> Review caught misleading screenshots, environment labels, and saved-state claims.</p></div>
 <aside class="qa-ownership" aria-label="My role"><h2>Designing the handoffs.</h2><p>I defined tool behavior and acceptance checks, directed AI-assisted implementation, and wrote the QA verdicts.</p></aside>
 </div>
 <p id="problem" class="qa-problem">I wanted one packet with expected behavior, regression risks, and the limits of the available evidence.</p>
@@ -76,7 +76,7 @@
 <p class="qa-workbench-note">Reconstructed workflow, not a workplace artifact. Historical coverage limits remain attached.</p>
 </section>
 <div class="qa-story-pair">
-<section id="test-layers"><p class="qa-section-label">Test design</p><h2>Put the assertion in the right place.</h2><p>I put stored vitals and server rules in GraphQL tests. BMI calculated in the interface needed UI coverage.</p><p>Early June 2026 records show dev API checks run and UI checks pending. Later June API and Playwright runs record failures, deferred checks, and local-versus-dev differences.</p><p>In October 2026, I required readings created through the UI in one test tenant. Review made the seed-write guard check the selected tenant, not a requested argument. A build marker checked what the browser actually served.</p></section>
+<section id="test-layers"><p class="qa-section-label">Test design</p><h2>Put the assertion in the right place.</h2><p>I chose the test layer per behavior: GraphQL checks for stored vitals and server rules, UI coverage for BMI calculated in the interface.</p><p>Early June 2026 records show dev API checks run and UI checks pending. Later June API and Playwright runs record failures, deferred checks, and local-versus-dev differences.</p><p>In October 2026, I required readings created through the UI in one test tenant. Review made the seed-write guard check the selected tenant, not a requested argument. A build marker checked what the browser actually served.</p></section>
 <section id="refinement"><p class="qa-section-label">Workflow refinement</p><h2>Sometimes, remove a stage.</h2><p>I retired a parallel-work pipeline with too much overhead and moved an unused impact viewer into a screen I used.</p><p>I switched Kanban lanes to pipeline stages and removed misleading sample cards. One writer per shared document and interruption recovery steps kept handoffs manageable.</p></section>
 </div>
 <section id="maintenance"><p class="qa-section-label">Sustained maintenance &middot; June&ndash;October 2026</p><h2>Keep the tracker honest.</h2><p>A June refinement surfaced work hidden by a project filter and separated tag-cut dates from deployment dates. The running application could still lag behind the deployment API.</p><p>In July, the publishing wrapper gained wake-error retries and a guard against publishing stale source data. The generator produced dated records in October; that does not prove every scheduled publish succeeded.</p></section>
@@ -84,7 +84,7 @@
 <p>After a repaired pilot passed its sample, I asked for more random trials.</p>
 </section>
 <section id="evidence"><p class="qa-section-label">Outputs</p><h2>Useful work, with the limits attached.</h2>
-<p>The workflow produced runbooks and evidence reviews. I combined Jira, GitHub, and release discussions into Google Docs and Confluence updates. I operated the tools; colleagues followed releases through the documents. <a href="release-readiness.html">Read the release-readiness case</a>.</p>
+<p>The workflow produced runbooks and evidence reviews. A related release-status workflow combined Jira, GitHub PR state and release discussions into Google Docs and Confluence updates. Engineering leadership requested Confluence delivery; colleagues used the changelog for demo-readiness questions. I kept the acceptance verdicts human-written. <a href="release-readiness.html">Read the release-readiness case</a>.</p>
 <details class="qa-evidence-detail"><summary>Inspect a synthetic saved-state evidence record</summary><figure class="evidence-example"><p class="figure-label">Synthetic example &middot; Invented settings and values</p><div class="evidence-table"><table role="table"><caption>How a saved-state claim becomes reviewable</caption><thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Check</th><th scope="col" role="columnheader">Example record</th></tr></thead><tbody role="rowgroup"><tr role="row"><th scope="row" role="rowheader">Starting state</th><td role="cell">Weekly digest on; reminder off. Record starting values.</td></tr><tr role="row"><th scope="row" role="rowheader">Action and request</th><td role="cell">Change another display option, save, and inspect the request.</td></tr><tr role="row"><th scope="row" role="rowheader">Reload and control</th><td role="cell">Read back both settings and an unaffected control.</td></tr><tr role="row"><th scope="row" role="rowheader">Conclusion</th><td role="cell">A Save click does not prove persistence.</td></tr><tr role="row"><th scope="row" role="rowheader">Open scope</th><td role="cell">Other accounts and browsers untested.</td></tr></tbody></table></div><figcaption>Fictional evidence structure, not a workplace artifact or reported finding.</figcaption></figure></details>
 </section>
 <section id="limits"><p class="qa-section-label">Limits and lessons</p><h2>Keep the unfinished work visible.</h2><p>This was personal QA tooling. In September 2026, I retired demo-document polling, then the changelog Google Docs poster. The markdown generator and Confluence publishing were unaffected. I corrected stale information and environment mix-ups; later work covered coverage review, browser harnesses, and CI triage. These records do not establish complete current care-module coverage.</p><p>A useful packet lets me start work and see what remains unchecked.</p></section>

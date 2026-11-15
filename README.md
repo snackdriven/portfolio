@@ -2,7 +2,7 @@
 
 **I find bugs for money and introduce them for fun.**
 
-Senior QA Engineer · AI Workflows & Internal Tools. Bentonville, AR (remote).
+Senior QA Engineer · Healthcare SaaS & AI Workflows. Bentonville, AR (remote).
 
 The work I keep coming back to: finding out why something broke, making a tool for the part that got annoying, and occasionally giving a haunted craft shop a publishing schedule.
 

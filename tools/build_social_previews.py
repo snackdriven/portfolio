@@ -1,6 +1,7 @@
 """Render deterministic, branded 1200x630 share cards using the bundled site fonts.
 
 Requires Pillow. Run from the repository root with python tools/build_social_previews.py.
+Use --only followed by card slugs to regenerate a subset.
 """
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
@@ -10,11 +11,13 @@ OUT = ROOT / 'assets/social'
 FONTS = ROOT / 'tools/resume/fonts'
 CARDS = {
     'site': ('off the happy path', 'debugging, useful tools, and the decisions behind them.'),
-    'portfolio': ('QA, useful tools &\na little weirdness', 'the decisions, debugging, and checks behind the work.'),
-    'qa-workflow': ('from scattered context\nto reviewable QA', 'recordings, network evidence, controls, and a human decision.'),
+    'portfolio': ('Healthcare QA &\nAI workflows', 'test decisions, saved-state checks, and verified outcomes.'),
+    'qa-workflow': ('from investigation\nto a human verdict', 'source context, adversarial review, and saved-state evidence.'),
     'al80-studio': ('the logs said yes.\nthe screen said no.', 'AL80 Studio: browser controls and hands-on hardware debugging.'),
-    'felt-presence': ('letters from\na haunted craft shop', 'Felt Presence: a reader, recurring generation, and publishing checks.'),
-    'platform-investigation': ('250 findings.\n23 recurring patterns.', 'a four-day staging investigation, with its coverage limits attached.'),
+    'felt-presence': ('letters from\na haunted craft shop', 'Felt Presence: reader fit, accepted pairs, and publication checks.'),
+    'release-readiness': ('what was ready?\nwhat actually shipped?', 'scope, release candidates, smokes, and engineering handoffs.'),
+    'agent-evaluation': ('did the agent\nactually book it?', 'synthetic saved-state checks, with tests for the checker.'),
+    'platform-investigation': ('250 findings.\n23 recurring patterns.', 'test priorities, persistence evidence, and an engineering handoff.'),
 }
 
 _font_cache = {}
@@ -25,9 +28,10 @@ def font(name, size):
         _font_cache[key] = ImageFont.truetype(str(FONTS / name), size)
     return _font_cache[key]
 
-def render():
+def render(slugs=None):
     OUT.mkdir(parents=True, exist_ok=True)
-    for slug, (title, description) in CARDS.items():
+    for slug in CARDS if slugs is None else slugs:
+        title, description = CARDS[slug]
         image = Image.new('RGB', (1200, 630), '#2D2B3A')
         draw = ImageDraw.Draw(image)
         draw.rectangle((0, 0, 11, 630), fill='#4AEEA0')
@@ -42,10 +46,14 @@ def render():
             raise ValueError(f'{slug}: description exceeds card width')
         draw.text((66, 385), description, font=body_font, fill='#B5B2C8')
         draw.line((64, 482, 1136, 482), fill='#625A76', width=2)
-        draw.text((66, 514), 'Kayla Young (Gilbert)', font=font('Inter.ttf', 26), fill='#E0DEE8')
-        draw.text((66, 555), 'senior QA engineer · workflows & internal tools', font=font('Inter.ttf', 21), fill='#72C5D9')
+        draw.text((66, 514), 'Kayla Young', font=font('Inter.ttf', 26), fill='#E0DEE8')
+        draw.text((66, 555), 'Senior QA Engineer · Healthcare SaaS & AI Workflows', font=font('Inter.ttf', 21), fill='#72C5D9')
         image.save(OUT / f'{slug}.png', optimize=True)
         print(OUT / f'{slug}.png')
 
 if __name__=='__main__':
-    render()
+    import argparse
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--only', nargs='+', choices=list(CARDS))
+    args = parser.parse_args()
+    render(args.only)
