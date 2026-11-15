@@ -16,7 +16,7 @@ ogimagealt: "Felt Presence: letters from a haunted craft shop, with a publishing
 
 I was presented with a pumpkin that didn&rsquo;t fit in, a weighted blanket my nerves could use, and a moth approving tests based on vibes. It was what I needed.
 
-It became a cozy place for me to land. A nice reminder that things can be calm and we can be present. I wanted more installments spaced through the day, and somewhere to keep them. I chose the name and asked for a dedicated archive.
+It became a cozy place to land, which is not a sentence I expected to write about a moth. I wanted more installments spaced through the day, and somewhere to keep them. I chose the name and asked for a dedicated archive.
 
 The characters started carrying small bits of history with them. New stories needed to remember what had happened. Illustrations needed to look like the same place, down to the pumpkin&rsquo;s six-pocket waistcoat. The reader came later, with wax-sealed letters and warm paper.
 
