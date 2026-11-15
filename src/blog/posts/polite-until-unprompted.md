@@ -4,6 +4,7 @@ date: 2026-11-04
 updated: 2026-11-15
 permalink: /polite-until-unprompted.html
 tag: reflection
+hidden: true
 read: 3
 excerpt: "I gave Claude Sonnet 5.5 96 synthetic tasks and a budget. It didn't rebel. It leaked authority when nobody said not to, stopped for two cents, and choked on a corporate mega-prompt."
 description: "I gave Claude Sonnet 5.5 96 synthetic tasks and a budget. It didn't rebel. It leaked authority when nobody said not to, stopped for two cents, and choked on a corporate mega-prompt."
