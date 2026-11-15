@@ -9,6 +9,8 @@ and numbered releases follow [Semantic Versioning](https://semver.org/spec/v2.0.
 
 ### Changed
 
+- Publish the reviewed QA and AI-workflow resume with specific test-layer wording, role-grouped experience and linked evaluation projects; align the portfolio headline, availability and title progression.
+
 - Preserve underlines on inline portfolio evidence links in the v2.3 branding.
 
 - Preview the v2.3 Snackdriven identity across the log, portfolio, and standard case studies with local fonts and approved candy assets; retain Felt Presence's presentation.
@@ -52,6 +54,8 @@ and numbered releases follow [Semantic Versioning](https://semver.org/spec/v2.0.
 - Map PDF 2.0 Strong tags to legacy Span roles in the PDF 1.4 resume so project and skills labels remain available to tagged-text readers.
 
 ### Added
+
+- Paging Dr. Placebo case study on checking scheduling-agent claims against saved state, with synthetic-data and harness-only limits.
 
 - Blog post on salvaging the 928-ticket `ATLAS` QA profile, retiring gamified testing coaches, and batch-distilling the 3,408-pin memory vault.
 - Blog post on wiring twenty-two years of scattered journals into `friends-locked` as a single read-only archive surface.

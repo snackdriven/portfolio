@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-ornament="signal">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Paging Dr. Placebo: a synthetic scheduling-agent lab that checks claimed outcomes against saved state and tests the checker with planted contradictions.">
+<meta property="og:title" content="Agent evaluation | Kayla Young">
+<meta property="og:description" content="Paging Dr. Placebo: a synthetic scheduling-agent lab that checks claimed outcomes against saved state and tests the checker with planted contradictions.">
+<meta property="og:url" content="https://snackdriven.com/portfolio/projects/agent-evaluation.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://snackdriven.com/assets/social/portfolio.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Paging Dr. Placebo: a synthetic agent-evaluation project by Kayla Young.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://snackdriven.com/assets/social/portfolio.png">
+<link rel="canonical" href="https://snackdriven.com/portfolio/projects/agent-evaluation.html">
+<title>Agent evaluation | Kayla Young</title>
+<link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="case-study.css"><link rel="stylesheet" href="portfolio-case-study.css"><link rel="stylesheet" href="../portfolio-system.css">
+<script defer src="/assets/site.js"></script>
+<script defer src="/assets/repo-shortcut.js"></script>
+<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../portfolio-sharper.css">
+<link rel="stylesheet" href="/assets/brand/component-appearance-tokens.css">
+<link rel="stylesheet" href="/assets/brand-v2.css">
+</head>
+<body class="portfolio-case agent-evaluation-case">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="case-header"><div class="case-header-inner"><a class="site-name sd-brand" href="/"><img class="sd-brand-icon" src="/assets/brand/icon.svg" width="32" height="32" alt=""><img class="sd-brand-wordmark" src="/assets/brand/wordmark-tidy200-dark.svg" width="200" alt="snackdriven"></a><nav class="case-nav portfolio-nav" aria-label="Portfolio links">
+    <a href="/portfolio/#selected-projects">Projects</a><span class="hero-sep" aria-hidden="true">|</span>
+    <a href="/portfolio/#experience">Experience</a><span class="hero-sep" aria-hidden="true">|</span>
+    <a href="/portfolio/resume/kayla-young-resume.pdf">Resume PDF</a><span class="hero-sep" aria-hidden="true">|</span>
+    <a href="mailto:kayla@snackdriven.com">Email</a><span class="hero-sep" aria-hidden="true">|</span>
+    <a href="https://linkedin.com/in/snackdriven">LinkedIn</a><span class="hero-sep" aria-hidden="true">|</span>
+    <a href="https://github.com/snackdriven" title="Source shortcut: Alt+?">GitHub</a><span class="hero-sep" aria-hidden="true">|</span>
+    <a href="/">Log</a>
+  </nav></div></header>
+<main id="main-content" class="case-shell"><div class="case-intro">
+<a class="back-link" href="/portfolio/#selected-projects">&larr; Back to selected projects</a>
+<p class="case-kicker">Agent evaluation &middot; Personal project</p><h1>Did the agent actually book it?</h1>
+<p class="case-lead">Paging Dr. Placebo checks a scheduling agent&rsquo;s claimed outcome against what the system saved.</p>
+<p><a href="https://github.com/snackdriven/paging-dr-placebo">View the public repository</a></p>
+<dl class="case-facts"><div><dt>My role</dt><dd>Requirements, acceptance checks, implementation direction and review</dd></div><div><dt>Scope</dt><dd>Synthetic data and evaluation-harness behavior</dd></div></dl>
+</div><div class="case-layout"><nav class="contents" aria-label="On this page"><div class="contents-inner"><h2>On this page</h2><a href="#problem">Problem</a><a href="#design">The design</a><a href="#release-gate">What I would gate a release on</a><a href="#limits">What this establishes</a></div></nav><article class="case-body"><section id="problem"><h2 class="case-section-label"><span class="case-section-number" aria-hidden="true">01</span><span>Problem</span></h2><div class="case-section-content"><p>A scheduling agent can say &ldquo;booked&rdquo; when no appointment was saved. The person relying on it is left with a promise the system never kept.</p></div></section>
+<section id="design"><h2 class="case-section-label"><span class="case-section-number" aria-hidden="true">02</span><span>The design</span></h2><div class="case-section-content"><p>I specified a synthetic lab with the agent, backend state and independent observer kept separate. I defined the requirements and acceptance checks and directed implementation. The observer compares the agent&rsquo;s claim with what the backend saved; planted contradictions test whether the observer catches a mismatch.</p></div></section>
+<section id="release-gate"><h2 class="case-section-label"><span class="case-section-number" aria-hidden="true">03</span><span>What I would gate a release on</span></h2><div class="case-section-content"><p>A success verdict needs matching saved state. A missing or mismatched appointment should fail the check. Ambiguous outcomes need review rather than a confident success label.</p></div></section>
+<section id="limits"><h2 class="case-section-label"><span class="case-section-number" aria-hidden="true">04</span><span>What this establishes</span></h2><div class="case-section-content"><p>The lab demonstrates a repeatable way to test false-success detection and the checker&rsquo;s failure modes. It uses fictional data and a deterministic default agent. These checks establish evaluation-harness behavior; they do not establish live-model accuracy, real patient outcomes, clinical readiness or production readiness.</p></div></section>
+<footer class="case-footer"><a href="qa-workflow.html">Next: Personal QA workflow &rarr;</a><a href="mailto:kayla@snackdriven.com">Contact Kayla</a></footer></article></div></main></body></html>

@@ -7,8 +7,8 @@ from pypdf.generic import DictionaryObject, NameObject
 
 
 READING_LABELS = [
-    'Personal QA workflow.', 'AL80 Studio.', 'Felt Presence.',
-    'QA:', 'AI workflows:', 'Tools & technologies:',
+    'Paging Dr. Placebo.', 'Personal QA workflow.', 'AL80 Studio.',
+    'QA:', 'AI workflows:', 'Tools:',
 ]
 
 
@@ -131,12 +131,15 @@ def render():
     expected_links = {
         'mailto:kayla@snackdriven.com', 'https://snackdriven.com/portfolio/',
         'https://linkedin.com/in/snackdriven', 'https://github.com/snackdriven',
+        'https://snackdriven.com/portfolio/projects/agent-evaluation.html',
+        'https://snackdriven.com/portfolio/projects/qa-workflow.html',
+        'https://snackdriven.com/portfolio/projects/al80-studio.html',
     }
     links = {
         annotation.get_object().get('/A', {}).get('/URI')
         for annotation in reader.pages[0].get('/Annots', [])
     }
-    assert links == expected_links, 'Expected all four contact/portfolio links to survive export.'
+    assert links == expected_links, 'Expected all contact, portfolio and project links to survive export.'
     fonts = reader.pages[0]['/Resources']['/Font']
     assert all(font.get_object().get('/Subtype') != '/Type3' for font in fonts.values()), 'Expected embedded text fonts, not Type3 glyphs.'
     for reference in fonts.values():
@@ -146,7 +149,7 @@ def render():
         descriptor = descriptor.get_object() if descriptor else {}
         assert any(key in descriptor for key in ['/FontFile', '/FontFile2', '/FontFile3']), f'Expected embedded font: {font.get("/BaseFont")}'
     text = reader.pages[0].extract_text()
-    for required in ['Kayla Young', 'Chorus Innovations', 'Ultranauts', '250', '23', 'HAR', 'GraphQL', 'Felt Presence']:
+    for required in ['Kayla Young', 'Chorus Innovations', 'Ultranauts', '250', '23', 'GraphQL', 'Paging Dr. Placebo']:
         assert required in text, f'Missing extracted resume content: {required}'
     reading_text = ' '.join(structure_text(reader).split())
     for label in READING_LABELS:
