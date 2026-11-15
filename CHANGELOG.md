@@ -9,6 +9,8 @@ and numbered releases follow [Semantic Versioning](https://semver.org/spec/v2.0.
 
 ### Changed
 
+- Tighten the resume's staging-investigation and release-readiness bullets for scanning, describe the investigation's five product decisions as open for owners to resolve, and expand the personal-builds line to cover acceptance checks, implementation direction and verification alongside the AI attribution.
+
 - Align all six portfolio case studies with QA judgment, verified outcomes and explicit AI implementation attribution; surface documented release-status use and pinned synthetic observer evidence.
 - Refresh portfolio share cards with the current public name and healthcare QA framing, including dedicated release-readiness and agent-evaluation previews.
 
