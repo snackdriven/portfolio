@@ -33,7 +33,7 @@ preserves the catalog, structure tree, metadata, bookmarks, and annotations.
 
 Before replacing the primary PDF, the renderer checks page count, font subtype,
 key extracted text, English language metadata, a real structure tree with heading,
-list and link roles, bookmarks, and all four contact/portfolio link annotations.
+list and link roles, bookmarks, and all four contact/portfolio and three project link annotations.
 It also follows marked-content references in the structure tree and verifies that
 all three project names and three skills labels remain in tagged reading content.
 For an independent consumer check, run `pdfinfo -struct-text portfolio/resume/kayla-young-resume.pdf`
