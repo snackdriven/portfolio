@@ -9,6 +9,9 @@ and numbered releases follow [Semantic Versioning](https://semver.org/spec/v2.0.
 
 ### Changed
 
+- Align all six portfolio case studies with QA judgment, verified outcomes and explicit AI implementation attribution; surface documented release-status use and pinned synthetic observer evidence.
+- Refresh portfolio share cards with the current public name and healthcare QA framing, including dedicated release-readiness and agent-evaluation previews.
+
 - Publish the reviewed QA and AI-workflow resume with specific test-layer wording, role-grouped experience and linked evaluation projects; align the portfolio headline, availability and title progression.
 
 - Preserve underlines on inline portfolio evidence links in the v2.3 branding.
