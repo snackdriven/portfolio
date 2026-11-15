@@ -3,6 +3,7 @@ title: "Dear diary, allegedly"
 date: 2026-10-01
 permalink: /dear-diary-allegedly.html
 tag: building
+hidden: true
 read: 2
 excerpt: "A diary importer that could preserve my edits. Understanding my day was going to take longer."
 description: "A diary importer that could preserve my edits. Understanding my day was going to take longer."
